@@ -1,0 +1,57 @@
+:root {
+}
+
+.invSlot {
+    background-color: rgb(176, 50, 50);
+    border-right-width: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    padding-right: 0;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: auto;
+    justify-content: center;
+    align-self: auto;
+    align-content: auto;
+    flex-wrap: nowrap;
+}
+
+.itemName {
+    position: absolute;
+    bottom: 0;
+    visibility: visible;
+    overflow: hidden;
+    max-width: 100%;
+    width: 90%;
+    -unity-text-generator: advanced;
+    -unity-text-auto-size: best-fit 10px 100px;
+    left: auto;
+    -unity-text-align: lower-center;
+    white-space: normal;
+    text-overflow: clip;
+    align-items: auto;
+    align-self: center;
+    justify-content: center;
+    height: 30%;
+    aspect-ratio: auto;
+    flex-direction: column-reverse;
+}
+
+.itemCount {
+    overflow: hidden;
+    position: absolute;
+    bottom: auto;
+    right: 0;
+    top: 0;
+    left: auto;
+}
+
+.itemIMG {
+    width: 90px;
+    height: 90px;
+    align-self: center;
+}
