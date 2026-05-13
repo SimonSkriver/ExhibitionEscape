@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6dc63d381ce6a94ebe58a1b149d1976, type: 3}
-  m_Name: NewCoconut
-  m_EditorClassIdentifier: Assembly-CSharp::CoconutData
+  m_Script: {fileID: 11500000, guid: e6c9b0a7795f62e43a2eba7ab9b0f094, type: 3}
+  m_Name: Coconut
+  m_EditorClassIdentifier: Assembly-CSharp::FoodData
   itemName: New Item
-  itemType: 4
+  itemType: 5
   icon: {fileID: 0}
   itemPrefab: {fileID: 0}
   healAmount: 0
-  saturationAmount: 50
-  MovementSpeedBoost: 5
+  saturationAmount: 0
+  boostAmount: 0

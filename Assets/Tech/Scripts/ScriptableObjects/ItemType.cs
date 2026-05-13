@@ -3,7 +3,8 @@ public enum ItemType
     Tool,
     Material,
     Banana,
+    Berry,
     Coconut,
-    BoarMeat,
+    Meat,
     Other
 }
