@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static PlayerStats Instance { get; private set; }
+    public static PlayerStats Instance;
 
     [Header("Stats")]
-    public float MaxStats { get; set; }
-    public float Health { get; set; }
-    public float Saturation { get; set; }
-    public float Hunger { get; set; }
-    public float AttackDamage { get; set; }
-
+    public float Health;
+    public float MovementSpeed;
+    public float JumpPower;
 
     void Awake()
     {
@@ -18,11 +15,7 @@ public class PlayerStats : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            MaxStats = 100;
             Health = 100;
-            Saturation = 100;
-            Hunger = 100;
-            AttackDamage = 5;
         }
     }
 }
