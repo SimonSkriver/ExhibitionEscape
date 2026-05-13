@@ -1,10 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewFood", menuName = "Items/Food")]
+[CreateAssetMenu(fileName = "NewFood", menuName = "Scriptable Objects/Items/Food")]
 public class FoodData : ItemData
 {
-    [Header("Food Settings")]
-    public float feedAmount;
-    public float saturationAmount;
+    [Header("Heal Settings")]
+    [Range(0, 100)]
     public float healAmount;
 }

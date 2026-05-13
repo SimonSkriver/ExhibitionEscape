@@ -2,7 +2,8 @@ public enum ItemType
 {
     Tool,
     Material,
-    Food,
-    Drink,
+    Banana,
+    Coconut,
+    BoarMeat,
     Other
 }

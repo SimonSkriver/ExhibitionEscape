@@ -62,6 +62,7 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
+
         foreach (var slot in slots) //Second put it in an empty slot if there is one
         {
             if (slot.IsEmpty)
@@ -91,7 +92,7 @@ public class InventoryManager : MonoBehaviour
 
         if (slot.IsEmpty) return;
 
-        if (slot.item is FoodData food)
+        /*if (slot.item is FoodData food)
         {
             if(PlayerStats.Instance != null)
             {
@@ -133,7 +134,7 @@ public class InventoryManager : MonoBehaviour
                 
                 slot.count--;
             }
-        }
+        }*/
 
         if (slot.count <= 0)
         {
