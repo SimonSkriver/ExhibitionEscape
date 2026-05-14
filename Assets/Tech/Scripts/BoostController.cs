@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BoostController : MonoBehaviour
 {
-    public static BoostController Instance;
+    /*public static BoostController Instance;
 
     [Header("References")]
     [SerializeField] private Animator anim;
@@ -146,5 +146,5 @@ public class BoostController : MonoBehaviour
 
     PlayerStats.Instance.Strength = normalStrength;
     
-    }
+    }*/
 }

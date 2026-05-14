@@ -6,31 +6,38 @@ public class InputManager : MonoBehaviour
     public static InputManager Instance;
 
     [Header ("Info")]
+    [SerializeField] private GameObject player;
     [SerializeField] private PlayerInput playerInput;
-    public bool playerCanMove;
-
-    [Header ("Scripts")]
     [SerializeField] private PlayerController playerMovement;
 
+    private InputAction moveAction;
+    public Vector2 moveInput { get; private set; }
 
     void Awake()
     {
-        if (Instance != null)
+        if (Instance == null)
         {
             Instance = this;
         }
 
+        player = GameObject.FindWithTag("Player");
         playerInput = GetComponent<PlayerInput>();
-        playerMovement = GetComponent<PlayerController>();
+        playerMovement = player.GetComponent<PlayerController>();
 
-        playerInput.actions.FindAction("Jump").performed += ctx => playerMovement.Move();
+        moveAction = playerInput.actions.FindAction("Move");
+
+        playerInput.actions.FindAction("Jump").performed += ctx => playerMovement.Jump();
         playerInput.actions.FindAction("Attack").performed += ctx => playerMovement.Attack();
         playerInput.actions.FindAction("Interact").performed += ctx => playerMovement.Interact();
     }
 
     void Update()
     {
-        if (!playerCanMove) return;
-        
+        ReadMovementInput();
+    }
+
+    void ReadMovementInput()
+    {
+        moveInput = moveAction.ReadValue<Vector2>();
     }
 }
