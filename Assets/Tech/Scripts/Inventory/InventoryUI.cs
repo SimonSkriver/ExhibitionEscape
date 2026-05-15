@@ -24,7 +24,7 @@ public class InventoryUI : MonoBehaviour
         //Refresh();
     }
 
-    public void Refresh()
+    /*public void Refresh()
     {
         var slots = InventoryManager.Instance.slots;
 
@@ -55,7 +55,7 @@ public class InventoryUI : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
     private void ClearSlot (InventorySlotUI ui)
     {
