@@ -2,13 +2,35 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public void Use()
+    [Header ("Info")]
+    [SerializeField] private Transform eyes;
+
+    [Header ("Settings")]
+    [SerializeField] private float reach = 5f;
+
+    private IInteractable obj;
+
+    void Awake()
     {
-        
+        eyes = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
+    }
+
+    void Update()
+    {
+        Ray ray = new Ray(eyes.position, eyes.forward);
+        if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit, reach) && hit.collider.TryGetComponent(out IInteractable interactableItem))
+        {
+            obj = interactableItem;
+        }
+        else
+        {
+            obj = null;
+        }
     }
 
     public void Interact()
     {
-        
+        if (obj == null) return;
+        obj.Interact();
     }
 }

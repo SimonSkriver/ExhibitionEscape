@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerController playerMovement;
     [SerializeField] private PlayerInteract playerInteract;
+    [SerializeField] private PlayerUse playerUse;
 
     private InputAction moveAction;
     public Vector2 moveInput { get; private set; }
@@ -29,16 +30,11 @@ public class InputManager : MonoBehaviour
         moveAction = playerInput.actions.FindAction("Move");
 
         playerInput.actions.FindAction("Jump").performed += ctx => playerMovement.Jump();
-        playerInput.actions.FindAction("Use").performed += ctx => playerInteract.Use();
+        playerInput.actions.FindAction("Use").performed += ctx => playerUse.Use();
         playerInput.actions.FindAction("Interact").performed += ctx => playerInteract.Interact();
     }
 
     void Update()
-    {
-        ReadMovementInput();
-    }
-
-    void ReadMovementInput()
     {
         moveInput = moveAction.ReadValue<Vector2>();
     }
