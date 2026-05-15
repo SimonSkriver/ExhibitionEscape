@@ -6,7 +6,7 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Stats")]
     public float Health;
-    public float Thirst;
+    public float Saturation;
     public float MovementSpeed;
     public float JumpPower;
     public float Strength;
@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Health = 100;
-            Thirst = 100;
+            Saturation = 100;
         }
     }
 }

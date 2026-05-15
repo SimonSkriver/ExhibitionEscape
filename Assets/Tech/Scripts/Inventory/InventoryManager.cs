@@ -108,7 +108,7 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log("Player restored " + food.saturationAmount + " saturation.");
                 Debug.Log("Player restored " + food.healAmount + " health.");
                 
-                BoostController.Instance.UseBoost(slot.item.itemType);
+                BoostController.Instance.UseBoost(slot.item);
                 slot.count--;
             }
         }

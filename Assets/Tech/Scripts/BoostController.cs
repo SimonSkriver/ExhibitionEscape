@@ -108,7 +108,7 @@ public class BoostController : MonoBehaviour
     
     }
 
-    private IEnumerator BananaEffect(ItemData itemData)
+    private IEnumerator MeatEffect(ItemData itemData)
     {
         if (itemData is not FoodData foodData)
         {
@@ -145,6 +145,5 @@ public class BoostController : MonoBehaviour
         }
 
     PlayerStats.Instance.Strength = normalStrength;
-    
     }
 }
