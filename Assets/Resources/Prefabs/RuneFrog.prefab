@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 3659691701271155142}
   - component: {fileID: 7053325257338910678}
   - component: {fileID: 2376592057424752134}
+  - component: {fileID: 7419039658769891899}
   - component: {fileID: 7649747237781186817}
   m_Layer: 0
   m_Name: RuneFrog
@@ -397,6 +398,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   controller: {fileID: 0}
   gravity: -10
+--- !u!114 &7419039658769891899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047162832961064572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee978a52adac0cc438dc93433b1981c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteract
 --- !u!114 &7649747237781186817
 MonoBehaviour:
   m_ObjectHideFlags: 0

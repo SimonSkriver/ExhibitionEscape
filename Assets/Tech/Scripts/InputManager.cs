@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerController playerMovement;
+    [SerializeField] private PlayerInteract playerInteract;
 
     private InputAction moveAction;
     public Vector2 moveInput { get; private set; }
@@ -23,12 +24,13 @@ public class InputManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerInput = GetComponent<PlayerInput>();
         playerMovement = player.GetComponent<PlayerController>();
+        playerInteract = player.GetComponent<PlayerInteract>();
 
         moveAction = playerInput.actions.FindAction("Move");
 
         playerInput.actions.FindAction("Jump").performed += ctx => playerMovement.Jump();
-        playerInput.actions.FindAction("Attack").performed += ctx => playerMovement.Attack();
-        playerInput.actions.FindAction("Interact").performed += ctx => playerMovement.Interact();
+        playerInput.actions.FindAction("Use").performed += ctx => playerInteract.Use();
+        playerInput.actions.FindAction("Interact").performed += ctx => playerInteract.Interact();
     }
 
     void Update()

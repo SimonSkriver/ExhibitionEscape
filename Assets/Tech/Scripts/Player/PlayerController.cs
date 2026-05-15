@@ -34,16 +34,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Attack()
-    {
-        
-    }
-
-    public void Interact()
-    {
-        
-    }
-
     void HandleGravity()
     {
         //Apply gravity
