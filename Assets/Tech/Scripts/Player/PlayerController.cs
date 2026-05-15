@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterController controller;
 
     [Header ("Settings")]
-    [SerializeField] private float gravity;
+    [SerializeField] private float gravity = -10f; 
     
     private bool isGrounded;
     private bool isSprinting;
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = controller.isGrounded;
 
         Move();
+        HandleGravity();
     }
 
     public void Jump()
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             float jumpPower = PlayerStats.Instance.JumpPower;
-            playerVelocity.y = Mathf.Sqrt(jumpPower * -3f * gravity);
+            playerVelocity.y = Mathf.Sqrt(jumpPower * -1f * gravity);
         }
     }
 
@@ -43,11 +44,29 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    void HandleGravity()
+    {
+        //Apply gravity
+        playerVelocity.y += gravity * Time.deltaTime;
+
+        //Keep player grounded by applying slight negative force
+        if (isGrounded && playerVelocity.y < 0) 
+        {
+            playerVelocity.y = -2f;
+        }
+    }
+
     void Move()
     {
-        Vector2 moveInput = InputManager.Instance.moveInput;
-        Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
+        //Read input and move speed
         float moveSpeed = PlayerStats.Instance.MovementSpeed;
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        Vector2 moveInput = InputManager.Instance.moveInput;
+
+        //Save moveinput in a Vector3 to combine with vertical velocity
+        Vector3 horizontalInput = (transform.right * moveInput.x + transform.forward * moveInput.y) * moveSpeed;
+
+        //Combine horizontal and vertical movement and apply movement
+        Vector3 moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
+        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
     }
 }

@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 7053325257338910678}
   - component: {fileID: 2376592057424752134}
   - component: {fileID: 7649747237781186817}
-  - component: {fileID: 1081448709047966357}
   m_Layer: 0
   m_Name: RuneFrog
   m_TagString: Player
@@ -377,13 +376,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1.75
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.84, z: 0}
+  m_Center: {x: 0, y: 0.955, z: 0}
 --- !u!114 &2376592057424752134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   controller: {fileID: 0}
-  gravity: 0
+  gravity: -10
 --- !u!114 &7649747237781186817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,33 +410,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   Health: 0
-  Thirst: 0
+  Saturation: 0
   MovementSpeed: 2
-  JumpPower: 2
+  JumpPower: 1
   Strength: 0
---- !u!136 &1081448709047966357
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047162832961064572}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1537981
-  m_Height: 1.719593
-  m_Direction: 1
-  m_Center: {x: -0.0026836395, y: 0.8643408, z: 0.01610279}
 --- !u!1 &2173671998435751289
 GameObject:
   m_ObjectHideFlags: 0
