@@ -768,6 +768,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerInput: {fileID: 0}
   playerMovement: {fileID: 0}
+  playerInteract: {fileID: 0}
 --- !u!1001 &474178948733902228
 PrefabInstance:
   m_ObjectHideFlags: 0
