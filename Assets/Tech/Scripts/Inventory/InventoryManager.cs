@@ -1,4 +1,4 @@
-/*using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 public class InventoryManager : MonoBehaviour
@@ -124,7 +124,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (oldStat > 100) return true;
     }*/
-/*
+
     void EnableInventoryActions()
     {
         slot1Action = InputSystem.actions.FindAction("UseItem1");
@@ -190,4 +190,4 @@ public class InventoryManager : MonoBehaviour
         slot9Action.performed += ctx => UseItem(8);
         }
     }
-}*/
+}

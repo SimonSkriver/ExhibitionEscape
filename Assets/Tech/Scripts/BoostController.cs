@@ -32,41 +32,40 @@ public class BoostController : MonoBehaviour
 
     private IEnumerator CoconutEffect(ItemData itemData)
     {
-        if (itemData is not FoodData foodData)
+         if (itemData is not FoodData foodData)
         {
             yield break;
         }
+        
+        anim.SetBool("CoconutEffect", true);
+        PlayerStats.Instance.MovementSpeed += foodData.boostAmount;
 
-    anim.SetBool("CoconutEffect", true);
-    PlayerStats.Instance.MovementSpeed += foodData.boostAmount;
+        while (anim.GetCurrentAnimatorStateInfo(0).IsName("CoconutEffect") 
+              && anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f) 
+            {
+                yield return null;
+            }
 
-    while (anim.GetCurrentAnimatorStateInfo(0).IsName("CoconutEffect") 
-          && anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f) 
-        {
-            yield return null;
-        }
+        anim.SetBool("CoconutEffect", false);
 
-    anim.SetBool("CoconutEffect", false);
+        float boostedSpeed = PlayerStats.Instance.MovementSpeed;
+        float normalSpeed = boostedSpeed - foodData.boostAmount;
 
-    float boostedSpeed = PlayerStats.Instance.MovementSpeed;
-    float normalSpeed = boostedSpeed - foodData.boostAmount;
+        float declineDuration = 2f;
+        float timer = 0f;
 
-    float declineDuration = 2f;
-    float timer = 0f;
+        while (timer < declineDuration)
+            {
+                timer += Time.deltaTime;
 
-    while (timer < declineDuration)
-        {
-            timer += Time.deltaTime;
+                float t = timer / declineDuration;
 
-            float t = timer / declineDuration;
+                PlayerStats.Instance.MovementSpeed = Mathf.Lerp(boostedSpeed, normalSpeed, t);
 
-            PlayerStats.Instance.MovementSpeed = Mathf.Lerp(boostedSpeed, normalSpeed, t);
+                yield return null;
+            }
 
-            yield return null;
-        }
-
-    PlayerStats.Instance.MovementSpeed = normalSpeed;
-
+        PlayerStats.Instance.MovementSpeed = normalSpeed;
     }
 
     private IEnumerator BananaEffect(ItemData itemData)
@@ -143,7 +142,6 @@ public class BoostController : MonoBehaviour
 
             yield return null;
         }
-
     PlayerStats.Instance.Strength = normalStrength;
     }
 }
