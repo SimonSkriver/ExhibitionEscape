@@ -4,17 +4,21 @@ public class PlayerController : MonoBehaviour
 {
     [Header ("Info")]
     [SerializeField] private CharacterController controller;
+    [SerializeField] private Transform orientation;
 
     [Header ("Settings")]
     [SerializeField] private float gravity = -10f; 
+    [SerializeField] private float turnSpeed = 5f; 
     
     private bool isGrounded;
     private bool isSprinting;
     private Vector3 playerVelocity;
+    public Vector3 moveDirection;
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        orientation = GameObject.FindWithTag("Orientation").GetComponent<Transform>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -56,10 +60,18 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = InputManager.Instance.moveInput;
 
         //Save moveinput in a Vector3 to combine with vertical velocity
-        Vector3 horizontalInput = (transform.right * moveInput.x + transform.forward * moveInput.y) * moveSpeed;
+        Vector3 horizontalInput = orientation.right * moveInput.x + orientation.forward * moveInput.y;
 
         //Combine horizontal and vertical movement and apply movement
-        Vector3 moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
+        /*Vector3*/ moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+        //If there's horizontal input, lerp from current rotation to the input value rotation
+        if (horizontalInput.sqrMagnitude > 0.01f)
+        {
+            Debug.Log("Turning");
+            Quaternion targetRotation = Quaternion.LookRotation(horizontalInput);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
+        }
     }
 }

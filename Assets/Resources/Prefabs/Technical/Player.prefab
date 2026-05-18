@@ -399,7 +399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   controller: {fileID: 0}
+  orientation: {fileID: 0}
   gravity: -10
+  turnSpeed: 5
+  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &7649747237781186817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   Health: 0
   Saturation: 0
-  MovementSpeed: 2
+  MovementSpeed: 5
   JumpPower: 1
   Strength: 0
 --- !u!114 &7419039658769891899
@@ -1567,9 +1570,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3769304917319399551}
+  - component: {fileID: 3613285010768371733}
   m_Layer: 2
   m_Name: Orientation
-  m_TagString: Untagged
+  m_TagString: Orientation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1589,3 +1593,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3659691701271155142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3613285010768371733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8872692256032217097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0790e46d59f6f44832cb1e0f022b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOrientation
+  cameraTransform: {fileID: 0}

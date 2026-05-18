@@ -64,11 +64,15 @@ Assets/Tech/Scripts/
  Player/
   PlayerController.cs
   PlayerInteract.cs
+  PlayerOrientation.cs
   PlayerStats.cs
+  PlayerUse.cs
  ScriptableObjects/
   FoodData.cs
   ItemData.cs
   ItemType.cs
+ Seagull.cs
+ Spawner.cs
 Temp/obj/Assembly-CSharp/.NETStandard,Version=v2.1.AssemblyAttributes.cs
 
 [metadataReferences]
@@ -381,6 +385,8 @@ Library/ScriptAssemblies/
  Unity.ShaderGraph.Editor.dll
  Unity.Splines.dll
  Unity.Splines.Editor.dll
+ Unity.TerrainTools.dll
+ Unity.TerrainTools.Editor.dll
  Unity.TextMeshPro.dll
  Unity.TextMeshPro.Editor.dll
  Unity.Timeline.dll
