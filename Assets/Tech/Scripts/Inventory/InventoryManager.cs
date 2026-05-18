@@ -92,49 +92,26 @@ public class InventoryManager : MonoBehaviour
 
         if (slot.IsEmpty) return;
 
-        /*if (slot.item is FoodData food)
+        if (slot.item is FoodData food)
         {
             if(PlayerStats.Instance != null)
             {
-                Debug.Log("Previous Player Hunger: " + PlayerStats.Instance.Hunger);
                 Debug.Log("Previous Player Saturation: " + PlayerStats.Instance.Saturation);
                 Debug.Log("Previous Player Health: " + PlayerStats.Instance.Health);
 
-                PlayerStats.Instance.Hunger += food.feedAmount;
                 PlayerStats.Instance.Saturation += food.saturationAmount;
                 PlayerStats.Instance.Health += food.healAmount;
 
-                if (PlayerStats.Instance.Hunger > 100) PlayerStats.Instance.Hunger = 100;
                 if (PlayerStats.Instance.Saturation > 100) PlayerStats.Instance.Saturation = 100;
                 if (PlayerStats.Instance.Health > 100) PlayerStats.Instance.Health = 100;
 
-                Debug.Log("Player restored " + food.feedAmount + " hunger.");
                 Debug.Log("Player restored " + food.saturationAmount + " saturation.");
                 Debug.Log("Player restored " + food.healAmount + " health.");
                 
+                BoostController.Instance.UseBoost(slot.item);
                 slot.count--;
             }
         }
-
-        else if (slot.item is DrinkData drink)
-        {
-            if(PlayerStats.Instance != null)
-            {
-                Debug.Log("Previous Player Saturation: " + PlayerStats.Instance.Saturation);
-                Debug.Log("Previous Player Health: " + PlayerStats.Instance.Health);
-
-                PlayerStats.Instance.Saturation += drink.saturationAmount;
-                PlayerStats.Instance.Health += drink.healAmount;
-
-                if (PlayerStats.Instance.Saturation > 100) PlayerStats.Instance.Saturation = 100;
-                if (PlayerStats.Instance.Health > 100) PlayerStats.Instance.Health = 100;
-
-                Debug.Log("Player restored " + drink.saturationAmount + " saturation.");
-                Debug.Log("Player restored " + drink.healAmount + " health.");
-                
-                slot.count--;
-            }
-        }*/
 
         if (slot.count <= 0)
         {
