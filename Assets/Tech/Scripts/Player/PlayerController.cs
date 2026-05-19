@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     
     private bool isGrounded;
     private bool isSprinting;
+    private float moveSpeed;
     private Vector3 playerVelocity;
-    public Vector3 moveDirection;
 
     void Awake()
     {
@@ -56,22 +56,26 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         //Read input and move speed
-        float moveSpeed = PlayerStats.Instance.MovementSpeed;
+        moveSpeed = isSprinting ? PlayerStats.Instance.SprintSpeed : PlayerStats.Instance.MovementSpeed; 
         Vector2 moveInput = InputManager.Instance.moveInput;
 
         //Save moveinput in a Vector3 to combine with vertical velocity
         Vector3 horizontalInput = orientation.right * moveInput.x + orientation.forward * moveInput.y;
 
         //Combine horizontal and vertical movement and apply movement
-        /*Vector3*/ moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
+        Vector3 moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
         //If there's horizontal input, lerp from current rotation to the input value rotation
         if (horizontalInput.sqrMagnitude > 0.01f)
         {
-            Debug.Log("Turning");
             Quaternion targetRotation = Quaternion.LookRotation(horizontalInput);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
         }
+    }
+
+    public void Sprint()
+    {
+        isSprinting = !isSprinting;
     }
 }

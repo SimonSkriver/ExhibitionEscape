@@ -400,9 +400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   controller: {fileID: 0}
   orientation: {fileID: 0}
-  gravity: -10
-  turnSpeed: 5
-  moveDirection: {x: 0, y: 0, z: 0}
+  gravity: -8
+  turnSpeed: 10
 --- !u!114 &7649747237781186817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +417,8 @@ MonoBehaviour:
   Health: 0
   Saturation: 0
   MovementSpeed: 5
-  JumpPower: 1
+  SprintSpeed: 7
+  JumpPower: 0.5
   Strength: 0
 --- !u!114 &7419039658769891899
 MonoBehaviour:

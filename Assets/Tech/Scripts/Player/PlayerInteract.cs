@@ -9,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float reach = 5f;
 
     private IInteractable obj;
+    public MeshRenderer[] outlines;
 
     void Awake()
     {
@@ -18,9 +19,18 @@ public class PlayerInteract : MonoBehaviour
     void Update()
     {
         Ray ray = new Ray(eyes.position, eyes.forward);
-        if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit, reach) && hit.collider.TryGetComponent(out IInteractable interactableItem))
+        if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit, reach) && hit.collider.TryGetComponent(out IInteractable currentObj))
         {
-            obj = interactableItem;
+            obj = currentObj;
+            
+            outlines = hit.collider.transform.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer renderer in outlines)
+            {
+                if (renderer != null)
+                {
+                    renderer.enabled = true;
+                }
+            }
         }
         else
         {
