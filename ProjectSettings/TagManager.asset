@@ -5,15 +5,17 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Obstacle
+  - BananaPeel
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - SkyBox
+  - Ground
   - Water
   - UI
-  - 
-  - 
+  - Obstacle
+  - Player
   - 
   - 
   - 

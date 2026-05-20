@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public float Health;
     public float Saturation;
     public float MovementSpeed;
+    public float SprintSpeed;
     public float JumpPower;
     public float Strength;
 
