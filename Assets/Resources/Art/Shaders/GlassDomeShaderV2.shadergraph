@@ -89,6 +89,9 @@
         },
         {
             "m_Id": "53b7cff42e934342a2d885232cfce003"
+        },
+        {
+            "m_Id": "b6be3d72866d405698a25347dcdfa8d7"
         }
     ],
     "m_GroupDatas": [],
@@ -198,6 +201,20 @@
                     "m_Id": "9c05ebbec7b841c59adda0c0ebbda3c5"
                 },
                 "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b6be3d72866d405698a25347dcdfa8d7"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "b6be3d72866d405698a25347dcdfa8d7"
+                },
+                "m_SlotId": 1
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -342,7 +359,7 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "m_SerializedTexture": "",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"10327cbc2c401bc4389aab3826a5a80a\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -515,6 +532,32 @@
     "m_Property": {
         "m_Id": "07c2d9c6381747dba3950fcc2e231a76"
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ScreenPositionMaterialSlot",
+    "m_ObjectId": "1e753c8efdea48aa9e5069929a3458c0",
+    "m_Id": 0,
+    "m_DisplayName": "UV",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "UV",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": [],
+    "m_ScreenSpaceType": 0
 }
 
 {
@@ -1424,6 +1467,19 @@
 }
 
 {
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
+    "m_ObjectId": "aa6d266ec7234edd8b58172c11ef59d2",
+    "m_Id": 0,
+    "m_DisplayName": "RefractionMap",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_BareResource": false
+}
+
+{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty",
     "m_ObjectId": "b0de884fc1a249b0acbc9dae6f294639",
@@ -1566,6 +1622,44 @@
     "m_EnumValues": [
         0
     ]
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SceneColorNode",
+    "m_ObjectId": "b6be3d72866d405698a25347dcdfa8d7",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Scene Color",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -765.333251953125,
+            "y": 47.99992370605469,
+            "width": 139.33331298828126,
+            "height": 78.66667175292969
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "1e753c8efdea48aa9e5069929a3458c0"
+        },
+        {
+            "m_Id": "e0570ae2e5bb442ea8b008680b32c107"
+        }
+    ],
+    "synonyms": [
+        "screen buffer"
+    ],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    }
 }
 
 {
@@ -1944,6 +2038,29 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
+    "m_ObjectId": "e0570ae2e5bb442ea8b008680b32c107",
+    "m_Id": 1,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TilingAndOffsetNode",
     "m_ObjectId": "e250395b083b48e7805898a57b53c567",
     "m_Group": {
@@ -2219,18 +2336,5 @@
         "y": 0.0
     },
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
-    "m_ObjectId": "aa6d266ec7234edd8b58172c11ef59d2",
-    "m_Id": 0,
-    "m_DisplayName": "RefractionMap",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_BareResource": false
 }
 
