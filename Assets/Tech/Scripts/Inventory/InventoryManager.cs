@@ -99,13 +99,11 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log("Previous Player Saturation: " + PlayerStats.Instance.Saturation);
                 Debug.Log("Previous Player Health: " + PlayerStats.Instance.Health);
 
-                PlayerStats.Instance.Saturation += food.saturationAmount;
                 PlayerStats.Instance.Health += food.healAmount;
 
                 if (PlayerStats.Instance.Saturation > 100) PlayerStats.Instance.Saturation = 100;
                 if (PlayerStats.Instance.Health > 100) PlayerStats.Instance.Health = 100;
 
-                Debug.Log("Player restored " + food.saturationAmount + " saturation.");
                 Debug.Log("Player restored " + food.healAmount + " health.");
                 
                 BoostController.Instance.UseBoost(slot.item);
