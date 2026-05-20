@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GlassDome
-  m_Shader: {fileID: -6465566751694194690, guid: db7f44705a193af489edf720fa59ba8d, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 63ace250e9d64254fad6f8fafa606a3d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -68,6 +68,26 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RefractionMap:
+        m_Texture: {fileID: 2800000, guid: 606be407558219941a5f7fd07ef2d7cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_25b97df02b5e4645bdee1c8ab093f383_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3985803898a6b1545a884fbe48035676, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_556a403e3188484b9190b5bfd6cfc724_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3985803898a6b1545a884fbe48035676, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9c509bac4bdb43cea4a0c3e3d643462c_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3985803898a6b1545a884fbe48035676, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SkyboxTexture:
+        m_Texture: {fileID: 8400000, guid: 5d32ac373c21a1c469df5a3fc9f1a39a, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -104,9 +124,10 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _IOR: 0.309
+    - _IOR: 0.286
+    - _IOR2: 0
     - _Metallic: 0
-    - _NormalStrength: 0.346
+    - _NormalStrength: 0.565
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -117,6 +138,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _Strength: 0.26
     - _Surface: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
@@ -125,7 +147,10 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.19215687}
     - _Color: {r: 1, g: 1, b: 1, a: 0.19215687}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
+    - _TintColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8090053460516541475
