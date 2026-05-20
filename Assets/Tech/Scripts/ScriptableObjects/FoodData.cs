@@ -13,16 +13,6 @@ public class FoodData : ItemData
     public float healAmount;
 
     [Space]
-    [Header("(Hover below) Saturation amount 0-100")]
-    [Tooltip (
-    "Banana = 0\n" +
-    "Coconut = 30\n" +
-    "Meat = 10\n" +
-    "Berry = 20" )]
-    [Range(0, 100)]
-    public float saturationAmount;
-
-    [Space]
     [Header("(Hover below) Boost amount")]
     [Tooltip (
     "Banana = Jump Boost (5) \n" +
