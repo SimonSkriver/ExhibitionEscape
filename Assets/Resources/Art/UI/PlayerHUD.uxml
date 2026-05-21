@@ -1,6 +1,12 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="Inventory" src="project://database/Assets/Resources/Art/UI/Inventory.uxml?fileID=9197481963319205126&amp;guid=c3404b1cf7b687b4088367c7f5729343&amp;type=3#Inventory"/>
-    <ui:Template name="SurvivalStatus" src="project://database/Assets/Resources/Art/UI/SurvivalStatus.uxml?fileID=9197481963319205126&amp;guid=07ed7bf8c9f36e948b4e96b129c7cc71&amp;type=3#SurvivalStatus"/>
-    <ui:Instance template="Inventory" name="Inventory" style="width: 100%; height: 100%; display: flex;"/>
-    <ui:Instance template="SurvivalStatus" name="TemplateContainer" style="position: absolute; width: 259px; height: 282px; margin-top: -4px; border-top-width: -67px; border-right-width: -67px; border-bottom-width: 70px; border-left-width: -71px; top: 169px; left: 9px;"/>
+    <ui:Template name="Heart" src="project://database/Assets/Resources/Art/UI/Heart.uxml?fileID=9197481963319205126&amp;guid=07ed7bf8c9f36e948b4e96b129c7cc71&amp;type=3#Heart"/>
+    <ui:Template name="InventorySlot" src="project://database/Assets/Resources/Art/UI/InventorySlot.uxml?fileID=9197481963319205126&amp;guid=9df4fdec4aa129348bafd003cfd90d25&amp;type=3#InventorySlot"/>
+    <ui:Instance template="Heart" name="HP" style="position: absolute; bottom: 0; width: 256px; height: 256px; scale: 0.75 0.75 0.75;"/>
+    <ui:VisualElement name="InventorySlots" style="flex-grow: 1; flex-direction: row; width: 100%; height: 100%; justify-content: space-evenly; align-self: flex-end; align-items: auto; padding-right: 30%; padding-left: 30%; padding-bottom: 25px;">
+        <ui:Instance template="InventorySlot" name="InvSlot" style="width: 100px; height: 100px;"/>
+        <ui:Instance template="InventorySlot" name="InvSlot" tabindex="1" style="width: 100px; height: 100px;"/>
+        <ui:Instance template="InventorySlot" name="InvSlot" tabindex="2" style="width: 100px; height: 100px;"/>
+        <ui:Instance template="InventorySlot" name="InvSlot" tabindex="3" style="width: 100px; height: 100px;"/>
+        <ui:Instance template="InventorySlot" name="InvSlot" tabindex="4" style="width: 100px; height: 100px;"/>
+    </ui:VisualElement>
 </ui:UXML>

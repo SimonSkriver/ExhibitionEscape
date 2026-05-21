@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 7419039658769891899}
   - component: {fileID: 6571923433663294185}
   - component: {fileID: 72742465125361895}
+  - component: {fileID: 2145551601307726183}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -427,6 +428,18 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &2145551601307726183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047162832961064572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f529f0bca368514e9ae6c7f50f3fcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHUD
 --- !u!1 &2245853109052884041
 GameObject:
   m_ObjectHideFlags: 0

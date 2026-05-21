@@ -10,7 +10,7 @@ public class FoodData : ItemData
     "Meat = 50\n" +
     "Berry = 10" )]
     [Range(0, 100)]
-    public float healAmount;
+    public int healAmount;
 
     [Space]
     [Header("(Hover below) Boost amount")]

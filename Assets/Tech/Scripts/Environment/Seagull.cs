@@ -18,6 +18,7 @@ public class Seagull : MonoBehaviour
     }
 
     IEnumerator ChangeFlyDestination() {
+        StartCoroutine(Lifetime());
         while (true) {
             // Change destination point
             float rndX = orbit.position.x + Random.Range(0, range);
@@ -33,6 +34,12 @@ public class Seagull : MonoBehaviour
             
             yield return new WaitUntil(() => Vector3.Distance(transform.position, flyDest) < 1);
         }
+    }
+
+    IEnumerator Lifetime() {
+        int time = Random.Range(10, range);
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
     void OnDrawGizmos() {
