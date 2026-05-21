@@ -285,6 +285,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8746500860010289497}
+  - component: {fileID: 3651434134696459929}
+  - component: {fileID: 4319064190600632451}
   m_Layer: 0
   m_Name: MEAT
   m_TagString: Untagged
@@ -312,6 +314,39 @@ Transform:
   - {fileID: 4078651365732454819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3651434134696459929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326735245159988429}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2695189, y: 2.1100492, z: 1.274086}
+  m_Center: {x: 0.0022835732, y: 0.5550246, z: 0.0091362}
+--- !u!114 &4319064190600632451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7326735245159988429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb11f0356b37907448a04abd53345fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTester
 --- !u!1 &9028833341497463481
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +448,7 @@ GameObject:
   - component: {fileID: 5212825615276236805}
   - component: {fileID: 5373302915907203959}
   - component: {fileID: 31689035452630465}
+  - component: {fileID: 5277425115748018443}
   m_Layer: 0
   m_Name: MEAT_State_1
   m_TagString: Untagged
@@ -494,3 +530,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5277425115748018443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9187044143669451471}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

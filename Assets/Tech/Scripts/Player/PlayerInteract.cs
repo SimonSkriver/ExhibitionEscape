@@ -8,9 +8,9 @@ public class PlayerInteract : MonoBehaviour
     [Header ("Settings")]
     [SerializeField] private float reach = 5f;
 
-    private IInteractable obj;
+    private IInteractable interactableObject;
     private LayerMask layerMask;
-    public MeshRenderer[] outlines;
+    private Outline[] currentOutline;
 
     void Awake()
     {
@@ -23,29 +23,46 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = new Ray(eyes.position, eyes.forward);
         if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit, reach, ~layerMask) && hit.collider.TryGetComponent(out IInteractable currentObj))
         {
-            obj = currentObj;
-            
-            outlines = hit.collider.transform.GetComponentsInChildren<MeshRenderer>();
-            foreach (MeshRenderer renderer in outlines)
+            if (currentObj != interactableObject) // Ensure we only assign the current object once
             {
-                if (renderer != null)
-                {
-                    renderer.enabled = true;
-                }
+                Clear(); // Ensure no other outlines are drawn and variables are clear before drawing and assigning
+                interactableObject = currentObj;
+                currentOutline = hit.collider.transform.GetComponentsInChildren<Outline>();
+                DrawOutline(currentOutline);
             }
         }
         else
         {
-            obj = null;
+            Clear();
         }
 
-Debug.DrawRay(eyes.position, eyes.forward * reach, Color.blue);
+        Debug.DrawRay(eyes.position, eyes.forward * reach, Color.blue);
+    }
 
+    void DrawOutline(Outline[] outline)
+    {
+        foreach (Outline outlineComponent in outline)
+        {
+            outlineComponent.enabled = true;
+        }
+    }
+
+    void Clear()
+    {
+        if (currentOutline != null)
+        {
+            foreach (Outline outlines in currentOutline)
+            {
+                outlines.enabled = false;
+            }
+        }
+        currentOutline = null;
+        interactableObject = null;
     }
 
     public void Interact()
     {
-        if (obj == null) return;
-        obj.Interact();
+        if (interactableObject == null) return;
+        interactableObject.Interact();
     }        
 }
