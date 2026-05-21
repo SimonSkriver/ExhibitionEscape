@@ -24486,6 +24486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d02ec0422fe27044fa528a9d6601e7ac, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b6ffb59e587ee64db833d6652f8be0e, type: 2}
     - target: {fileID: 919132149155446097, guid: d02ec0422fe27044fa528a9d6601e7ac, type: 3}
       propertyPath: m_Name
       value: Ribcage 1
