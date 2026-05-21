@@ -45,7 +45,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float deathDelay = 2f;
 
     [Header("Damage")]
-    [SerializeField] private float playerDamage = 25f;
+    [SerializeField] private int playerDamage = 25;
     [SerializeField] private float knockbackDistance = 5f;
     [SerializeField] private float knockbackDuration = 1f;
 
@@ -351,7 +351,7 @@ public class BoarBehavior : MonoBehaviour
     {
         if (PlayerStats.Instance != null)
         {
-            PlayerStats.Instance.Health -= playerDamage;
+            PlayerStats.Instance.RemoveHealth(playerDamage);
         }
 
         if (playerController != null)

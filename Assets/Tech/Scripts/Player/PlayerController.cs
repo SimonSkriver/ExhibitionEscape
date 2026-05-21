@@ -6,12 +6,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform orientation;
 
+    [Header("Animation")]
+    public Animator A { get; private set; }
+    
+
     [Header ("Settings")]
     [SerializeField] private float gravity = -10f; 
     [SerializeField] private float turnSpeed = 5f; 
     
     private bool isGrounded;
     private bool isSprinting;
+    bool isMoving;
     private float moveSpeed;
     private Vector3 playerVelocity;
 
@@ -22,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        A = GetComponent<Animator>();
     }
 
     void Update()
@@ -38,6 +45,7 @@ public class PlayerController : MonoBehaviour
         {
             float jumpPower = PlayerStats.Instance.JumpPower;
             playerVelocity.y = Mathf.Sqrt(jumpPower * -1f * gravity);
+            A.SetFloat("playerVelocity", playerVelocity.y);
         }
     }
 
@@ -50,6 +58,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && playerVelocity.y < 0) 
         {
             playerVelocity.y = -2f;
+            A.SetFloat("playerVelocity", playerVelocity.y);
         }
     }
 
@@ -72,10 +81,25 @@ public class PlayerController : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(horizontalInput);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
         }
+
+        
+        // Walking or Idle animation
+        if (moveDirection != new Vector3(0, playerVelocity.y, 0)) {
+            A.SetBool("isWalking", true);
+            isMoving = true;
+        } else {
+            A.SetBool("isWalking", false);
+            isMoving = false;
+        }
     }
 
     public void Sprint()
     {
         isSprinting = !isSprinting;
+
+        // Sprint Animation
+        if (isMoving) {
+            A.SetBool("isRunning", isSprinting);
+        }
     }
 }
