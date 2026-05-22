@@ -16,14 +16,16 @@
     border-bottom-left-radius: 15px;
     background-color: rgb(248, 188, 137);
     -unity-text-outline-width: 2px;
-    font-size: 40px;
+    font-size: 240%;
     -unity-font-style: bold;
     -unity-text-outline-color: rgb(135, 103, 193);
-    -unity-text-align: upper-center;
+    -unity-text-align: middle-center;
     margin-bottom: 10px;
     margin-top: 10px;
     -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
     color: rgb(135, 103, 193);
+    width: 97%;
+    height: 14%;
 }
 
 .menuButton:hover {

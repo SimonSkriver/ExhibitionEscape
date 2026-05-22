@@ -29,7 +29,6 @@ public class PlayerHUD : MonoBehaviour
         HP.Q<Label>("txtHP").text = health.ToString();
 
         HP.Q<VisualElement>("HeartSlider").style.minHeight = Length.Percent(health);
-        Debug.Log(Length.Percent(health));
     }
 
     public void UpdateInvSlotUI(int slotID, int itemCount, Texture itemIcon, string itemName) {
