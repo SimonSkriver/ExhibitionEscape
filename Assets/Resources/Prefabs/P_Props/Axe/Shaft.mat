@@ -101,6 +101,7 @@ Material:
     m_Floats:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
+    - _AlphaClip_threshold: 0
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -139,7 +140,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.51804173, g: 0.27229264, b: 0.12695143, a: 1}
-    - _Color: {r: 0.5180417, g: 0.2722926, b: 0.1269514, a: 1}
+    - _Color: {r: 0.6528301, g: 0.38355616, b: 0.22541113, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
