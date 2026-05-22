@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BushTesterMat
-  m_Shader: {fileID: -6465566751694194690, guid: 4ef1edda452cd3e4c8b243ac886436a7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b42871271a3de194a9177d0656bb5fdf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2989
+  m_CustomRenderQueue: 1989
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -25,6 +25,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _SampleTexture2D_5872ad2ba7194789b496b24381d2b638_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 606be407558219941a5f7fd07ef2d7cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
         m_Texture: {fileID: 2800000, guid: 606be407558219941a5f7fd07ef2d7cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -42,9 +46,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Max_Brightness: 1
+    - _Min_Brightness: 0.3
     - _QueueControl: 0
     - _QueueOffset: -11
-    m_Colors: []
+    - _Shade_Size: 0.49
+    m_Colors:
+    - _Color: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2664903749002462080
