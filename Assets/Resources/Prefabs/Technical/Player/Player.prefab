@@ -373,7 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d224d5a50d45f4593cc2ab6c07182d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  Health: 0
   Saturation: 0
   MovementSpeed: 5
   SprintSpeed: 7
@@ -562,9 +561,9 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 99edb2d690f69874fadb21ea2d00bf6b, type: 2}
-  - {fileID: 2100000, guid: 68970bfa69d280a49b896da75ec6e92a, type: 2}
-  - {fileID: 2100000, guid: fce453a6721a6664ab273cb3b29f173a, type: 2}
-  - {fileID: 2100000, guid: 4ad77d2c1f69e7248a742507eabc5706, type: 2}
+  - {fileID: 2100000, guid: b6307f3ab1b5f414a8e666181f42ab00, type: 2}
+  - {fileID: 2100000, guid: 3e60597a3b4b65645ae0d685a5d14fcf, type: 2}
+  - {fileID: 2100000, guid: d20078db18f3eb746800fb0bc0928ebd, type: 2}
   - {fileID: 2100000, guid: 818a57f7b54a83d4988e4a3a5956d700, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1387,6 +1386,10 @@ PrefabInstance:
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 3659691701271155142}
+    - target: {fileID: 4743567652815826774, guid: 5dfc7b59cabb90546b6590c6f057eea9, type: 3}
+      propertyPath: HorizontalAxis.Center
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6234423322640308078, guid: 5dfc7b59cabb90546b6590c6f057eea9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
