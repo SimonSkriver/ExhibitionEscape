@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6c9b0a7795f62e43a2eba7ab9b0f094, type: 3}
-  m_Name: Banana
+  m_Name: Berries
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
-  itemName: Banana
-  itemType: 2
-  icon: {fileID: 21300000, guid: 500a724e6b6c4f549aedfd1e0253be4b, type: 3}
-  itemPrefab: {fileID: 3347418967427903102, guid: 6e85a724c79db47438f770fee0e3ab10, type: 3}
-  healAmount: 30
-  boostAmount: 5
+  itemName: Berries
+  itemType: 3
+  icon: {fileID: 21300000, guid: 16ba9ae2bcddce44483b12e6fc7323da, type: 3}
+  itemPrefab: {fileID: 611313050000275008, guid: 5d694589fea951c40bed93cb7b11ce33, type: 3}
+  healAmount: 10
+  boostAmount: 0

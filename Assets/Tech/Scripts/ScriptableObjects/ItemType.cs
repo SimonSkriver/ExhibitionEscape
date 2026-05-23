@@ -1,7 +1,7 @@
 public enum ItemType
 {
     Tool,
-    Material,
+    Apple,
     Banana,
     Berry,
     Coconut,

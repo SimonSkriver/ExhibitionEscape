@@ -5,16 +5,17 @@ public class FoodData : ItemData
 {
     [Header("(Hover below) Heal amount 0-100")]
     [Tooltip (
+    "Apple= 20\n" +
     "Banana = 30\n" +
     "Coconut = 20\n" +
     "Meat = 50\n" +
     "Berry = 10" )]
-    [Range(0, 100)]
     public int healAmount;
 
     [Space]
     [Header("(Hover below) Boost amount")]
     [Tooltip (
+    "Apple = Jump Boost + Movement Boost (2)\n" +
     "Banana = Jump Boost (5) \n" +
     "Coconut = Movement Speed Boost (10) \n" +
     "Meat = Strength (10) \n" +

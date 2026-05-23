@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - BananaPeel
   - Orientation
+  - Food
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Obstacle
   - Player
-  - 
+  - Food
   - 
   - 
   - 

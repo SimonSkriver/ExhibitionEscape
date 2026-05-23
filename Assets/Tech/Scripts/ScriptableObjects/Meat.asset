@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ceaef006a6edb4c8512419d9bee0d9, type: 3}
+  m_Name: Meat
+  m_EditorClassIdentifier: Assembly-CSharp::MeatData
+  itemName: Meat
+  itemType: 5
+  icon: {fileID: 21300000, guid: 7d265236c55f76344b4c750a3b3e0b5e, type: 3}
+  itemPrefab: {fileID: 7326735245159988429, guid: 9080759850a279b47b92782c0c3a37d9, type: 3}
+  healAmount: 50
+  boostAmount: 10
+  meatStages:
+  - inventoryIcon: {fileID: 21300000, guid: 7d265236c55f76344b4c750a3b3e0b5e, type: 3}
+    heldPrefab: {fileID: 7326735245159988429, guid: c2ce2e65e91af7e4083afe3d08cf9ac1, type: 3}
+  - inventoryIcon: {fileID: 21300000, guid: d8d6d73be8208d944aa18cabcd6f3c12, type: 3}
+    heldPrefab: {fileID: 7326735245159988429, guid: 9a333abb20ffc204b9691e248bcf50b6, type: 3}
+  - inventoryIcon: {fileID: 21300000, guid: 04921716a8c73c5469be0dcb621036e8, type: 3}
+    heldPrefab: {fileID: 7326735245159988429, guid: e7963abcfd0b04f45a3f6dd04c7904ba, type: 3}
+  - inventoryIcon: {fileID: 21300000, guid: c40545a4346a7b94da5ffb8ebe0468be, type: 3}
+    heldPrefab: {fileID: 7326735245159988429, guid: 4f99de609354c214ab97883c1bf496c9, type: 3}
