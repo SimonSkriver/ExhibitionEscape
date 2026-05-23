@@ -63,8 +63,9 @@ public class PlayerInteract : MonoBehaviour
     public void Interact()
     {
         if (interactableObject == null) return;
+
         interactableObject.Interact();
+        
         GetComponent<Animator>().SetTrigger("PICK_UP");
-        GetComponent<Animator>().ResetTrigger("PICK_UP");
     }        
 }
