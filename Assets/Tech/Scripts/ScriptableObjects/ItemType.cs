@@ -1,10 +1,6 @@
 public enum ItemType
 {
-    Tool,
-    Apple,
-    Banana,
-    Berry,
-    Coconut,
+    Fruit,
     Meat,
-    Other
+    Axe
 }

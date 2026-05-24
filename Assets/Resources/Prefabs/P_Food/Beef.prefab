@@ -232,10 +232,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1487558874368984138}
   - component: {fileID: 2594488766259229492}
-  - component: {fileID: 7044886245477755751}
   m_Layer: 0
   m_Name: Beef
-  m_TagString: Untagged
+  m_TagString: BananaPeel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,15 +277,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.47663912, y: 0.17469534, z: 0.71068704}
   m_Center: {x: 0.0032696724, y: 0.062430702, z: -0.1294295}
---- !u!114 &7044886245477755751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6166557738390847936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb11f0356b37907448a04abd53345fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractTester

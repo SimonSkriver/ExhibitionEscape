@@ -13,7 +13,16 @@ public class ItemPickup : MonoBehaviour, IInteractable
             return;
         }
 
-        InventoryManager.Instance.AddItem(itemData);
+        bool added = InventoryManager.Instance.AddItem(itemData);
+
+        if (!added) return;
+
+        Animator anim = GameObject.FindWithTag("Player").GetComponent<Animator>();
+
+        if (anim != null) 
+        {
+        anim.SetTrigger("PICK_UP");
+        }
 
         Destroy(gameObject);
     }

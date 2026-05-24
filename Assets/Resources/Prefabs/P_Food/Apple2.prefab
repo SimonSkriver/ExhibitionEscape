@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4035086922591275749}
   - component: {fileID: 4460969942875353620}
   - component: {fileID: 8752740699601257201}
-  - component: {fileID: 1173207237003061195}
+  - component: {fileID: 544463177886339816}
   m_Layer: 0
   m_Name: Apple2
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,7 +71,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: fce67b04003b9924694b4aef3e51207f, type: 2}
   - {fileID: 2100000, guid: 21845b559f1ea1d43b2a1a74c5916bc4, type: 2}
-  - {fileID: 2100000, guid: bb88818f76f7c634a8cbcac720b7d910, type: 2}
+  - {fileID: 2100000, guid: 3b7b3470b4be91d49aea691da04ba6f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,9 +132,9 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.12
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0.073678866, z: -0.000000014901161}
---- !u!114 &1173207237003061195
+--- !u!114 &544463177886339816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,6 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 274385080587330710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb11f0356b37907448a04abd53345fd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 467fdc0ec238b88448d290b6b32e2d65, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractTester
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
+  itemData: {fileID: 11400000, guid: 261eadd0ddb04bd4eab330181adb658e, type: 2}

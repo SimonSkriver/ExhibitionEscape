@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
   itemName: Apple
-  itemType: 1
   icon: {fileID: 21300000, guid: ce8374864b3ca604983d8e15c900728c, type: 3}
-  itemPrefab: {fileID: 274385080587330710, guid: e7b0b239c89e98e4ea26f781cebea6c7, type: 3}
-  healAmount: 20
-  boostAmount: 2
+  equippedPrefab: {fileID: 274385080587330710, guid: 37661bc75bab70249a21f242160949d6, type: 3}
+  itemType: 0
+  healthAmount: 20
+  givesMovementBoost: 1
+  movementBoostAmount: 2
+  movementBoostDuration: 10
+  givesJumpBoost: 1
+  jumpBoostAmount: 2
+  jumpBoostDuration: 10
+  spawnsObjectOnUse: 0
+  objectToSpawn: {fileID: 0}
