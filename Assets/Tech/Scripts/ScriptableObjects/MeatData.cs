@@ -27,37 +27,37 @@ public class MeatData : ItemData
 
     public GameObject bonePrefab;
 
-    public Sprite GetInventoryIcon(int stageIndex)
+    public Sprite GetInventoryIcon(int stage)
     {
         if (meatStages == null || meatStages.Count == 0)
             return icon;
 
-        stageIndex = Mathf.Clamp(stageIndex, 0, meatStages.Count - 1);
+        stage = Mathf.Clamp(stage, 0, meatStages.Count - 1);
 
-        if (meatStages[stageIndex].inventoryIcon == null)
+        if (meatStages[stage].inventoryIcon == null)
             return icon;
 
-        return meatStages[stageIndex].inventoryIcon;
+        return meatStages[stage].inventoryIcon;
     }
 
-    public GameObject GetHeldPrefab(int stageIndex)
+    public GameObject GetHeldPrefab(int stage)
     {
         if (meatStages == null || meatStages.Count == 0)
             return equippedPrefab;
 
-        stageIndex = Mathf.Clamp(stageIndex, 0, meatStages.Count - 1);
+        stage = Mathf.Clamp(stage, 0, meatStages.Count - 1);
 
-        if (meatStages[stageIndex].heldPrefab == null)
+        if (meatStages[stage].heldPrefab == null)
             return equippedPrefab;
 
-        return meatStages[stageIndex].heldPrefab;
+        return meatStages[stage].heldPrefab;
     }
 
-    public bool IsLastStage(int stageIndex)
+    public bool IsLastStage(int stage)
     {
         if (meatStages == null || meatStages.Count == 0)
             return true;
 
-        return stageIndex >= meatStages.Count - 1;
+        return stage >= meatStages.Count - 1;
     }
 }

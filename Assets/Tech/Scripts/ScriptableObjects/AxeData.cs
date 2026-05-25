@@ -4,5 +4,5 @@ using UnityEngine;
 public class AxeData : ItemData
 {
     [Header("Axe Settings")]
-    public float reach = 3f;
+    public float reach = 5f;
 }
