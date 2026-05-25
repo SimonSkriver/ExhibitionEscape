@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 6571923433663294185}
   - component: {fileID: 72742465125361895}
   - component: {fileID: 2145551601307726183}
+  - component: {fileID: 5575369567906724831}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -359,6 +360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   controller: {fileID: 0}
   orientation: {fileID: 0}
+  playerVelocity: {x: 0, y: 0, z: 0}
+  isGrounded: 0
   gravity: -8
   turnSpeed: 10
 --- !u!114 &7649747237781186817
@@ -373,11 +376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d224d5a50d45f4593cc2ab6c07182d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  Saturation: 0
   MovementSpeed: 5
   SprintSpeed: 7
   JumpPower: 0.5
-  Strength: 0
 --- !u!114 &7419039658769891899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658c493691150344dbce606e493957e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerUse
+  eyes: {fileID: 0}
+  animator: {fileID: 0}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &72742465125361895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +445,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f529f0bca368514e9ae6c7f50f3fcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHUD
+--- !u!114 &5575369567906724831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047162832961064572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aa2242f9d2e1246b47758b6f12a0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFallDamage
+  threshold: 3.5
+  dmgMultiplier: 2.5
 --- !u!1 &2245853109052884041
 GameObject:
   m_ObjectHideFlags: 0

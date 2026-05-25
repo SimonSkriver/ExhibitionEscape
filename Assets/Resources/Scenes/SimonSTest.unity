@@ -514,7 +514,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09430826, y: 0.000000041004927, z: -0.000000003884416, w: 0.99554306}
-  m_LocalPosition: {x: -12.87925, y: 22.45, z: -27.68819}
+  m_LocalPosition: {x: -12.87925, y: 53.07018, z: -27.68819}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2216,8 +2216,8 @@ Transform:
   m_GameObject: {fileID: 1413170166}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.87925, y: 13.854, z: -24.28819}
-  m_LocalScale: {x: 1, y: 12.3350725, z: 1}
+  m_LocalPosition: {x: -12.87925, y: 29.2137, z: -24.28819}
+  m_LocalScale: {x: 1, y: 43.052956, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2565,7 +2565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6234423322640308078, guid: 5dfc7b59cabb90546b6590c6f057eea9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.45
+      value: 53.07018
       objectReference: {fileID: 0}
     - target: {fileID: 6234423322640308078, guid: 5dfc7b59cabb90546b6590c6f057eea9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3184,7 +3184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3659691701271155142, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.2
+      value: 50.82018
       objectReference: {fileID: 0}
     - target: {fileID: 3659691701271155142, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3216,6 +3216,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3659691701271155142, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418673326483570804, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: HorizontalAxis.Center
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

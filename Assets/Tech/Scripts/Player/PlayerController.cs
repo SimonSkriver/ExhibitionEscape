@@ -5,20 +5,18 @@ public class PlayerController : MonoBehaviour
     [Header ("Info")]
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform orientation;
-    public Vector3 playerVelocity;
-    public bool isGrounded;
+    public bool isGrounded { get; private set; }
 
     [Header("Animation")]
     public Animator A { get; private set; }
     
-
     [Header ("Settings")]
     [SerializeField] private float gravity = -10f; 
     [SerializeField] private float turnSpeed = 5f; 
     
+    [HideInInspector] public Vector3 playerVelocity;
     private bool isSprinting;
-    bool isMoving;
-    private float moveSpeed;
+    private bool isMoving;
 
     void Awake()
     {
@@ -65,7 +63,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         //Read input and move speed
-        moveSpeed = isSprinting ? PlayerStats.Instance.SprintSpeed : PlayerStats.Instance.MovementSpeed; 
+        float moveSpeed = isSprinting ? PlayerStats.Instance.SprintSpeed : PlayerStats.Instance.MovementSpeed; 
         Vector2 moveInput = InputManager.Instance.moveInput;
 
         //Save moveinput in a Vector3 to combine with vertical velocity
