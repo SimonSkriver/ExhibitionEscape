@@ -7,7 +7,7 @@ public class PlayerUse : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [Header("Layers")]
-    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private LayerMask axeHitLayers;
 
     private void Awake()
     {
@@ -89,25 +89,41 @@ public class PlayerUse : MonoBehaviour
         }
     }
 
-    private void UseAxeItem(InventorySlot slot)
+   private void UseAxeItem(InventorySlot slot)
+{
+    AxeData axeData = slot.item as AxeData;
+
+    if (axeData == null)
     {
-        AxeData axeData = slot.item as AxeData;
+        Debug.LogWarning("Item is not AxeData");
+        return;
+    }
 
-        if (animator != null)
+    if (animator != null)
+    {
+        Debug.Log("Swung Axe");
+        animator.SetTrigger("AXE_SWING");
+    }
+
+    Ray ray = new Ray(eyes.position, eyes.forward);
+
+    Debug.DrawRay(eyes.position, eyes.forward * axeData.reach, Color.red, 2f);
+
+    if (Physics.Raycast(ray, out RaycastHit hit, axeData.reach, axeHitLayers, QueryTriggerInteraction.Collide))
+    {
+        Debug.Log("Axe hit: " + hit.collider.name);
+
+        DestroyableLog log = hit.collider.GetComponentInParent<DestroyableLog>();
+
+        if (log != null)
         {
-            animator.SetTrigger("AXE_SWING");
-        }
-
-        Ray ray = new Ray(eyes.position, eyes.forward);
-
-        if (Physics.Raycast(ray, out RaycastHit hit, axeData.reach, ~playerLayer))
-        {
-            DestroyableLog log = hit.collider.GetComponentInParent<DestroyableLog>();
-
-            if (log != null)
-            {
-                log.DestroyLog();
-            }
+            Debug.Log("Destroying log");
+            log.DestroyLog();
         }
     }
+    else
+    {
+        Debug.Log("Axe hit nothing");
+    }
+}
 }
