@@ -75,7 +75,7 @@ public class EquipController : MonoBehaviour
 
                 if (meatData == null)
                 {
-                    Debug.LogWarning(slot.item.itemName + " is marked as Meat but is not MeatData.");
+                    Debug.LogWarning(slot.item.itemName + " is not MeatData.");
                     return slot.item.equippedPrefab;
                 }
 
