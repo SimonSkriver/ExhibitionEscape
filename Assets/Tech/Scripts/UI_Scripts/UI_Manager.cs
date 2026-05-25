@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-public class UI_Manager : MonoBehaviour {
+public class UI_Manager : MonoBehaviour 
+{
     public static UI_Manager Instance;
     InputActionMap playerMap;
 
@@ -24,9 +25,7 @@ public class UI_Manager : MonoBehaviour {
         levelRoot.style.display = DisplayStyle.None;
 
         playerMap = InputSystem.actions.FindActionMap("Player");
-
         playerCam = GameObject.FindWithTag("CMcam");
-
     }
 
     void EnablePlayer() {
@@ -41,8 +40,6 @@ public class UI_Manager : MonoBehaviour {
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
     }
-
-
 
     public void PauseMenuUI() {
         Debug.Log(pauseRoot.style.display);

@@ -30,5 +30,6 @@ public class PlayerStats : MonoBehaviour
     public void RemoveHealth(int health) {
         Health -= health;
         PlayerHUD.Instance.UpdateHealthUI(Health);
+        Debug.Log(Health);
     }
 }
