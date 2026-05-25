@@ -26,6 +26,7 @@ public class InputManager : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerMovement = player.GetComponent<PlayerController>();
         playerInteract = player.GetComponent<PlayerInteract>();
+        playerUse = player.GetComponent<PlayerUse>();
 
         moveAction = playerInput.actions.FindAction("Move");
 

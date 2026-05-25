@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     [Header ("Info")]
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform orientation;
+    public Vector3 playerVelocity;
+    public bool isGrounded;
 
     [Header("Animation")]
     public Animator A { get; private set; }
@@ -14,11 +16,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravity = -10f; 
     [SerializeField] private float turnSpeed = 5f; 
     
-    private bool isGrounded;
     private bool isSprinting;
     bool isMoving;
     private float moveSpeed;
-    private Vector3 playerVelocity;
 
     void Awake()
     {
