@@ -5,36 +5,32 @@ public class FOVChanger : MonoBehaviour
 {
     [Header ("Info")]
     [SerializeField] private PlayerController player;
+    [SerializeField] private CinemachineCamera cam;
 
     [Header ("Settings")]
-    [Tooltip ("How much the FOV should increase when sprinting")]
-    [SerializeField] float fovIncrease = 10f;
+    [Tooltip ("How fast the camera zooms in and out")]
     [SerializeField] float lerpSpeed = 5f;
+    [SerializeField] private float walkFOV = 60;
+    [SerializeField] private float sprintFOV = 80;
 
-    private float walkFOV = 60;
-    private float sprintFOV;
-    float FOV;
 
     void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
-        FOV = GetComponent<CinemachineCamera>().Lens.FieldOfView;
-    }
-
-    void Start()
-    {
-        sprintFOV = walkFOV + fovIncrease;
+        cam = GetComponent<CinemachineCamera>();
     }
 
     void Update()
     {
+        float currentFOV = cam.Lens.FieldOfView;
+
         if (player.isSprinting)
         {
-            FOV = sprintFOV;
+            cam.Lens.FieldOfView = Mathf.Lerp(currentFOV, sprintFOV, Time.deltaTime * lerpSpeed);
         }
         else
         {
-            FOV = walkFOV;
+            cam.Lens.FieldOfView = Mathf.Lerp(currentFOV, walkFOV, Time.deltaTime * lerpSpeed);
         }
     }
 }

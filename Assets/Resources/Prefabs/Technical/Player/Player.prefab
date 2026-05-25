@@ -1123,9 +1123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FOVChanger
   player: {fileID: 0}
-  fovIncrease: 10
+  cam: {fileID: 0}
   lerpSpeed: 5
-  currentFOV: 0
+  walkFOV: 60
+  sprintFOV: 70
 --- !u!1 &5778194878056416259
 GameObject:
   m_ObjectHideFlags: 0
