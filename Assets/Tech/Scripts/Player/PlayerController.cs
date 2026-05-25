@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 5f; 
     
     [HideInInspector] public Vector3 playerVelocity;
-    private bool isSprinting;
+    public bool isSprinting { get; private set; }
     private bool isMoving;
 
     void Awake()
