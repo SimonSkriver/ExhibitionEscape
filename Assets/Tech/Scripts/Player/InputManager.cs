@@ -53,6 +53,9 @@ public class InputManager : MonoBehaviour
                 InventoryManager.Instance.ScrollSelect(scrollValue.y);
             }
         };
+
+        playerInput.actions.FindAction("Pause").performed += ctx => UI_Manager.Instance.PauseMenuUI();
+
     }
 
     void Update()
