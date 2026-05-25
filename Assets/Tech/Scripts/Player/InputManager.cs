@@ -34,6 +34,8 @@ public class InputManager : MonoBehaviour
         playerInput.actions.FindAction("Sprint").canceled += ctx => playerMovement.Sprint();
         playerInput.actions.FindAction("Use").performed += ctx => playerUse.Use();
         playerInput.actions.FindAction("Interact").performed += ctx => playerInteract.Interact();
+
+        playerInput.actions.FindAction("Pause").performed += ctx => UI_Manager.Instance.PauseMenuUI();
     }
 
     void Update()
