@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7479135395133610480}
   - component: {fileID: 5542970634571637471}
   - component: {fileID: 1315999702585956524}
-  - component: {fileID: 5492123901982764299}
   - component: {fileID: -4135655747049401766}
   m_Layer: 8
   m_Name: Banana2
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -133,20 +132,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.39718485
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0.13289031, z: -0.010230467}
---- !u!114 &5492123901982764299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3347418967427903102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb11f0356b37907448a04abd53345fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractTester
 --- !u!114 &-4135655747049401766
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Coconut
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
   itemName: Coconut
-  itemType: 4
   icon: {fileID: 21300000, guid: 606be407558219941a5f7fd07ef2d7cd, type: 3}
-  itemPrefab: {fileID: 4516666075083856654, guid: 817f06e8eee8d2e458d7a4ea04fbb81e, type: 3}
-  healAmount: 20
-  boostAmount: 10
+  equippedPrefab: {fileID: 0}
+  itemType: 0
+  healthAmount: 20
+  givesMovementBoost: 1
+  movementBoostAmount: 5
+  movementBoostDuration: 0
+  givesJumpBoost: 0
+  jumpBoostAmount: 0
+  jumpBoostDuration: 0
+  spawnsObjectOnUse: 0
+  objectToSpawn: {fileID: 0}

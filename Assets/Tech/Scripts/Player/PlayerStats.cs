@@ -6,11 +6,9 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Stats")]
     int Health;
-    public float Saturation;
     public float MovementSpeed;
     public float SprintSpeed;
     public float JumpPower;
-    public float Strength;
 
     void Awake()
     {
@@ -19,7 +17,6 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             Health = 100;
-            Saturation = 100;
         }
     }
     

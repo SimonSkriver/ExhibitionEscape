@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Meat
   m_EditorClassIdentifier: Assembly-CSharp::MeatData
   itemName: Meat
-  itemType: 5
   icon: {fileID: 21300000, guid: 7d265236c55f76344b4c750a3b3e0b5e, type: 3}
-  itemPrefab: {fileID: 7326735245159988429, guid: 9080759850a279b47b92782c0c3a37d9, type: 3}
-  healAmount: 50
-  boostAmount: 10
+  equippedPrefab: {fileID: 7326735245159988429, guid: c2ce2e65e91af7e4083afe3d08cf9ac1, type: 3}
+  itemType: 1
+  healthAmount: 50
+  enablesBoulderBreaking: 1
+  boulderBreakingDuration: 20
   meatStages:
   - inventoryIcon: {fileID: 21300000, guid: 7d265236c55f76344b4c750a3b3e0b5e, type: 3}
     heldPrefab: {fileID: 7326735245159988429, guid: c2ce2e65e91af7e4083afe3d08cf9ac1, type: 3}
@@ -27,3 +28,4 @@ MonoBehaviour:
     heldPrefab: {fileID: 7326735245159988429, guid: e7963abcfd0b04f45a3f6dd04c7904ba, type: 3}
   - inventoryIcon: {fileID: 21300000, guid: c40545a4346a7b94da5ffb8ebe0468be, type: 3}
     heldPrefab: {fileID: 7326735245159988429, guid: 4f99de609354c214ab97883c1bf496c9, type: 3}
+  bonePrefab: {fileID: 7326735245159988429, guid: 5c76126e04d52614bb60767f2195cdc6, type: 3}

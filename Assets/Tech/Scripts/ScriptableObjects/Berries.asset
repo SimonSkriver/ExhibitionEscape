@@ -13,8 +13,15 @@ MonoBehaviour:
   m_Name: Berries
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
   itemName: Berries
-  itemType: 3
   icon: {fileID: 21300000, guid: 16ba9ae2bcddce44483b12e6fc7323da, type: 3}
-  itemPrefab: {fileID: 611313050000275008, guid: 5d694589fea951c40bed93cb7b11ce33, type: 3}
-  healAmount: 10
-  boostAmount: 0
+  equippedPrefab: {fileID: 611313050000275008, guid: 5d694589fea951c40bed93cb7b11ce33, type: 3}
+  itemType: 0
+  healthAmount: 10
+  givesMovementBoost: 0
+  movementBoostAmount: 0
+  movementBoostDuration: 0
+  givesJumpBoost: 0
+  jumpBoostAmount: 0
+  jumpBoostDuration: 0
+  spawnsObjectOnUse: 0
+  objectToSpawn: {fileID: 0}

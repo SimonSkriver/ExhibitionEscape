@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2616837220111677706}
   - component: {fileID: 7398757362623076163}
   - component: {fileID: 6411590902363993928}
+  - component: {fileID: 9039299169751561429}
   m_Layer: 8
   m_Name: Berry1Stilk (1)
   m_TagString: Untagged
@@ -90,6 +91,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9039299169751561429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370733812744995884}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1774247600457552142
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +120,7 @@ GameObject:
   - component: {fileID: 4781688522295862979}
   - component: {fileID: 386016532368179897}
   - component: {fileID: 3188183525251643580}
+  - component: {fileID: 6681172934812065078}
   m_Layer: 8
   m_Name: Berry2
   m_TagString: Untagged
@@ -180,6 +200,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6681172934812065078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774247600457552142}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1971058634085088442
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +229,7 @@ GameObject:
   - component: {fileID: 3268672954631684148}
   - component: {fileID: 2662075613529375202}
   - component: {fileID: 5041632026610827063}
+  - component: {fileID: 6154982848055565593}
   m_Layer: 8
   m_Name: Berry2Stilk
   m_TagString: Untagged
@@ -270,6 +309,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6154982848055565593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971058634085088442}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7749540780602881826
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +338,7 @@ GameObject:
   - component: {fileID: 8664729069993816343}
   - component: {fileID: 5185359447960871626}
   - component: {fileID: 6536995564937257821}
+  - component: {fileID: 7991126190365843404}
   m_Layer: 8
   m_Name: Berry1 (1)
   m_TagString: Untagged
@@ -360,6 +418,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7991126190365843404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749540780602881826}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &340787216707914513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -594,6 +670,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34d27fa257e46c641b5bcd833bfd57cf, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3445163507340284248}
+    - targetCorrespondingSourceObject: {fileID: 6324240423935976452, guid: 34d27fa257e46c641b5bcd833bfd57cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4496949573837563030}
+    - targetCorrespondingSourceObject: {fileID: 6524296907165094974, guid: 34d27fa257e46c641b5bcd833bfd57cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2076388010988697182}
   m_SourcePrefab: {fileID: 100100000, guid: 34d27fa257e46c641b5bcd833bfd57cf, type: 3}
 --- !u!4 &229685051978411258 stripped
 Transform:
@@ -620,11 +702,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.058775675
+  m_Radius: 0.2
   m_Center: {x: -0.021888878, y: 8.408642e-12, z: -0.01080024}
 --- !u!114 &-3445163507340284248
 MonoBehaviour:
@@ -639,3 +721,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemData: {fileID: 11400000, guid: ce26626541dfff04692f4b01393e18ca, type: 2}
+--- !u!1 &6016403397492616981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6324240423935976452, guid: 34d27fa257e46c641b5bcd833bfd57cf, type: 3}
+  m_PrefabInstance: {fileID: 340787216707914513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4496949573837563030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016403397492616981}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!1 &6787009658585341743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6524296907165094974, guid: 34d27fa257e46c641b5bcd833bfd57cf, type: 3}
+  m_PrefabInstance: {fileID: 340787216707914513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2076388010988697182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787009658585341743}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Outline
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

@@ -1,21 +1,26 @@
-using UnityEngine;
-
 [System.Serializable]
 public class InventorySlot
 {
     public ItemData item;
-    public int count;
-    public bool IsEmpty => item == null || count <= 0;
+    public int currentStage;
+
+    public bool IsEmpty => item == null;
 
     public InventorySlot()
     {
         item = null;
-        count = 0 ;
+        currentStage = 0;
     }
 
-    public InventorySlot(ItemData item, int count)
+    public void SetItem(ItemData newItem)
     {
-        this.item = item;
-        this.count = count;
+        item = newItem;
+        currentStage = 0;
+    }
+
+    public void Clear()
+    {
+        item = null;
+        currentStage = 0;
     }
 }

@@ -3,18 +3,13 @@ using UnityEngine;
 //[CreateAssetMenu(fileName = "ItemData", menuName = "Scriptable Objects/ItemData")]
 public class ItemData : ScriptableObject
 {
-    [Header("Basic info")]
-    [Tooltip("Name to be displayed in inventory")]
-    public string itemName = "New Item";
-
-    [Space]
-    public ItemType itemType = ItemType.Other;
-
-    [Space]
-    [Tooltip("Picture to be displayed in inventory")]
+    [Header("Basic Info")]
+    public string itemName;
     public Sprite icon;
 
-    [Space]
-    [Tooltip("Item to be spawned in hand when equipping")]
-    public GameObject itemPrefab;
+    [Header("Equipped Prefab")]
+    public GameObject equippedPrefab;
+
+    [Header("Item Type")]
+    public ItemType itemType;
 }
