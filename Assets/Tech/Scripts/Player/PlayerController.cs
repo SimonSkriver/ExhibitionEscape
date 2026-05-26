@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isGrounded)
         {
+            SFXManager.PlayEffect("Jump");
             float jumpPower = PlayerStats.Instance.JumpPower;
             playerVelocity.y = Mathf.Sqrt(jumpPower * -1f * gravity);
             A.SetFloat("playerVelocity", playerVelocity.y);
