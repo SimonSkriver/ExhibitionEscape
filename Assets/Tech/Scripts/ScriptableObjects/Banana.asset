@@ -21,7 +21,7 @@ MonoBehaviour:
   movementBoostAmount: 0
   movementBoostDuration: 0
   givesJumpBoost: 1
-  jumpBoostAmount: 5
+  jumpBoostAmount: 1
   jumpBoostDuration: 10
   spawnsObjectOnUse: 1
   objectToSpawn: {fileID: 6166557738390847936, guid: 8da3b40598a2d3d41bab1ec51bbdd19b, type: 3}
