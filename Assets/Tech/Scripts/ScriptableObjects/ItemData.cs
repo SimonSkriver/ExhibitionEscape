@@ -9,6 +9,8 @@ public class ItemData : ScriptableObject
 
     [Header("Equipped Prefab")]
     public GameObject equippedPrefab;
+    public Vector3 positionOffSet;
+    public Quaternion rotation;
 
     [Header("Item Type")]
     public ItemType itemType;

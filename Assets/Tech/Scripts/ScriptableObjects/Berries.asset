@@ -15,6 +15,8 @@ MonoBehaviour:
   itemName: Berries
   icon: {fileID: 21300000, guid: 16ba9ae2bcddce44483b12e6fc7323da, type: 3}
   equippedPrefab: {fileID: 611313050000275008, guid: 5d694589fea951c40bed93cb7b11ce33, type: 3}
+  positionOffSet: {x: 0.228, y: -0.046, z: 0.044}
+  rotation: {x: 0.12799445, y: 0.10541226, z: 0.34348783, w: 0.9244035}
   itemType: 0
   healthAmount: 10
   givesMovementBoost: 0

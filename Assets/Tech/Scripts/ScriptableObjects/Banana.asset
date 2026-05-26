@@ -15,6 +15,8 @@ MonoBehaviour:
   itemName: Banana
   icon: {fileID: 21300000, guid: 500a724e6b6c4f549aedfd1e0253be4b, type: 3}
   equippedPrefab: {fileID: 3347418967427903102, guid: 6e85a724c79db47438f770fee0e3ab10, type: 3}
+  positionOffSet: {x: 0, y: -0.19, z: 0.11}
+  rotation: {x: -0.042992562, y: -0.38010395, z: 0.49114072, w: 0.78259414}
   itemType: 0
   healthAmount: 30
   givesMovementBoost: 0

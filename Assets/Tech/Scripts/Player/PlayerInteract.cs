@@ -6,7 +6,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Transform eyes;
 
     [Header ("Settings")]
-    [SerializeField] private float reach = 5f;
+    [SerializeField] private float reach = 8f;
 
     private IInteractable interactableObject;
     private LayerMask layerMask;
