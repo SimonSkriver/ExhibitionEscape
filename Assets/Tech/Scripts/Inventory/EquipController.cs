@@ -58,7 +58,7 @@ public class EquipController : MonoBehaviour
         currentEquippedObject = Instantiate(prefabToEquip, handTransform.position, handTransform.rotation, handTransform);
 
         currentEquippedObject.transform.localPosition = selectedSlot.item.positionOffSet;
-        currentEquippedObject.transform.localRotation = selectedSlot.item.rotation;
+        currentEquippedObject.transform.localRotation = Quaternion.Euler(selectedSlot.item.rotationOffset);
 
         Debug.Log("Equipped: " + selectedSlot.item.itemName);
     }
