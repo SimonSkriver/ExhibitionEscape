@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     
     [HideInInspector] public Vector3 playerVelocity;
     public bool isSprinting { get; private set; }
-    private bool isMoving;
+    public bool isMoving { get; private set; }
 
     void Awake()
     {
@@ -98,6 +98,10 @@ public class PlayerController : MonoBehaviour
         // Sprint Animation
         if (isMoving) {
             A.SetBool("isRunning", isSprinting);
+        }
+        else
+        {
+            A.SetBool("isRunning", false);
         }
     }
 }

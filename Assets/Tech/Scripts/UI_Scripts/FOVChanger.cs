@@ -24,7 +24,7 @@ public class FOVChanger : MonoBehaviour
     {
         float currentFOV = cam.Lens.FieldOfView;
 
-        if (player.isSprinting)
+        if (player.isSprinting && player.isMoving)
         {
             cam.Lens.FieldOfView = Mathf.Lerp(currentFOV, sprintFOV, Time.deltaTime * lerpSpeed);
         }

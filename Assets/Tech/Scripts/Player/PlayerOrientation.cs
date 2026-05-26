@@ -5,7 +5,7 @@ public class PlayerOrientation : MonoBehaviour
     [Header ("Info")]
     [SerializeField] Transform cameraTransform;
 
-    void Start()
+    void Awake()
     {
         cameraTransform = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
     }
