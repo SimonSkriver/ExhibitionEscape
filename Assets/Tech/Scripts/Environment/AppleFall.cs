@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class AppleFall : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Rigidbody rb;
+    private bool hasLanded;
+
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (hasLanded) return;
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            hasLanded = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
     }
 }

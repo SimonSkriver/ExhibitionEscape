@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class DestroyableLog : MonoBehaviour, IInteractable
 {
     [SerializeField] private TreeType treeType;
@@ -6,11 +7,15 @@ public class DestroyableLog : MonoBehaviour, IInteractable
     [Header("Make list with fruit gameobjects on tree")]
     [SerializeField] private GameObject[] apples;
     [SerializeField] private GameObject[] coconuts;
- public void Interact()
+
+    public void Interact()
     {
-        if(HasAxeEquipped()) DestroyLog();
+        if (HasAxeEquipped())
+        {
+            DestroyLog();
+        }
     }
-    
+
     public void DestroyLog()
     {
         switch (treeType)
@@ -20,28 +25,44 @@ public class DestroyableLog : MonoBehaviour, IInteractable
                 break;
 
             case TreeType.AppleTree:
-                foreach (GameObject apple in apples)
-                {
-                    Rigidbody rb = apple.GetComponent<Rigidbody>();
-                    rb.constraints = ~RigidbodyConstraints.FreezePositionY;
-                }
+                DropFruits(apples);
                 Destroy(gameObject);
                 break;
 
             case TreeType.CoconutTree:
-                foreach (GameObject coconut in coconuts)
-                {
-                    Rigidbody rb = coconut.GetComponent<Rigidbody>();
-                    rb.constraints = ~RigidbodyConstraints.FreezePositionY;
-                }
+                DropFruits(coconuts);
                 Destroy(gameObject);
                 break;
+        }
+    }
+
+    private void DropFruits(GameObject[] fruits)
+    {
+        foreach (GameObject fruit in fruits)
+        {
+            if (fruit == null) continue;
+
+            fruit.transform.SetParent(null);
+
+            Rigidbody rb = fruit.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+            }
         }
     }
 
     private bool HasAxeEquipped()
     {
         InventorySlot equippedSlot = InventoryManager.Instance.GetSelectedSlot();
+
+        if (equippedSlot == null || equippedSlot.item == null)
+        {
+            Debug.LogWarning("No item equipped");
+            return false;
+        }
+
         AxeData axeData = equippedSlot.item as AxeData;
 
         if (axeData == null)
@@ -49,6 +70,7 @@ public class DestroyableLog : MonoBehaviour, IInteractable
             Debug.LogWarning("Item is not AxeData");
             return false;
         }
-        else return true;
+
+        return true;
     }
 }
