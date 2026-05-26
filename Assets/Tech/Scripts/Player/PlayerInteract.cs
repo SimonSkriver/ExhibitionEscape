@@ -28,6 +28,7 @@ public class PlayerInteract : MonoBehaviour
                 Clear(); // Ensure no other outlines are drawn and variables are clear before drawing and assigning
                 interactableObject = currentObj;
                 currentOutline = hit.collider.transform.GetComponentsInChildren<Outline>();
+
                 DrawOutline(currentOutline);
             }
         }
@@ -35,13 +36,21 @@ public class PlayerInteract : MonoBehaviour
         {
             Clear();
         }
+
+        Debug.DrawRay(eyes.position, eyes.forward * reach, Color.blue);
     }
 
-    void DrawOutline(Outline[] outline)
+    private void DrawOutline(Outline[] outlines)
     {
-        foreach (Outline outlineComponent in outline)
+        if (outlines == null)
+            return;
+
+        foreach (Outline outline in outlines)
         {
-            outlineComponent.enabled = true;
+            if (outline != null)
+            {
+                outline.enabled = true;
+            }
         }
     }
 
@@ -49,9 +58,12 @@ public class PlayerInteract : MonoBehaviour
     {
         if (currentOutline != null)
         {
-            foreach (Outline outlines in currentOutline)
+            foreach (Outline outline in currentOutline)
             {
-                outlines.enabled = false;
+                if(outline != null)
+                {
+                    outline.enabled = false;
+                }
             }
         }
         currentOutline = null;
@@ -61,6 +73,10 @@ public class PlayerInteract : MonoBehaviour
     public void Interact()
     {
         if (interactableObject == null) return;
-        interactableObject.Interact();
+        IInteractable ObjectToInteractWith = interactableObject;
+
+        Clear();
+
+        ObjectToInteractWith.Interact();
     }        
 }
