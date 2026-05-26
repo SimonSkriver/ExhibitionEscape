@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between; margin-top: -5px; margin-right: -5px; margin-bottom: -5px; margin-left: -5px;">
+        <ui:Button text="&lt;" name="PREVIOUS" class="levelSelectButton" style="white-space: nowrap;"/>
+        <ui:Button text="&gt;" name="NEXT" class="levelSelectButton" style="white-space: nowrap;"/>
+    </ui:VisualElement>
+</ui:UXML>

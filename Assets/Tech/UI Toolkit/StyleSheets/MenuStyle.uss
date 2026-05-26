@@ -47,3 +47,33 @@
     color: rgb(40, 166, 96);
     -unity-text-outline-color: rgb(40, 166, 96);
 }
+
+.levelSelectButton {
+    -unity-font-style: bold;
+    font-size: 100px;
+    background-color: rgba(28, 35, 60, 0.392);
+    color: rgb(226, 229, 241);
+    width: 12%;
+}
+
+.levelSelectButton:hover {
+    -unity-font-style: bold;
+    font-size: 100px;
+    background-color: rgba(226, 229, 241, 0.392);
+    color: rgb(28, 35, 60);
+}
+
+.levelSelectButton:active {
+    -unity-font-style: bold;
+    font-size: 100px;
+    background-color: rgba(157, 214, 150, 0.392);
+    color: rgb(214, 238, 212);
+}
+
+.customizeText {
+}
+
+.customizeButton {
+    width: 100px;
+    height: 100px;
+}
