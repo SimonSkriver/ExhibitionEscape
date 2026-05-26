@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance;
 
     [Header("Stats")]
-    int Health;
+    public int Health { get; private set; }
     public float MovementSpeed;
     public float SprintSpeed;
     public float JumpPower;
@@ -15,7 +16,6 @@ public class PlayerStats : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             Health = 100;
         }
     }
@@ -31,5 +31,10 @@ public class PlayerStats : MonoBehaviour
         Health -= health;
         PlayerHUD.Instance.UpdateHealthUI(Health);
         Debug.Log(Health);
+        if (Health <= 0)
+        {
+            string currentScene = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
+        }
     }
 }
