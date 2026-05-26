@@ -52,7 +52,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 0.5
-    - _Be_Wavy_Wit_It: 0
+    - _Be_Wavy_Wit_It: 1
     - _Float: -8
     - _Foaf_Cutoff: 0
     - _Foam_Amount: 10
@@ -66,9 +66,13 @@ Material:
     - _Ripple_Size: 11.19
     - _Ripple_Speed: 3
     - _Water_Depth: 10
+    - _Wave_Instensity: 0.1
+    - _Wave_Intensity: 0.001
     - _Wave_Speed: 0.1
+    - _Wave_Tiling: 1
     m_Colors:
     - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Foam_Tiling: {r: 100, g: 100, b: 0, a: 0}
     - _Ripple_Color: {r: 1.039024, g: 1.73164, b: 1.9493195, a: 1}
     - _Tiling: {r: 100, g: 100, b: 0, a: 0}
     - _WaterColor: {r: 0.35826805, g: 0.7638341, b: 0.9150943, a: 1}

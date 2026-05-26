@@ -2432,6 +2432,24 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Texture2DInputMaterialSlot",
+    "m_ObjectId": "401a410f251e4ae692d22af8c6a381b3",
+    "m_Id": -1557260892,
+    "m_DisplayName": "WindGradient",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_WindGradient",
+    "m_StageCapability": 3,
+    "m_BareResource": false,
+    "m_Texture": {
+        "m_SerializedTexture": "",
+        "m_Guid": ""
+    },
+    "m_DefaultType": 0
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "41f1dc5f489b47b193f3f8834a752356",
     "m_Id": 0,
@@ -3143,6 +3161,9 @@
             "m_Id": "1410d96ff8024185a28879125dfdcc4c"
         },
         {
+            "m_Id": "401a410f251e4ae692d22af8c6a381b3"
+        },
+        {
             "m_Id": "d0a6b609e02c4220b8b3f49027e593e1"
         }
     ],
@@ -3158,12 +3179,14 @@
     "m_PropertyGuids": [
         "fb3c9b8c-9a4e-46d6-882e-3673a93cc22c",
         "84d7413f-e61e-4863-9806-ef5a2bced06a",
-        "d2ebbbb2-ba6b-4c2e-8b88-555225e6f9a1"
+        "d2ebbbb2-ba6b-4c2e-8b88-555225e6f9a1",
+        "dd42ec66-76fc-4000-adc5-4f11934a232f"
     ],
     "m_PropertyIds": [
         -501345309,
         -57970798,
-        1835626359
+        1835626359,
+        -1557260892
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
