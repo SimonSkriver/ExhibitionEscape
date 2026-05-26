@@ -12,7 +12,6 @@ public class GameUI : MonoBehaviour {
         foreach (var btn in pauseButtons) {
             btn.RegisterCallback<ClickEvent>(OnPauseButton);
         }
-        Debug.Log(pauseButtons.Count);
     }
 
     void OnPauseButton(ClickEvent evt) {
