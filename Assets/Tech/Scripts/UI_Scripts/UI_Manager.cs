@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 public class UI_Manager : MonoBehaviour 
 {
     public static UI_Manager Instance;
-    
 
     VisualElement root;
     TemplateContainer pauseRoot, levelRoot, customizeRoot, dialogueRoot;
@@ -34,6 +33,8 @@ public class UI_Manager : MonoBehaviour
         pauseRoot.style.display = DisplayStyle.None;
         levelRoot.style.display = DisplayStyle.None;
         dialogueRoot.style.display = DisplayStyle.None;
+
+        //StartCoroutine(ScreenTransition());
     }
 
     public void PauseMenuUI() {
@@ -56,6 +57,29 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    public IEnumerator ScreenTransition() {
+        float alpha = 0;
+
+        // Fade in
+        while (alpha < 1 ) {
+            yield return new WaitForSeconds(0.01f);
+            alpha += 0.01f;
+            root.Q<VisualElement>("TransitionScreen").style.backgroundColor = new Color(1, 1, 1, alpha);
+            if (alpha > 1) { alpha = 1; }
+            Debug.Log(alpha);
+        }
+
+        yield return new WaitUntil(() => alpha.Equals(1));
+        yield return new WaitForSeconds(1f);
+
+        // Fade out
+        while (alpha > 0) {
+            yield return new WaitForSeconds(0.01f);
+            alpha -= 0.01f;
+            root.Q<VisualElement>("TransitionScreen").style.backgroundColor = new Color(1, 1, 1, alpha);
+            Debug.Log(alpha);
+        }
+    }
 
     #region Dialogue
     public void ShowDialogueUI() {
