@@ -82,15 +82,15 @@ public class InputManager : MonoBehaviour
     }
 
     public void EnablePlayer() {
-        playerMap.Enable();
-        playerCam.SetActive(true);
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         UnityEngine.Cursor.visible = false;
+        playerMap.Enable();
+        playerCam.SetActive(true);
     }
     public void DisablePlayer() {
-        playerMap.Disable();
-        playerCam.SetActive(false);
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
+        playerMap.Disable();
+        playerCam.SetActive(false);
     }
 }

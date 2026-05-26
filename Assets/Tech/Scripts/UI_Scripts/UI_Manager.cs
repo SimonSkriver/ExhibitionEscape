@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using Ink.Runtime;
 
 public class UI_Manager : MonoBehaviour 
 {
@@ -10,7 +11,8 @@ public class UI_Manager : MonoBehaviour
     VisualElement root;
     TemplateContainer pauseRoot, levelRoot, customizeRoot, dialogueRoot;
 
-    
+    Label dialogueText;
+    List<Button> choices = new List<Button>();
 
     private void Awake() {
         if (Instance != null) { Destroy(gameObject); }
@@ -20,10 +22,16 @@ public class UI_Manager : MonoBehaviour
         pauseRoot = root.Q<TemplateContainer>("PauseMenu");
         levelRoot = root.Q<TemplateContainer>("LevelSelect");
         //customizeRoot = root.Q<TemplateContainer>("CustomizeMenu");
-        dialogueRoot = root.Q<TemplateContainer>("DialogueMenu");
 
+        // Dialogue
+        dialogueRoot = root.Q<TemplateContainer>("DialogueMenu");
+        dialogueText = dialogueRoot.Q<Label>("DialogueText");
+        choices = dialogueRoot.Query<Button>().ToList();
+
+        // Apply display style
         pauseRoot.style.display = DisplayStyle.None;
         levelRoot.style.display = DisplayStyle.None;
+        dialogueRoot.style.display = DisplayStyle.None;
     }
 
     public void PauseMenuUI() {
@@ -45,4 +53,34 @@ public class UI_Manager : MonoBehaviour
             InputManager.Instance.EnablePlayer();
         }
     }
+
+
+    #region Dialogue
+    public void ShowDialogueUI() {
+        dialogueRoot.style.display = DisplayStyle.Flex;
+        InputManager.Instance.DisablePlayer();
+    }
+
+    public void HideDialogueUI() {
+        dialogueRoot.style.display = DisplayStyle.None;
+        InputManager.Instance.EnablePlayer();
+    }
+
+    public void DisplayDialogue(string dialogueLine, List<Choice> dialogueChoices) {
+        dialogueText.text = dialogueLine;
+
+        //enable and set choice info depending on ink information
+        foreach (Choice choice in dialogueChoices) {
+            choices[choice.index].text = choice.text;
+            choices[choice.index].style.display = DisplayStyle.Flex;
+        }
+    }
+
+    public void HideChoices() {
+        foreach (var choice in choices) {
+            choice.RegisterCallback<ClickEvent>(OnChoiceSelected);
+            choice.style.display = DisplayStyle.None;
+        }
+    }
+    #endregion
 }

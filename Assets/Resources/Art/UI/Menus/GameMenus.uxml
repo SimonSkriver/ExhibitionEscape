@@ -2,7 +2,7 @@
     <ui:Template name="DialogueMenu" src="project://database/Assets/Resources/Art/UI/Menus/DialogueMenu.uxml?fileID=9197481963319205126&amp;guid=b31d63cd1f9f36e49b809f31de10c371&amp;type=3#DialogueMenu"/>
     <ui:Template name="LevelSelectMenu" src="project://database/Assets/Resources/Art/UI/Menus/LevelSelectMenu.uxml?fileID=9197481963319205126&amp;guid=f075467264c87ae4e97a4749a80fe18a&amp;type=3#LevelSelectMenu"/>
     <ui:Template name="PauseMenu" src="project://database/Assets/Resources/Art/UI/Menus/PauseMenu.uxml?fileID=9197481963319205126&amp;guid=80174141c1158a94a9f980bbec6f8d06&amp;type=3#PauseMenu"/>
-    <ui:Instance template="PauseMenu" name="PauseMenu" style="width: 100%; height: 100%; justify-content: center; align-self: center; align-items: center; background-color: rgba(0, 0, 0, 0.784); display: none;"/>
-    <ui:Instance template="LevelSelectMenu" name="LevelSelect" style="width: 100%; height: 100%; display: none;"/>
     <ui:Instance template="DialogueMenu" name="DialogueMenu" style="width: 100%; height: 25%; flex-direction: column; position: absolute; bottom: 0; border-left-width: 200px; border-right-width: 200px; border-bottom-width: 20px; display: none;"/>
+    <ui:Instance template="LevelSelectMenu" name="LevelSelect" style="width: 100%; height: 100%; display: none;"/>
+    <ui:Instance template="PauseMenu" name="PauseMenu" style="width: 100%; height: 100%; justify-content: center; align-self: center; align-items: center; background-color: rgba(0, 0, 0, 0.784); display: none;"/>
 </ui:UXML>
