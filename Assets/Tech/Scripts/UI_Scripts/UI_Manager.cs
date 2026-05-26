@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.UIElements;
-using Ink.Runtime;
 
 public class UI_Manager : MonoBehaviour 
 {
@@ -81,6 +81,14 @@ public class UI_Manager : MonoBehaviour
             choice.RegisterCallback<ClickEvent>(OnChoiceSelected);
             choice.style.display = DisplayStyle.None;
         }
+    }
+
+    void OnChoiceSelected(ClickEvent evt) {
+        Button button = (Button)evt.currentTarget;
+
+
+        UI_Manager.Instance.HideChoices();
+        Debug.Log("You chose " + button.tabIndex);
     }
     #endregion
 }
