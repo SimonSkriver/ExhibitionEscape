@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6334388854531790833}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -95,6 +95,74 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ca707bc7-70fa-41d5-b33d-f8adc3e01952
     m_ActionName: 'Player/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: deac97e9-f307-4360-9f5c-c5900d96fd79
+    m_ActionName: 'Player/Slot1[/Keyboard/1]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d2781a10-c254-4e41-8d49-2824e013c287
+    m_ActionName: 'Player/Slot2[/Keyboard/2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cb383dba-59fd-4a9b-8335-7e0e6f7c45e1
+    m_ActionName: 'Player/Slot3[/Keyboard/3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95a8dddb-6fd5-4768-b8c6-4c268bac677b
+    m_ActionName: 'Player/Slot4[/Keyboard/4]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5133b958-99d8-49c2-b622-c636706dbcc9
+    m_ActionName: 'Player/Slot5[/Keyboard/5]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5eb92936-b4d6-4d5f-ba8d-0baba8666cf4
+    m_ActionName: 'Player/Scroll[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2b9d4403-4cc2-43d1-a3c2-372ccc55af34
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4a8307ab-d16e-4962-a9b4-94aa74d79e8a
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 74178238-6e45-4e93-b1eb-816f7b0d1901
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b8df4cb6-0d08-458a-b857-5a037f3f3e5d
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9fdd951a-b538-48cd-8519-aee448c19f2d
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57fd4c2e-dd50-4a41-90fb-dce53bfd3520
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3df68af9-ed8b-4ef2-b81a-3bd061cd5e7f
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c850ca5b-c82c-417c-ab2b-a8abc3aac196
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9db370bf-0cc3-4f1c-b981-c7882560f82f
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c945cc4b-6313-4cba-b42b-4ed277d4cc3c
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9a8739f2-24aa-433f-afa8-c54c7cf0e4de
+    m_ActionName: 'Menu/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

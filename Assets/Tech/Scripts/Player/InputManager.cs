@@ -16,6 +16,10 @@ public class InputManager : MonoBehaviour
     private InputAction scrollAction;
     public Vector2 moveInput { get; private set; }
 
+    InputActionMap playerMap;
+    GameObject playerCam;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -23,12 +27,16 @@ public class InputManager : MonoBehaviour
             Instance = this;
         }
 
+
         player = GameObject.FindWithTag("Player");
         playerInput = GetComponent<PlayerInput>();
         playerUse = player.GetComponent<PlayerUse>();
         playerMovement = player.GetComponent<PlayerController>();
         playerInteract = player.GetComponent<PlayerInteract>();
         playerUse = player.GetComponent<PlayerUse>();
+
+        playerMap = InputSystem.actions.FindActionMap("Player");
+        playerCam = player.transform.GetChild(3).gameObject;
 
         moveAction = playerInput.actions.FindAction("Move");
         scrollAction = playerInput.actions.FindAction("Scroll");
@@ -62,5 +70,31 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         moveInput = moveAction.ReadValue<Vector2>();
+    }
+
+    private void OnEnable() {
+        playerInput.actions.FindAction("Pause").Enable();
+    }
+    private void OnDisable() {
+        playerInput.actions.FindAction("Pause").Disable();
+    }
+
+    public void EnablePlayer() {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
+        playerInput.enabled = true;
+        playerCam.SetActive(true);
+    }
+    public void DisablePlayer() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        playerInput.enabled = false;
+        playerCam.SetActive(false);
+
+        if (DialogueManager.Instance.isDialoguePlaying) {
+            playerInput.actions.FindAction("Interact").Enable();
+        }
     }
 }
