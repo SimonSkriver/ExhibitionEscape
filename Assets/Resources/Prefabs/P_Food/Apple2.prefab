@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 4460969942875353620}
   - component: {fileID: 8752740699601257201}
   - component: {fileID: 544463177886339816}
+  - component: {fileID: 7567512562351447030}
+  - component: {fileID: 9058667166017767645}
+  - component: {fileID: 2802471685447192474}
   m_Layer: 0
   m_Name: Apple2
   m_TagString: Untagged
@@ -132,8 +135,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0.073678866, z: -0.000000014901161}
+  m_Radius: 0.11350944
+  m_Center: {x: 0.0010188818, y: 0.10315905, z: 0.004237294}
 --- !u!114 &544463177886339816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +150,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemData: {fileID: 11400000, guid: 261eadd0ddb04bd4eab330181adb658e, type: 2}
+--- !u!54 &7567512562351447030
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274385080587330710}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
+--- !u!65 &9058667166017767645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274385080587330710}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1461124, y: 0.048942216, z: 0.1461124}
+  m_Center: {x: 0, y: 0.0039643864, z: -0.000000011920929}
+--- !u!114 &2802471685447192474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274385080587330710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c67cc2e082ac3514f96859f443077753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AppleFall

@@ -2,19 +2,67 @@ using UnityEngine;
 
 public class DestroyableLog : MonoBehaviour, IInteractable
 {
- public void Interact()
+    [SerializeField] private TreeType treeType;
+
+    [Header("Make list with fruit gameobjects on tree")]
+    [SerializeField] private GameObject[] apples;
+    [SerializeField] private GameObject[] coconuts;
+
+    public void Interact()
     {
-        if(HasAxeEquipped()) DestroyLog();
+        if (HasAxeEquipped())
+        {
+            DestroyLog();
+        }
     }
-    
+
     public void DestroyLog()
     {
-        Destroy(gameObject);
+        switch (treeType)
+        {
+            case TreeType.PuzzleTree:
+                Destroy(gameObject);
+                break;
+
+            case TreeType.AppleTree:
+                DropFruits(apples);
+                Destroy(gameObject);
+                break;
+
+            case TreeType.CoconutTree:
+                DropFruits(coconuts);
+                Destroy(gameObject);
+                break;
+        }
+    }
+
+    private void DropFruits(GameObject[] fruits)
+    {
+        foreach (GameObject fruit in fruits)
+        {
+            if (fruit == null) continue;
+
+            fruit.transform.SetParent(null);
+
+            Rigidbody rb = fruit.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+            }
+        }
     }
 
     private bool HasAxeEquipped()
     {
         InventorySlot equippedSlot = InventoryManager.Instance.GetSelectedSlot();
+
+        if (equippedSlot == null || equippedSlot.item == null)
+        {
+            Debug.LogWarning("No item equipped");
+            return false;
+        }
+
         AxeData axeData = equippedSlot.item as AxeData;
 
         if (axeData == null)
@@ -22,6 +70,7 @@ public class DestroyableLog : MonoBehaviour, IInteractable
             Debug.LogWarning("Item is not AxeData");
             return false;
         }
-        else return true;
+
+        return true;
     }
 }
