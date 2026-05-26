@@ -2330,9 +2330,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.815
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2392,9 +2404,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.157
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2963,14 +2987,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1062672039}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
 --- !u!4 &252189815 stripped
 Transform:
@@ -3180,9 +3219,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -10.821
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3452,9 +3503,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 75906640271438430, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 604630438840089552, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 858915296919706216, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246481478992521244, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624120133693394699, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824559489415716980, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946763850538937084, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964348260097547027, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2047162832961064572, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047162832961064572, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245853109052884041, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795208803168493090, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865303414777722853, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468492317037750749, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3659691701271155142, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3496,6 +3599,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3836804532601010997, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521921333009021266, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4651637564080487590, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704541172615069816, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120205001052074543, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253634840420886267, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435330909710599518, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778194878056416259, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398921376131017013, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420984422186078638, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6571923433663294185, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: playerLayer.m_Bits
       value: 128
@@ -3503,6 +3646,18 @@ PrefabInstance:
     - target: {fileID: 6571923433663294185, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: axeHitLayers.m_Bits
       value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694663058092413132, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6803273385628612299, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024306597471960529, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7171056169079814220, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3527,6 +3682,46 @@ PrefabInstance:
     - target: {fileID: 7171056169079814220, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.00000006431017
+      objectReference: {fileID: 0}
+    - target: {fileID: 7212560631467805480, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404257224964571146, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993909116371657818, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8150713479909493886, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299441024436412118, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578458194853573372, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583883187834547836, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597240013179510334, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872692256032217097, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9155202012994845572, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3737,14 +3932,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.485
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2100987477}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
 --- !u!4 &345420289 stripped
 Transform:
@@ -4659,6 +4869,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2440325318020907531, guid: 2efee0d95397f464ca24de6fa17e9bee, type: 3}
   m_PrefabInstance: {fileID: 989097856}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &444168823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+  m_PrefabInstance: {fileID: 2059181263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &448584147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,14 +5399,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -10.028
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1625315674}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
 --- !u!4 &522262895 stripped
 Transform:
@@ -5251,9 +5481,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5592,9 +5834,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.72
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5949,9 +6203,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.965
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6694,9 +6960,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7336,6 +7614,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8647917489949687992, guid: 71fa940860d263546a713b63eda44257, type: 3}
   m_PrefabInstance: {fileID: 731929531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &732639023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+  m_PrefabInstance: {fileID: 1440168406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &732639024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732639023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
 --- !u!1001 &741456348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7609,9 +7904,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.965
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8314,9 +8621,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8376,9 +8695,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8890,9 +9221,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9183,9 +9526,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.005
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9951,9 +10306,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10023,9 +10390,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.007
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11583,6 +11962,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2efee0d95397f464ca24de6fa17e9bee, type: 3}
+--- !u!1 &1062672038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+  m_PrefabInstance: {fileID: 252189814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1062672039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062672038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
 --- !u!1001 &1070480864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11813,59 +12209,59 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 287093997401309802, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 425161039354659294, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2111315406151771065, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3209089783835455769, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3310055542950216045, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4377000073281546680, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4681159434151176536, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5066466234873781594, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5494233069677095602, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6276878360446106579, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6528500460915020417, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7289603377980560626, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7459887748553119549, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8039536638291067450, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8150288245765968264, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11913,7 +12309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8813671286709177138, guid: a431a996ac0fe654d959f74b5ba8e82f, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13144,9 +13540,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.072
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13628,7 +14036,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -15267,14 +15675,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -8.281
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree
       objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 732639024}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
 --- !u!4 &1444268453 stripped
 Transform:
@@ -15341,9 +15764,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.965
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15854,9 +16289,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15928,9 +16375,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.259
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16112,9 +16571,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.128
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16390,9 +16861,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -5.493
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16669,9 +17152,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17480,6 +17975,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5765519670235657264, guid: c3e858c0ea6bac048a7e9c806f666e31, type: 3}
   m_PrefabInstance: {fileID: 1616626354}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1625315673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+  m_PrefabInstance: {fileID: 522262894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1625315674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625315673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
 --- !u!1001 &1648683001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19149,7 +19661,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796170231}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PalmTrees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19340,9 +19852,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20617,9 +21141,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21199,9 +21735,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.282
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21352,9 +21900,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.698
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22311,20 +22871,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree
       objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2059181265}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
 --- !u!4 &2059181264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3343218712320922928, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
   m_PrefabInstance: {fileID: 2059181263}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2059181265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444168823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
 --- !u!1001 &2066408827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22597,6 +23184,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 817f06e8eee8d2e458d7a4ea04fbb81e, type: 3}
+--- !u!1 &2100987476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+  m_PrefabInstance: {fileID: 345420288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100987477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100987476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
 --- !u!1001 &2108632203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22908,7 +23512,7 @@ GameObject:
   - component: {fileID: 2130732142}
   - component: {fileID: 2130732141}
   - component: {fileID: 2130732140}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23203,9 +23807,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5487332419338889601, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
       propertyPath: m_Name
       value: PalmTree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041398045973746537, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

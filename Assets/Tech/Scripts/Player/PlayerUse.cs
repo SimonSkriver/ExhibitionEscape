@@ -89,41 +89,41 @@ public class PlayerUse : MonoBehaviour
         }
     }
 
-   private void UseAxeItem(InventorySlot slot)
-{
-    AxeData axeData = slot.item as AxeData;
-
-    if (axeData == null)
+    private void UseAxeItem(InventorySlot slot)
     {
-        Debug.LogWarning("Item is not AxeData");
-        return;
-    }
+        AxeData axeData = slot.item as AxeData;
 
-    if (animator != null)
-    {
-        Debug.Log("Swung Axe");
-        animator.SetTrigger("AXE_SWING");
-    }
-
-    Ray ray = new Ray(eyes.position, eyes.forward);
-
-    Debug.DrawRay(eyes.position, eyes.forward * axeData.reach, Color.red, 2f);
-
-    if (Physics.Raycast(ray, out RaycastHit hit, axeData.reach, axeHitLayers, QueryTriggerInteraction.Collide))
-    {
-        Debug.Log("Axe hit: " + hit.collider.name);
-
-        DestroyableLog log = hit.collider.GetComponentInParent<DestroyableLog>();
-
-        if (log != null)
+        if (axeData == null)
         {
-            Debug.Log("Destroying log");
-            log.DestroyLog();
+            Debug.LogWarning("Item is not AxeData");
+            return;
+        }
+
+        if (animator != null)
+        {
+            Debug.Log("Swung Axe");
+            animator.SetTrigger("AXE_SWING");
+        }
+
+        Ray ray = new Ray(eyes.position, eyes.forward);
+
+        Debug.DrawRay(eyes.position, eyes.forward * axeData.reach, Color.red, 2f);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, axeData.reach, axeHitLayers, QueryTriggerInteraction.Collide))
+        {
+            Debug.Log("Axe hit: " + hit.collider.name);
+
+            DestroyableLog log = hit.collider.GetComponentInParent<DestroyableLog>();
+
+            if (log != null)
+            {
+                Debug.Log("Destroying log");
+                log.DestroyLog();
+            }
+        }
+        else
+        {
+            Debug.Log("Axe hit nothing");
         }
     }
-    else
-    {
-        Debug.Log("Axe hit nothing");
-    }
-}
 }
