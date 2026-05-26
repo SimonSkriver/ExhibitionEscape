@@ -73,24 +73,28 @@ public class InputManager : MonoBehaviour
     }
 
     private void OnEnable() {
-        playerMap.Enable();
         playerInput.actions.FindAction("Pause").Enable();
     }
     private void OnDisable() {
-        playerMap.Disable();
         playerInput.actions.FindAction("Pause").Disable();
     }
 
     public void EnablePlayer() {
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
-        UnityEngine.Cursor.visible = false;
-        playerMap.Enable();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
+        playerInput.enabled = true;
         playerCam.SetActive(true);
     }
     public void DisablePlayer() {
-        UnityEngine.Cursor.lockState = CursorLockMode.None;
-        UnityEngine.Cursor.visible = true;
-        playerMap.Disable();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        playerInput.enabled = false;
         playerCam.SetActive(false);
+
+        if (DialogueManager.Instance.isDialoguePlaying) {
+            playerInput.actions.FindAction("Interact").Enable();
+        }
     }
 }

@@ -1,5 +1,6 @@
-using System.Collections.Generic;
 using Ink.Runtime;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -27,6 +28,7 @@ public class UI_Manager : MonoBehaviour
         dialogueRoot = root.Q<TemplateContainer>("DialogueMenu");
         dialogueText = dialogueRoot.Q<Label>("DialogueText");
         choices = dialogueRoot.Query<Button>().ToList();
+        HideChoices();
 
         // Apply display style
         pauseRoot.style.display = DisplayStyle.None;
@@ -66,16 +68,7 @@ public class UI_Manager : MonoBehaviour
         InputManager.Instance.EnablePlayer();
     }
 
-    public void DisplayDialogue(string dialogueLine, List<Choice> dialogueChoices) {
-        dialogueText.text = dialogueLine;
-
-        //enable and set choice info depending on ink information
-        foreach (Choice choice in dialogueChoices) {
-            choices[choice.index].text = choice.text;
-            choices[choice.index].style.display = DisplayStyle.Flex;
-        }
-    }
-
+    #region Choices
     public void HideChoices() {
         foreach (var choice in choices) {
             choice.RegisterCallback<ClickEvent>(OnChoiceSelected);
@@ -83,12 +76,43 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    void ShowChoices(List<Choice> dialogueChoices) {
+        foreach (Choice choice in dialogueChoices) {
+            choices[choice.index].text = choice.text;
+            choices[choice.index].style.display = DisplayStyle.Flex;
+        }
+    }
+
     void OnChoiceSelected(ClickEvent evt) {
         Button button = (Button)evt.currentTarget;
-
-
-        UI_Manager.Instance.HideChoices();
-        Debug.Log("You chose " + button.tabIndex);
+        DialogueManager.Instance.story.ChooseChoiceIndex(button.tabIndex); // Connecting the button.tabIndex with the Ink choice index
+        HideChoices();
+        DialogueManager.Instance.ContinueOrExitStory();
     }
+    #endregion
+
+    #region DialogueLine
+    public void ChangeDialogueUI(string dialogueLine, List<Choice> dialogueChoices) {
+        // Write dialogue
+        StartCoroutine(WriteDialogueLine(dialogueLine));
+
+        // Enable and set choice info depending on ink information
+        ShowChoices(dialogueChoices);
+    }
+
+    IEnumerator WriteDialogueLine(string dialogueLine) {
+        dialogueText.text = "";
+
+        foreach (char c in dialogueLine.ToCharArray()) {
+            dialogueText.text += c.ToString();
+            yield return new WaitForSeconds(0.03f);
+        }
+    }
+
+    // Connect the method to the event system
+    private void OnEnable() => EventManager.Instance.dialogueEvents.onChangeDialogueUI += ChangeDialogueUI;
+    private void OnDisable() => EventManager.Instance.dialogueEvents.onChangeDialogueUI -= ChangeDialogueUI;
+    #endregion
+
     #endregion
 }

@@ -5,94 +5,53 @@ using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance;
+    DialogueEvents dlgEvent;
+
     [Header("Ink Story")]
     [SerializeField] private TextAsset inkJSON;
-    private Story story;
-    
-    private bool isDialoguePlaying = false;
+    public Story story { get; private set; }
+    public bool isDialoguePlaying { get; private set; }
 
-    private int currentChoiceIndex = -1;
-
-    private void Awake()
-    {
+    private void Awake() {
+        if (Instance != null) { Destroy(gameObject); }
+        Instance = this;
+        
         story = new Story(inkJSON.text);
+        dlgEvent = EventManager.Instance.dialogueEvents;
     }
 
-
-    private void OnEnable()
-    {
-        EventManager.Instance.dialogueEvents.onEnterDialogue += EnterDialogue;
-        EventManager.Instance.dialogueEvents.onDisplayDialogue += UI_Manager.Instance.DisplayDialogue;
-    }
-
-    private void OnDisable()
-    {
-        EventManager.Instance.dialogueEvents.onEnterDialogue -= EnterDialogue;
-        EventManager.Instance.dialogueEvents.onDisplayDialogue -= UI_Manager.Instance.DisplayDialogue;
-    }
-
+    private void OnEnable() => dlgEvent.onEnterDialogue += EnterDialogue;
+    private void OnDisable() => dlgEvent.onEnterDialogue -= EnterDialogue;
 
     private void EnterDialogue(string knotName)
     {
-        UI_Manager.Instance.ShowDialogueUI();
-
-        if (isDialoguePlaying)
-        {
+        // Don't enter dialogue if we've already entered
+        if (!isDialoguePlaying) {
             isDialoguePlaying = true;
 
+            UI_Manager.Instance.ShowDialogueUI();
+
             // jump to the knot
-            if (!knotName.Equals(""))
-            {
-                story.ChoosePathString(knotName);
-            }
-            else
-            {
-                Debug.LogWarning("Knot Name is empty");
-            }    
+            story.ChoosePathString(knotName);
         }
+
         ContinueOrExitStory();
     }
 
-
-    private void ContinueOrExitStory()
+    public void ContinueOrExitStory()
     {
-        if (story.canContinue)
-        {
+        if (story.canContinue) {
             string dialogueLine = story.Continue();
-            EventManager.Instance.dialogueEvents.DisplayDialogue(dialogueLine, story.currentChoices);
-
-
-            UnityEngine.Cursor.visible = true;
-            UnityEngine.Cursor.lockState = CursorLockMode.None;
-            Debug.Log(dialogueLine);
-        }
-        else
-        {
+            EventManager.Instance.dialogueEvents.ChangeDialogueUI(dialogueLine, story.currentChoices);
+        } else {
             ExitDialogue();
         }
     }
 
-    private void ExitDialogue()
-    {
-        Debug.Log("Exiting dialogue");
-
+    private void ExitDialogue() {
         isDialoguePlaying = false;
-
         story.ResetState();
-
         UI_Manager.Instance.HideDialogueUI();
     }
-
-    private void OnChoiceSelected(ClickEvent evt)
-    {
-        Button button = (Button)evt.currentTarget;
-
-        story.ChooseChoiceIndex(button.tabIndex);
-        UI_Manager.Instance.HideChoices();
-        ContinueOrExitStory();
-        Debug.Log("You chose " + button.tabIndex);
-    }
-
-
-
 }

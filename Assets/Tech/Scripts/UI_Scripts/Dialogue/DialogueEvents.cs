@@ -10,10 +10,10 @@ public class DialogueEvents
         onEnterDialogue?.Invoke(knotName);
     }
 
-    public event Action<string, List<Choice>> onDisplayDialogue;
-    public void DisplayDialogue(string dialogueLine, List<Choice> dialogueChoices)
+    public event Action<string, List<Choice>> onChangeDialogueUI;
+    public void ChangeDialogueUI(string dialogueLine, List<Choice> dialogueChoices)
     {
-        onDisplayDialogue?.Invoke(dialogueLine, dialogueChoices);
+        onChangeDialogueUI?.Invoke(dialogueLine, dialogueChoices);
     }
 
     public event Action<int> onUpdateCoiceIndex;

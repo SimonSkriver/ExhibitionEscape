@@ -2,5 +2,8 @@
 
 === NPC ===
 A skeleton is speaking.
-Very cool!
--> END
+* [Agree]
+    Very cool!
+* [Disagree]
+    Not cool :(
+--> END
