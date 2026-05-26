@@ -2,25 +2,20 @@ using UnityEngine;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine.Rendering;
-/*public class PlayerSound : MonoBehaviour
+public class PlayerSound : MonoBehaviour
 {
-    [SerializeField] List<FootstepSound> footstepClips;
-    private TestController tc;
-    private AudioSource audioSource;
-    [SerializeField] private float walkInterval = 0.5f;
-    [SerializeField] private float sprintInterval = 0.25f;
-    float footstepTimer = 0f;
-    [SerializeField] float maxPitch = 1.1f;
-    [SerializeField] float minPitch = 0.9f;
+    [SerializeField] List<AudioClip> footStepSounds = new List<AudioClip>();
+    private CharacterController pCon;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        tc = GetComponent<TestController>();
+        
+        pCon = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if (tc.moveDirection.magnitude > 0.1f)
         {
@@ -37,7 +32,7 @@ using UnityEngine.Rendering;
             footstepTimer = 0f;
         }
        
-    }
+    }*/
     [System.Serializable]
     private struct FootstepSound
     {
@@ -45,6 +40,16 @@ using UnityEngine.Rendering;
         public string surfaceType;
         public float volume;
     }
+    void PlayFootStep()
+    {
+        RaycastHit hit;
+        if(!Physics.Raycast(transform.position, Vector3.down, out hit, 5f))
+        {
+            return;
+        }
+
+    }
+    /*
     void PlayFootstepSound(){
         //Ray ray = new Ray(transform.position, Vector3.down);
         
@@ -103,5 +108,5 @@ using UnityEngine.Rendering;
         }
         return 0f;
     }
-
-}*/
+*/
+}
