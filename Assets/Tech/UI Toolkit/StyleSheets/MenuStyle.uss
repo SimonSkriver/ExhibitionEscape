@@ -69,3 +69,11 @@
     background-color: rgba(157, 214, 150, 0.392);
     color: rgb(214, 238, 212);
 }
+
+.customizeText {
+}
+
+.customizeButton {
+    width: 100px;
+    height: 100px;
+}
