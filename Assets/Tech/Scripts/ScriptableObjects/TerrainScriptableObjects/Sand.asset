@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1131a4397b5cac49a22fab02c535811, type: 3}
+  m_Name: Sand
+  m_EditorClassIdentifier: Assembly-CSharp::FootStepSO
+  terrainLayer: {fileID: 8574412962073106934, guid: 09fe04414e04d5246bcd814e4588c41f, type: 2}
+  footstepClips:
+  - {fileID: 8300000, guid: 1c012bd68f505f842aa35b2638c9db59, type: 3}
+  - {fileID: 8300000, guid: e25565ff03e3c2342a1f1aec28eaf27e, type: 3}
+  - {fileID: 8300000, guid: af7ba55cd694afd4ba53b1ccd67e8dd6, type: 3}
+  - {fileID: 8300000, guid: d66257da21bf8ee46b5026b20a02f4ec, type: 3}
+  volume: 5
