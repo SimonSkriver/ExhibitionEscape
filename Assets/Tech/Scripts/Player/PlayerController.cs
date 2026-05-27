@@ -96,8 +96,8 @@ public class PlayerController : MonoBehaviour
         isSprinting = !isSprinting;
 
         // Sprint Animation
-        if (isMoving) {
-            A.SetBool("isRunning", isSprinting);
+        if (isMoving && isSprinting) {
+            A.SetBool("isRunning", true);
         }
         else
         {
