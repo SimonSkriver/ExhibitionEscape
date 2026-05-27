@@ -1,9 +1,51 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Label text="Shorts" class="customizeText"/>
-        <ui:GroupBox>
-            <ui:Button class="customizeButton"/>
-        </ui:GroupBox>
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(192, 155, 115); align-self: center; width: 100%; height: 100%; justify-content: center; align-items: center;">
+        <ui:VisualElement name="Skin" style="flex-grow: 1; justify-content: center;">
+            <ui:Label text="Skin Color" class="customizeText textMenu" style="color: rgb(0, 0, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-align: middle-center;"/>
+            <ui:GroupBox style="flex-direction: row; justify-content: center;">
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(0, 0, 0);"/>
+                <ui:Button name="SkinColor" tabindex="1" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(63, 38, 3);"/>
+                <ui:Button name="SkinColor" tabindex="2" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(99, 58, 0);"/>
+                <ui:Button name="SkinColor" tabindex="3" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(152, 99, 24);"/>
+                <ui:Button name="SkinColor" tabindex="4" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(188, 139, 70);"/>
+                <ui:Button name="SkinColor" tabindex="5" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(192, 158, 110);"/>
+                <ui:Button name="SkinColor" tabindex="6" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(231, 198, 151);"/>
+                <ui:Button name="SkinColor" tabindex="7" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(255, 255, 255);"/>
+            </ui:GroupBox>
+            <ui:GroupBox style="flex-direction: row; justify-content: center;">
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(17, 70, 0);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(27, 108, 0);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(35, 142, 0);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(45, 185, 0);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(97, 224, 56);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(138, 255, 100);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(178, 255, 153);"/>
+                <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(211, 255, 196);"/>
+            </ui:GroupBox>
+        </ui:VisualElement>
+        <ui:VisualElement name="Shorts" style="flex-grow: 1; justify-content: center;">
+            <ui:Label text="Shorts Color" class="customizeText textMenu" style="color: rgb(0, 0, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-align: middle-center;"/>
+            <ui:GroupBox style="flex-direction: row; justify-content: center;">
+                <ui:Button name="ShortsColor" tooltip="White" class="customizeButton customizationButton" style="background-color: rgb(255, 255, 255);"/>
+                <ui:Button name="ShortsColor" tooltip="Orange" class="customizeButton customizationButton" style="background-color: rgb(164, 113, 42);"/>
+                <ui:Button name="ShortsColor" tooltip="Red" class="customizeButton customizationButton" style="background-color: rgb(226, 1, 1);"/>
+                <ui:Button name="ShortsColor" tooltip="Yellow" class="customizeButton customizationButton" style="background-color: rgb(226, 224, 1);"/>
+                <ui:Button name="ShortsColor" tooltip="Green" class="customizeButton customizationButton" style="background-color: rgb(112, 226, 1);"/>
+                <ui:Button name="ShortsColor" tooltip="LightBlue" class="customizeButton customizationButton" style="background-color: rgb(1, 223, 226);"/>
+                <ui:Button name="ShortsColor" tooltip="LightPurple" class="customizeButton customizationButton" style="background-color: rgb(173, 117, 224);"/>
+                <ui:Button name="ShortsColor" tooltip="Pink" class="customizeButton customizationButton" style="background-color: rgb(247, 124, 255);"/>
+            </ui:GroupBox>
+            <ui:GroupBox style="flex-direction: row; justify-content: center;">
+                <ui:Button name="ShortsColor" tooltip="Black" class="customizeButton customizationButton" style="background-color: rgb(0, 0, 0);"/>
+                <ui:Button name="ShortsColor" tooltip="Brown" class="customizeButton customizationButton" style="background-color: rgb(84, 50, 3);"/>
+                <ui:Button name="ShortsColor" tooltip="DarkRed" class="customizeButton customizationButton" style="background-color: rgb(135, 0, 0);"/>
+                <ui:Button name="ShortsColor" tooltip="LightBlue" class="customizeButton customizationButton" style="background-color: rgb(226, 133, 1);"/>
+                <ui:Button name="ShortsColor" tooltip="DarkGreen" class="customizeButton customizationButton" style="background-color: rgb(26, 132, 0);"/>
+                <ui:Button name="ShortsColor" tooltip="Blue" class="customizeButton customizationButton" style="background-color: rgb(1, 97, 226);"/>
+                <ui:Button name="ShortsColor" tooltip="Purple" class="customizeButton customizationButton" style="background-color: rgb(119, 1, 226);"/>
+                <ui:Button name="ShortsColor" tooltip="Magenta" class="customizeButton customizationButton" style="background-color: rgb(212, 1, 226);"/>
+            </ui:GroupBox>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

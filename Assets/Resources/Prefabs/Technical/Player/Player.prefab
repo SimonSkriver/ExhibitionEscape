@@ -924,8 +924,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 99edb2d690f69874fadb21ea2d00bf6b, type: 2}
-  - {fileID: 2100000, guid: b6307f3ab1b5f414a8e666181f42ab00, type: 2}
+  - {fileID: 2100000, guid: 55d8a97c06d07a949b2f8793c434f0d9, type: 2}
+  - {fileID: 2100000, guid: c2a480c7e89c8cf4f94ba71bb7f6b48c, type: 2}
   - {fileID: 2100000, guid: 3e60597a3b4b65645ae0d685a5d14fcf, type: 2}
   - {fileID: 2100000, guid: d20078db18f3eb746800fb0bc0928ebd, type: 2}
   - {fileID: 2100000, guid: 818a57f7b54a83d4988e4a3a5956d700, type: 2}
@@ -1332,7 +1332,7 @@ MonoBehaviour:
     Range: {x: -180, y: 180}
     Wrap: 1
     Recentering:
-      Enabled: 1
+      Enabled: 0
       Wait: 2
       Time: 3
     Restrictions: 0
@@ -1342,7 +1342,7 @@ MonoBehaviour:
     Range: {x: -10, y: 45}
     Wrap: 0
     Recentering:
-      Enabled: 1
+      Enabled: 0
       Wait: 2
       Time: 3
     Restrictions: 0

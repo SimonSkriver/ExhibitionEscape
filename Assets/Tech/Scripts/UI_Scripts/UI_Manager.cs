@@ -26,7 +26,7 @@ public class UI_Manager : MonoBehaviour
         pauseRoot = root.Q<TemplateContainer>("PauseMenu");
         settingsRoot = root.Q<TemplateContainer>("SettingsMenu");
         levelRoot = root.Q<TemplateContainer>("LevelSelect");
-        //customizeRoot = root.Q<TemplateContainer>("CustomizeMenu");
+        customizeRoot = root.Q<TemplateContainer>("CustomizeMenu");
 
         // Dialogue
         dialogueRoot = root.Q<TemplateContainer>("DialogueMenu");
@@ -56,6 +56,9 @@ public class UI_Manager : MonoBehaviour
 
     public void ShowSettingsMenuUI() => settingsRoot.style.display = DisplayStyle.Flex;
     public void HideSettingsMenuUI() => settingsRoot.style.display = DisplayStyle.None;
+
+    public void ShowPlayerCustomizeUI() => customizeRoot.style.display = DisplayStyle.Flex;
+    public void HidePlayerCustomizeUI() => customizeRoot.style.display = DisplayStyle.None;
 
     public IEnumerator ScreenTransition() {
         float alpha = 0;
