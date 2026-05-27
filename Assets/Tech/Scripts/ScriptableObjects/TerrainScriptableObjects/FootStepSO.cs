@@ -6,4 +6,5 @@ public class FootStepSO : ScriptableObject
 {
    public TerrainLayer terrainLayer;
     public List<AudioClip> footstepClips = new List<AudioClip>();
+    public float volume = 1f;
 }

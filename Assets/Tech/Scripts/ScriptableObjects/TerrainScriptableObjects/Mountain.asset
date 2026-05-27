@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1131a4397b5cac49a22fab02c535811, type: 3}
   m_Name: Mountain
   m_EditorClassIdentifier: Assembly-CSharp::FootStepSO
-  terrainLayer: {fileID: 0}
-  footstepClips: []
+  terrainLayer: {fileID: 8574412962073106934, guid: 5f1cac482daf4bd45b54c6e9c52899ad, type: 2}
+  footstepClips:
+  - {fileID: 8300000, guid: 984c63a1baa4d6845b0ca34ea2d51520, type: 3}
+  - {fileID: 8300000, guid: 66f33efe0a8a96e48802e7dee299b56a, type: 3}
+  - {fileID: 8300000, guid: 6f42a0506c55571409a5351db47e7331, type: 3}
+  - {fileID: 8300000, guid: ea2a20ce335e9824e83653a9436ea41d, type: 3}
+  volume: 0.1

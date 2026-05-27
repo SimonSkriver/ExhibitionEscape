@@ -9,8 +9,9 @@ public class PlayerSound : MonoBehaviour
     private string currentLayer;
     public FootStepSO[] footStepSOs;
     AudioSource audioSource;
-    [SerializeField] float maxPitch = 1.1f;
-    [SerializeField] float minPitch = 0.9f;
+    [SerializeField] float maxPitch = 1.2f;
+    [SerializeField] float minPitch = 0.8f;
+    float currentVolume = 1f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,6 +49,7 @@ public class PlayerSound : MonoBehaviour
         {
             footStepSounds.Add(footstepso.footstepClips[i]);
         }
+        currentVolume = footstepso.volume;
     }
     private float[] GetTextureMix(Vector3 playerPos, Terrain t)
     {
@@ -109,6 +111,7 @@ public class PlayerSound : MonoBehaviour
         }
         AudioClip randomFootstep = footStepSounds[Random.Range(0,footStepSounds.Count)];
             audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.volume = currentVolume;
             audioSource.PlayOneShot(randomFootstep);
     }
     /*
