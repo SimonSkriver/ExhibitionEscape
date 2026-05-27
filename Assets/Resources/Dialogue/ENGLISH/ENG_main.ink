@@ -7,3 +7,5 @@ A skeleton is speaking.
 * [Disagree]
     Not cool :(
 --> END
+
+INCLUDE ENG_SleepingSkeleton.ink

@@ -15,4 +15,9 @@ public class DialogueNPC : MonoBehaviour, IInteractable
             Debug.LogWarning($"{gameObject.name} has no dialogueKnotName");
         }
     }
+
+    public bool ShowOutline()
+    {
+        return true;
+    }
 }

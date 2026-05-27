@@ -23,13 +23,19 @@ public class PlayerInteract : MonoBehaviour
         Ray ray = new Ray(eyes.position, eyes.forward);
         if (Physics.SphereCast(ray, 0.2f, out RaycastHit hit, reach, ~layerMask) && hit.collider.TryGetComponent(out IInteractable currentObj))
         {
-            if (currentObj != interactableObject) // Ensure we only assign the current object once
+            if (currentObj.ShowOutline())
             {
-                Clear(); // Ensure no other outlines are drawn and variables are clear before drawing and assigning
-                interactableObject = currentObj;
-                currentOutline = hit.collider.transform.GetComponentsInChildren<Outline>();
-
-                DrawOutline(currentOutline);
+                if (currentObj != interactableObject) // Ensure we only assign the current object once
+                {
+                    Clear(); // Ensure no other outlines are drawn and variables are clear before drawing and assigning
+                    interactableObject = currentObj;
+                    currentOutline = hit.collider.transform.GetComponents<Outline>();
+                    DrawOutline(currentOutline);
+                }
+            }
+            if (!currentObj.ShowOutline())
+            {
+                Clear();
             }
         }
         else

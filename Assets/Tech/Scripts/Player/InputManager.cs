@@ -19,6 +19,8 @@ public class InputManager : MonoBehaviour
     InputActionMap playerMap;
     GameObject playerCam;
 
+    bool isGamePaused;
+
 
     void Awake()
     {
@@ -63,7 +65,7 @@ public class InputManager : MonoBehaviour
             }
         };
 
-        playerInput.actions.FindAction("Pause").performed += ctx => UI_Manager.Instance.PauseMenuUI();
+        playerInput.actions.FindAction("Pause").performed += ctx => Pause();
 
     }
 
@@ -96,5 +98,19 @@ public class InputManager : MonoBehaviour
         if (DialogueManager.Instance.isDialoguePlaying) {
             playerInput.actions.FindAction("Interact").Enable();
         }
+    }
+
+    public void Pause() {
+        if (!isGamePaused) {
+            isGamePaused = true;
+            DisablePlayer();
+            UI_Manager.Instance.ShowPauseMenuUI();
+        } else {
+            isGamePaused = false;
+            EnablePlayer();
+            UI_Manager.Instance.HidePauseMenuUI();
+            UI_Manager.Instance.HideSettingsMenuUI();
+        }
+           
     }
 }

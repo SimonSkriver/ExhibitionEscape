@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Coconut
   m_EditorClassIdentifier: Assembly-CSharp::FoodData
   itemName: Coconut
-  icon: {fileID: 21300000, guid: 606be407558219941a5f7fd07ef2d7cd, type: 3}
+  icon: {fileID: 21300000, guid: 318f456dd0060e64d8d3e8b2eea9a1ef, type: 3}
   equippedPrefab: {fileID: 0}
+  positionOffSet: {x: 0, y: 0, z: 0}
+  rotationOffset: {x: 0, y: 0, z: 0}
   itemType: 0
   healthAmount: 20
   givesMovementBoost: 1
