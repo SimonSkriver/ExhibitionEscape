@@ -53,6 +53,12 @@ public class DestroyableLog : MonoBehaviour, IInteractable
         }
     }
 
+    public bool ShowOutline()
+    {
+        Debug.Log("Showed because axe is equipped, is this true?: " + HasAxeEquipped());
+        return HasAxeEquipped();
+    }
+
     private bool HasAxeEquipped()
     {
         InventorySlot equippedSlot = InventoryManager.Instance.GetSelectedSlot();

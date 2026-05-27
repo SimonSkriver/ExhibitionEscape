@@ -16,4 +16,9 @@ public class DestroyableBoulder : MonoBehaviour, IInteractable
             Debug.Log("Eat some meat to destroy the boulder");
         }
     }
+
+    public bool ShowOutline()
+    {
+        return true;
+    }
 }
