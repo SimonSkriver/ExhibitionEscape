@@ -104,7 +104,8 @@ public class InputManager : MonoBehaviour
         if (!isGamePaused) {
             isGamePaused = true;
             DisablePlayer();
-            UI_Manager.Instance.ShowPauseMenuUI();
+            //UI_Manager.Instance.ShowPauseMenuUI();
+            UI_Manager.Instance.ShowPlayerCustomizeUI();
         } else {
             isGamePaused = false;
             EnablePlayer();
