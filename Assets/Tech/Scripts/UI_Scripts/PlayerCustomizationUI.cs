@@ -23,10 +23,15 @@ public class PlayerCustomizationUI : MonoBehaviour
         Button btn = (Button)evt.target;
         int index = btn.tabIndex;
 
+        Debug.Log(btn.name);
+
+        StyleColor c = btn.style.backgroundColor;
+        Color t = c.value;
+        Debug.Log(t);
+
         switch (btn.name) {
             case "SkinColor":
-                m_skin.color = btn.style.backgroundColor.value;
-                Debug.Log(btn.style.backgroundColor.value);
+                m_skin.color = t;
                 break;
             case "ShortsColor":
                 m_shorts.color = btn.style.backgroundColor.value;
