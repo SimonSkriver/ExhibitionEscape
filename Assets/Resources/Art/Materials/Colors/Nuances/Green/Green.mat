@@ -85,6 +85,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Wind_58ecd8a1f8b246718c47887b6c055c95_WindGradient_2737706404_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -103,7 +107,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaClip_threshold: 0
     - _AlphaToMask: 0
-    - _Apply_Wind: 0
+    - _Apply_Wind: 1
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -139,8 +143,8 @@ Material:
     - _Surface: 0
     - _UVSec: 0
     - _Use_Specular: 0
-    - _Wind_Scale: 0
-    - _Wind_Speed: 0
+    - _Wind_Scale: 2
+    - _Wind_Speed: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
