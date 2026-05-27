@@ -100,13 +100,7 @@ public class PlayerController : MonoBehaviour
         isSprinting = !isSprinting;
 
         // Sprint Animation
-        if (isMoving && isSprinting) {
-            A.SetBool("isRunning", true);
-        }
-        else
-        {
-            A.SetBool("isRunning", false);
-        }
+        A.SetBool("isRunning", isSprinting);
     }
 
     void SetSlopeSlideVelocity() {
