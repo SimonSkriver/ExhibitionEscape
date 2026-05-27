@@ -24,6 +24,12 @@ public class ItemPickup : MonoBehaviour, IInteractable
         anim.SetTrigger("PICK_UP");
         }
 
+
         Destroy(gameObject);
+    }
+
+    public bool ShowOutline()
+    {
+        return true;
     }
 }
