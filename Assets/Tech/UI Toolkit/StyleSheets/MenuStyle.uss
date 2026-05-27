@@ -149,3 +149,19 @@
     -unity-text-outline-color: rgb(78, 101, 35);
     color: rgb(78, 101, 35);
 }
+
+.textMenu {
+    color: rgb(57, 82, 42);
+    -unity-text-outline-color: rgb(57, 82, 42);
+    -unity-text-outline-width: 4px;
+    font-size: 28px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+}
+
+.PAUSE_MENU {
+    background-color: rgba(0, 0, 0, 0.784);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}

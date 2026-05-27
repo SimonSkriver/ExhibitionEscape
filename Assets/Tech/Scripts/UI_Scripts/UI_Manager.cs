@@ -8,8 +8,12 @@ public class UI_Manager : MonoBehaviour
 {
     public static UI_Manager Instance;
 
-    VisualElement root;
-    TemplateContainer pauseRoot, levelRoot, customizeRoot, dialogueRoot;
+    public VisualElement root { get; private set; }
+    public TemplateContainer pauseRoot { get; private set; }
+    public TemplateContainer settingsRoot { get; private set; }
+    public TemplateContainer levelRoot { get; private set; }
+    public TemplateContainer customizeRoot { get; private set; }
+    public TemplateContainer dialogueRoot { get; private set; }
 
     Label dialogueText;
     List<Button> choices = new List<Button>();
@@ -20,6 +24,7 @@ public class UI_Manager : MonoBehaviour
 
         root = GetComponent<UIDocument>().rootVisualElement;
         pauseRoot = root.Q<TemplateContainer>("PauseMenu");
+        settingsRoot = root.Q<TemplateContainer>("SettingsMenu");
         levelRoot = root.Q<TemplateContainer>("LevelSelect");
         //customizeRoot = root.Q<TemplateContainer>("CustomizeMenu");
 
@@ -37,25 +42,20 @@ public class UI_Manager : MonoBehaviour
         //StartCoroutine(ScreenTransition());
     }
 
-    public void PauseMenuUI() {
-        if (pauseRoot.style.display == DisplayStyle.None) {
-            pauseRoot.style.display = DisplayStyle.Flex;
-            InputManager.Instance.DisablePlayer();
-        } else {
-            pauseRoot.style.display = DisplayStyle.None;
-            InputManager.Instance.EnablePlayer();
-        }
+    public void ShowPauseMenuUI() => pauseRoot.style.display = DisplayStyle.Flex;
+    public void HidePauseMenuUI() => pauseRoot.style.display = DisplayStyle.None;
+
+    public void ShowLevelMenuUI() {
+        levelRoot.style.display = DisplayStyle.Flex;
+        InputManager.Instance.DisablePlayer();
+    }
+    public void HideLevelMenuUI() {
+        levelRoot.style.display = DisplayStyle.None;
+        InputManager.Instance.EnablePlayer();
     }
 
-    public void LevelMenuUI() {
-        if (levelRoot.style.display == DisplayStyle.None) {
-            levelRoot.style.display = DisplayStyle.Flex;
-            InputManager.Instance.DisablePlayer();
-        } else {
-            levelRoot.style.display = DisplayStyle.None;
-            InputManager.Instance.EnablePlayer();
-        }
-    }
+    public void ShowSettingsMenuUI() => settingsRoot.style.display = DisplayStyle.Flex;
+    public void HideSettingsMenuUI() => settingsRoot.style.display = DisplayStyle.None;
 
     public IEnumerator ScreenTransition() {
         float alpha = 0;

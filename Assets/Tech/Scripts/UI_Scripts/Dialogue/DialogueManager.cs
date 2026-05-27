@@ -10,19 +10,26 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Ink Story")]
     [SerializeField] private TextAsset inkJSON;
+    public void SetInkJSON(TextAsset inkAsset) {
+        inkJSON = inkAsset;
+        SetStory();
+    }
     public Story story { get; private set; }
     public bool isDialoguePlaying { get; private set; }
 
     private void Awake() {
         if (Instance != null) { Destroy(gameObject); }
         Instance = this;
-        
-        story = new Story(inkJSON.text);
+
+        SetStory();
+
         dlgEvent = EventManager.Instance.dialogueEvents;
     }
 
     private void OnEnable() => dlgEvent.onEnterDialogue += EnterDialogue;
     private void OnDisable() => dlgEvent.onEnterDialogue -= EnterDialogue;
+
+    void SetStory() => story = new Story(inkJSON.text);
 
     private void EnterDialogue(string knotName)
     {
