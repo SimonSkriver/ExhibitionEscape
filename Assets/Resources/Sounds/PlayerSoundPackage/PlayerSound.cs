@@ -4,15 +4,81 @@ using NUnit.Framework;
 using UnityEngine.Rendering;
 public class PlayerSound : MonoBehaviour
 {
-    [SerializeField] List<AudioClip> footStepSounds = new List<AudioClip>();
+    List<AudioClip> footStepSounds = new List<AudioClip>();
     private CharacterController pCon;
-   
+    private string currentLayer;
+    public FootStepSO[] footStepSOs;
+    AudioSource audioSource;
+    [SerializeField] float maxPitch = 1.1f;
+    [SerializeField] float minPitch = 0.9f;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
         pCon = GetComponent<CharacterController>();
+        audioSource = GetComponent<AudioSource>();
     }
+    public void CheckLayers()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, Vector3.down, out hit, 5f))
+        {
+            if (hit.transform.GetComponent<Terrain>()!= null)
+            {
+                Terrain t = hit.transform.GetComponent<Terrain>();
+                if(currentLayer != GetLayerName(transform.position, t))
+                {
+                    currentLayer = GetLayerName(transform.position, t);
+                    foreach(FootStepSO footstepso in footStepSOs)
+                    {
+                        if(currentLayer == footstepso.terrainLayer.name)
+                        {
+                            SwapFootSteps(footstepso);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    public void SwapFootSteps(FootStepSO footstepso)
+    {
+        footStepSounds.Clear();
+        for (int i = 0; i < footstepso.footstepClips.Count; i++)
+        {
+            footStepSounds.Add(footstepso.footstepClips[i]);
+        }
+    }
+    private float[] GetTextureMix(Vector3 playerPos, Terrain t)
+    {
+        Vector3 tPos = t.transform.position;
+        TerrainData tData = t.terrainData;
+        int mapX = Mathf.RoundToInt((playerPos.x - tPos.x) / tData.size.x * tData.alphamapWidth);
+        int mapZ = Mathf.RoundToInt((playerPos.z - tPos.z) / tData.size.z * tData.alphamapHeight);
+        float[,,] splatMapData = tData.GetAlphamaps(mapX,mapZ, 1,1);
+        float[] cellmix = new float[splatMapData.GetUpperBound(2) + 1];
+        for (int i = 0; i < cellmix.Length; i++)
+        {
+            cellmix[i] = splatMapData[0,0,i];
+        }
+        return cellmix;
+    }
+
+    public string GetLayerName(Vector3 playerPos, Terrain t)
+    {
+        float[] cellMix = GetTextureMix(playerPos, t);
+        float strongestTexture = 0;
+        int maxIndex = 0;
+        for (int i = 0; i < cellMix.Length; i++)
+        {
+            if(cellMix[i] > strongestTexture)
+            {
+                maxIndex = i;
+                strongestTexture = cellMix[i];
+            }
+        }
+        return t.terrainData.terrainLayers[maxIndex].name;
+    } 
 
     // Update is called once per frame
     /*void Update()
@@ -33,21 +99,17 @@ public class PlayerSound : MonoBehaviour
         }
        
     }*/
-    [System.Serializable]
-    private struct FootstepSound
+  
+    public void PlayFootStep()
     {
-        public List<AudioClip> clip;
-        public string surfaceType;
-        public float volume;
-    }
-    void PlayFootStep()
-    {
-        RaycastHit hit;
-        if(!Physics.Raycast(transform.position, Vector3.down, out hit, 5f))
+       CheckLayers();
+       if(footStepSounds.Count == 0)
         {
             return;
         }
-
+        AudioClip randomFootstep = footStepSounds[Random.Range(0,footStepSounds.Count)];
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(randomFootstep);
     }
     /*
     void PlayFootstepSound(){
