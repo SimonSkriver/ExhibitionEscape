@@ -73,10 +73,7 @@
 .customizeText {
 }
 
-.customizeButton {
-    width: 100px;
-    height: 100px;
-}
+
 
 .choiceButton {
     width: 300px;
@@ -164,4 +161,160 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.customizationButton {
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
+}
+
+.customizationButton:hover {
+    border-left-color: rgb(254, 255, 103);
+    border-right-color: rgb(254, 255, 103);
+    border-top-color: rgb(254, 255, 103);
+    border-bottom-color: rgb(254, 255, 103);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
+}
+
+.customizationButton:focus {
+    border-left-color: rgb(255, 203, 0);
+    border-right-color: rgb(255, 203, 0);
+    border-top-color: rgb(255, 203, 0);
+    border-bottom-color: rgb(255, 203, 0);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
+}
+
+.customSkinButton {
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
+}
+
+.customSkinButton:hover {
+    border-left-color: rgb(254, 255, 103);
+    border-right-color: rgb(254, 255, 103);
+    border-top-color: rgb(254, 255, 103);
+    border-bottom-color: rgb(254, 255, 103);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
+}
+
+.customSkinButton:focus {
+    border-left-color: rgb(255, 203, 0);
+    border-right-color: rgb(255, 203, 0);
+    border-top-color: rgb(255, 203, 0);
+    border-bottom-color: rgb(255, 203, 0);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
 }

@@ -15,8 +15,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 5f; 
     
     [HideInInspector] public Vector3 playerVelocity;
+    Vector3 slopeSlideVelocity;
     public bool isSprinting { get; private set; }
     public bool isMoving { get; private set; }
+    bool isSliding;
+
 
     void Awake()
     {
@@ -102,6 +105,17 @@ public class PlayerController : MonoBehaviour
         else
         {
             A.SetBool("isRunning", false);
+        }
+    }
+
+    void SetSlopeSlideVelocity() {
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit hitInfo, 5)) {
+            // Get angle of the slope
+            float angle = Vector3.Angle(hitInfo.normal, Vector3.up);
+
+            if (angle >= controller.slopeLimit) {
+                slopeSlideVelocity = Vector3.ProjectOnPlane(new Vector3(0, gravity, 0), hitInfo.normal);
+            }
         }
     }
 }
