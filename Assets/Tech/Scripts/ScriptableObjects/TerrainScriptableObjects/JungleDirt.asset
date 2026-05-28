@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1131a4397b5cac49a22fab02c535811, type: 3}
   m_Name: JungleDirt
   m_EditorClassIdentifier: Assembly-CSharp::FootStepSO
-  terrainLayer: {fileID: 0}
-  footstepClips: []
+  terrainLayer: {fileID: 8574412962073106934, guid: 02802b3d0a76bca48b01d6dd5e096bcf, type: 2}
+  footstepClips:
+  - {fileID: 8300000, guid: 99a85bb391ef32c488e9260907cfe2ee, type: 3}
+  - {fileID: 8300000, guid: 8fffd4fba5bfc4c4287f7f7413f7b156, type: 3}
+  - {fileID: 8300000, guid: 0e4ccafe78a2ec240908f89cd21d0439, type: 3}
+  - {fileID: 8300000, guid: 3abd0e703fa06be43a5d4bac16c12cde, type: 3}
+  volume: 1

@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 public class PlayerSound : MonoBehaviour
 {
     List<AudioClip> footStepSounds = new List<AudioClip>();
-    private CharacterController pCon;
+    //private CharacterController pCon;
     private string currentLayer;
     public FootStepSO[] footStepSOs;
     AudioSource audioSource;
@@ -17,7 +17,7 @@ public class PlayerSound : MonoBehaviour
     void Start()
     {
         
-        pCon = GetComponent<CharacterController>();
+        //pCon = GetComponent<CharacterController>();
         audioSource = GetComponent<AudioSource>();
     }
     public void CheckLayers()
