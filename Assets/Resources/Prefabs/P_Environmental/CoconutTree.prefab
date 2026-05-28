@@ -193,7 +193,6 @@ GameObject:
   - component: {fileID: 598489082800655384}
   - component: {fileID: 7330548329119139836}
   - component: {fileID: 3989054123607545320}
-  - component: {fileID: 1467579630834877366}
   m_Layer: 6
   m_Name: PalmTrunk_2
   m_TagString: Untagged
@@ -314,23 +313,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1467579630834877366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7523619817943781360}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
-  treeType: 1
-  apples: []
-  coconuts:
-  - {fileID: 8209339954454264812}
-  - {fileID: 9189464777984751255}
 --- !u!1001 &141406682564883281
 PrefabInstance:
   m_ObjectHideFlags: 0
