@@ -6,7 +6,7 @@ using Ink.Runtime;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
-    DialogueEvents dlgEvent;
+    //DialogueEvents dlgEvent;
 
     [Header("Ink Story")]
     [SerializeField] private TextAsset inkJSON;
@@ -23,15 +23,15 @@ public class DialogueManager : MonoBehaviour
 
         SetStory();
 
-        dlgEvent = EventManager.Instance.dialogueEvents;
+        //dlgEvent = EventManager.Instance.dialogueEvents;
     }
 
-    private void OnEnable() => dlgEvent.onEnterDialogue += EnterDialogue;
-    private void OnDisable() => dlgEvent.onEnterDialogue -= EnterDialogue;
+    //private void OnEnable() => dlgEvent.onEnterDialogue += EnterDialogue;
+    //private void OnDisable() => dlgEvent.onEnterDialogue -= EnterDialogue;
 
     void SetStory() => story = new Story(inkJSON.text);
 
-    private void EnterDialogue(string knotName)
+    public void EnterDialogue(string knotName)
     {
         // Don't enter dialogue if we've already entered
         if (!isDialoguePlaying) {
@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (story.canContinue) {
             string dialogueLine = story.Continue();
-            EventManager.Instance.dialogueEvents.ChangeDialogueUI(dialogueLine, story.currentChoices);
+        UI_Manager.Instance.dialogueUI.ChangeDialogueUI(dialogueLine, story.currentChoices);
         } else {
             ExitDialogue();
         }

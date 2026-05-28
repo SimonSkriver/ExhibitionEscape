@@ -10,7 +10,7 @@ public class DialogueNPC : MonoBehaviour, IInteractable
         // start dialogue if a knotName is defined
         if (dialogueKnotName != "")
         {
-            EventManager.Instance.dialogueEvents.EnterDialogue(dialogueKnotName);
+            DialogueManager.Instance.EnterDialogue(dialogueKnotName);
         } else {
             Debug.LogWarning($"{gameObject.name} has no dialogueKnotName");
         }

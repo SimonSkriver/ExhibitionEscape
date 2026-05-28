@@ -16,9 +16,13 @@ public class PlayerController : MonoBehaviour
     
     [HideInInspector] public Vector3 playerVelocity;
     Vector3 slopeSlideVelocity;
+    Vector3 moveDirection;
     public bool isSprinting { get; private set; }
     public bool isMoving { get; private set; }
     bool isSliding;
+
+    float groundRayDistance = 1;
+    RaycastHit slopeHit;
 
 
     void Awake()
@@ -38,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
         Move();
         HandleGravity();
+        
+
     }
 
     public void Jump()
@@ -57,7 +63,7 @@ public class PlayerController : MonoBehaviour
         playerVelocity.y += gravity * Time.deltaTime;
 
         //Keep player grounded by applying slight negative force
-        if (isGrounded && playerVelocity.y < 0) 
+        if (isGrounded && playerVelocity.y < 0 && !OnSteepSlope()) 
         {
             playerVelocity.y = -2f;
             A.SetFloat("playerVelocity", playerVelocity.y);
@@ -74,8 +80,14 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalInput = orientation.right * moveInput.x + orientation.forward * moveInput.y;
 
         //Combine horizontal and vertical movement and apply movement
-        Vector3 moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
-        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
+
+        if (OnSteepSlope()) {
+            SteepSlopeMovement();
+            controller.Move(moveDirection * Time.deltaTime);
+        } else {
+            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        }
 
         //If there's horizontal input, lerp from current rotation to the input value rotation
         if (horizontalInput.sqrMagnitude > 0.01f)
@@ -102,6 +114,26 @@ public class PlayerController : MonoBehaviour
         // Sprint Animation
         A.SetBool("isRunning", isSprinting);
     }
+
+
+    bool OnSteepSlope() {
+        if (isGrounded) return false;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, (controller.height / 2) + groundRayDistance)) {
+            float slopeAngle = Vector3.Angle(slopeHit.normal, Vector3.up);
+            if (slopeAngle > controller.slopeLimit) return true;
+        }
+        return false;
+    }
+
+    void SteepSlopeMovement() {
+        Vector3 slopeDirection = Vector3.up - slopeHit.normal * Vector3.Dot(Vector3.up, slopeHit.normal);
+        float slideSpeed = 5 + Time.deltaTime;
+
+        moveDirection = slopeDirection * -slideSpeed;
+        moveDirection.y = moveDirection.y - slopeHit.point.y;
+    }
+
 
     void SetSlopeSlideVelocity() {
         if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit hitInfo, 5)) {

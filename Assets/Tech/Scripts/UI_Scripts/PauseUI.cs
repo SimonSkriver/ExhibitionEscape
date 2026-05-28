@@ -47,17 +47,19 @@ public class PauseUI : MonoBehaviour {
                 UI.ShowPauseMenuUI();
                 break;
             case "Language":
-                TextAsset asset = null;
                 switch (btn.text) {
                     case "English":
-                        asset = Resources.Load<TextAsset>("Dialogue/DANISH/DAN_main");
                         btn.text = "Danish";
                         break;
                     case "Danish":
-                        asset = Resources.Load<TextAsset>("Dialogue/ENGLISH/ENG_main");
                         btn.text = "English";
                         break;
                 }
+
+                Debug.Log(btn.text.ToCharArray(0, 1));
+
+
+                TextAsset asset = Resources.Load<TextAsset>($"Dialogue/{btn.text.ToUpper()}/{btn.text.ToCharArray(0, 1)}_main");
                 Debug.Log(asset);
                 DialogueManager.Instance.SetInkJSON(asset);
                 break;
