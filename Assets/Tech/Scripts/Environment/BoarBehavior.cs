@@ -50,7 +50,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float knockbackDuration = 1f;
 
     [Header("Jungle Area")]
-    [SerializeField] private Collider jungleArea;
+    [SerializeField] private Collider[] jungleAreas;
 
     [Header("References")]
     [SerializeField] private Transform player;
@@ -192,6 +192,7 @@ public class BoarBehavior : MonoBehaviour
             if (distanceToPlayer <= chargeStartDistance)
             {
                 StartCoroutine(WindupThenCharge());
+                return;
             }
         }
         else
@@ -270,14 +271,14 @@ public class BoarBehavior : MonoBehaviour
 
         Vector3 nextPosition = transform.position + chargeDirection * moveDistance;
 
-        if (NavMesh.SamplePosition(nextPosition, out NavMeshHit navHit, navMeshCheckDistance, NavMesh.AllAreas))
+        if (NavMesh.Raycast(transform.position, nextPosition, out NavMeshHit navHit, NavMesh.AllAreas))
         {
             transform.position = navHit.position;
+            StartCoroutine(PauseThenChaseAgain());
+            return;
         }
-        else
-        {
-            transform.position = nextPosition;
-        }
+
+        transform.position = nextPosition;
 
         if (Vector3.Distance(transform.position, chargeTarget) <= 0.5f)
         {
@@ -501,10 +502,30 @@ public class BoarBehavior : MonoBehaviour
 
     private bool IsPlayerInsideJungle()
     {
-        if (jungleArea == null)
-            return true;
+        if (player == null)
+        {
+            return false;
+        }
 
-        return jungleArea.bounds.Contains(player.position);
+        if (jungleAreas == null || jungleAreas.Length == 0)
+        {
+            return true;
+        }
+
+        foreach (Collider area in jungleAreas)
+        {
+            if (area == null)
+            {
+                continue;
+            }
+            
+            if (area.bounds.Contains(player.position))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private Vector3 GenerateRandomPoint(Vector3 origin, float dist)
@@ -514,11 +535,9 @@ public class BoarBehavior : MonoBehaviour
             Vector3 randomDirection = Random.insideUnitSphere * dist;
             randomDirection += origin;
 
-            NavMeshHit navHit;
-
-            if (NavMesh.SamplePosition(randomDirection, out navHit, dist, NavMesh.AllAreas))
+            if (NavMesh.SamplePosition(randomDirection, out NavMeshHit navHit, dist, NavMesh.AllAreas))
             {
-                if (jungleArea == null || IsPointInsideJungle(navHit.position))
+                if (IsPointInsideJungle(navHit.position))
                 {
                     return navHit.position;
                 }
@@ -530,10 +549,26 @@ public class BoarBehavior : MonoBehaviour
 
     private bool IsPointInsideJungle(Vector3 point)
     {
-        if (jungleArea == null)
+        if (jungleAreas == null || jungleAreas.Length == 0)
+        {
             return true;
+        }
+            
 
-        return jungleArea.bounds.Contains(point);
+        foreach (Collider area in jungleAreas)
+        {
+            if (area == null) 
+            {
+                continue;
+            }
+
+            if (area.bounds.Contains(point))
+            {
+            return true;
+            }
+        }
+
+        return false;
     }
 
     private void EnableAgentAgain()
@@ -544,9 +579,8 @@ public class BoarBehavior : MonoBehaviour
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit navHit, navMeshCheckDistance, NavMesh.AllAreas))
         {
             transform.position = navHit.position;
+            agent.enabled = true;
         }
-
-        agent.enabled = true;
     }
 
     private void UpdateAnimator()

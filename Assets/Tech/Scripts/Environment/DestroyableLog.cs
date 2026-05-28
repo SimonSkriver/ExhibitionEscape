@@ -33,6 +33,10 @@ public class DestroyableLog : MonoBehaviour, IInteractable
                 DropFruits(coconuts);
                 Destroy(gameObject);
                 break;
+
+            case TreeType.NormalTree:
+                Destroy(gameObject);
+                break;
         }
     }
 
