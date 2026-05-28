@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (isGrounded)
+        if (isGrounded && !isSliding)
         {
             SFXManager.PlayEffect("Jump");
             float jumpPower = PlayerStats.Instance.JumpPower;
@@ -62,10 +62,17 @@ public class PlayerController : MonoBehaviour
         //Apply gravity
         playerVelocity.y += gravity * Time.deltaTime;
 
+        SetSlopeSlideVelocity();
+
         //Keep player grounded by applying slight negative force
         if (isGrounded && playerVelocity.y < 0) 
         {
-            playerVelocity.y = -2f;
+            if (slopeSlideVelocity != Vector3.zero) {
+                isSliding = true;
+            }
+            if (!isSliding) {
+                playerVelocity.y = -2f;
+            }
             A.SetFloat("playerVelocity", playerVelocity.y);
         }
     }
@@ -80,9 +87,14 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalInput = orientation.right * moveInput.x + orientation.forward * moveInput.y;
 
         //Combine horizontal and vertical movement and apply movement
-        moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
-        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
- 
+            moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
+            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+        if (isSliding) {
+            Vector3 velocity = slopeSlideVelocity;
+            velocity.y = playerVelocity.y;
+            controller.Move(velocity * Time.deltaTime);
+        }
 
         //If there's horizontal input, lerp from current rotation to the input value rotation
         if (horizontalInput.sqrMagnitude > 0.01f)
@@ -142,5 +154,6 @@ public class PlayerController : MonoBehaviour
         }
 
         slopeSlideVelocity = Vector3.zero;
+        isSliding = false;
     }
 }
