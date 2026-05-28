@@ -6,30 +6,26 @@ using Ink.Runtime;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
-    //DialogueEvents dlgEvent;
 
     [Header("Ink Story")]
-    [SerializeField] private TextAsset inkJSON;
+    private TextAsset inkJSON;
     public void SetInkJSON(TextAsset inkAsset) {
         inkJSON = inkAsset;
-        SetStory();
+        story = new Story(inkJSON.text);
     }
     public Story story { get; private set; }
     public bool isDialoguePlaying { get; private set; }
+
+
+
 
     private void Awake() {
         if (Instance != null) { Destroy(gameObject); }
         Instance = this;
 
-        SetStory();
-
-        //dlgEvent = EventManager.Instance.dialogueEvents;
+        // Default dialogue language
+        SetInkJSON(Resources.Load<TextAsset>("Dialogue/ENGLISH/EN_main"));
     }
-
-    //private void OnEnable() => dlgEvent.onEnterDialogue += EnterDialogue;
-    //private void OnDisable() => dlgEvent.onEnterDialogue -= EnterDialogue;
-
-    void SetStory() => story = new Story(inkJSON.text);
 
     public void EnterDialogue(string knotName)
     {

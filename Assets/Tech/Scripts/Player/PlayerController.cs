@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         playerVelocity.y += gravity * Time.deltaTime;
 
         //Keep player grounded by applying slight negative force
-        if (isGrounded && playerVelocity.y < 0 && !OnSteepSlope()) 
+        if (isGrounded && playerVelocity.y < 0) 
         {
             playerVelocity.y = -2f;
             A.SetFloat("playerVelocity", playerVelocity.y);
@@ -81,13 +81,8 @@ public class PlayerController : MonoBehaviour
 
         //Combine horizontal and vertical movement and apply movement
         moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
-
-        if (OnSteepSlope()) {
-            SteepSlopeMovement();
-            controller.Move(moveDirection * Time.deltaTime);
-        } else {
-            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
-        }
+        controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+ 
 
         //If there's horizontal input, lerp from current rotation to the input value rotation
         if (horizontalInput.sqrMagnitude > 0.01f)
@@ -115,7 +110,7 @@ public class PlayerController : MonoBehaviour
         A.SetBool("isRunning", isSprinting);
     }
 
-
+    /*
     bool OnSteepSlope() {
         if (isGrounded) return false;
 
@@ -133,7 +128,7 @@ public class PlayerController : MonoBehaviour
         moveDirection = slopeDirection * -slideSpeed;
         moveDirection.y = moveDirection.y - slopeHit.point.y;
     }
-
+    */
 
     void SetSlopeSlideVelocity() {
         if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit hitInfo, 5)) {
@@ -141,8 +136,11 @@ public class PlayerController : MonoBehaviour
             float angle = Vector3.Angle(hitInfo.normal, Vector3.up);
 
             if (angle >= controller.slopeLimit) {
-                slopeSlideVelocity = Vector3.ProjectOnPlane(new Vector3(0, gravity, 0), hitInfo.normal);
+                slopeSlideVelocity = Vector3.ProjectOnPlane(new Vector3(0, playerVelocity.y, 0), hitInfo.normal);
+                return;
             }
         }
+
+        slopeSlideVelocity = Vector3.zero;
     }
 }

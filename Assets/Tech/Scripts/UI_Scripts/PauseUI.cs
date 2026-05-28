@@ -56,11 +56,13 @@ public class PauseUI : MonoBehaviour {
                         break;
                 }
 
-                Debug.Log(btn.text.ToCharArray(0, 1));
+                // Get the ISO 639 Language Code
+                string ISO_639 = "";
+                foreach (char c in btn.text.ToCharArray(0, 2)) {
+                    ISO_639 += c.ToString().ToUpper();
+                }
 
-
-                TextAsset asset = Resources.Load<TextAsset>($"Dialogue/{btn.text.ToUpper()}/{btn.text.ToCharArray(0, 1)}_main");
-                Debug.Log(asset);
+                TextAsset asset = Resources.Load<TextAsset>($"Dialogue/{btn.text.ToUpper()}/{ISO_639}_main");
                 DialogueManager.Instance.SetInkJSON(asset);
                 break;
         }

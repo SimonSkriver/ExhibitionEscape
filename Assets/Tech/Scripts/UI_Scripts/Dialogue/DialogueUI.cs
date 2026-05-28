@@ -57,9 +57,5 @@ public class DialogueUI : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
         }
     }
-
-    // Connect the method to the event system
-    //private void OnEnable() => EventManager.Instance.dialogueEvents.onChangeDialogueUI += ChangeDialogueUI;
-    //private void OnDisable() => EventManager.Instance.dialogueEvents.onChangeDialogueUI -= ChangeDialogueUI;
     #endregion
 }
