@@ -19,10 +19,7 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection;
     public bool isSprinting { get; private set; }
     public bool isMoving { get; private set; }
-    bool isSliding;
-
-    float groundRayDistance = 1;
-    RaycastHit slopeHit;
+    public bool isSliding { get; private set; }
 
 
     void Awake()

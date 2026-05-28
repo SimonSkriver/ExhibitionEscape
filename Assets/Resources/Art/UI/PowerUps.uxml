@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:GroupBox style="flex-direction: row; justify-content: space-evenly; width: 500px; height: 100px;">
+        <ui:Image source="project://database/Assets/Resources/Art/UI/HUD_Sprites/JumpBoostIcon.svg?fileID=7388822144124034973&amp;guid=04339427852fc2944b6a71cd153ed34e&amp;type=3#JumpBoostIcon" name="JumpBoostIcon"/>
+    </ui:GroupBox>
+</ui:UXML>

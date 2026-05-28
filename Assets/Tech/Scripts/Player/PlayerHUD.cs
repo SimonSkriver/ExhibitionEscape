@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,15 +7,14 @@ public class PlayerHUD : MonoBehaviour
 {
     public static PlayerHUD Instance;
 
-    VisualElement root;
-    TemplateContainer HP;
+    TemplateContainer root, HP;
     List<TemplateContainer> InvSlot;
 
     private void Awake() {
         if (Instance != null) { Destroy(gameObject); }
         Instance = this;
 
-        root = GetComponent<UIDocument>().rootVisualElement;
+        root = UI_Manager.Instance.HUD_Root;
         HP = root.Q<TemplateContainer>("HP");
 
         InvSlot = root.Query<TemplateContainer>("InvSlot").ToList();
@@ -28,6 +28,27 @@ public class PlayerHUD : MonoBehaviour
     public void UpdateHealthUI(int health) {
         HP.Q<Label>("txtHP").text = health.ToString();
         HP.Q<VisualElement>("HeartSlider").style.minHeight = Length.Percent(health);
+        StartCoroutine(HealthAnimationUI(health));
+    }
+
+    IEnumerator HealthAnimationUI(int health) {
+        float size = 0.5f;
+
+        while (size < 0.7f) {
+            size += 0.01f;
+            HP.style.scale = new Vector3(size, size, size);
+
+            yield return new WaitForSeconds(0.001f);
+        }
+
+        while (size > 0.5f) {
+            size -= 0.01f;
+            HP.style.scale = new Vector3(size, size, size);
+
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        HP.Q<VisualElement>("HeartSliderTrail").style.minHeight = Length.Percent(health);
     }
 
     public void UpdateInventoryUI()

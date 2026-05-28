@@ -11,6 +11,7 @@ public class UI_Manager : MonoBehaviour
     public DialogueUI dialogueUI { get; private set; }
 
     public VisualElement root { get; private set; }
+    public TemplateContainer HUD_Root { get; private set; }
     public TemplateContainer pauseRoot { get; private set; }
     public TemplateContainer settingsRoot { get; private set; }
     public TemplateContainer levelRoot { get; private set; }
@@ -22,6 +23,7 @@ public class UI_Manager : MonoBehaviour
         Instance = this;
 
         root = GetComponent<UIDocument>().rootVisualElement;
+        HUD_Root = root.Q<TemplateContainer>("PlayerHUD");
         pauseRoot = root.Q<TemplateContainer>("PauseMenu");
         settingsRoot = root.Q<TemplateContainer>("SettingsMenu");
         levelRoot = root.Q<TemplateContainer>("LevelSelect");
@@ -40,6 +42,8 @@ public class UI_Manager : MonoBehaviour
         //StartCoroutine(ScreenTransition());
     }
 
+    public void ShowPlayerHUD() => HUD_Root.style.display = DisplayStyle.Flex;
+    public void HidePlayerHUD() => HUD_Root.style.display = DisplayStyle.None;
     public void ShowPauseMenuUI() => pauseRoot.style.display = DisplayStyle.Flex;
     public void HidePauseMenuUI() => pauseRoot.style.display = DisplayStyle.None;
 

@@ -20,7 +20,7 @@ public class PlayerFallDamage : MonoBehaviour
 
     void Update()
     {
-        if (!wasGrounded && player.isGrounded) //If player wasn't grounded last frame, but now is grounded
+        if (!wasGrounded && player.isGrounded && !player.isSliding) //If player wasn't grounded last frame, but now is grounded
         {
             if (velocity < threshold) return;
             CalculateFallDamage(velocity);

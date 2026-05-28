@@ -187,10 +187,10 @@
     color: rgb(135, 103, 193);
     width: 100px;
     height: 100px;
-    border-left-color: rgb(0, 0, 0);
-    border-right-color: rgb(0, 0, 0);
-    border-top-color: rgb(0, 0, 0);
-    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0.392);
+    border-right-color: rgba(0, 0, 0, 0.392);
+    border-top-color: rgba(0, 0, 0, 0.392);
+    border-bottom-color: rgba(0, 0, 0, 0.392);
 }
 
 .customizationButton:hover {
@@ -244,5 +244,3 @@
     width: 100px;
     height: 100px;
 }
-
-
