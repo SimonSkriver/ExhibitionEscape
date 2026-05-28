@@ -8,7 +8,7 @@ public class PlayerCustomization : MonoBehaviour
     Material m_skin, m_shorts;
     List<Button> customButtons = new List<Button>();
     List<Slider> customSliders = new List<Slider>();
-    [SerializeField] Transform neckBone;
+    Transform neckBone;
 
     private void Awake() {
         root = UI_Manager.Instance.customizeRoot;
@@ -24,6 +24,7 @@ public class PlayerCustomization : MonoBehaviour
 
         m_skin = Resources.Load<Material>("Art/Materials/PlayerSkin");
         m_shorts = Resources.Load<Material>("Art/Materials/PlayerShorts");
+        neckBone = GameObject.FindGameObjectWithTag("Player").transform.Find("ShortsMan/Main/Bone.001/Bone.002/Bone.003/Chest/Neck");
     }
 
     void OnColorButton(ClickEvent evt) {

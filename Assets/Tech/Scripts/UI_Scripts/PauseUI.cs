@@ -47,18 +47,22 @@ public class PauseUI : MonoBehaviour {
                 UI.ShowPauseMenuUI();
                 break;
             case "Language":
-                TextAsset asset = null;
                 switch (btn.text) {
                     case "English":
-                        asset = Resources.Load<TextAsset>("Dialogue/DANISH/DAN_main");
                         btn.text = "Danish";
                         break;
                     case "Danish":
-                        asset = Resources.Load<TextAsset>("Dialogue/ENGLISH/ENG_main");
                         btn.text = "English";
                         break;
                 }
-                Debug.Log(asset);
+
+                // Get the ISO 639 Language Code
+                string ISO_639 = "";
+                foreach (char c in btn.text.ToCharArray(0, 2)) {
+                    ISO_639 += c.ToString().ToUpper();
+                }
+
+                TextAsset asset = Resources.Load<TextAsset>($"Dialogue/{btn.text.ToUpper()}/{ISO_639}_main");
                 DialogueManager.Instance.SetInkJSON(asset);
                 break;
         }
