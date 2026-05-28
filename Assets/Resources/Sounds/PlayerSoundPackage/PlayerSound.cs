@@ -18,7 +18,7 @@ public class PlayerSound : MonoBehaviour
     {
         
         pCon = GetComponent<CharacterController>();
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
     public void CheckLayers()
     {
