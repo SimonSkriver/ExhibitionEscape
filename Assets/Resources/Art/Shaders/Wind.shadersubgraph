@@ -8,9 +8,6 @@
         },
         {
             "m_Id": "760fa0cf880c476091415580497fef55"
-        },
-        {
-            "m_Id": "f9360d44f44e49c7b74b886c88b70d5e"
         }
     ],
     "m_Keywords": [],
@@ -1467,9 +1464,6 @@
         },
         {
             "m_Id": "760fa0cf880c476091415580497fef55"
-        },
-        {
-            "m_Id": "f9360d44f44e49c7b74b886c88b70d5e"
         }
     ]
 }
@@ -2420,43 +2414,6 @@
         "e32": 0.0,
         "e33": 1.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "f9360d44f44e49c7b74b886c88b70d5e",
-    "m_Guid": {
-        "m_GuidSerialized": "dd42ec66-76fc-4000-adc5-4f11934a232f"
-    },
-    "promotedFromAssetID": "",
-    "promotedFromCategoryName": "",
-    "promotedOrdering": -1,
-    "m_Name": "WindGradient",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "WindGradient",
-    "m_DefaultReferenceName": "_WindGradient",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_PerRendererData": false,
-    "m_customAttributes": [],
-    "m_Value": {
-        "m_SerializedTexture": "",
-        "m_Guid": ""
-    },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
-    "useTexelSize": true,
-    "isHDR": false,
-    "m_Modifiable": true,
-    "m_DefaultType": 0
 }
 
 {

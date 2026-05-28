@@ -1030,7 +1030,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 50.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -1117,7 +1117,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 0.05000000074505806,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -1717,7 +1717,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 15.5,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -2290,10 +2290,10 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "r": 1.047169804573059,
-        "g": 1.7617924213409424,
-        "b": 2.0,
-        "a": 1.0
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.0
     },
     "isMainColor": false,
     "m_ColorMode": 0
@@ -2371,10 +2371,10 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "r": 0.25882354378700259,
-        "g": 0.7882353067398071,
-        "b": 0.9647058844566345,
-        "a": 1.0
+        "r": 0.0,
+        "g": 0.6235294342041016,
+        "b": 1.0,
+        "a": 0.3686274588108063
     },
     "isMainColor": false,
     "m_ColorMode": 0
@@ -2793,8 +2793,8 @@
     "m_ObjectId": "655253a5fbd04b17ba7ef5e0ab5db0e8",
     "m_Title": "Refraction",
     "m_Position": {
-        "x": -2709.3330078125,
-        "y": -859.9998779296875
+        "x": -2709.0,
+        "y": -860.0
     }
 }
 
@@ -3301,7 +3301,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 7.0,
+    "m_Value": 6.599999904632568,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -3404,7 +3404,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 10.0,
+    "m_Value": 2000.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -3600,7 +3600,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 5.0,
+    "m_Value": 7.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -4720,7 +4720,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 5.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -5076,7 +5076,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 0.0,
+    "m_Value": 10.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -5598,7 +5598,7 @@
     "m_Title": "Foam",
     "m_Position": {
         "x": -1868.0,
-        "y": 464.0001525878906
+        "y": 464.0
     }
 }
 
@@ -5912,8 +5912,8 @@
     "m_ObjectId": "e81e53a2ce6c47b896d9d921dbd1e876",
     "m_Title": "Water and ripple color",
     "m_Position": {
-        "x": -2149.3330078125,
-        "y": -187.33331298828126
+        "x": -2149.0,
+        "y": -187.0
     }
 }
 
@@ -6066,7 +6066,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 5.0,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
@@ -6279,7 +6279,7 @@
     "m_Hidden": false,
     "m_PerRendererData": false,
     "m_customAttributes": [],
-    "m_Value": 1.0,
+    "m_Value": 0.20000000298023225,
     "m_FloatType": 0,
     "m_LiteralFloatMode": false,
     "m_RangeValues": {

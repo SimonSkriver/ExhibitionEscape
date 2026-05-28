@@ -79,10 +79,10 @@ public class PlayerInteract : MonoBehaviour
     public void Interact()
     {
         if (interactableObject == null) return;
-        IInteractable ObjectToInteractWith = interactableObject;
+        IInteractable objectToInteractWith = interactableObject;
 
         Clear();
 
-        ObjectToInteractWith.Interact();
+        objectToInteractWith.Interact();
     }        
 }

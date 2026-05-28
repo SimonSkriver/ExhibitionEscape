@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header ("Info")]
-    [SerializeField] private CharacterController controller;
     [SerializeField] private Transform orientation;
+    public CharacterController controller { get; private set; }
     public bool isGrounded { get; private set; }
 
     [Header("Animation")]
