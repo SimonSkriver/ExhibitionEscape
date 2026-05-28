@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9217199714615037757}
   - component: {fileID: 198055714492718448}
   - component: {fileID: 2853980431641869901}
-  - component: {fileID: 6984828254151775536}
   m_Layer: 0
   m_Name: BathingRing
   m_TagString: Untagged
@@ -133,15 +132,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7070427, y: 0.25506592, z: 0.7253151}
   m_Center: {x: 0, y: 0.00228405, z: -0.0091362}
---- !u!114 &6984828254151775536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5729963193366240909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb11f0356b37907448a04abd53345fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractTester

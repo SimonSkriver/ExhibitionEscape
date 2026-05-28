@@ -5,10 +5,10 @@ using UnityEngine.Rendering;
 public class PlayerSound : MonoBehaviour
 {
     List<AudioClip> footStepSounds = new List<AudioClip>();
-    private CharacterController pCon;
+    [SerializeField] private CharacterController pCon;
     private string currentLayer;
     public FootStepSO[] footStepSOs;
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
     [SerializeField] float maxPitch = 1.2f;
     [SerializeField] float minPitch = 0.8f;
     float currentVolume = 1f;
@@ -18,7 +18,7 @@ public class PlayerSound : MonoBehaviour
     {
         
         pCon = GetComponent<CharacterController>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
     public void CheckLayers()
     {
