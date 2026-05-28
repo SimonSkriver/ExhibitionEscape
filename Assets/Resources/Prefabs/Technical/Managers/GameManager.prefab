@@ -297,6 +297,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8021989778726726055, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
+      propertyPath: sFXclips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021989778726726055, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
+      propertyPath: sFXclips.Array.data[0].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021989778726726055, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
+      propertyPath: sFXclips.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021989778726726055, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
+      propertyPath: sFXclips.Array.data[2].clipName
+      value: ChooseColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021989778726726055, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
+      propertyPath: sFXclips.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a9a97efda7a666b408e6429f9bbc1228, type: 3}
     - target: {fileID: 8509480256758159201, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
       propertyPath: m_Name
       value: SFXManager
