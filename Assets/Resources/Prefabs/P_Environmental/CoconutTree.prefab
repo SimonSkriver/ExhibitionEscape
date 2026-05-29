@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3180902151015684731}
   - component: {fileID: 2246891112861292869}
   - component: {fileID: 943290735944953142}
+  - component: {fileID: 3841267828746947378}
+  - component: {fileID: 465729009978866420}
   m_Layer: 6
   m_Name: CoconutTree
   m_TagString: Untagged
@@ -72,6 +74,48 @@ MonoBehaviour:
   coconuts:
   - {fileID: 8209339954454264812}
   - {fileID: 9189464777984751255}
+--- !u!65 &3841267828746947378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684245652486803399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11525656, y: 0.45086348, z: 0.092945084}
+  m_Center: {x: 0.025655935, y: 0.21486266, z: 0.021768682}
+--- !u!65 &465729009978866420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2684245652486803399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14778522, y: 0.57956576, z: 0.1644381}
+  m_Center: {x: -0.011284396, y: 0.72041017, z: 0.14768527}
 --- !u!1 &6400519783840256762
 GameObject:
   m_ObjectHideFlags: 0

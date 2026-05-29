@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,7 +19,7 @@ public class InputManager : MonoBehaviour
 
     InputActionMap playerMap;
     GameObject playerCam;
-    DisableplayerCutscene cutscene;
+    BoatCutscene cutscene;
 
     bool isGamePaused;
 
@@ -67,7 +68,7 @@ public class InputManager : MonoBehaviour
         };
 
         playerInput.actions.FindAction("Pause").performed += ctx => Pause();
-        cutscene = FindAnyObjectByType<DisableplayerCutscene>();
+        cutscene = FindAnyObjectByType<BoatCutscene>();
     }
 
     void Update()
@@ -114,7 +115,6 @@ public class InputManager : MonoBehaviour
             if (!cutscene.inCutscene) EnablePlayer();
             UI_Manager.Instance.HidePauseMenuUI();
             UI_Manager.Instance.HideSettingsMenuUI();
-        }
-           
+        }  
     }
 }

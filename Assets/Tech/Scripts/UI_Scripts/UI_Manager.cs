@@ -42,6 +42,10 @@ public class UI_Manager : MonoBehaviour
         //StartCoroutine(ScreenTransition());
     }
 
+    private void Start() {
+        ShowPlayerCustomizeUI();
+    }
+
     public void ShowPlayerHUD() => HUD_Root.style.display = DisplayStyle.Flex;
     public void HidePlayerHUD() => HUD_Root.style.display = DisplayStyle.None;
     public void ShowPauseMenuUI() => pauseRoot.style.display = DisplayStyle.Flex;
@@ -61,14 +65,19 @@ public class UI_Manager : MonoBehaviour
 
     public void ShowPlayerCustomizeUI() {
         customizeRoot.style.display = DisplayStyle.Flex;
-        GameObject.Find("CustomizationCamera").SetActive(true);
+        HidePlayerHUD();
+        GameManager.CameraManager.GetChild(1).gameObject.SetActive(true);
+        InputManager.Instance.DisablePlayer();
     }
     public void HidePlayerCustomizeUI() {
         customizeRoot.style.display = DisplayStyle.None;
-        GameObject.Find("CustomizationCamera").SetActive(false);
+        ShowPlayerHUD();
+        GameManager.CameraManager.GetChild(1).gameObject.SetActive(false);
+        InputManager.Instance.EnablePlayer();
     }
     public void ShowDialogueUI() {
         dialogueRoot.style.display = DisplayStyle.Flex;
+        ShowPlayerHUD();
         InputManager.Instance.DisablePlayer();
     }
 

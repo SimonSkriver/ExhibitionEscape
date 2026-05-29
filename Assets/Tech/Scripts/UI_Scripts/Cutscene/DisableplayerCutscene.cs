@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class DisableplayerCutscene : MonoBehaviour
 {
-    public bool inCutscene { get; private set; }
     private Transform player;
     [SerializeField] Transform targetPosition;
 
@@ -16,12 +15,10 @@ public class DisableplayerCutscene : MonoBehaviour
         player.GetComponent<PlayerInteract>().enabled = false;
         player.SetPositionAndRotation(targetPosition.position, targetPosition.rotation);
         player.SetParent(targetPosition);
-        inCutscene = true;
     }
 
     void OnDisable()
     {
         InputManager.Instance.EnablePlayer();
-        inCutscene = false;
     }
 }

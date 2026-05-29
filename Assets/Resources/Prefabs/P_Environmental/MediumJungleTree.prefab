@@ -364,7 +364,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 8606641443615337958}
   - component: {fileID: 3925589082726472504}
   - component: {fileID: 3055322943175642992}
+  - component: {fileID: 6269287762495285377}
   m_Layer: 6
   m_Name: MediumJungleTree
   m_TagString: Untagged
@@ -546,6 +547,27 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &6269287762495285377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257784544739304954}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4971924, y: 24.126648, z: 2.8199463}
+  m_Center: {x: -0.13543701, y: 11.563324, z: -0.113464355}
 --- !u!1 &1419642727306049992
 GameObject:
   m_ObjectHideFlags: 0
