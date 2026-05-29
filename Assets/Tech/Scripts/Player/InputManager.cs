@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour
 
     InputActionMap playerMap;
     GameObject playerCam;
+    DisableplayerCutscene cutscene;
 
     bool isGamePaused;
 
@@ -66,7 +67,7 @@ public class InputManager : MonoBehaviour
         };
 
         playerInput.actions.FindAction("Pause").performed += ctx => Pause();
-
+        cutscene = FindAnyObjectByType<DisableplayerCutscene>();
     }
 
     void Update()
@@ -107,7 +108,7 @@ public class InputManager : MonoBehaviour
             UI_Manager.Instance.ShowPauseMenuUI();
         } else {
             isGamePaused = false;
-            EnablePlayer();
+            if (!cutscene.inCutscene) EnablePlayer();
             UI_Manager.Instance.HidePauseMenuUI();
             UI_Manager.Instance.HideSettingsMenuUI();
         }
