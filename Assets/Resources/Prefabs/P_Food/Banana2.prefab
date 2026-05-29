@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5542970634571637471}
   - component: {fileID: 1315999702585956524}
   - component: {fileID: -4135655747049401766}
+  - component: {fileID: 924704539092399881}
   m_Layer: 8
   m_Name: Banana2
   m_TagString: Food
@@ -126,14 +127,14 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0.13289031, z: -0.010230467}
+  m_Radius: 0.36882916
+  m_Center: {x: 0, y: 0.26406118, z: -0.010230422}
 --- !u!114 &-4135655747049401766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +148,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   itemData: {fileID: 11400000, guid: ce8f2f7112a6f974d95c455b70c3788c, type: 2}
+--- !u!54 &924704539092399881
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347418967427903102}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
