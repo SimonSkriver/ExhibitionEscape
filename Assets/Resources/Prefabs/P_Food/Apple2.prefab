@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8752740699601257201}
   - component: {fileID: 544463177886339816}
   - component: {fileID: 7567512562351447030}
-  - component: {fileID: 9058667166017767645}
   - component: {fileID: 2802471685447192474}
   m_Layer: 8
   m_Name: Apple2
@@ -177,27 +176,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!65 &9058667166017767645
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274385080587330710}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.1461124, y: 0.048942216, z: 0.1461124}
-  m_Center: {x: 0, y: 0.0039643864, z: -0.000000011920929}
 --- !u!114 &2802471685447192474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67cc2e082ac3514f96859f443077753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AppleFall
+  isCoconut: 0
+  fullCoconut: {fileID: 0}
+  splitCoconut: {fileID: 0}

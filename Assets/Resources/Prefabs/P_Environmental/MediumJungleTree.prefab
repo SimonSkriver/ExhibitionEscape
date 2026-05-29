@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3636040280895348889}
   - component: {fileID: 73898155899356203}
   - component: {fileID: 3450656942306385145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5366848155515252417}
   - component: {fileID: 6201817652189649716}
   - component: {fileID: 6060482516701991065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 2171742570288835885}
   - component: {fileID: 7707523105546702455}
   - component: {fileID: 2754496358588264375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 7847859129694566115}
   - component: {fileID: 329102146628760135}
   - component: {fileID: 431799441904649791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 8606641443615337958}
   - component: {fileID: 3925589082726472504}
   - component: {fileID: 3055322943175642992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MediumJungleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,6 +526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!114 &3055322943175642992
 MonoBehaviour:
@@ -557,7 +558,7 @@ GameObject:
   - component: {fileID: 6515904790936191774}
   - component: {fileID: 8880995202376402015}
   - component: {fileID: 8241994938941637531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +667,7 @@ GameObject:
   - component: {fileID: 4112652604835670931}
   - component: {fileID: 1174164309409427351}
   - component: {fileID: 5469309504761119448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +776,7 @@ GameObject:
   - component: {fileID: 1125462627079570061}
   - component: {fileID: 7025586854245548048}
   - component: {fileID: 3244258930648598856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +885,7 @@ GameObject:
   - component: {fileID: 1874099442278777484}
   - component: {fileID: 3937562259103464976}
   - component: {fileID: 4453388724075357412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +994,7 @@ GameObject:
   - component: {fileID: 8161003590651352065}
   - component: {fileID: 6698794354352384556}
   - component: {fileID: 5080488629407078320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1103,7 @@ GameObject:
   - component: {fileID: 1251695014412034498}
   - component: {fileID: 204844103011704568}
   - component: {fileID: 4336884500170908943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1212,7 @@ GameObject:
   - component: {fileID: 2186705260585585573}
   - component: {fileID: 296419521327926624}
   - component: {fileID: 3052272771847523495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1321,7 @@ GameObject:
   - component: {fileID: 2629149480102846696}
   - component: {fileID: 8459425963458364633}
   - component: {fileID: 4897420078030483627}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1430,7 @@ GameObject:
   - component: {fileID: 196281851548321926}
   - component: {fileID: 1371420312766496537}
   - component: {fileID: 7811658410083696668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1538,7 +1539,7 @@ GameObject:
   - component: {fileID: 8878147371826126960}
   - component: {fileID: 591769372613109508}
   - component: {fileID: 4355592104381402159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1647,7 +1648,7 @@ GameObject:
   - component: {fileID: 8636697300643401210}
   - component: {fileID: 201048391801891084}
   - component: {fileID: 5963118494347772946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1757,7 @@ GameObject:
   - component: {fileID: 4109950091056557341}
   - component: {fileID: 8394665014720440444}
   - component: {fileID: 5835163327324720998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1865,7 +1866,7 @@ GameObject:
   - component: {fileID: 5752396046861512807}
   - component: {fileID: 8078766682034519856}
   - component: {fileID: 7656079758799099730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1974,7 +1975,7 @@ GameObject:
   - component: {fileID: 2171137145808814123}
   - component: {fileID: 1091534114720110679}
   - component: {fileID: 1568714310844546449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2083,7 +2084,7 @@ GameObject:
   - component: {fileID: 7110996836181908697}
   - component: {fileID: 1796122711071600218}
   - component: {fileID: 9149053436633466611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2193,7 @@ GameObject:
   - component: {fileID: 1567356237929736290}
   - component: {fileID: 7044102471705113196}
   - component: {fileID: 7262577655154521957}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

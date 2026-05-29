@@ -66,8 +66,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
-  treeType: 1
+  treeType: 3
   apples: []
+  bananas: []
   coconuts:
   - {fileID: 8209339954454264812}
   - {fileID: 9189464777984751255}

@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644fa642b3b6632418e0f76e08b205dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
-  treeType: 0
+  treeType: 1
   apples:
   - {fileID: 7589085438569093866}
   - {fileID: 2145448868124669722}

@@ -6,6 +6,7 @@ public class DestroyableLog : MonoBehaviour, IInteractable
 
     [Header("Make list with fruit gameobjects on tree")]
     [SerializeField] private GameObject[] apples;
+    [SerializeField] private GameObject[] bananas;
     [SerializeField] private GameObject[] coconuts;
 
     public void Interact()
@@ -26,6 +27,11 @@ public class DestroyableLog : MonoBehaviour, IInteractable
 
             case TreeType.AppleTree:
                 DropFruits(apples);
+                Destroy(gameObject);
+                break;
+
+            case TreeType.BananaTree:
+                DropFruits(bananas);
                 Destroy(gameObject);
                 break;
 
