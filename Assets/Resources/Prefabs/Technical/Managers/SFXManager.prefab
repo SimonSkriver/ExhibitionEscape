@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8509480256758159201
+--- !u!1 &6324937905845350986
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4211830997642520735}
-  - component: {fileID: 8021989778726726055}
-  - component: {fileID: 3562236231570456216}
+  - component: {fileID: 28842766046609807}
+  - component: {fileID: 3072787230215081544}
+  - component: {fileID: 3189948444369110283}
   m_Layer: 0
   m_Name: SFXManager
   m_TagString: Untagged
@@ -18,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4211830997642520735
+--- !u!4 &28842766046609807
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8509480256758159201}
+  m_GameObject: {fileID: 6324937905845350986}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 282.97003, y: 23.44622, z: 275.74448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8021989778726726055
+--- !u!114 &3072787230215081544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8509480256758159201}
+  m_GameObject: {fileID: 6324937905845350986}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ca445546dfb5c34ca90eed8895f077b, type: 3}
@@ -47,18 +47,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SFXManager
   sFXclips:
   - audioClip: {fileID: 8300000, guid: 4d6a936bbad52594dbb2ce169950e5a8, type: 3}
-    volume: 0.5
+    volume: 0.1
     clipName: Jump
   - audioClip: {fileID: 8300000, guid: e0290bf16f623ca41abbb5e12f03c4d5, type: 3}
     volume: 0.5
     clipName: Sprint
---- !u!82 &3562236231570456216
+  - audioClip: {fileID: 8300000, guid: a9a97efda7a666b408e6429f9bbc1228, type: 3}
+    volume: 1
+    clipName: ConfirmColor
+  - audioClip: {fileID: 8300000, guid: 0a9be1ef751d6d54ea3a592b3571ac1b, type: 3}
+    volume: 1
+    clipName: HoverSettings
+  - audioClip: {fileID: 8300000, guid: 0b6cefeaed0328746ab90bc9a4b38aa0, type: 3}
+    volume: 1
+    clipName: PauseMenu
+  - audioClip: {fileID: 8300000, guid: c58ebb3fbb7a0814aab2256db23ae291, type: 3}
+    volume: 1
+    clipName: ClickButton
+  - audioClip: {fileID: 8300000, guid: 67f04ad7ded49104b8ff55ec1542f7ea, type: 3}
+    volume: 1
+    clipName: BackButton
+  - audioClip: {fileID: 8300000, guid: f16525b62ae09b940b353d2f25287ce9, type: 3}
+    volume: 1
+    clipName: BoulderDestroy
+  - audioClip: {fileID: 8300000, guid: 231dae423456d3743a9c845bbff14ada, type: 3}
+    volume: 1
+    clipName: TreeDestroy
+  - audioClip: {fileID: 8300000, guid: db403de1edad40a4484b4404a8d43ab6, type: 3}
+    volume: 1
+    clipName: ItemPickup
+  - audioClip: {fileID: 8300000, guid: 3fa78e9438db66d4398a6d26617cd401, type: 3}
+    volume: 1
+    clipName: FruitDrop
+  - audioClip: {fileID: 8300000, guid: 2fa24d5dfb36d4f46b0952ded1eb946e, type: 3}
+    volume: 1
+    clipName: StrengthBoost
+  - audioClip: {fileID: 8300000, guid: 0dec75bcdebc62b48a62cd99d5c5599f, type: 3}
+    volume: 1
+    clipName: SpeedBoost
+  - audioClip: {fileID: 8300000, guid: 7e9ea962253805c448c38a2cb7d00a37, type: 3}
+    volume: 1
+    clipName: JumpBoost
+--- !u!82 &3189948444369110283
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8509480256758159201}
+  m_GameObject: {fileID: 6324937905845350986}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
