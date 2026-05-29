@@ -4,7 +4,7 @@
         <ui:Label text="PAUSED" style="font-size: 70px; padding-bottom: 10px; padding-top: 15px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(57, 82, 42); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); letter-spacing: 5px; -unity-text-align: upper-center; -unity-font-style: bold; color: rgb(57, 82, 42);"/>
         <ui:Button text="Continue" name="Continue" class="menuButton"/>
         <ui:Button text="Settings" name="Settings" class="menuButton"/>
-        <ui:Button text="BUG REPORT" name="BUG_REPORT" class="menuButton" style="-unity-material: url(&quot;project://database/Assets/Resources/Art/Shaders/MenuShader.shadergraph?fileID=-876546973899608171&amp;guid=05b13368345f6054abea596e8df069f5&amp;type=3#MenuShader&quot;) prop(&quot;_Scale&quot; 10) prop(&quot;_Speed&quot; 0.1) prop(&quot;_Color_1&quot; rgb(255, 0, 197)) prop(&quot;_Color_2&quot; rgb(140, 24, 107)) prop(&quot;_Color_3&quot; rgb(238, 13, 255)) prop(&quot;_Color_4&quot; rgb(241, 121, 255)); color: rgb(122, 152, 112); -unity-text-outline-color: rgb(122, 152, 112); -unity-font-style: normal;"/>
+        <ui:Button text="BUG REPORT" name="BUG_REPORT" class="menuButton" style="-unity-font-style: normal;"/>
         <ui:Button text="Leave Island" name="Leave_Island" class="menuButton"/>
     </ui:VisualElement>
 </ui:UXML>
