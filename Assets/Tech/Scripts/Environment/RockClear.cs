@@ -6,6 +6,7 @@ public class RockClear : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        SFXManager.PlayEffect("BoulderDestroy");
         rocks = GetComponentsInChildren<Rigidbody>();
         foreach (Rigidbody rb in rocks)
         {
