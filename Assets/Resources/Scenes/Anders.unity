@@ -312,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!4 &35425935 stripped
 Transform:
@@ -537,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.size
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[7].volume
@@ -552,27 +553,75 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[10].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[13].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[7].clipName
-      value: StrengthBoost
+      value: BoulderDestroy
       objectReference: {fileID: 0}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[8].clipName
-      value: SpeedBoost
+      value: TreeDestroy
       objectReference: {fileID: 0}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[9].clipName
+      value: ItemPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[10].clipName
+      value: FruitDrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[11].clipName
+      value: StrengthBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[12].clipName
+      value: SpeedBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[13].clipName
       value: JumpBoost
       objectReference: {fileID: 0}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[7].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2fa24d5dfb36d4f46b0952ded1eb946e, type: 3}
+      objectReference: {fileID: 8300000, guid: f16525b62ae09b940b353d2f25287ce9, type: 3}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[8].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0dec75bcdebc62b48a62cd99d5c5599f, type: 3}
+      objectReference: {fileID: 8300000, guid: 231dae423456d3743a9c845bbff14ada, type: 3}
     - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: sFXclips.Array.data[9].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: db403de1edad40a4484b4404a8d43ab6, type: 3}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[10].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fa78e9438db66d4398a6d26617cd401, type: 3}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[11].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2fa24d5dfb36d4f46b0952ded1eb946e, type: 3}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[12].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0dec75bcdebc62b48a62cd99d5c5599f, type: 3}
+    - target: {fileID: 4183853177479585990, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: sFXclips.Array.data[13].audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 7e9ea962253805c448c38a2cb7d00a37, type: 3}
     - target: {fileID: 4885810749828687223, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
@@ -616,7 +665,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 0}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
@@ -6445,6 +6495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 2
   apples: []
+  bananas: []
   coconuts: []
 --- !u!4 &500625668
 Transform:
@@ -7628,6 +7679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!64 &565815152
 MeshCollider:
@@ -9248,6 +9300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!64 &771903136
 MeshCollider:
@@ -13225,6 +13278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!1001 &1197927389
 PrefabInstance:
@@ -18264,6 +18318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 1
   apples: []
+  bananas: []
   coconuts: []
 --- !u!1001 &1541192364
 PrefabInstance:
@@ -18931,6 +18986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!4 &1591133998 stripped
 Transform:
@@ -19109,6 +19165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!1 &1614957973
 GameObject:
