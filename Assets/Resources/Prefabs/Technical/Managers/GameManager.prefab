@@ -53,6 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365729686925590023}
+  - component: {fileID: 1784408990871253246}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -73,13 +74,25 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1298480373542110686}
   - {fileID: 7993650490702973609}
   - {fileID: 453943770971450480}
   - {fileID: 836605052927626571}
   - {fileID: 308390142212898497}
+  - {fileID: 2886865260662303950}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1784408990871253246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854412785630299793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6b24693607d4c4ebde2d68ac430bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1001 &2915602466881760577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,9 +170,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
---- !u!4 &1298480373542110686 stripped
+--- !u!4 &2886865260662303950 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4211830997642520735, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 28842766046609807, guid: d6ea2705d1d548a4799b04f41ea211e6, type: 3}
   m_PrefabInstance: {fileID: 2915602466881760577}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6448156252697578233
