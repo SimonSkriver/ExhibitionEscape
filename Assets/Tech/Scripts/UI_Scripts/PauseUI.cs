@@ -12,14 +12,16 @@ public class PauseUI : MonoBehaviour {
         pauseButtons = UI.pauseRoot.Query<Button>().ToList();
         foreach (var btn in pauseButtons) {
             btn.RegisterCallback<ClickEvent>(OnPauseButton);
+            btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
+
         }
         settingsButtons = UI.settingsRoot.Query<Button>().ToList();
         foreach (var btn in settingsButtons) {
             btn.RegisterCallback<ClickEvent>(OnSettingsButton);
-            btn.RegisterCallback<PointerEnterEvent>(OnHoverSettings);
+            btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
         }
     }
-    public void OnHoverSettings(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
+    public void OnHoverSettings(MouseEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
 
     void OnPauseButton(ClickEvent evt) {
         Button btn = evt.target as Button;
@@ -31,8 +33,10 @@ public class PauseUI : MonoBehaviour {
             case "Settings":
                 UI.HidePauseMenuUI();
                 UI.ShowSettingsMenuUI();
+                SFXManager.PlayEffect("ClickButton");
                 break;
             case "BUG_REPORT":
+                SFXManager.PlayEffect("ClickButton");
                 Application.OpenURL("https://tally.so/r/GxQRbZ");
                 break;
         }
@@ -47,14 +51,17 @@ public class PauseUI : MonoBehaviour {
             case "Back":
                 UI.HideSettingsMenuUI();
                 UI.ShowPauseMenuUI();
+                SFXManager.PlayEffect("BackButton");
                 break;
             case "Language":
                 switch (btn.text) {
                     case "English":
                         btn.text = "Danish";
+                        SFXManager.PlayEffect("ClickButton");
                         break;
                     case "Danish":
                         btn.text = "English";
+                        SFXManager.PlayEffect("BackButton");
                         break;
                 }
 

@@ -21,6 +21,7 @@ public class BoulderStrengthEffect : MonoBehaviour
 
         if (strengthCoroutine != null)
         {
+            SFXManager.PlayEffect("StengthBoost");
             StopCoroutine(strengthCoroutine);
         }
 

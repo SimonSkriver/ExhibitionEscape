@@ -105,8 +105,11 @@ public class InputManager : MonoBehaviour
             isGamePaused = true;
             DisablePlayer();
             UI_Manager.Instance.ShowPauseMenuUI();
+            SFXManager.PlayEffect("PauseMenu");
+
         } else {
             isGamePaused = false;
+            SFXManager.PlayEffect("BackButton");
             EnablePlayer();
             UI_Manager.Instance.HidePauseMenuUI();
             UI_Manager.Instance.HideSettingsMenuUI();
