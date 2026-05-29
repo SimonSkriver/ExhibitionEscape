@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 669223990644124239}
   - component: {fileID: 4185582929726101293}
   - component: {fileID: 6751634052774041549}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 7209664790521512046}
   - component: {fileID: 6712548227251669622}
   - component: {fileID: 5006813990648086653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 3684512757431639702}
   - component: {fileID: 2643013326308662535}
   - component: {fileID: 5829877966297442491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 6106304714978177261}
   - component: {fileID: 4363757526410273915}
   - component: {fileID: 2596237200890455503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 425793877740048223}
   - component: {fileID: 7144659518524941194}
   - component: {fileID: 2497320882149373601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 7532762869823411363}
   - component: {fileID: 3881781823129092842}
   - component: {fileID: 4827329948998778227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 5099805703583121870}
   - component: {fileID: 1323994277264145871}
   - component: {fileID: 3709091504551226242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 6366177920133549580}
   - component: {fileID: 8751074877230577647}
   - component: {fileID: 5029405850829496802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 5169567849170535518}
   - component: {fileID: 717575495480518448}
   - component: {fileID: 6036256865882791025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2248356485034807569}
   - component: {fileID: 1425679699453561172}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallJungleTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,7 +1044,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.07390462, z: -0, w: 0.9972654}
   m_LocalPosition: {x: -1.48, y: 0, z: -0.22}
-  m_LocalScale: {x: 0.45000002, y: 0.45000002, z: 0.45000002}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 670607468559502161}
@@ -1064,6 +1064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DestroyableLog
   treeType: 0
   apples: []
+  bananas: []
   coconuts: []
 --- !u!1 &5147220336295124897
 GameObject:
@@ -1077,7 +1078,7 @@ GameObject:
   - component: {fileID: 665357945280541079}
   - component: {fileID: 5816642974800489266}
   - component: {fileID: 7868202101561269927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1187,7 @@ GameObject:
   - component: {fileID: 3483128891987838265}
   - component: {fileID: 2393259723615817335}
   - component: {fileID: 7347158514990425140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1296,7 @@ GameObject:
   - component: {fileID: 8157664097749247847}
   - component: {fileID: 7202464981845015060}
   - component: {fileID: 4731020942777485111}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1405,7 @@ GameObject:
   - component: {fileID: 100838918416258274}
   - component: {fileID: 6995922009898472192}
   - component: {fileID: 3964106706870148938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1513,7 +1514,7 @@ GameObject:
   - component: {fileID: 3830120164485534972}
   - component: {fileID: 1850848135300752183}
   - component: {fileID: 3093048086241237005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leaf.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}

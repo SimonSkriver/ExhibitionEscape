@@ -59,8 +59,14 @@ public class UI_Manager : MonoBehaviour
     public void ShowSettingsMenuUI() => settingsRoot.style.display = DisplayStyle.Flex;
     public void HideSettingsMenuUI() => settingsRoot.style.display = DisplayStyle.None;
 
-    public void ShowPlayerCustomizeUI() => customizeRoot.style.display = DisplayStyle.Flex;
-    public void HidePlayerCustomizeUI() => customizeRoot.style.display = DisplayStyle.None;
+    public void ShowPlayerCustomizeUI() {
+        customizeRoot.style.display = DisplayStyle.Flex;
+        GameObject.Find("CustomizationCamera").SetActive(true);
+    }
+    public void HidePlayerCustomizeUI() {
+        customizeRoot.style.display = DisplayStyle.None;
+        GameObject.Find("CustomizationCamera").SetActive(false);
+    }
     public void ShowDialogueUI() {
         dialogueRoot.style.display = DisplayStyle.Flex;
         InputManager.Instance.DisablePlayer();
