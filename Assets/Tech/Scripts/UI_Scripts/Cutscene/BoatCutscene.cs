@@ -6,6 +6,7 @@ public class BoatCutscene : MonoBehaviour, IInteractable
     [SerializeField] Transform anchor;
     [SerializeField] Transform player;
     [SerializeField] PlayableDirector cutscene;
+    public bool inCutscene { get; private set; }
 
     public void Interact()
     {
