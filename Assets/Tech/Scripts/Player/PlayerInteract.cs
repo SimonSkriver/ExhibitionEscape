@@ -60,7 +60,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    void Clear()
+    public void Clear()
     {
         if (currentOutline != null)
         {
