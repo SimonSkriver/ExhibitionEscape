@@ -16,8 +16,10 @@ public class PauseUI : MonoBehaviour {
         settingsButtons = UI.settingsRoot.Query<Button>().ToList();
         foreach (var btn in settingsButtons) {
             btn.RegisterCallback<ClickEvent>(OnSettingsButton);
+            btn.RegisterCallback<PointerEnterEvent>(OnHoverSettings);
         }
     }
+    public void OnHoverSettings(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
 
     void OnPauseButton(ClickEvent evt) {
         Button btn = evt.target as Button;
