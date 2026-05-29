@@ -24,12 +24,13 @@ public class SFXManager : MonoBehaviour
         {
             return;
         }
-        foreach(var clip in Instance.sFXclips)
+        foreach(var sfxclip in Instance.sFXclips)
         {
-            if(soundName == clip.clipName)
+            if(soundName == sfxclip.clipName)
             {
-                Instance.audioSource.volume = clip.volume;
-                Instance.audioSource.PlayOneShot(clip.audioClip);
+                Instance.audioSource.volume = sfxclip.volume;
+                var randomClip = Random.Range(0,sfxclip.audioClips.Length);
+                Instance.audioSource.PlayOneShot(sfxclip.audioClips[randomClip]);
                 return;
             }
         }

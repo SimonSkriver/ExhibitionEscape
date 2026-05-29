@@ -46,48 +46,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SFXManager
   sFXclips:
-  - audioClip: {fileID: 8300000, guid: 4d6a936bbad52594dbb2ce169950e5a8, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: 4d6a936bbad52594dbb2ce169950e5a8, type: 3}
     volume: 0.1
     clipName: Jump
-  - audioClip: {fileID: 8300000, guid: e0290bf16f623ca41abbb5e12f03c4d5, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: e0290bf16f623ca41abbb5e12f03c4d5, type: 3}
     volume: 0.5
     clipName: Sprint
-  - audioClip: {fileID: 8300000, guid: a9a97efda7a666b408e6429f9bbc1228, type: 3}
-    volume: 1
+  - audioClips:
+    - {fileID: 8300000, guid: a9a97efda7a666b408e6429f9bbc1228, type: 3}
+    volume: 0.7
     clipName: ConfirmColor
-  - audioClip: {fileID: 8300000, guid: 0a9be1ef751d6d54ea3a592b3571ac1b, type: 3}
-    volume: 1
+  - audioClips:
+    - {fileID: 8300000, guid: 0a9be1ef751d6d54ea3a592b3571ac1b, type: 3}
+    volume: 0.5
     clipName: HoverSettings
-  - audioClip: {fileID: 8300000, guid: 0b6cefeaed0328746ab90bc9a4b38aa0, type: 3}
-    volume: 1
+  - audioClips:
+    - {fileID: 8300000, guid: 0b6cefeaed0328746ab90bc9a4b38aa0, type: 3}
+    volume: 0.5
     clipName: PauseMenu
-  - audioClip: {fileID: 8300000, guid: c58ebb3fbb7a0814aab2256db23ae291, type: 3}
-    volume: 1
+  - audioClips:
+    - {fileID: 8300000, guid: c58ebb3fbb7a0814aab2256db23ae291, type: 3}
+    volume: 0.5
     clipName: ClickButton
-  - audioClip: {fileID: 8300000, guid: 67f04ad7ded49104b8ff55ec1542f7ea, type: 3}
-    volume: 1
+  - audioClips:
+    - {fileID: 8300000, guid: 67f04ad7ded49104b8ff55ec1542f7ea, type: 3}
+    volume: 0.5
     clipName: BackButton
-  - audioClip: {fileID: 8300000, guid: f16525b62ae09b940b353d2f25287ce9, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: f16525b62ae09b940b353d2f25287ce9, type: 3}
     volume: 1
     clipName: BoulderDestroy
-  - audioClip: {fileID: 8300000, guid: 231dae423456d3743a9c845bbff14ada, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: 231dae423456d3743a9c845bbff14ada, type: 3}
     volume: 1
     clipName: TreeDestroy
-  - audioClip: {fileID: 8300000, guid: db403de1edad40a4484b4404a8d43ab6, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: db403de1edad40a4484b4404a8d43ab6, type: 3}
     volume: 1
     clipName: ItemPickup
-  - audioClip: {fileID: 8300000, guid: 3fa78e9438db66d4398a6d26617cd401, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: 3fa78e9438db66d4398a6d26617cd401, type: 3}
     volume: 1
     clipName: FruitDrop
-  - audioClip: {fileID: 8300000, guid: 2fa24d5dfb36d4f46b0952ded1eb946e, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: 2fa24d5dfb36d4f46b0952ded1eb946e, type: 3}
     volume: 1
     clipName: StrengthBoost
-  - audioClip: {fileID: 8300000, guid: 0dec75bcdebc62b48a62cd99d5c5599f, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: 0dec75bcdebc62b48a62cd99d5c5599f, type: 3}
     volume: 1
     clipName: SpeedBoost
-  - audioClip: {fileID: 8300000, guid: 7e9ea962253805c448c38a2cb7d00a37, type: 3}
+  - audioClips:
+    - {fileID: 8300000, guid: 7e9ea962253805c448c38a2cb7d00a37, type: 3}
     volume: 1
     clipName: JumpBoost
+  - audioClips:
+    - {fileID: 8300000, guid: bedf222f161ce534ba8aed156cc0ba7f, type: 3}
+    - {fileID: 8300000, guid: 1d277b8c6024efe4d8eedcd269b8dc9f, type: 3}
+    - {fileID: 8300000, guid: 838ff8c692d0094469f9236a71f70996, type: 3}
+    - {fileID: 8300000, guid: 4dcb2d5ce76b64e489c0f2cef59d68c6, type: 3}
+    volume: 0.3
+    clipName: HurtSound
 --- !u!82 &3189948444369110283
 AudioSource:
   m_ObjectHideFlags: 0
