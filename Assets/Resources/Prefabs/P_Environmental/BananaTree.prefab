@@ -120,6 +120,8 @@ GameObject:
   - component: {fileID: 792292175539967613}
   - component: {fileID: 7134596884438306740}
   - component: {fileID: 3189646594256166694}
+  - component: {fileID: 6949324933961314856}
+  - component: {fileID: 4011564372520642294}
   m_Layer: 6
   m_Name: BananaTree
   m_TagString: Untagged
@@ -183,6 +185,48 @@ MonoBehaviour:
   - {fileID: 6578913131560211678}
   - {fileID: 3303202099399553984}
   coconuts: []
+--- !u!65 &6949324933961314856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315806015117422612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1082939, y: 0.50027263, z: 0.08490427}
+  m_Center: {x: 0.031424344, y: 0.23288503, z: 0.04349845}
+--- !u!65 &4011564372520642294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315806015117422612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14783615, y: 0.6496052, z: 0.21637836}
+  m_Center: {x: 0.003531188, y: 0.80385524, z: 0.16697475}
 --- !u!1 &7756765007360758274
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +337,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
