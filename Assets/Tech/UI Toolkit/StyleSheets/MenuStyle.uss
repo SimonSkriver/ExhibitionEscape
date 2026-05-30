@@ -54,6 +54,10 @@
     background-color: rgba(28, 35, 60, 0.392);
     color: rgb(226, 229, 241);
     width: 12%;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }
 
 .levelSelectButton:hover {
@@ -244,5 +248,3 @@
     width: 100px;
     height: 100px;
 }
-
-
