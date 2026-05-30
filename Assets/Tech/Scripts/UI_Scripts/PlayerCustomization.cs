@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Unity.Cinemachine;
 
 public class PlayerCustomization : MonoBehaviour
 {
@@ -47,9 +48,28 @@ public class PlayerCustomization : MonoBehaviour
         Slider sld = (Slider)evt.target;
 
         switch (sld.tooltip) {
+
             case "Head Size":
+                // Change scale of head (neckBone)
                 neckBone.localScale = new Vector3(sld.value, sld.value, sld.value);;
+
+                // Find slider value in percent
+                float sldValPercent = (sld.value - sld.lowValue) / (sld.highValue - sld.lowValue);
+
+                // Lerp between given numbers
+                float xScreenPos = Mathf.Lerp(-0.1f, 0f, sldValPercent);
+                float yScreenPos = Mathf.Lerp(-0.15f, 0.08f, sldValPercent);
+                float targetOffset = Mathf.Lerp(-0.35f, 1.5f, sldValPercent);
+
+                // Set Camera Target Offset
+                GameManager.customCam.GetComponent<CinemachineOrbitalFollow>().TargetOffset.z = targetOffset;
+
+                // Set Camera Screen Position
+                CinemachineRotationComposer crc = GameManager.customCam.GetComponent<CinemachineRotationComposer>();
+                crc.Composition.ScreenPosition.x = xScreenPos;
+                crc.Composition.ScreenPosition.y = yScreenPos;
                 break;
+
             case "Neck Length":
                 Vector3 neckPos = neckBone.localPosition;
                 neckPos.y = sld.value;
