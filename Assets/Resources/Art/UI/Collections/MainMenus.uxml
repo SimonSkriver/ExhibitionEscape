@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="LevelSelectMenu" src="project://database/Assets/Resources/Art/UI/Menus/LevelSelectMenu.uxml?fileID=9197481963319205126&amp;guid=f075467264c87ae4e97a4749a80fe18a&amp;type=3#LevelSelectMenu"/>
+    <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
+    <ui:Instance template="LevelSelectMenu" name="LevelSelect" style="width: 100%; height: 100%; display: flex;"/>
+</ui:UXML>

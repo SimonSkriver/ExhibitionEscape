@@ -54,6 +54,10 @@
     background-color: rgba(28, 35, 60, 0.392);
     color: rgb(226, 229, 241);
     width: 12%;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }
 
 .levelSelectButton:hover {
@@ -68,6 +72,18 @@
     font-size: 100px;
     background-color: rgba(157, 214, 150, 0.392);
     color: rgb(214, 238, 212);
+}
+
+.levelSelectButton:disabled {
+    -unity-font-style: bold;
+    font-size: 100px;
+    background-color: rgba(15, 19, 34, 0.239);
+    color: rgb(195, 195, 195);
+    width: 12%;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }
 
 .choiceButton {
@@ -244,5 +260,3 @@
     width: 100px;
     height: 100px;
 }
-
-

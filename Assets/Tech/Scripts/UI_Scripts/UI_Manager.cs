@@ -39,7 +39,7 @@ public class UI_Manager : MonoBehaviour
         levelRoot.style.display = DisplayStyle.None;
         dialogueRoot.style.display = DisplayStyle.None;
 
-        //StartCoroutine(ScreenTransition());
+        
     }
 
     private void Start() {
@@ -86,29 +86,5 @@ public class UI_Manager : MonoBehaviour
         InputManager.Instance.EnablePlayer();
     }
 
-    public IEnumerator ScreenTransition() {
-        float alpha = 0;
 
-        // Fade in
-        while (alpha < 1 ) {
-            yield return new WaitForSeconds(0.01f);
-            alpha += 0.01f;
-            root.Q<VisualElement>("TransitionScreen").style.backgroundColor = new Color(1, 1, 1, alpha);
-            if (alpha > 1) { alpha = 1; }
-            Debug.Log(alpha);
-        }
-
-        yield return new WaitUntil(() => alpha.Equals(1));
-        yield return new WaitForSeconds(1f);
-
-        // Fade out
-        while (alpha > 0) {
-            yield return new WaitForSeconds(0.01f);
-            alpha -= 0.01f;
-            root.Q<VisualElement>("TransitionScreen").style.backgroundColor = new Color(1, 1, 1, alpha);
-            Debug.Log(alpha);
-        }
-    }
-
-    
 }

@@ -1,7 +1,9 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
+    <ui:Label text="Title" name="Island_Title" style="position: absolute; align-self: center; -unity-text-align: middle-center; font-size: 100px; -unity-font-style: bold; -unity-text-outline-width: 5px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;);"/>
     <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between; margin-top: -5px; margin-right: -5px; margin-bottom: -5px; margin-left: -5px;">
         <ui:Button text="&lt;" name="PREVIOUS" class="levelSelectButton" style="white-space: nowrap;"/>
+        <ui:Button text="Select" name="SELECT" enabled="true" class="levelSelectButton" style="width: 500px; height: 200px; align-self: flex-end;"/>
         <ui:Button text="&gt;" name="NEXT" class="levelSelectButton" style="white-space: nowrap;"/>
     </ui:VisualElement>
 </ui:UXML>
