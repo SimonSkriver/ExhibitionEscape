@@ -7,10 +7,10 @@
             <ui:Button text="Back" name="Back" class="menuButton"/>
             <ui:GroupBox>
                 <ui:Label text="Volume" name="SoundVolume" class="textMenu"/>
-                <ui:Slider label="Master" value="42" high-value="100" name="SettingsSlider" focusable="true"/>
-                <ui:Slider label="Environment" value="42" high-value="100" name="SettingsSlider" focusable="true"/>
-                <ui:Slider label="Sound Effects" value="42" high-value="100" name="SettingsSlider"/>
-                <ui:Slider label="Music" value="42" high-value="100" name="SettingsSlider"/>
+                <ui:Slider label="Master" value="50" high-value="100" name="SettingsSlider" focusable="true" tooltip="Master" low-value="0"/>
+                <ui:Slider label="Environment" value="50" high-value="100" name="SettingsSlider" focusable="true" tooltip="Environment" low-value="0"/>
+                <ui:Slider label="Sound Effects" value="50" high-value="100" name="SettingsSlider" tooltip="SoundEffects" low-value="0"/>
+                <ui:Slider label="Music" value="50" high-value="100" name="SettingsSlider" tooltip="Music" low-value="0" fill="false"/>
             </ui:GroupBox>
             <ui:GroupBox>
                 <ui:Label text="LANGUAGE" class="textMenu"/>

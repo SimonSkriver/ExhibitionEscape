@@ -1,0 +1,50 @@
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UIElements;
+using System.Collections.Generic;
+public class SoundMixerManager : MonoBehaviour
+{
+    private AudioMixer audioMixer;
+    private VisualElement rootVis;
+    private List<Slider> sliders = new List<Slider>();
+    private VisualElement dragger;
+
+
+    void Start()
+    {
+        audioMixer = Resources.Load<AudioMixer>("Sounds/MainMixer");
+        rootVis = GetComponent<UIDocument>().rootVisualElement;
+        sliders = rootVis.Query<Slider>().ToList();
+        foreach(var slider in sliders)
+        {
+            slider.RegisterCallback<ChangeEvent<float>>(SetVolume);
+            //SetVolume(new ChangeEvent<float>());
+        }
+    }
+    public void SetVolume(ChangeEvent<float> evt)
+    {
+        Slider slider = (Slider) evt.target;
+
+        float percent = slider.value / 100f;
+        percent = Mathf.Clamp(percent, 0.0001f, 1f);
+        float decibel = Mathf.Log10(percent)* 20f;
+
+        switch (slider.label)
+        {
+            case "Master":
+                audioMixer.SetFloat("masterVolume", decibel);
+                break;
+            case "Music":
+                audioMixer.SetFloat("musicVolume", decibel);
+                break;
+            case "Environment":
+                audioMixer.SetFloat("soundscapeVolume", decibel);
+                break;
+            case "Sound Effects":
+                audioMixer.SetFloat("sfxVolume", decibel);
+                break;
+        }
+
+        
+    }
+}
