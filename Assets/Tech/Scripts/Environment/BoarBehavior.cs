@@ -34,7 +34,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private LayerMask visionObstacleMask;
 
     [Header("Threat Call")]
-    [SerializeField] private float threatCallTime = 1.2f;
+    [SerializeField] private float threatCallTime = 1f;
 
     [Header("Charge")]
     [SerializeField] private float chargeStartDistance = 10f;
@@ -52,8 +52,9 @@ public class BoarBehavior : MonoBehaviour
 
     [Header("Damage")]
     [SerializeField] private int playerDamage = 25;
-    [SerializeField] private float knockbackDistance = 5f;
-    [SerializeField] private float knockbackDuration = 1f;
+    [SerializeField] private float knockbackDistance = 10f;
+    [SerializeField] private float knockbackDuration = 2f;
+    [SerializeField] private float knockbackUpHeight = 2f;
 
     [Header("Jungle Area")]
     [SerializeField] private Collider[] jungleAreas;
@@ -217,9 +218,6 @@ public class BoarBehavior : MonoBehaviour
     {
         ChangeState(BoarState.Threatening);
 
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
-
         Vector3 lookDirection = player.position - transform.position;
         lookDirection.y = 0f;
 
@@ -247,25 +245,22 @@ public class BoarBehavior : MonoBehaviour
     {
         ChangeState(BoarState.Windup);
 
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
-
-        Vector3 lockedPlayerPosition = player.position;
-        lockedPlayerPosition.y = transform.position.y;
-
-        chargeDirection = (lockedPlayerPosition - transform.position).normalized;
-        chargeTarget = lockedPlayerPosition + chargeDirection * chargePastPlayerDistance;
-
         float timer = 0f;
 
         while (timer < chargeWindupTime)
         {
             timer += Time.deltaTime;
 
+            Vector3 lockedPlayerPosition = player.position;
+            lockedPlayerPosition.y = transform.position.y;
+
+            chargeDirection = (lockedPlayerPosition - transform.position).normalized;
+            chargeTarget = lockedPlayerPosition + chargeDirection * chargePastPlayerDistance;
+
             if (chargeDirection != Vector3.zero)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(chargeDirection);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 8f);
+                transform.rotation = Quaternion.Slerp(transform.rotation,targetRotation,Time.deltaTime * 8f);
             }
 
             yield return null;
@@ -329,7 +324,8 @@ public class BoarBehavior : MonoBehaviour
 
     private IEnumerator PauseThenChaseAgain()
     {
-        EnableAgentAgain();
+        if (!EnableAgentAgain())
+            yield break;
 
         ChangeState(BoarState.Stunned); //Perhaps a different enum
 
@@ -367,7 +363,8 @@ public class BoarBehavior : MonoBehaviour
 
     private IEnumerator StunBoar()
     {
-        EnableAgentAgain();
+        if (!EnableAgentAgain())
+            yield break;
 
         ChangeState(BoarState.Stunned);
 
@@ -375,6 +372,9 @@ public class BoarBehavior : MonoBehaviour
         agent.velocity = Vector3.zero;
 
         yield return new WaitForSeconds(stunTime);
+
+        if (!agent.enabled)
+            yield break;
 
         agent.isStopped = false;
 
@@ -397,6 +397,13 @@ public class BoarBehavior : MonoBehaviour
 
         if (playerController != null)
         {
+            PlayerController playerMovement = playerController.GetComponent<PlayerController>();
+
+            if (playerMovement != null)
+            {
+                playerMovement.playerVelocity.y = 0f;
+            }
+
             StartCoroutine(KnockbackPlayer());
         }
     }
@@ -405,14 +412,27 @@ public class BoarBehavior : MonoBehaviour
     {
         float timer = 0f;
 
-        Vector3 knockbackDirection = chargeDirection.normalized;
-        Vector3 knockbackMovement = knockbackDirection * knockbackDistance;
+        Vector3 horizontalDirection = chargeDirection;
+        horizontalDirection.y = 0f;
+        horizontalDirection.Normalize();
+
+        Vector3 totalHorizontalMovement = horizontalDirection * knockbackDistance;
+
+        float previousHeight = 0f;
 
         while (timer < knockbackDuration)
         {
             timer += Time.deltaTime;
 
-            playerController.Move(knockbackMovement * Time.deltaTime / knockbackDuration);
+            float progress = timer / knockbackDuration;
+
+            Vector3 horizontalMove = totalHorizontalMovement * Time.deltaTime / knockbackDuration;
+
+            float currentHeight = Mathf.Sin(progress * Mathf.PI) * knockbackUpHeight;
+            float verticalMove = currentHeight - previousHeight;
+            previousHeight = currentHeight;
+
+            playerController.Move(horizontalMove + Vector3.up * verticalMove);
 
             yield return null;
         }
@@ -441,22 +461,20 @@ public class BoarBehavior : MonoBehaviour
         StartCoroutine(DestroyBoarAfterDelay());
     }
 
-   private void KillBoar()
+    private void KillBoar()
     {
         if (isDead)
             return;
 
         isDead = true;
 
-        EnableAgentAgain();
-
-        ChangeState(BoarState.Dead);
-
-        if (agent.enabled)
+        if (EnableAgentAgain())
         {
             agent.isStopped = true;
             agent.velocity = Vector3.zero;
         }
+
+        ChangeState(BoarState.Dead);
 
         StartCoroutine(DestroyBoarAfterDelay());
     }
@@ -472,7 +490,7 @@ public class BoarBehavior : MonoBehaviour
 
         if (boarSpawner != null)
         {
-            StartCoroutine(boarSpawner.SpawnBoar());
+            boarSpawner.SpawnBoar();
         }
 
         Destroy(gameObject);
@@ -489,10 +507,11 @@ public class BoarBehavior : MonoBehaviour
 
         if (currentState == BoarState.Wandering)
         {
-            EnableAgentAgain();
-
-            agent.speed = wanderSpeed;
-            agent.isStopped = false;
+            if (EnableAgentAgain())
+            {
+                agent.speed = wanderSpeed;
+                agent.isStopped = false;
+            }
 
             lostSightCounter = 0f;
             wanderCounter = wanderTimer;
@@ -500,36 +519,39 @@ public class BoarBehavior : MonoBehaviour
 
         else if (currentState == BoarState.Grazing)
         {
-            EnableAgentAgain();
-
-            agent.isStopped = true;
-            agent.velocity = Vector3.zero;
+            if (EnableAgentAgain())
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
         }
 
         else if (currentState == BoarState.Threatening)
         {
-            EnableAgentAgain();
-
-            agent.isStopped = true;
-            agent.velocity = Vector3.zero;
+            if (EnableAgentAgain())
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
         }
 
         else if (currentState == BoarState.Chasing)
         {
-            EnableAgentAgain();
-
-            agent.speed = chaseSpeed;
-            agent.isStopped = false;
+            if (EnableAgentAgain())
+            {
+                agent.speed = chaseSpeed;
+                agent.isStopped = false;
+            }
 
             lostSightCounter = 0f;
 
             if (player != null)
-            lastSeenPlayerPosition = player.position;
+                lastSeenPlayerPosition = player.position;
         }
 
         else if (currentState == BoarState.Windup)
         {
-            if(EnableAgentAgain())
+            if (EnableAgentAgain())
             {
                 agent.isStopped = true;
                 agent.velocity = Vector3.zero;
@@ -547,7 +569,7 @@ public class BoarBehavior : MonoBehaviour
 
         else if (currentState == BoarState.Stunned)
         {
-            if(EnableAgentAgain())
+            if (EnableAgentAgain())
             {
                 agent.isStopped = true;
                 agent.velocity = Vector3.zero;
@@ -556,7 +578,7 @@ public class BoarBehavior : MonoBehaviour
 
         else if (currentState == BoarState.Dead)
         {
-            if(EnableAgentAgain())
+            if (EnableAgentAgain())
             {
                 agent.isStopped = true;
                 agent.velocity = Vector3.zero;
