@@ -15,10 +15,10 @@ Material:
   m_InvalidKeywords:
   - _ALPHAPREMULTIPLY_ON
   - _SURFACE_TYPE_TRANSPARENT
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 2999
+  m_CustomRenderQueue: 3001
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
@@ -105,7 +105,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _Alpha: 0
+    - _Alpha: 0.1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -130,7 +130,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
-    - _QueueOffset: -1
+    - _QueueOffset: 1
     - _ReceiveShadows: 1
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
@@ -148,12 +148,12 @@ Material:
     - _asd: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.19215687}
-    - _Color: {r: 1, g: 1, b: 1, a: 0.19215687}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _TintColor: {r: 0.8224902, g: 0.89762217, b: 0.9528302, a: 1}
+    - _TintColor: {r: 0.46444464, g: 0.58268607, b: 0.6698113, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8090053460516541475
