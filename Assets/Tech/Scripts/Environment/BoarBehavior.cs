@@ -8,6 +8,7 @@ public class BoarBehavior : MonoBehaviour
     {
         Wandering,
         Grazing,
+        Threatening,
         Chasing,
         Windup,
         Charging,
@@ -29,7 +30,11 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float viewDistance = 20f;
     [SerializeField] private float viewAngle = 50f;
     [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask chargeHitMask;
     [SerializeField] private LayerMask visionObstacleMask;
+
+    [Header("Threat Call")]
+    [SerializeField] private float threatCallTime = 1.2f;
 
     [Header("Charge")]
     [SerializeField] private float chargeStartDistance = 10f;
@@ -43,6 +48,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private int boarHealth = 3;
     [SerializeField] private float stunTime = 2f;
     [SerializeField] private float deathDelay = 2f;
+    private bool isDead;
 
     [Header("Damage")]
     [SerializeField] private int playerDamage = 25;
@@ -118,7 +124,7 @@ public class BoarBehavior : MonoBehaviour
     {
         if (CanSeePlayer())
         {
-            ChangeState(BoarState.Chasing);
+            StartCoroutine(ThreatCallThenChase());
             return;
         }
 
@@ -136,11 +142,11 @@ public class BoarBehavior : MonoBehaviour
         }
     }
 
-    private void UpdateGrazing()
+   private void UpdateGrazing()
     {
         if (CanSeePlayer())
         {
-            ChangeState(BoarState.Chasing);
+            StartCoroutine(ThreatCallThenChase());
             return;
         }
 
@@ -148,9 +154,8 @@ public class BoarBehavior : MonoBehaviour
 
         if (wanderCounter >= wanderTimer)
         {
-            agent.isStopped = false;
-            SetNewWanderDestination();
             ChangeState(BoarState.Wandering);
+            SetNewWanderDestination();
         }
     }
 
@@ -208,6 +213,36 @@ public class BoarBehavior : MonoBehaviour
         }
     }
 
+    private IEnumerator ThreatCallThenChase()
+    {
+        ChangeState(BoarState.Threatening);
+
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+
+        Vector3 lookDirection = player.position - transform.position;
+        lookDirection.y = 0f;
+
+        if (lookDirection != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(lookDirection);
+        }
+
+        yield return new WaitForSeconds(threatCallTime);
+
+        if (currentState != BoarState.Threatening || isDead)
+            yield break;
+
+        if (IsPlayerInsideJungle())
+        {
+            ChangeState(BoarState.Chasing);
+        }
+        else
+        {
+            ChangeState(BoarState.Wandering);
+        }
+    }
+
     private IEnumerator WindupThenCharge()
     {
         ChangeState(BoarState.Windup);
@@ -236,16 +271,21 @@ public class BoarBehavior : MonoBehaviour
             yield return null;
         }
 
-        agent.enabled = false;
+        if (currentState != BoarState.Windup || isDead)
+            yield break;
 
         ChangeState(BoarState.Charging);
+
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+        agent.enabled = false;
     }
 
     private void UpdateCharging()
     {
         float moveDistance = chargeSpeed * Time.deltaTime;
 
-        if (Physics.SphereCast(transform.position + Vector3.up * 0.5f, chargeHitRadius, chargeDirection, out RaycastHit hit, moveDistance))
+       if (Physics.SphereCast(transform.position + Vector3.up * 0.5f, chargeHitRadius, chargeDirection, out RaycastHit hit, moveDistance, chargeHitMask, QueryTriggerInteraction.Collide))
         {
             GameObject hitObject = hit.collider.gameObject;
 
@@ -380,12 +420,20 @@ public class BoarBehavior : MonoBehaviour
 
     private void KillBoarByBananaPeel()
     {
+        if (isDead)
+            return;
+
+        isDead = true;
+
         EnableAgentAgain();
 
         ChangeState(BoarState.Dead);
 
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
+        if (agent.enabled)
+        {
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+        }
 
         if (anim != null)
             anim.SetTrigger("BoarFlip");
@@ -393,17 +441,22 @@ public class BoarBehavior : MonoBehaviour
         StartCoroutine(DestroyBoarAfterDelay());
     }
 
-    private void KillBoar()
+   private void KillBoar()
     {
+        if (isDead)
+            return;
+
+        isDead = true;
+
         EnableAgentAgain();
 
         ChangeState(BoarState.Dead);
 
-        agent.isStopped = true;
-        agent.velocity = Vector3.zero;
-
-        if (anim != null)
-            anim.SetTrigger("Die");
+        if (agent.enabled)
+        {
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+        }
 
         StartCoroutine(DestroyBoarAfterDelay());
     }
@@ -427,7 +480,12 @@ public class BoarBehavior : MonoBehaviour
 
     private void ChangeState(BoarState newState)
     {
+        if (currentState == newState)
+            return;
+
         currentState = newState;
+
+        UpdateAnimator();
 
         if (currentState == BoarState.Wandering)
         {
@@ -440,7 +498,7 @@ public class BoarBehavior : MonoBehaviour
             wanderCounter = wanderTimer;
         }
 
-        if (currentState == BoarState.Grazing)
+        else if (currentState == BoarState.Grazing)
         {
             EnableAgentAgain();
 
@@ -448,7 +506,15 @@ public class BoarBehavior : MonoBehaviour
             agent.velocity = Vector3.zero;
         }
 
-        if (currentState == BoarState.Chasing)
+        else if (currentState == BoarState.Threatening)
+        {
+            EnableAgentAgain();
+
+            agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+        }
+
+        else if (currentState == BoarState.Chasing)
         {
             EnableAgentAgain();
 
@@ -458,7 +524,43 @@ public class BoarBehavior : MonoBehaviour
             lostSightCounter = 0f;
 
             if (player != null)
-                lastSeenPlayerPosition = player.position;
+            lastSeenPlayerPosition = player.position;
+        }
+
+        else if (currentState == BoarState.Windup)
+        {
+            if(EnableAgentAgain())
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
+        }
+
+        else if (currentState == BoarState.Charging)
+        {
+            if (agent.enabled)
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
+        }
+
+        else if (currentState == BoarState.Stunned)
+        {
+            if(EnableAgentAgain())
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
+        }
+
+        else if (currentState == BoarState.Dead)
+        {
+            if(EnableAgentAgain())
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
         }
     }
 
@@ -571,16 +673,20 @@ public class BoarBehavior : MonoBehaviour
         return false;
     }
 
-    private void EnableAgentAgain()
+    private bool EnableAgentAgain()
     {
         if (agent.enabled)
-            return;
+            return true;
 
         if (NavMesh.SamplePosition(transform.position, out NavMeshHit navHit, navMeshCheckDistance, NavMesh.AllAreas))
         {
             transform.position = navHit.position;
             agent.enabled = true;
+            return true;
         }
+
+        Debug.LogWarning("Could not place boar back on NavMesh.");
+        return false;
     }
 
     private void UpdateAnimator()
@@ -588,12 +694,44 @@ public class BoarBehavior : MonoBehaviour
         if (anim == null)
             return;
 
-        anim.SetBool("IsWalking", currentState == BoarState.Wandering);
-        anim.SetBool("IsGrazing", currentState == BoarState.Grazing);
-        anim.SetBool("IsChasing", currentState == BoarState.Chasing);
-        anim.SetBool("IsPreparingCharge", currentState == BoarState.Windup);
-        anim.SetBool("IsCharging", currentState == BoarState.Charging);
-        anim.SetBool("IsStunned", currentState == BoarState.Stunned);
+        int animState = 0;
+
+        switch (currentState)
+        {
+            case BoarState.Wandering:
+                animState = 0;
+                break;
+
+            case BoarState.Grazing:
+                animState = 1;
+                break;
+
+            case BoarState.Threatening:
+                animState = 2;
+                break;
+
+            case BoarState.Chasing:
+                animState = 3;
+                break;
+
+            case BoarState.Windup:
+                animState = 4;
+                break;
+
+            case BoarState.Charging:
+                animState = 5;
+                break;
+
+            case BoarState.Stunned:
+                animState = 6;
+                break;
+
+            case BoarState.Dead:
+                animState = 7;
+                break;
+        }
+
+        anim.SetInteger("BoarAnimState", animState);
     }
 
     private void OnDrawGizmosSelected()
