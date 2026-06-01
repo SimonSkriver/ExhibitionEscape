@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
     {
         isSprinting = !isSprinting;
 
-        if (isSprinting)
+        if (isSprinting && isMoving)
         {
             SFXManager.PlayEffect("Sprint");
         }
