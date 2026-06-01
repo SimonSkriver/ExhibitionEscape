@@ -37,7 +37,7 @@ public class SoundMixerManager : MonoBehaviour
             case "Environment":
                 audioMixer.SetFloat("soundscapeVolume", decibel);
                 break;
-            case "Sound Effects":
+            case "SoundEffects":
                 audioMixer.SetFloat("sfxVolume", decibel);
                 break;
         }
