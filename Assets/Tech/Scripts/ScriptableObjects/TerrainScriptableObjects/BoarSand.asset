@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FootStepSO
   terrainLayer: {fileID: 8574412962073106934, guid: 09fe04414e04d5246bcd814e4588c41f, type: 2}
   footstepClips:
-  - {fileID: 8300000, guid: 9622ab435a3aa844895c50511142fea3, type: 3}
-  - {fileID: 8300000, guid: d34f65ea2df75914a94d4723ba72c34c, type: 3}
-  - {fileID: 8300000, guid: 979c88a1d02601a4289e30f30745f5a3, type: 3}
-  - {fileID: 8300000, guid: 917edca8c96245a4a9d6d8756ede2db0, type: 3}
+  - {fileID: 8300000, guid: fdc2d733b549fd24e8cb4f5868540278, type: 3}
+  - {fileID: 8300000, guid: 65c99098933a75a46880aaf4f6ee1653, type: 3}
   volume: 0.125

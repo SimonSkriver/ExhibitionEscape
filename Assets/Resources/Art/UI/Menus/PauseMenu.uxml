@@ -18,6 +18,7 @@
                 </UnityEngine.Localization.LocalizedString>
             </Bindings>
         </ui:Button>
+        <ui:Slider label="Slider" value="42" high-value="100"/>
         <ui:Button text="BUG REPORT" name="BUG_REPORT" class="menuButton" style="-unity-font-style: normal;">
             <Bindings>
                 <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(189366992220160)"/>
