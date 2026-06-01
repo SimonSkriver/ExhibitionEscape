@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public float MovementSpeed;
     public float SprintSpeed;
     public float JumpPower;
+    public bool canTakeFallDamage = true;
 
     void Awake()
     {
