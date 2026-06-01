@@ -9,7 +9,6 @@ public class SoundMixerManager : MonoBehaviour
     private List<Slider> sliders = new List<Slider>();
     float nextSFXtime;
 
-
     void Start()
     {
         audioMixer = Resources.Load<AudioMixer>("Sounds/MainMixer");
@@ -26,31 +25,39 @@ public class SoundMixerManager : MonoBehaviour
         float percent = slider.value / 100f;
         percent = Mathf.Clamp(percent, 0.0001f, 1f);
         float decibel = Mathf.Log10(percent)* 20f;
-
-        switch (slider.label)
+        
+        switch (slider.tooltip)
         {
             case "Master":
                 audioMixer.SetFloat("masterVolume", decibel);
+                PlaySliderSound();
                 break;
             case "Music":
                 audioMixer.SetFloat("musicVolume", decibel);
+                PlaySliderSound();
                 break;
             case "Environment":
                 audioMixer.SetFloat("soundscapeVolume", decibel);
+                PlaySliderSound();
                 break;
             case "SoundEffects":
                 audioMixer.SetFloat("sfxVolume", decibel);
+                PlaySliderSound();
                 break;
         }
     }
     public void SetVolume(ChangeEvent<float> evt)
     {
+        
         Slider slider = (Slider) evt.target;
-        if(nextSFXtime < Time.time)
-        {
-            SFXManager.PlayEffect("SliderSound");
-            nextSFXtime = Time.time + 0.05f;
-        }
         AudioSliderSetting(slider);
+    }
+    public void PlaySliderSound()
+    {
+        if(nextSFXtime < Time.unscaledTime)
+        {
+           SFXManager.PlayEffect("SliderSound");
+           nextSFXtime = Time.unscaledTime + 0.05f; 
+        }
     }
 }

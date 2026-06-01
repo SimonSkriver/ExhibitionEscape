@@ -31,7 +31,7 @@
                         </UnityEngine.Localization.LocalizedString>
                     </Bindings>
                 </ui:Label>
-                <ui:Slider label="VOLUME" value="42" high-value="100" name="SettingsSlider" focusable="true">
+                <ui:Slider label="VOLUME" value="50" high-value="100" name="SettingsSlider" focusable="true" tooltip="Master">
                     <Bindings>
                         <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
                             <variables>
@@ -42,7 +42,7 @@
                         </UnityEngine.Localization.LocalizedString>
                     </Bindings>
                 </ui:Slider>
-                <ui:Slider label="Music" value="42" high-value="100" name="SettingsSlider">
+                <ui:Slider label="Music" value="50" high-value="100" name="SettingsSlider" tooltip="Music">
                     <Bindings>
                         <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
                             <variables>
@@ -53,7 +53,7 @@
                         </UnityEngine.Localization.LocalizedString>
                     </Bindings>
                 </ui:Slider>
-                <ui:Slider label="Sound Effects" high-value="100" name="SettingsSlider" value="42">
+                <ui:Slider label="Sound Effects" high-value="100" name="SettingsSlider" value="50" tooltip="SoundEffects">
                     <Bindings>
                         <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
                             <variables>
@@ -64,7 +64,7 @@
                         </UnityEngine.Localization.LocalizedString>
                     </Bindings>
                 </ui:Slider>
-                <ui:Slider label="Environment" value="42" high-value="100" name="SettingsSlider" focusable="true">
+                <ui:Slider label="Environment" value="50" high-value="100" name="SettingsSlider" focusable="true" tooltip="Environment">
                     <Bindings>
                         <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
                             <variables>
