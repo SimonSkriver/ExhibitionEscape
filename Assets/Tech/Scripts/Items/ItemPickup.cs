@@ -14,6 +14,7 @@ public class ItemPickup : MonoBehaviour, IInteractable
         }
 
         bool added = InventoryManager.Instance.AddItem(itemData);
+        SFXManager.PlayEffect("ItemPickup");
 
         if (!added) return;
 

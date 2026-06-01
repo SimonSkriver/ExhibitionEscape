@@ -39,7 +39,11 @@ public class UI_Manager : MonoBehaviour
         levelRoot.style.display = DisplayStyle.None;
         dialogueRoot.style.display = DisplayStyle.None;
 
-        //StartCoroutine(ScreenTransition());
+        
+    }
+
+    private void Start() {
+        ShowPlayerCustomizeUI();
     }
 
     public void ShowPlayerHUD() => HUD_Root.style.display = DisplayStyle.Flex;
@@ -61,14 +65,19 @@ public class UI_Manager : MonoBehaviour
 
     public void ShowPlayerCustomizeUI() {
         customizeRoot.style.display = DisplayStyle.Flex;
-        GameObject.Find("CustomizationCamera").SetActive(true);
+        HidePlayerHUD();
+        GameManager.CameraManager.GetChild(1).gameObject.SetActive(true);
+        InputManager.Instance.DisablePlayer();
     }
     public void HidePlayerCustomizeUI() {
         customizeRoot.style.display = DisplayStyle.None;
-        GameObject.Find("CustomizationCamera").SetActive(false);
+        ShowPlayerHUD();
+        GameManager.CameraManager.GetChild(1).gameObject.SetActive(false);
+        InputManager.Instance.EnablePlayer();
     }
     public void ShowDialogueUI() {
         dialogueRoot.style.display = DisplayStyle.Flex;
+        ShowPlayerHUD();
         InputManager.Instance.DisablePlayer();
     }
 
@@ -77,29 +86,5 @@ public class UI_Manager : MonoBehaviour
         InputManager.Instance.EnablePlayer();
     }
 
-    public IEnumerator ScreenTransition() {
-        float alpha = 0;
 
-        // Fade in
-        while (alpha < 1 ) {
-            yield return new WaitForSeconds(0.01f);
-            alpha += 0.01f;
-            root.Q<VisualElement>("TransitionScreen").style.backgroundColor = new Color(1, 1, 1, alpha);
-            if (alpha > 1) { alpha = 1; }
-            Debug.Log(alpha);
-        }
-
-        yield return new WaitUntil(() => alpha.Equals(1));
-        yield return new WaitForSeconds(1f);
-
-        // Fade out
-        while (alpha > 0) {
-            yield return new WaitForSeconds(0.01f);
-            alpha -= 0.01f;
-            root.Q<VisualElement>("TransitionScreen").style.backgroundColor = new Color(1, 1, 1, alpha);
-            Debug.Log(alpha);
-        }
-    }
-
-    
 }

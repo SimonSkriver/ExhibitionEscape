@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,7 +19,7 @@ public class InputManager : MonoBehaviour
 
     InputActionMap playerMap;
     GameObject playerCam;
-    DisableplayerCutscene cutscene;
+    BoatCutscene cutscene;
 
     bool isGamePaused;
 
@@ -34,9 +35,9 @@ public class InputManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerInput = GetComponent<PlayerInput>();
         playerUse = player.GetComponent<PlayerUse>();
-        playerMovement = player.GetComponent<PlayerController>();
-        playerInteract = player.GetComponent<PlayerInteract>();
-        playerUse = player.GetComponent<PlayerUse>();
+        playerMovement = player.GetComponentInParent<PlayerController>();
+        playerInteract = player.GetComponentInParent<PlayerInteract>();
+        playerUse = player.GetComponentInParent<PlayerUse>();
 
         playerMap = InputSystem.actions.FindActionMap("Player");
         playerCam = GameObject.FindWithTag("CMcam");
@@ -67,7 +68,7 @@ public class InputManager : MonoBehaviour
         };
 
         playerInput.actions.FindAction("Pause").performed += ctx => Pause();
-        cutscene = FindAnyObjectByType<DisableplayerCutscene>();
+        cutscene = FindAnyObjectByType<BoatCutscene>();
     }
 
     void Update()
@@ -106,12 +107,14 @@ public class InputManager : MonoBehaviour
             isGamePaused = true;
             DisablePlayer();
             UI_Manager.Instance.ShowPauseMenuUI();
+            SFXManager.PlayEffect("PauseMenu");
+
         } else {
             isGamePaused = false;
+            SFXManager.PlayEffect("BackButton");
             if (!cutscene.inCutscene) EnablePlayer();
             UI_Manager.Instance.HidePauseMenuUI();
             UI_Manager.Instance.HideSettingsMenuUI();
-        }
-           
+        }  
     }
 }

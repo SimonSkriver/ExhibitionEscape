@@ -29,6 +29,7 @@ public class PlayerStats : MonoBehaviour
 
     public void RemoveHealth(int health) {
         Health -= health;
+        SFXManager.PlayEffect("HurtSound");
         PlayerHUD.Instance.UpdateHealthUI(Health);
         Debug.Log(Health);
         if (Health <= 0)

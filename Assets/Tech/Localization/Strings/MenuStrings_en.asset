@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MenuStrings_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0e0ba97df2b1b9a438f0e8abd1ec2cd9, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 3975410346420863327
+  m_TableData:
+  - m_Id: 63137755136
+    m_Localized: '{islandID:cond:=0?The Lost Treasure
+
+      |=1?The Burned Donut
+
+      |=2?Mushroom
+
+      |???
+
+      }'
+    m_Metadata:
+      m_Items:
+      - rid: 3975410346420863327
+  - m_Id: 32380283629568
+    m_Localized: Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171942276345856
+    m_Localized: '{Header:LANGUAGE|English}'
+    m_Metadata:
+      m_Items:
+      - rid: 3975410346420863327
+  - m_Id: 172065182035968
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172300671234048
+    m_Localized: '{ID:cond:=0?AUDIO
+
+      |=1?Master
+
+      |=2?Music
+
+      |=3?Sound
+      Effects
+
+      |=4?Environment
+
+      }'
+    m_Metadata:
+      m_Items:
+      - rid: 3975410346420863327
+  - m_Id: 176562746798080
+    m_Localized: '{Header:SETTINGS|Settings}'
+    m_Metadata:
+      m_Items:
+      - rid: 3975410346420863327
+  - m_Id: 189366992220160
+    m_Localized: REPORT BUG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 203204110168064
+    m_Localized: Leave Island
+    m_Metadata:
+      m_Items: []
+  - m_Id: 203462391214080
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204867806015488
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204996713754624
+    m_Localized: Head Size
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207271179956224
+    m_Localized: Neck Length
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207382316429312
+    m_Localized: Skin Color
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207409470353408
+    m_Localized: Shorts Color
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3975410346420863327
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 63137755136
+        - id: 172300671234048
+        - id: 176562746798080
+        - id: 171942276345856

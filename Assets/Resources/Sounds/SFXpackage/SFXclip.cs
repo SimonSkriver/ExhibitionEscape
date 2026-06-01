@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class SFXclip
 {
 
-        public AudioClip audioClip;
+        public AudioClip[] audioClips;
         public float volume = 1f;
         public string clipName;
       

@@ -114,6 +114,10 @@ public class PlayerController : MonoBehaviour
 
         // Sprint Animation
         A.SetBool("isRunning", isSprinting);
+        if (isSprinting)
+        {
+            SFXManager.PlayEffect("Sprint");
+        }
     }
 
     void SetSlopeSlideVelocity() {

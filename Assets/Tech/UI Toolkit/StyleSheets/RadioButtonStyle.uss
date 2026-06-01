@@ -1,0 +1,52 @@
+:root {
+}
+
+.unity-radio-button__checkmark {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#EN .unity-radio-button__checkmark-background {
+    background-image: resource("Art/UI/Sprites/Flags/UnitedKingdom_Flag");
+    -unity-background-scale-mode: scale-and-crop;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 30px;
+    height: 30px;
+}
+
+#DE .unity-radio-button__checkmark-background {
+    background-image: resource("Art/UI/Sprites/Flags/Germany_Flag");
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 30px;
+    height: 30px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+#DA .unity-radio-button__checkmark-background {
+    background-image: resource("Art/UI/Sprites/Flags/Denmark_Flag");
+    -unity-background-scale-mode: scale-and-crop;
+    background-position-x: left -4px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    height: 30px;
+    width: 30px;
+}
+
+#SE .unity-radio-button__checkmark-background {
+    background-image: resource("Art/UI/Sprites/Flags/Sweden_Flag");
+    -unity-background-scale-mode: scale-and-crop;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 30px;
+    height: 30px;
+    background-position-x: left -4px;
+}

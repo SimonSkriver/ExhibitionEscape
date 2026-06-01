@@ -19,6 +19,7 @@ public class DestroyableLog : MonoBehaviour, IInteractable
 
     public void DestroyLog()
     {
+        SFXManager.PlayEffect("TreeDestroy");
         switch (treeType)
         {
             case TreeType.PuzzleTree:

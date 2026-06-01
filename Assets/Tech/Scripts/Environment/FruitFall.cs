@@ -23,12 +23,14 @@ public class FruitFall : MonoBehaviour
             {
                 if (!hasLanded) PlayerStats.Instance.RemoveHealth(25);
                 hasLanded = true;
+                SFXManager.PlayEffect("FruitDrop");
             }
         }
 
         if (collision.gameObject.CompareTag("Ground"))
         {
             hasLanded = true;
+            SFXManager.PlayEffect("FruitDrop");
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.constraints = RigidbodyConstraints.FreezeAll;
