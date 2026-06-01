@@ -15,6 +15,7 @@ public class BoarSound : MonoBehaviour
     {
         public AudioClip audioClip;
         public string clipName;
+        public float volume;
     }
 
     public void PlayBoarClip(string clipname)
@@ -24,6 +25,7 @@ public class BoarSound : MonoBehaviour
             if(clipname == boarclip.clipName)
             {
                 var audioclip = boarclip.audioClip;
+                audioSource.volume = boarclip.volume;
                 audioSource.PlayOneShot(audioclip);
                 return;
             }
