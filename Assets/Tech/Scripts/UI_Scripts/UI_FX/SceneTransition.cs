@@ -16,8 +16,6 @@ public class SceneTransition : MonoBehaviour {
         Instance = this;
 
         transitionScreen = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("TransitionScreen");
-
-        DontDestroyOnLoad(Instance);
     }
 
     public void LoadLevel(int sceneID) => StartCoroutine(StartTransition(sceneID));

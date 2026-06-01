@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4059188415934655358
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterMAT_DomeSide
+  m_Shader: {fileID: -6465566751694194690, guid: 41d67ab366c76ad44813dfc0d155810d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_c6e7819433ea4e73945b0ec801a9c296_Texture_1_Texture2D:
+        m_Texture: {fileID: 8400000, guid: b0cce8ba7504d5e49a3cd63ef78201b5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0.5
+    - _Be_Wavy_Wit_It: 1
+    - _Float: -8
+    - _Foaf_Cutoff: 0
+    - _Foam_Amount: 0
+    - _Foam_Color: 0
+    - _Foam_Cutoff: 1
+    - _Foam_Distance: 0.5
+    - _Foam_Offset: 1
+    - _Foam_Scale: 0
+    - _Foam_Speed: 0.2
+    - _Offset: 0.6
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Refraction_Scale: 3
+    - _Refraction_Speed: 0.05
+    - _Refraction_Strenth: 5.5
+    - _Ripple_Density: 0
+    - _Ripple_Size: 10
+    - _Ripple_Speed: 0
+    - _Water_Depth: 10
+    - _Wave_Instensity: 0.1
+    - _Wave_Intensity: 0.001
+    - _Wave_Speed: 0.1
+    - _Wave_Tiling: 100
+    m_Colors:
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Foam_Tiling: {r: 100, g: 100, b: 0, a: 0}
+    - _Ripple_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Tiling: {r: 100, g: 100, b: 0, a: 0}
+    - _WaterColor: {r: 0, g: 0.6234765, b: 1, a: 0.36862746}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

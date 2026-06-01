@@ -9,12 +9,12 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Ink Story")]
     private TextAsset inkJSON;
+    public Story story { get; private set; }
+    public bool isDialoguePlaying { get; private set; }
     public void SetInkJSON(TextAsset inkAsset) {
         inkJSON = inkAsset;
         story = new Story(inkJSON.text);
     }
-    public Story story { get; private set; }
-    public bool isDialoguePlaying { get; private set; }
 
 
 
@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
 
         // Default dialogue language
-        SetInkJSON(Resources.Load<TextAsset>("Dialogue/ENGLISH/EN_main"));
+        SetInkJSON(Resources.Load<TextAsset>("Dialogue/EN/EN_main"));
     }
 
     public void EnterDialogue(string knotName)

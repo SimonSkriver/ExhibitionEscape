@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.Localization.Settings;
 
 public class PauseUI : MonoBehaviour {
     UI_Manager UI;
@@ -52,26 +53,25 @@ public class PauseUI : MonoBehaviour {
                 UI.HideSettingsMenuUI();
                 SFXManager.PlayEffect("BackButton");
                 break;
+            
             case "Language":
-                switch (btn.text) {
-                    case "English":
-                        btn.text = "Danish";
-                        SFXManager.PlayEffect("ClickButton");
-                        break;
-                    case "Danish":
-                        btn.text = "English";
-                        SFXManager.PlayEffect("BackButton");
-                        break;
+                // Change text on button and font size on header
+                if (btn.text == "Dansk") {
+                    SFXManager.PlayEffect("BackButton");
+                    UI.settingsRoot.Q<Label>("Header").style.fontSize = 45;
+                } else {
+                    SFXManager.PlayEffect("ClickButton");
+                    UI.settingsRoot.Q<Label>("Header").style.fontSize = 70;
                 }
 
                 // Get the ISO 639 Language Code
-                string ISO_639 = "";
-                foreach (char c in btn.text.ToCharArray(0, 2)) {
-                    ISO_639 += c.ToString().ToUpper();
-                }
-
-                TextAsset asset = Resources.Load<TextAsset>($"Dialogue/{btn.text.ToUpper()}/{ISO_639}_main");
-                DialogueManager.Instance.SetInkJSON(asset);
+                string ISO_639 = btn.text switch {
+                    "English" => "EN",
+                    "Dansk" => "DA",
+                    _ => "EN"
+                };
+            
+                Localization.ChangeLanguage(ISO_639);
                 break;
         }
     }

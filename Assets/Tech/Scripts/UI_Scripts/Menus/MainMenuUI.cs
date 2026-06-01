@@ -3,7 +3,9 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 public class MainMenuUI : MonoBehaviour
 {
@@ -12,6 +14,11 @@ public class MainMenuUI : MonoBehaviour
     TemplateContainer lvlSelectRoot;
     Label islandTitle;
     Button btnSelect;
+    List<RadioButton> languageButtons = new List<RadioButton>();
+
+    [Header("Localization")]
+    LocalizedString titleBinding;
+    IntVariable islandID;
 
     [Header("Cameras")]
     Transform camParent;
@@ -26,59 +33,68 @@ public class MainMenuUI : MonoBehaviour
             GameObject cam = camParent.GetChild(i).gameObject;
             islandCams.Add(cam);
             cam.SetActive(false);
+            cam.name = "LOCKED_" + cam.name;
         }
         islandCams[0].SetActive(true);
+        islandCams[0].name = "UN" + islandCams[0].name;
         maxCamID = islandCams.Count - 1;
 
         // UI
         root = GetComponent<UIDocument>().rootVisualElement;
         lvlSelectRoot = root.Q<TemplateContainer>("LevelSelect");
-
         btnSelect = lvlSelectRoot.Q<Button>("SELECT");
+        islandTitle = lvlSelectRoot.Q<Label>("Island_Title");
+        languageButtons = root.Query<RadioButton>().ToList();
+
+        // Localization
+        titleBinding = (LocalizedString)islandTitle.GetBinding("text");
+        islandID = (IntVariable)titleBinding["islandID"];
+
+        // Register Callbacks
         btnSelect.RegisterCallback<ClickEvent>(OnLevelSelect);
         lvlSelectRoot.Q<Button>("PREVIOUS").RegisterCallback<ClickEvent>(OnLevelSelect);
         lvlSelectRoot.Q<Button>("NEXT").RegisterCallback<ClickEvent>(OnLevelSelect);
-        
-        islandTitle = lvlSelectRoot.Q<Label>("Island_Title");
 
-
-        SetTitle();
+        foreach (var btn in languageButtons) {
+            btn.RegisterCallback<ClickEvent>(evt => {
+                var rb = (RadioButton)evt.target;
+                Localization.ChangeLanguage(rb.name);
+            });
+        }
     }
 
     void OnLevelSelect(ClickEvent evt) {
-        
         var btn = (Button)evt.target;
-
 
         // Set CamID
         previousCamID = currentCamID;
-        switch (btn.text) {
-            case "<":
+        switch (btn.name) {
+            case "PREVIOUS":
                 if (currentCamID == 0) { currentCamID = maxCamID; }
                 else { currentCamID--; }
                 break;
-            case ">":
+            case "NEXT":
                 if (currentCamID == maxCamID) { currentCamID = 0; }
                 else { currentCamID++; }
                 break;
-            case "Select":
+            case "SELECT":
                 StartCoroutine(LoadLevel());
                 return;
         }
+
+        // Change Localization variable
+        if (islandCams[currentCamID].name.Contains("UNLOCKED")) {
+            islandID.Value = currentCamID;
+        } else {
+            islandID.Value = -1; // Make the title ???
+        }
+        
 
         // Change Camera
         islandCams[currentCamID].SetActive(true);
         islandCams[previousCamID].SetActive(false);
 
-        SetTitle();
-    }
-
-    void SetTitle() {
-        islandTitle.text = currentCamID switch {
-            0 => "Pirate",
-            _ => "???"
-        };
-
+        // Disable btnSelect if island isn't unlocked
         if (islandTitle.text == "???") {
             btnSelect.SetEnabled(false);
             btnSelect.focusable = false;
