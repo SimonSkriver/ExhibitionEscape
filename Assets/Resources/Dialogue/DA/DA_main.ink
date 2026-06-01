@@ -1,11 +1,3 @@
--> NPC
+INCLUDE DA_CaptainSkeleton.ink
+INCLUDE DA_SkeletonNPC.ink
 
-=== NPC ===
-Et skellet taler.
-* [Enig]
-    Mega sejt!
-* [Uenig]
-    Ikke særlig sejt :(
---> END
-
-INCLUDE DA_SleepingSkeleton.ink
