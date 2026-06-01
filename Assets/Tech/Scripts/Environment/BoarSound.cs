@@ -8,7 +8,7 @@ public class BoarSound : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = transform.Find("OneShotAS").GetComponent<AudioSource>();
     }
     [System.Serializable]
     public struct BoarClip
