@@ -16,6 +16,7 @@ public class PlayerCustomization : MonoBehaviour
         customButtons = root.Query<Button>().ToList();
         foreach (var btn in customButtons) {
             btn.RegisterCallback<ClickEvent>(OnColorButton);
+            btn.RegisterCallback<PointerEnterEvent>(OnHoverSettings);
         }
 
         customSliders = root.Query<Slider>().ToList();
@@ -27,15 +28,18 @@ public class PlayerCustomization : MonoBehaviour
         m_shorts = Resources.Load<Material>("Art/Materials/PlayerShorts");
         neckBone = GameObject.FindGameObjectWithTag("Player").transform.Find("ShortsMan/Main/Bone.001/Bone.002/Bone.003/Chest/Neck");
     }
+    public void OnHoverSettings(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
 
     void OnColorButton(ClickEvent evt) {
         Button btn = (Button)evt.target;
 
         switch (btn.name) {
             case "SkinColor":
+                SFXManager.PlayEffect("ClickButton");
                 m_skin.color = btn.resolvedStyle.backgroundColor;
                 break;
             case "ShortsColor":
+                SFXManager.PlayEffect("ClickButton");
                 m_shorts.color = btn.resolvedStyle.backgroundColor;
                 break;
             case "ConfirmPlayerCustomization":

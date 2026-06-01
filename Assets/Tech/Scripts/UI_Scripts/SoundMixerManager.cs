@@ -7,6 +7,7 @@ public class SoundMixerManager : MonoBehaviour
     private AudioMixer audioMixer;
     private VisualElement rootVis;
     private List<Slider> sliders = new List<Slider>();
+    float nextSFXtime;
 
 
     void Start()
@@ -45,6 +46,11 @@ public class SoundMixerManager : MonoBehaviour
     public void SetVolume(ChangeEvent<float> evt)
     {
         Slider slider = (Slider) evt.target;
+        if(nextSFXtime < Time.time)
+        {
+            SFXManager.PlayEffect("SliderSound");
+            nextSFXtime = Time.time + 0.05f;
+        }
         AudioSliderSetting(slider);
     }
 }
