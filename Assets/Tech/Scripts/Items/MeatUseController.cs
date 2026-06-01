@@ -24,9 +24,7 @@ public class MeatUseController : MonoBehaviour
 
         if (meatData.enablesBoulderBreaking && boulderStrengthEffect != null)
         {
-            boulderStrengthEffect.StartBoulderStrength(
-                meatData.boulderBreakingDuration
-            );
+            boulderStrengthEffect.StartBoulderStrength(meatData.boulderBreakingDuration);
         }
     }
 

@@ -32,14 +32,18 @@ public class FruitUseController : MonoBehaviour
 
         if (fruitData.givesMovementBoost && movementBoostEffect != null)
         {
-            movementBoostEffect.StartBoost(fruitData.movementBoostAmount,fruitData.movementBoostDuration);
+            float duration = fruitData.movementBoostDuration;
+            movementBoostEffect.StartBoost(fruitData.movementBoostAmount, duration);
             SFXManager.PlayEffect("SpeedBoost");
+            PowerUpUI.Instance.StartSpeedIcon(duration);
         }
 
         if (fruitData.givesJumpBoost && jumpBoostEffect != null)
         {
-            jumpBoostEffect.StartBoost(fruitData.jumpBoostAmount,fruitData.jumpBoostDuration);
+            float duration = fruitData.jumpBoostDuration;
+            jumpBoostEffect.StartBoost(fruitData.jumpBoostAmount, duration);
             SFXManager.PlayEffect("JumpBoost");
+            PowerUpUI.Instance.StartJumpIcon(duration);
         }
 
         if (fruitData.spawnsObjectOnUse && spawnOnUseEffect != null)
