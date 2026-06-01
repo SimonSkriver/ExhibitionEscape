@@ -30,3 +30,13 @@ Vil du forlade mig uden min skat?
 *[Nej]
     Jaer, du vil ikke gå glip af den ;D
 --> END
+
+
+
+===SailAway===
+AARRRGGG you found MY TREASURE!
+I knew I could trust you
+YO HO HO it still fits perfectly
+Thank you visitor {visitNum}
+As promised, you can have my boat
+-> END
