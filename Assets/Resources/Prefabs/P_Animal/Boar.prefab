@@ -1035,12 +1035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoarFootsteps
   footStepSOs:
-  - {fileID: 11400000, guid: 4bc621dcb46cf4c40a7298986f442883, type: 2}
-  - {fileID: 11400000, guid: 5e29c9e0be4204c408ff1dc942171c99, type: 2}
-  - {fileID: 11400000, guid: cb1822fcbe3858d4f921fc05a82cc305, type: 2}
-  - {fileID: 11400000, guid: c409735f5fd1722408ad881be16492d0, type: 2}
-  - {fileID: 11400000, guid: 68534108356e5ef4ea1191a845cd91c5, type: 2}
-  - {fileID: 11400000, guid: 715c35a71ed88734392abc751118d453, type: 2}
+  - {fileID: 11400000, guid: d100667cd057f9141a1e24371168c230, type: 2}
+  - {fileID: 11400000, guid: 0635ace589e210842a362301b92a389e, type: 2}
   maxPitch: 1.2
   minPitch: 0.8
 --- !u!114 &2840400018182479587
