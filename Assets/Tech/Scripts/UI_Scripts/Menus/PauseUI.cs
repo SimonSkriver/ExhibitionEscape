@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.Localization.Settings;
 
 public class PauseUI : MonoBehaviour {
     UI_Manager UI;
@@ -22,7 +21,6 @@ public class PauseUI : MonoBehaviour {
             btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
         }
     }
-    public void OnHoverSettings(MouseEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
 
     void OnPauseButton(ClickEvent evt) {
         Button btn = evt.target as Button;
@@ -43,8 +41,7 @@ public class PauseUI : MonoBehaviour {
         }
     }
 
-
-
+    public void OnHoverSettings(MouseEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
     void OnSettingsButton(ClickEvent evt) {
         Button btn = (Button)evt.target;
 
@@ -55,22 +52,20 @@ public class PauseUI : MonoBehaviour {
                 break;
             
             case "Language":
-                // Change text on button and font size on header
+                // Change text on button
                 if (btn.text == "Dansk") {
                     SFXManager.PlayEffect("BackButton");
-                    UI.settingsRoot.Q<Label>("Header").style.fontSize = 45;
                 } else {
                     SFXManager.PlayEffect("ClickButton");
-                    UI.settingsRoot.Q<Label>("Header").style.fontSize = 70;
                 }
 
                 // Get the ISO 639 Language Code
                 string ISO_639 = btn.text switch {
-                    "English" => "EN",
-                    "Dansk" => "DA",
+                    "English" => "DA",
+                    "Dansk" => "EN",
                     _ => "EN"
                 };
-            
+
                 Localization.ChangeLanguage(ISO_639);
                 break;
         }

@@ -20,12 +20,7 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-da
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a8f23a6db46060545984f03651288f95
-    m_Address: Font_da
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-da
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6756699dcab237f40b4c2edfd6a8bcc1, type: 2}

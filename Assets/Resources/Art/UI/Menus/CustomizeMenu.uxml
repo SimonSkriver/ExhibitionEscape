@@ -5,15 +5,27 @@
         <ui:VisualElement name="BackgroundBox" style="flex-grow: 1; background-color: rgb(101, 183, 182); align-self: center; width: 100%; height: 100%; justify-content: center; align-items: center; padding-bottom: 50px; padding-top: 50px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-left-color: rgb(25, 78, 99); border-right-color: rgb(25, 78, 99); border-top-color: rgb(25, 78, 99); border-bottom-color: rgb(25, 78, 99); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; position: absolute; -unity-material: url(&quot;project://database/Assets/Resources/Art/Shaders/MenuShader.shadergraph?fileID=-876546973899608171&amp;guid=05b13368345f6054abea596e8df069f5&amp;type=3#MenuShader&quot;) prop(&quot;_Scale&quot; 50) prop(&quot;_Speed&quot; 0.01) prop(&quot;_Color_1&quot; rgb(0, 253, 255)) prop(&quot;_Color_2&quot; rgb(0, 210, 255)) prop(&quot;_Color_3&quot; rgb(255, 255, 255)) prop(&quot;_Color_4&quot; rgb(0, 231, 255));"/>
         <ui:VisualElement name="BackgroundBoxOutline" style="flex-grow: 1; align-self: center; width: 100%; height: 100%; justify-content: center; align-items: center; padding-bottom: 50px; padding-top: 50px; border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-left-color: rgba(0, 0, 0, 0.784); border-right-color: rgba(0, 0, 0, 0.784); border-top-color: rgba(0, 0, 0, 0.784); border-bottom-color: rgba(0, 0, 0, 0.784); border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; position: absolute;"/>
         <ui:VisualElement name="Head" style="flex-grow: 1;">
-            <ui:Label text="Head Size" class="customizeText" style="-unity-text-align: middle-center;"/>
+            <ui:Label text="Head Size" class="customizeText" style="-unity-text-align: middle-center;">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(204996713754624)"/>
+                </Bindings>
+            </ui:Label>
             <ui:Slider name="CustomizationSlider" value="1" fill="false" tooltip="Head Size" low-value="0.5" high-value="2" style="width: 800px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;"/>
         </ui:VisualElement>
         <ui:VisualElement name="Neck" style="flex-grow: 1;">
-            <ui:Label text="Neck Length" class="customizeText" style="-unity-text-align: middle-center;"/>
+            <ui:Label text="Neck Length" class="customizeText" style="-unity-text-align: middle-center;">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(207271179956224)"/>
+                </Bindings>
+            </ui:Label>
             <ui:Slider name="CustomizationSlider" value="0.4" fill="false" tooltip="Neck Length" low-value="0.2" high-value="0.5" style="width: 800px; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;"/>
         </ui:VisualElement>
         <ui:VisualElement name="Skin" style="flex-grow: 1; justify-content: center;">
-            <ui:Label text="Skin Color" class="customizeText"/>
+            <ui:Label text="Skin Color" class="customizeText">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(207382316429312)"/>
+                </Bindings>
+            </ui:Label>
             <ui:GroupBox style="flex-direction: row; justify-content: center; margin-top: -6.5px; margin-right: -6.5px; margin-bottom: -6.5px; margin-left: -6.5px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
                 <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(0, 0, 0);"/>
                 <ui:Button name="SkinColor" class="customizeButton customSkinButton customizationButton" style="background-color: rgb(63, 38, 3);"/>
@@ -36,7 +48,11 @@
             </ui:GroupBox>
         </ui:VisualElement>
         <ui:VisualElement name="Shorts" style="flex-grow: 1; justify-content: center;">
-            <ui:Label text="Shorts Color" class="customizeText"/>
+            <ui:Label text="Shorts Color" class="customizeText">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(207409470353408)"/>
+                </Bindings>
+            </ui:Label>
             <ui:GroupBox style="flex-direction: row; justify-content: center; margin-top: -6.5px; margin-right: -6.5px; margin-bottom: -6.5px; margin-left: -6.5px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(255, 255, 255);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(164, 113, 42);"/>
@@ -51,13 +67,17 @@
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(0, 0, 0);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(84, 50, 3);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(135, 0, 0);"/>
-                <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(226, 133, 1);"/>
+                <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(255, 122, 0);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(26, 132, 0);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(1, 97, 226);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(119, 1, 226);"/>
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(212, 1, 226);"/>
             </ui:GroupBox>
         </ui:VisualElement>
-        <ui:Button text="Confirm" name="ConfirmPlayerCustomization" class="menuButton" style="font-size: 50px; width: 300px;"/>
+        <ui:Button text="Confirm" name="ConfirmPlayerCustomization" class="menuButton" style="font-size: 50px; width: 300px; border-left-color: rgba(0, 0, 0, 0.784); border-right-color: rgba(0, 0, 0, 0.784); border-top-color: rgba(0, 0, 0, 0.784); border-bottom-color: rgba(0, 0, 0, 0.784); background-color: rgba(0, 0, 0, 0.784); -unity-text-outline-color: rgb(255, 122, 0); color: rgb(255, 122, 0);">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(204867806015488)"/>
+            </Bindings>
+        </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

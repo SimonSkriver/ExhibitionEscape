@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Localization.Settings;
 using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
@@ -24,7 +24,11 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
 
         // Default dialogue language
-        SetInkJSON(Resources.Load<TextAsset>("Dialogue/EN/EN_main"));
+        if (LocalizationSettings.SelectedLocale.name.Contains("Danish")) {
+            SetInkJSON(Resources.Load<TextAsset>("Dialogue/DA/DA_main"));
+        } else {
+            SetInkJSON(Resources.Load<TextAsset>("Dialogue/EN/EN_main"));
+        }
     }
 
     public void EnterDialogue(string knotName)

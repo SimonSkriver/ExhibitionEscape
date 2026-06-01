@@ -44,12 +44,40 @@ MonoBehaviour:
       m_Items:
       - rid: 3975410346420863328
   - m_Id: 176562746798080
-    m_Localized: INDSTILLINGER
+    m_Localized: '{Header:INDSTILLINGER|Indstillinger}'
     m_Metadata:
       m_Items:
       - rid: 3975410346420863328
   - m_Id: 189366992220160
-    m_Localized: 45
+    m_Localized: "RAPORT\xC9R BUG"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 203204110168064
+    m_Localized: "Forlad \xD8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 203462391214080
+    m_Localized: "Forts\xE6t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204867806015488
+    m_Localized: "Bekr\xE6ft"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204996713754624
+    m_Localized: "Hoved St\xF8rrelse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207271179956224
+    m_Localized: "Hals L\xE6ngde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207382316429312
+    m_Localized: Hudfarve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207409470353408
+    m_Localized: Shorts Farve
     m_Metadata:
       m_Items: []
   references:
@@ -62,5 +90,5 @@ MonoBehaviour:
         m_SharedEntries:
         - id: 63137755136
         - id: 172300671234048
-        - id: 176562746798080
         - id: 171942276345856
+        - id: 176562746798080
