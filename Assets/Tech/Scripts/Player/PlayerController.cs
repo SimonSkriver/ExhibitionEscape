@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
         // Sprint Animation
         A.SetBool("isRunning", isSprinting);
-        if (isSprinting)
+        if (isMoving && isSprinting)
         {
             SFXManager.PlayEffect("Sprint");
         }
