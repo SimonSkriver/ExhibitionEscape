@@ -82,25 +82,18 @@ public class MainMenuUI : MonoBehaviour
                 return;
         }
 
-        // Change Localization variable
+        // Change Localization variable & disable btnSelect if island isn't unlocked
         if (islandCams[currentCamID].name.Contains("UNLOCKED")) {
             islandID.Value = currentCamID;
+            btnSelect.SetEnabled(true);
         } else {
             islandID.Value = -1; // Make the title ???
+            btnSelect.SetEnabled(false);
         }
         
-
         // Change Camera
         islandCams[currentCamID].SetActive(true);
         islandCams[previousCamID].SetActive(false);
-
-        // Disable btnSelect if island isn't unlocked
-        if (islandTitle.text == "???") {
-            btnSelect.SetEnabled(false);
-            btnSelect.focusable = false;
-        } else {
-            btnSelect.SetEnabled(true);
-        }
     }
 
     IEnumerator LoadLevel() {
