@@ -16,7 +16,7 @@ public class FOVChanger : MonoBehaviour
 
     void Awake()
     {
-        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        player = GameObject.FindWithTag("Player").GetComponentInParent<PlayerController>();
         cam = GetComponent<CinemachineCamera>();
     }
 

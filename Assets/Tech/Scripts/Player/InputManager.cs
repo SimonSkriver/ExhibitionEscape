@@ -35,9 +35,9 @@ public class InputManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerInput = GetComponent<PlayerInput>();
         playerUse = player.GetComponent<PlayerUse>();
-        playerMovement = player.GetComponent<PlayerController>();
-        playerInteract = player.GetComponent<PlayerInteract>();
-        playerUse = player.GetComponent<PlayerUse>();
+        playerMovement = player.GetComponentInParent<PlayerController>();
+        playerInteract = player.GetComponentInParent<PlayerInteract>();
+        playerUse = player.GetComponentInParent<PlayerUse>();
 
         playerMap = InputSystem.actions.FindActionMap("Player");
         playerCam = GameObject.FindWithTag("CMcam");
