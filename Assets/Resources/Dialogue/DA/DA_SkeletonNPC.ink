@@ -18,6 +18,12 @@ Jeg prøvede at fange noget GIGANTISK, men min fiskestang fløj ud ad hænderne 
 >_<
 -> END
 
+===CoconutStory===
+Jeg så ham prøve at få en kokosnød ned fra palmetræet
+Uheldigvis for ham, landede den på hans hoved.
+Nu kalder vi ham for "Kokosnøde Hoved"
+-> END
+
 
 
 ===BoarFightingClub===
@@ -31,3 +37,18 @@ Tror du de er interesserret i at være med i en kampklub?
     Tjaa, du har nok ret.
     De virker meget truende.
 --> END
+
+
+
+===SunBath===
+Jeg ved ikke om UV'en er høj nok...
+...jeg synes ikke jeg tager farve
+-> END
+
+===SunBathBurned===
+Hvorfor er UV'en så høj?
+Jeg var ude i solen i 5 sekunder..
+5 SEKUNDER!!!!
+Og så er der ham der, som bare ligger og brokker sig over hans knogler ikke kan tage farve...
+Han må gerne få mine, hvis han virkelig brænder for det!
+-> END
