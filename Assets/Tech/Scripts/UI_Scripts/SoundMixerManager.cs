@@ -7,7 +7,6 @@ public class SoundMixerManager : MonoBehaviour
     private AudioMixer audioMixer;
     private VisualElement rootVis;
     private List<Slider> sliders = new List<Slider>();
-    private VisualElement dragger;
 
 
     void Start()
@@ -18,13 +17,11 @@ public class SoundMixerManager : MonoBehaviour
         foreach(var slider in sliders)
         {
             slider.RegisterCallback<ChangeEvent<float>>(SetVolume);
-            //SetVolume(new ChangeEvent<float>());
+            AudioSliderSetting(slider);
         }
     }
-    public void SetVolume(ChangeEvent<float> evt)
+    public void AudioSliderSetting(Slider slider)
     {
-        Slider slider = (Slider) evt.target;
-
         float percent = slider.value / 100f;
         percent = Mathf.Clamp(percent, 0.0001f, 1f);
         float decibel = Mathf.Log10(percent)* 20f;
@@ -44,7 +41,10 @@ public class SoundMixerManager : MonoBehaviour
                 audioMixer.SetFloat("sfxVolume", decibel);
                 break;
         }
-
-        
+    }
+    public void SetVolume(ChangeEvent<float> evt)
+    {
+        Slider slider = (Slider) evt.target;
+        AudioSliderSetting(slider);
     }
 }
