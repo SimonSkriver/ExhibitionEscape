@@ -7,7 +7,7 @@ public class Localization : MonoBehaviour
         // Get the locale index
         int i = ISO_639 switch {
             "EN" => 0,
-            "DA" => 1,
+            "DA" => 2,
             _ => 0
         };
 
