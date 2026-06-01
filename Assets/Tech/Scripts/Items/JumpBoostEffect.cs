@@ -35,8 +35,6 @@ public class JumpBoostEffect : MonoBehaviour
 
     private IEnumerator BoostRoutine(float duration)
     {
-        SFXManager.PlayEffect("JumpBoost");
-        PowerUpUI.Instance.ShowJumpIcon();
         yield return new WaitForSeconds(duration);
 
         PlayerStats.Instance.JumpPower -= currentBoostAmount;

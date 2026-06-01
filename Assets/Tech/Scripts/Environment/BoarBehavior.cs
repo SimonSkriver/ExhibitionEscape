@@ -414,12 +414,13 @@ public class BoarBehavior : MonoBehaviour
                 playerMovement.playerVelocity.y = 0f;
             }
 
-            StartCoroutine(KnockbackPlayer());
+            StartCoroutine(KnockbackPlayer(playerMovement));
         }
     }
 
-    private IEnumerator KnockbackPlayer()
+    private IEnumerator KnockbackPlayer(PlayerController playerMovement)
     {
+        playerMovement.canMove = false;
         float timer = 0f;
 
         Vector3 horizontalDirection = chargeDirection;
@@ -446,6 +447,7 @@ public class BoarBehavior : MonoBehaviour
 
             yield return null;
         }
+        playerMovement.canMove = true;
     }
 
     private void KillBoarByBananaPeel()
@@ -728,42 +730,16 @@ public class BoarBehavior : MonoBehaviour
         if (anim == null)
             return;
 
-        int animState = 0;
-
-        switch (currentState)
-        {
-            case BoarState.Wandering:
-                animState = 0;
-                break;
-
-            case BoarState.Grazing:
-                animState = 1;
-                break;
-
-            case BoarState.Threatening:
-                animState = 2;
-                break;
-
-            case BoarState.Chasing:
-                animState = 3;
-                break;
-
-            case BoarState.Windup:
-                animState = 4;
-                break;
-
-            case BoarState.Charging:
-                animState = 5;
-                break;
-
-            case BoarState.Stunned:
-                animState = 6;
-                break;
-
-            case BoarState.Dead:
-                animState = 7;
-                break;
-        }
+        int animState = BoarState.Wandering switch {
+            BoarState.Wandering => 0,
+            BoarState.Grazing => 1,
+            BoarState.Threatening => 2,
+            BoarState.Chasing => 3,
+            BoarState.Windup => 4,
+            BoarState.Charging => 5,
+            BoarState.Stunned => 6,
+            BoarState.Dead => 7
+        };
 
         anim.SetInteger("BoarAnimState", animState);
     }
