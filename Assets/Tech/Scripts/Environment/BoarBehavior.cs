@@ -38,7 +38,7 @@ public class BoarBehavior : MonoBehaviour
 
     [Header("Charge")]
     [SerializeField] private float chargeStartDistance = 10f;
-    [SerializeField] private float chargeWindupTime = 1.5f;
+    [SerializeField] private float chargeWindupTime = 2f;
     [SerializeField] private float chargeSpeed = 10f;
     [SerializeField] private float chargePastPlayerDistance = 5f;
     [SerializeField] private float chargeHitRadius = 0.5f;
@@ -65,6 +65,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator anim;
     [SerializeField] private BoarSpawner boarSpawner;
+    [SerializeField] private BoarSound boarSound;
 
     [Header("Drops")]
     [SerializeField] private GameObject meatPickupPrefab;
@@ -89,6 +90,11 @@ public class BoarBehavior : MonoBehaviour
 
         if (anim == null)
             anim = GetComponentInChildren<Animator>();
+
+        if (boarSound == null)
+        {
+            boarSound = GetComponentInChildren<BoarSound>();
+        }
 
         agent.autoBraking = false;
 
@@ -140,6 +146,7 @@ public class BoarBehavior : MonoBehaviour
         if (HasReachedDestination())
         {
             ChangeState(BoarState.Grazing);
+            boarSound.PlayBoarClip("Idle");
         }
     }
 
@@ -218,6 +225,7 @@ public class BoarBehavior : MonoBehaviour
     {
         ChangeState(BoarState.Threatening);
 
+        boarSound.PlayBoarClip("Alert");
         Vector3 lookDirection = player.position - transform.position;
         lookDirection.y = 0f;
 
@@ -245,6 +253,7 @@ public class BoarBehavior : MonoBehaviour
     {
         ChangeState(BoarState.Windup);
 
+        boarSound.PlayBoarClip("Charge");
         float timer = 0f;
 
         while (timer < chargeWindupTime)
@@ -348,6 +357,7 @@ public class BoarBehavior : MonoBehaviour
 
     private void HitObstacle()
     {
+        boarSound.PlayBoarClip("HitObstacle");
         boarHealth--;
 
         if (boarHealth <= 0)
@@ -481,11 +491,13 @@ public class BoarBehavior : MonoBehaviour
 
     private IEnumerator DestroyBoarAfterDelay()
     {
+        boarSound.PlayBoarClip("Death");
         yield return new WaitForSeconds(deathDelay);
 
         if (meatPickupPrefab != null)
         {
             Instantiate(meatPickupPrefab, transform.position, Quaternion.identity);
+            boarSound.PlayBoarClip("MeatDrop");
         }
 
         if (boarSpawner != null)
