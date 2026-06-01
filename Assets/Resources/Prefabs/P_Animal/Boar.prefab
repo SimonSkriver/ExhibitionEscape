@@ -1115,8 +1115,8 @@ MonoBehaviour:
   deathDelay: 2
   playerDamage: 25
   knockbackDistance: 10
-  knockbackDuration: 1
-  knockbackUpHeight: 1
+  knockbackDuration: 2
+  knockbackUpHeight: 3
   jungleAreas:
   - {fileID: 0}
   - {fileID: 0}

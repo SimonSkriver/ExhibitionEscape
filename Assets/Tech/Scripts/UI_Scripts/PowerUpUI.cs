@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UIElements;
 
 public class PowerUpUI : MonoBehaviour
 {
-    PowerUpUI Instance;
+    public static PowerUpUI Instance;
+    [SerializeField] private float iconShowDuration = 2.5f;
     VisualElement root;
     Image imgJumpBoost, imgSpeedBoost, imgStrengthBoost;
 
@@ -21,10 +23,33 @@ public class PowerUpUI : MonoBehaviour
         HideStengthBoostIcon();
     }
 
-    public void ShowJumpBoostIcon() => imgJumpBoost.style.display = DisplayStyle.Flex;
+    public void ShowJumpIcon() => StartCoroutine(ShowJumpBoostIcon());
     public void HideJumpBoostIcon() => imgJumpBoost.style.display = DisplayStyle.None;
-    public void ShowSpeedBoostIcon() => imgSpeedBoost.style.display = DisplayStyle.Flex;
+
+    public void ShowSpeedIcon() => StartCoroutine(ShowSpeedBoostIcon());
     public void HideSpeedBoostIcon() => imgSpeedBoost.style.display = DisplayStyle.None;
-    public void ShowStengthBoostIcon() => imgStrengthBoost.style.display = DisplayStyle.Flex;
+
+    public void ShowStrengthIcon() => StartCoroutine(ShowStrengthBoostIcon());
     public void HideStengthBoostIcon() => imgStrengthBoost.style.display = DisplayStyle.None;
+
+    private IEnumerator ShowJumpBoostIcon()
+    {
+        imgJumpBoost.style.display = DisplayStyle.Flex;
+        yield return new WaitForSeconds(iconShowDuration);
+        HideJumpBoostIcon();
+    }
+
+    private IEnumerator ShowSpeedBoostIcon()
+    {
+        imgSpeedBoost.style.display = DisplayStyle.Flex;
+        yield return new WaitForSeconds(iconShowDuration);
+        HideSpeedBoostIcon();
+    }
+
+    private IEnumerator ShowStrengthBoostIcon()
+    {
+        imgStrengthBoost.style.display = DisplayStyle.Flex;
+        yield return new WaitForSeconds(iconShowDuration);
+        HideStengthBoostIcon();
+    }
 }
