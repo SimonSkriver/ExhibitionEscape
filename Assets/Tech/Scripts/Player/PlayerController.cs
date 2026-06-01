@@ -100,11 +100,20 @@ public class PlayerController : MonoBehaviour
         {
             A.SetBool("isWalking", true);
             isMoving = true;
+            if (isSprinting)
+            {
+                A.SetBool("isRunning", isSprinting);
+            }
+            else if (A.GetBool("isRunning") != isSprinting)
+            {
+                A.SetBool("isRunning", isSprinting);
+            }
         } 
         else 
         {
             A.SetBool("isWalking", false);
             isMoving = false;
+            isSprinting = false;
         }
     }
 
@@ -112,8 +121,6 @@ public class PlayerController : MonoBehaviour
     {
         isSprinting = !isSprinting;
 
-        // Sprint Animation
-        A.SetBool("isRunning", isSprinting);
         if (isSprinting)
         {
             SFXManager.PlayEffect("Sprint");
