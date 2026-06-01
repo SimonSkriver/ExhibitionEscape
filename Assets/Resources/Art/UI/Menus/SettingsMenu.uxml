@@ -2,19 +2,103 @@
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/SliderStyles.uss?fileID=7433441132597879392&amp;guid=401769f8bac4a5c4c849a5bdccb9b5d6&amp;type=3#SliderStyles"/>
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
     <ui:VisualElement style="flex-grow: 1; justify-content: space-evenly; background-color: rgb(122, 152, 112); border-left-color: rgb(57, 82, 42); border-right-color: rgb(58, 82, 43); border-top-color: rgb(60, 87, 45); border-bottom-color: rgb(52, 75, 38); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; width: 450px; height: 750px; position: absolute; padding-right: 20px; padding-left: 20px; padding-bottom: 20px;">
-        <ui:Label text="SETTINGS" style="font-size: 70px; padding-bottom: 10px; padding-top: 15px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(57, 82, 42); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); letter-spacing: 5px; -unity-text-align: upper-center; -unity-font-style: bold; color: rgb(57, 82, 42); position: absolute; top: 8px;"/>
+        <ui:Label text="INDSTILLINGER" name="Header" style="padding-bottom: 10px; padding-top: 15px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(57, 82, 42); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); letter-spacing: 5px; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(57, 82, 42); position: absolute; top: 8px; white-space: nowrap; align-self: center; font-size: 45px;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(176562746798080)">
+                    <variables>
+                        <UnityEngine.Localization.LocalVariable name="Header">
+                            <UnityEngine.Localization.SmartFormat.PersistentVariables.BoolVariable value="true"/>
+                        </UnityEngine.Localization.LocalVariable>
+                    </variables>
+                </UnityEngine.Localization.LocalizedString>
+            </Bindings>
+        </ui:Label>
         <ui:GroupBox style="justify-content: flex-start; align-content: auto; padding-top: 100px;">
-            <ui:Button text="Back" name="Back" class="menuButton"/>
+            <ui:Button text="Back" name="Back" class="menuButton">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172065182035968)"/>
+                </Bindings>
+            </ui:Button>
             <ui:GroupBox>
-                <ui:Label text="Volume" name="SoundVolume" class="textMenu"/>
-                <ui:Slider label="Master" value="50" high-value="100" name="SettingsSlider" focusable="true" tooltip="Master" low-value="0"/>
-                <ui:Slider label="Environment" value="50" high-value="100" name="SettingsSlider" focusable="true" tooltip="Environment" low-value="0"/>
-                <ui:Slider label="Sound Effects" value="50" high-value="100" name="SettingsSlider" tooltip="SoundEffects" low-value="0"/>
-                <ui:Slider label="Music" value="50" high-value="100" name="SettingsSlider" tooltip="Music" low-value="0" fill="false"/>
+                <ui:Label text="VOLUME" name="SoundVolume" class="textMenu">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="ID">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.ShortVariable/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Label>
+                <ui:Slider label="VOLUME" value="42" high-value="100" name="SettingsSlider" focusable="true">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="ID">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.ShortVariable value="1"/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Slider>
+                <ui:Slider label="Music" value="42" high-value="100" name="SettingsSlider">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="ID">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.ShortVariable value="2"/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Slider>
+                <ui:Slider label="Sound Effects" high-value="100" name="SettingsSlider" value="42">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="ID">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.ShortVariable value="3"/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Slider>
+                <ui:Slider label="Environment" value="42" high-value="100" name="SettingsSlider" focusable="true">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="label" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="ID">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.ShortVariable value="4"/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Slider>
             </ui:GroupBox>
             <ui:GroupBox>
-                <ui:Label text="LANGUAGE" class="textMenu"/>
-                <ui:Button text="English" name="Language" class="menuButton"/>
+                <ui:Label text="LANGUAGE" class="textMenu">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(171942276345856)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="Header">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.BoolVariable value="true"/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Label>
+                <ui:Button text="English" name="Language" class="menuButton">
+                    <Bindings>
+                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(171942276345856)">
+                            <variables>
+                                <UnityEngine.Localization.LocalVariable name="Header">
+                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.BoolVariable/>
+                                </UnityEngine.Localization.LocalVariable>
+                            </variables>
+                        </UnityEngine.Localization.LocalizedString>
+                    </Bindings>
+                </ui:Button>
             </ui:GroupBox>
         </ui:GroupBox>
     </ui:VisualElement>

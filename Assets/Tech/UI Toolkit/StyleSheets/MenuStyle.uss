@@ -51,23 +51,103 @@
 .levelSelectButton {
     -unity-font-style: bold;
     font-size: 100px;
-    background-color: rgba(28, 35, 60, 0.392);
+    background-color: rgba(28, 35, 60, 0.784);
     color: rgb(226, 229, 241);
     width: 12%;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
 }
 
 .levelSelectButton:hover {
     -unity-font-style: bold;
     font-size: 100px;
-    background-color: rgba(226, 229, 241, 0.392);
+    background-color: rgba(226, 229, 241, 0.784);
     color: rgb(28, 35, 60);
 }
 
 .levelSelectButton:active {
     -unity-font-style: bold;
     font-size: 100px;
-    background-color: rgba(157, 214, 150, 0.392);
+    background-color: rgba(157, 214, 150, 0.784);
     color: rgb(214, 238, 212);
+}
+
+.levelSelectButton:disabled {
+    -unity-font-style: bold;
+    font-size: 100px;
+    background-color: rgba(15, 19, 34, 0.478);
+    color: rgb(195, 195, 195);
+    width: 12%;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.levelSelectLanguageButton {
+    border-left-color: rgb(65, 65, 65);
+    border-right-color: rgb(65, 65, 65);
+    border-top-color: rgb(65, 65, 65);
+    border-bottom-color: rgb(65, 65, 65);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    scale: 5 5 5;
+}
+
+.levelSelectLanguageButton:hover {
+    border-left-color: rgb(171, 171, 171);
+    border-right-color: rgb(171, 171, 171);
+    border-top-color: rgb(171, 171, 171);
+    border-bottom-color: rgb(171, 171, 171);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    scale: 5 5 5;
+}
+
+.levelSelectLanguageButton:checked {
+    border-left-color: rgb(255, 213, 0);
+    border-right-color: rgb(255, 213, 0);
+    border-top-color: rgb(255, 213, 0);
+    border-bottom-color: rgb(255, 213, 0);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    scale: 5 5 5;
+}
+
+.levelSelectLanguageButton:disabled {
+    border-left-color: rgba(65, 65, 65, 0.784);
+    border-right-color: rgba(65, 65, 65, 0.784);
+    border-top-color: rgba(65, 65, 65, 0.784);
+    border-bottom-color: rgba(65, 65, 65, 0.784);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    scale: 5 5 5;
 }
 
 .choiceButton {
@@ -244,5 +324,3 @@
     width: 100px;
     height: 100px;
 }
-
-

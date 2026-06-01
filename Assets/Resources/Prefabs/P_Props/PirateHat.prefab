@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1994391494354044284}
   - component: {fileID: 1342882246940722994}
   - component: {fileID: 4844963422248516010}
-  - component: {fileID: 2715080218165835214}
   m_Layer: 0
   m_Name: PirateHat
   m_TagString: Untagged
@@ -133,15 +132,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.34613568
   m_Center: {x: -0.0065000057, y: 0.09143234, z: -0.025113046}
---- !u!114 &2715080218165835214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4462461736162844857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb11f0356b37907448a04abd53345fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractTester

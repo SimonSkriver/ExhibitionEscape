@@ -7,7 +7,12 @@ public class BoarSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float respawnDelay = 60f;
 
-    public IEnumerator SpawnBoar()
+
+    public void SpawnBoar()
+    {
+        StartCoroutine(SpawnBoarEnumerator());
+    }
+    public IEnumerator SpawnBoarEnumerator()
     {
         yield return new WaitForSeconds(respawnDelay);
 
