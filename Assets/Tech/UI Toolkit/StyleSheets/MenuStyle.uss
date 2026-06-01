@@ -324,3 +324,28 @@
     width: 100px;
     height: 100px;
 }
+
+.backgroundCustomBox {
+    -unity-material: url("project://database/Assets/Resources/Art/Shaders/MenuShader.shadergraph?fileID=-876546973899608171&guid=05b13368345f6054abea596e8df069f5&type=3#MenuShader") prop("_Scale" 50) prop("_Speed" 0.1) prop("_Color_1" rgb(0, 253, 255)) prop("_Color_2" rgb(0, 210, 255)) prop("_Color_3" rgb(255, 255, 255)) prop("_Color_4" rgb(0, 231, 255));
+    border-left-color: rgb(25, 78, 99);
+    border-right-color: rgb(25, 78, 99);
+    border-top-color: rgb(25, 78, 99);
+    border-bottom-color: rgb(25, 78, 99);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(101, 183, 182);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+}
