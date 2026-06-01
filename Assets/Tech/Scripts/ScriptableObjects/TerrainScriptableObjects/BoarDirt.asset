@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1131a4397b5cac49a22fab02c535811, type: 3}
+  m_Name: BoarDirt
+  m_EditorClassIdentifier: Assembly-CSharp::FootStepSO
+  terrainLayer: {fileID: 8574412962073106934, guid: 02802b3d0a76bca48b01d6dd5e096bcf, type: 2}
+  footstepClips:
+  - {fileID: 8300000, guid: 99a85bb391ef32c488e9260907cfe2ee, type: 3}
+  - {fileID: 8300000, guid: 8fffd4fba5bfc4c4287f7f7413f7b156, type: 3}
+  - {fileID: 8300000, guid: 0e4ccafe78a2ec240908f89cd21d0439, type: 3}
+  - {fileID: 8300000, guid: 3abd0e703fa06be43a5d4bac16c12cde, type: 3}
+  volume: 1
