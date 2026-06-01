@@ -19,6 +19,7 @@ public class JumpBoostEffect : MonoBehaviour
             {
                 float difference = amount - currentBoostAmount;
                 PlayerStats.Instance.JumpPower += difference;
+                PlayerStats.Instance.canTakeFallDamage = false;
                 currentBoostAmount = amount;
             }
         }
@@ -26,6 +27,7 @@ public class JumpBoostEffect : MonoBehaviour
         {
             currentBoostAmount = amount;
             PlayerStats.Instance.JumpPower += currentBoostAmount;
+            PlayerStats.Instance.canTakeFallDamage = false;
         }
 
         boostCoroutine = StartCoroutine(BoostRoutine(duration));
@@ -36,7 +38,7 @@ public class JumpBoostEffect : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         PlayerStats.Instance.JumpPower -= currentBoostAmount;
-
+        PlayerStats.Instance.canTakeFallDamage = true;
         currentBoostAmount = 0;
         boostCoroutine = null;
     }

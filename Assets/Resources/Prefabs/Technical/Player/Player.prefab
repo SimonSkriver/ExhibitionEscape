@@ -480,7 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcde77baacfb0d847bf8f42a21ca4c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  controller: {fileID: 0}
   orientation: {fileID: 0}
   gravity: -8
   turnSpeed: 10
@@ -500,6 +499,7 @@ MonoBehaviour:
   MovementSpeed: 5
   SprintSpeed: 7
   JumpPower: 0.5
+  canTakeFallDamage: 1
 --- !u!114 &7419039658769891899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFallDamage
   threshold: 5
-  dmgMultiplier: 2.5
+  dmgMultiplier: 3
   velocity: 0
 --- !u!114 &5037222581142081660
 MonoBehaviour:
@@ -661,12 +661,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541ba0551a1978542a723e198f52dc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSound
+  pCon: {fileID: 0}
   footStepSOs:
   - {fileID: 11400000, guid: 5e29c9e0be4204c408ff1dc942171c99, type: 2}
   - {fileID: 11400000, guid: 715c35a71ed88734392abc751118d453, type: 2}
   - {fileID: 11400000, guid: cb1822fcbe3858d4f921fc05a82cc305, type: 2}
   - {fileID: 11400000, guid: c409735f5fd1722408ad881be16492d0, type: 2}
   - {fileID: 11400000, guid: 68534108356e5ef4ea1191a845cd91c5, type: 2}
+  audioSource: {fileID: 0}
   maxPitch: 1.2
   minPitch: 0.8
 --- !u!82 &4572075553160216814

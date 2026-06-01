@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
 
         Move();
         HandleGravity();
-        
-
     }
 
     public void Jump()
@@ -97,12 +95,14 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
         }
 
-        
         // Walking or Idle animation
-        if (moveDirection != new Vector3(0, playerVelocity.y, 0)) {
+        if (moveDirection != new Vector3(0, playerVelocity.y, 0)) 
+        {
             A.SetBool("isWalking", true);
             isMoving = true;
-        } else {
+        } 
+        else 
+        {
             A.SetBool("isWalking", false);
             isMoving = false;
         }
@@ -120,12 +120,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetSlopeSlideVelocity() {
-        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit hitInfo, 5)) {
+    void SetSlopeSlideVelocity() 
+    {
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit hitInfo, 5)) 
+        {
             // Get angle of the slope
             float angle = Vector3.Angle(hitInfo.normal, Vector3.up);
 
-            if (angle >= controller.slopeLimit) {
+            if (angle >= controller.slopeLimit) 
+            {
                 isSliding = true;
                 slopeSlideVelocity = Vector3.ProjectOnPlane(new Vector3(0, playerVelocity.y, 0), hitInfo.normal);
                 return;
