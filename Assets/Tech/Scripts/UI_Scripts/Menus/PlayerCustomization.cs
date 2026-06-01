@@ -39,6 +39,7 @@ public class PlayerCustomization : MonoBehaviour
                 m_shorts.color = btn.resolvedStyle.backgroundColor;
                 break;
             case "ConfirmPlayerCustomization":
+                SFXManager.PlayEffect("ConfirmColor");
                 UI_Manager.Instance.HidePlayerCustomizeUI();
                 break;
         }
