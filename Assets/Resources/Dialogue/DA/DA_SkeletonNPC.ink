@@ -31,12 +31,3 @@ Tror du de er interesserret i at være med i en kampklub?
     Tjaa, du har nok ret.
     De virker meget truende.
 --> END
-
-
-
-
-===THROW_CANONBALL===
-// End of cutscene
-TID TIL AT FLYVE!
-// The captain is throwing a canonball
--> END

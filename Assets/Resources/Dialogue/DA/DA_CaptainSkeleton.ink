@@ -34,9 +34,17 @@ Vil du forlade mig uden min skat?
 
 
 ===SailAway===
-AARRRGGG you found MY TREASURE!
-I knew I could trust you
-YO HO HO it still fits perfectly
-Thank you visitor {visitNum}
-As promised, you can have my boat
+ARRGH du fandt MIN SKAT!
+Jeg vidste jeg kunne stole på dig
+YO HO HO den passer stadig perfekt
+Tusind tak besøgsnummer {visitNum}
+Som lovet kan du få min båd
+-> END
+
+
+
+===THROW_CANONBALL===
+// End of cutscene
+TID TIL AT FLYVE!
+// The captain is throwing a canonball
 -> END

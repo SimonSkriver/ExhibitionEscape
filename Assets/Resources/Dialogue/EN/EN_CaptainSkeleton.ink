@@ -33,12 +33,13 @@ Planning to leave without my treasure?
 
 
 ===SailAway===
-AYE you found MY TREASURE!
+ARRGH you found MY TREASURE!
 I knew I could trust you
 YO HO HO it still fits perfectly
 Thank you visitor {visitNum}
-As promised, you can have my boat
+As promised you can have my boat
 -> END
+
 
 
 ===THROW_CANONBALL===
