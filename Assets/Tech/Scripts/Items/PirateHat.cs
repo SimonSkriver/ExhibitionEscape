@@ -3,8 +3,8 @@ using UnityEngine;
 public class PirateHat : MonoBehaviour, IInteractable
 {
     [SerializeField] Animator chestAnimator;
-    [SerializeField] bool ready;
     Transform hatAnchor;
+    [SerializeField] bool ready;
     public bool hasHat;
 
     void Awake()
@@ -20,6 +20,7 @@ public class PirateHat : MonoBehaviour, IInteractable
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         hasHat = true;
+        gameObject.layer = 4;
     }
 
     public bool ShowOutline()
