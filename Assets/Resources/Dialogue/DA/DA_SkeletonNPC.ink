@@ -27,7 +27,7 @@ Nu kalder vi ham for "Kokosnøde Hoved"
 
 
 ===BoarFightingClub===
-Disse vildsvin ser ud til at være meget engagerert i at kæmpe.
+Disse vildsvin ser ud til at være meget glade for at kæmpe.
 Tror du de er interesserret i at være med i en kampklub?
 *[Ja]
     Fedt mand! Du er hermed inviteret til grillaften i aften!
@@ -47,12 +47,12 @@ ARRGH! Skaf en KØDKØLLE-STEG og kæmp med MIG!
 
 
 ===SunBath===
-Jeg ved ikke om UV'en er høj nok...
+Jeg ved ikke om solen er varm nok...
 ...jeg synes ikke jeg tager farve
 -> END
 
 ===SunBathBurned===
-Hvorfor er UV'en så høj?
+Hvorfor er solen så varm?
 Jeg var ude i solen i 5 sekunder..
 5 SEKUNDER!!!!
 Og så er der ham der, som bare ligger og brokker sig over hans knogler ikke kan tage farve...
