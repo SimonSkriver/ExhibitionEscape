@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
@@ -12,6 +13,13 @@ public class PlayerStats : MonoBehaviour
     public float JumpPower;
     public bool canTakeFallDamage = true;
 
+    [Header("Take Damage Effect")]
+    private SkinnedMeshRenderer skinnedMeshRenderer;
+    [SerializeField] private float flickerAmount = 3;
+    [SerializeField] private float flickerDelay = 0.1f;
+    [SerializeField] private Color savedColor;
+    [SerializeField] private Color redColor;
+
     void Awake()
     {
         if (Instance == null)
@@ -19,6 +27,11 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
             Health = 100;
         }
+
+        skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        savedColor = skinnedMeshRenderer.material.color;
+        redColor = savedColor;
+        redColor.r = 100f;
     }
     
     public void AddHealth(int health) {
@@ -33,10 +46,22 @@ public class PlayerStats : MonoBehaviour
         SFXManager.PlayEffect("HurtSound");
         PlayerHUD.Instance.UpdateHealthUI(Health);
         Debug.Log(Health);
+        StartCoroutine(ColorFlicker());
         if (Health <= 0)
         {
             string currentScene = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentScene, LoadSceneMode.Single);
+        }
+    }
+
+    public IEnumerator ColorFlicker()
+    {
+        for (int i = 0; i < flickerAmount; i++)
+        {
+            skinnedMeshRenderer.material.color = redColor;
+            yield return new WaitForSeconds(flickerDelay);
+            skinnedMeshRenderer.material.color = savedColor;
+            yield return new WaitForSeconds(flickerDelay);
         }
     }
 }
