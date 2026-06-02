@@ -33,8 +33,6 @@ public class MovementBoostEffect : MonoBehaviour
 
     private IEnumerator BoostRoutine(float duration)
     {
-        SFXManager.PlayEffect("SpeedBoost");
-        PowerUpUI.Instance.ShowSpeedIcon();
         yield return new WaitForSeconds(duration);
 
         PlayerStats.Instance.MovementSpeed -= currentBoostAmount;

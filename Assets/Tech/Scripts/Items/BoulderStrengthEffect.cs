@@ -30,7 +30,7 @@ public class BoulderStrengthEffect : MonoBehaviour
     private IEnumerator BoulderStrengthRoutine(float duration)
     {
         SFXManager.PlayEffect("StrengthBoost");
-        PowerUpUI.Instance.ShowStrengthIcon();
+        PowerUpUI.Instance.StartStrengthIcon(duration);
         CanDestroyBoulders = true;
 
         yield return new WaitForSeconds(duration);

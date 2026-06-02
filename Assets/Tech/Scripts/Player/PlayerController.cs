@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public Vector3 playerVelocity;
     Vector3 slopeSlideVelocity;
     Vector3 moveDirection;
+    public bool canMove { get; set; }
     public bool isSprinting { get; private set; }
     public bool isMoving { get; private set; }
     public bool isSliding { get; private set; }
@@ -31,14 +32,19 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
 
         A = GetComponent<Animator>();
+        
+        canMove = true;
     }
 
     void Update()
     {
         isGrounded = controller.isGrounded;
-
-        Move();
-        HandleGravity();
+        
+        if (canMove)
+        {
+            Move();
+            HandleGravity();  
+        }
     }
 
     public void Jump()

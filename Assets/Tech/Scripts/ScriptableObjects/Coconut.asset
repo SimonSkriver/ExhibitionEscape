@@ -21,7 +21,7 @@ MonoBehaviour:
   healthAmount: 20
   givesMovementBoost: 1
   movementBoostAmount: 5
-  movementBoostDuration: 0
+  movementBoostDuration: 10
   givesJumpBoost: 0
   jumpBoostAmount: 0
   jumpBoostDuration: 0
