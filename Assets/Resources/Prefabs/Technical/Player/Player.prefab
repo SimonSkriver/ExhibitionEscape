@@ -500,6 +500,11 @@ MonoBehaviour:
   SprintSpeed: 7
   JumpPower: 0.5
   canTakeFallDamage: 1
+  skinnedMeshRenderer: {fileID: 0}
+  flickerAmount: 3
+  flickerDelay: 0.1
+  savedColor: {r: 0, g: 0, b: 0, a: 0}
+  redColor: {r: 0.735849, g: 0.31516552, b: 0.31516552, a: 0}
 --- !u!114 &7419039658769891899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,6 +1729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpUI
   iconShowDuration: 2.5
+  flickerAmount: 5
+  flickerDelay: 0.15
 --- !u!1 &8578458194853573372
 GameObject:
   m_ObjectHideFlags: 0
