@@ -1,16 +1,20 @@
-VAR visitNum = 1
+VAR visitNum = 512
 VAR isWelcomeMessageCompleted = false
 VAR hasTreasure = false
 
 ===Welcome===
 {isWelcomeMessageCompleted:
-    -> Ship
+    -> SailAway
 - else:
-    AHOY camrade!
+    AHOY camrade {visitNum}
+    
+    
+    
     This is my island, that I totally captured by myself.
     My crew?
     Don't worry about them. They're useless.
-    I mean look at them. They're just bare bones.
+    I mean look at them. They're just skin and bones...
+    ...without skin...
     ...
     You are my visitor number {visitNum}
     and I have something VERY valuable for you
@@ -30,26 +34,10 @@ VAR hasTreasure = false
 
 
 
-===Ship===
-{hasTreasure:
-    -> SailAway
-- else:
-    Planning to leave without my treasure?
-    *[Yes]
-        Well, I won't let you ;P
-        -> END
-    *[No]
-        Yeah, you wouldn't miss out ;D
-        -> END
-}
-
-
 ===SailAway===
-ARRGH you found MY TREASURE!
-I knew I could trust you
-YO HO HO it still fits perfectly
-Thank you visitor {visitNum}
-As promised you can have my boat
+ARRGH you found THE HAT!
+Be ready for your greatest adventure!
+BECAUSE YOU CAN NOW SAIL AWAY!!!
 -> END
 
 

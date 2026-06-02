@@ -69,7 +69,7 @@ He can get mine if he's really burning for it
 
 
 ===BathingRing===
-The first thing I saw on this island was this bathingring
+The first thing I saw on this island was this bathing ring
 Who put it there?
 And why?
 -> END
