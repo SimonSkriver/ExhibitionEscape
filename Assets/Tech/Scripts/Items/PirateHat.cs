@@ -20,7 +20,7 @@ public class PirateHat : MonoBehaviour, IInteractable
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         hasHat = true;
-        gameObject.layer = 4;
+        gameObject.layer = 2;
     }
 
     public bool ShowOutline()
