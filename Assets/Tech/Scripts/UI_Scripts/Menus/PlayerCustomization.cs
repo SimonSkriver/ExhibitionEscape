@@ -10,6 +10,7 @@ public class PlayerCustomization : MonoBehaviour
     List<Button> customButtons = new List<Button>();
     List<Slider> customSliders = new List<Slider>();
     Transform neckBone;
+    float nextSFXtime;
 
     private void Awake() {
         root = UI_Manager.Instance.customizeRoot;
@@ -19,7 +20,7 @@ public class PlayerCustomization : MonoBehaviour
             btn.RegisterCallback<PointerEnterEvent>(OnHoverSettings);
         }
 
-        customSliders = root.Query<Slider>().ToList();
+        customSliders = root.Query<Slider>("CustomizationSlider").ToList();
         foreach (var sld in customSliders) {
             sld.RegisterCallback<ChangeEvent<float>>(OnCustomizationSlider);
         }
@@ -29,6 +30,14 @@ public class PlayerCustomization : MonoBehaviour
         neckBone = GameObject.FindGameObjectWithTag("Player").transform.Find("ShortsMan/Main/Bone.001/Bone.002/Bone.003/Chest/Neck");
     }
     public void OnHoverSettings(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
+    public void PlaySliderSound()
+    {
+        if(nextSFXtime < Time.unscaledTime)
+        {
+           SFXManager.PlayEffect("SliderSound");
+           nextSFXtime = Time.unscaledTime + 0.03f; 
+        }
+    }
 
     void OnColorButton(ClickEvent evt) {
         Button btn = (Button)evt.target;
@@ -51,6 +60,7 @@ public class PlayerCustomization : MonoBehaviour
 
     void OnCustomizationSlider(ChangeEvent<float> evt) {
         Slider sld = (Slider)evt.target;
+        PlaySliderSound();
 
         switch (sld.tooltip) {
 
