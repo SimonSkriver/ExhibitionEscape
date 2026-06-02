@@ -1,35 +1,47 @@
 VAR visitNum = 1
+VAR isWelcomeMessageCompleted = false
+VAR hasTreasure = false
 
 ===Welcome===
-AHOY camrade!
-This is my island, that I totally captured by myself.
-My crew?
-Don't worry about them. They're useless.
-I mean look at them. They're just bare bones.
-...
-You are my visitor number {visitNum}
-and I have something VERY valuable for you
-MY TREASURE is somewhere on this island
-If you can find it, I will let you sail away in my boat ;D
-ARE YOU READY?
-*[YES]
-    LET'S GOOOO!!!
-*[no]
-    oh...
+{isWelcomeMessageCompleted:
+    -> Ship
+- else:
+    AHOY camrade!
+    This is my island, that I totally captured by myself.
+    My crew?
+    Don't worry about them. They're useless.
+    I mean look at them. They're just bare bones.
     ...
-    If you get hungry, there's meat in the jungle
---> END
+    You are my visitor number {visitNum}
+    and I have something VERY valuable for you
+    MY TREASURE is somewhere on this island
+    If you can find it, I will let you sail away in my boat ;D
+    ARE YOU READY?
+    ~ isWelcomeMessageCompleted = true
+    *[YES]
+        LET'S GOOOO!!!
+        -> END
+    *[no]
+        oh...
+        ...
+        If you get hungry, there's meat in the jungle
+        -> END
+}
 
 
 
 ===Ship===
-Planning to leave without my treasure?
-*[Yes]
-    Well, I won't let you ;P
-*[No]
-    Yeah, you wouldn't miss out ;D
---> END
-
+{hasTreasure:
+    -> SailAway
+- else:
+    Planning to leave without my treasure?
+    *[Yes]
+        Well, I won't let you ;P
+        -> END
+    *[No]
+        Yeah, you wouldn't miss out ;D
+        -> END
+}
 
 
 ===SailAway===

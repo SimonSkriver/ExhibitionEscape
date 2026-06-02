@@ -4,6 +4,7 @@ zzz
     AAAAAAAAAAAAAAHHHHHH!
     Just 5 more minutes...
 * [Leave]
+~ isWelcomeMessageCompleted = true
 --> END
 
 

@@ -49,13 +49,19 @@ public class DialogueUI : MonoBehaviour
         ShowChoices(dialogueChoices);
     }
 
+    public void SkipDialogueWriting(string dialogueLine) => dialogueText.text = dialogueLine;
+
     IEnumerator WriteDialogueLine(string dialogueLine) {
         dialogueText.text = "";
 
         foreach (char c in dialogueLine.ToCharArray()) {
-            dialogueText.text += c.ToString();
-            yield return new WaitForSeconds(0.03f);
+            if (DialogueManager.Instance.isWritingDialogue) {
+                dialogueText.text += c.ToString();
+                yield return new WaitForSeconds(0.03f);
+            }
         }
+
+        DialogueManager.Instance.isWritingDialogue = false;
     }
     #endregion
 }

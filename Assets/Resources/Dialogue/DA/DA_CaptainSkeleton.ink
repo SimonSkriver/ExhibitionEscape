@@ -1,26 +1,33 @@
 VAR visitNum = 1
+VAR isWelcomeMessageCompleted = false
+VAR hasTreasure = false
 
 ===Welcome===
-OHØJ kammerat!
-Dette er min ø, som jeg så meget har overtaget helt selv. 
-Min besætning?
-Ik' tænk på dem. De er ubrugelige.
-Se på dem. De er bare skind og ben...
-...uden skind...
-...
-Du er mit besøgsnummer {visitNum}
-hvilket betyder at jeg har noget MEGET værdifuldt til dig.
-MIN SKAT!
-Hvis du kan finde den, vil jeg lade dig sejle min båd ;D
-ER DU KLAR?
-*[JA]
-    LET'S GOOOO!!!
-*[nej]
-    oh...
+{isWelcomeMessageCompleted:
+    -> Ship
+- else:
+    OHØJ kammerat!
+    Dette er min ø, som jeg så meget har overtaget helt selv. 
+    Min besætning?
+    Ik' tænk på dem. De er ubrugelige.
+    Se på dem. De er bare skind og ben...
+    ...uden skind...
     ...
-    Hvis du bliver sulten, er der kød inde i junglen
---> END
-
+    Du er mit besøgsnummer {visitNum}
+    hvilket betyder at jeg har noget MEGET værdifuldt til dig.
+    MIN SKAT!
+    Hvis du kan finde den, vil jeg lade dig sejle min båd ;D
+    ER DU KLAR?
+    ~ isWelcomeMessageCompleted = true
+    *[JA]
+        LET'S GOOOO!!!
+        -> END
+    *[nej]
+        oh...
+        ...
+        Hvis du bliver sulten, er der kød inde i junglen
+        -> END
+}
 
 
 ===Ship===
