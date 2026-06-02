@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4462461736162844857, guid: 0fd589a357a382641bb17f42907186eb, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7745109193178885130, guid: 0fd589a357a382641bb17f42907186eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -462,3 +462,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   chestAnimator: {fileID: 4781656340362508493}
   ready: 0
+  hasHat: 0
