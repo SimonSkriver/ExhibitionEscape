@@ -40,6 +40,12 @@ Tror du de er interesserret i at være med i en kampklub?
 
 
 
+===CaveHint===
+ARRGH! Skaf en KØDKØLLE-STEG og kæmp med MIG!
+-> END
+
+
+
 ===SunBath===
 Jeg ved ikke om UV'en er høj nok...
 ...jeg synes ikke jeg tager farve
@@ -51,4 +57,12 @@ Jeg var ude i solen i 5 sekunder..
 5 SEKUNDER!!!!
 Og så er der ham der, som bare ligger og brokker sig over hans knogler ikke kan tage farve...
 Han må gerne få mine, hvis han virkelig brænder for det!
+-> END
+
+
+
+===BathingRing===
+Det første jeg så, da jeg kom til denne ø, var denne badering
+Hvem har placeret den dér?
+Og hvorfor?
 -> END
