@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/LevelSelection.unity
     guid: 161b9e9c6bc5c4f4c82eb089704351ff
   - enabled: 1
+    path: Assets/Resources/Scenes/GameScene.unity
+    guid: 0ebb24213ea53b24c97ab8bc6f6f827b
+  - enabled: 1
     path: Assets/Resources/Scenes/Island.unity
     guid: 11153bdf43ab75148afade25ab223b57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Resources/Scenes/NewIslandScene.unity
     guid: 40de853349cdf734b9c634beaa5db227
   m_configObjects:

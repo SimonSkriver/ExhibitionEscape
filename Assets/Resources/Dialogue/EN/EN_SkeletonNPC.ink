@@ -40,6 +40,12 @@ Do you think they will be interested in a fighting club?
 
 
 
+===CaveHint===
+ARRGH! Get some MEAT and fight with ME!
+-> END
+
+
+
 ===SunBath===
 I don't know if the UV index is high enough...
 ...I don't think I'm getting a tanline
@@ -51,4 +57,12 @@ I was out in the sun for 5 seconds..
 5 SECONDS!!!!
 And then there is this guy, that lays in the sun and complains about his bones not taking color...
 He can get mine if he's really burning for it
+-> END
+
+
+
+===BathingRing===
+The first thing I saw on this island was this bathingring
+Who put it there?
+And why?
 -> END
