@@ -162,6 +162,37 @@ Transform:
   - {fileID: 7853155560366462298}
   m_Father: {fileID: 440536302117854911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1800291017353224098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3564502796623774886}
+  m_Layer: 0
+  m_Name: HatAnchor
+  m_TagString: HatAnchor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3564502796623774886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800291017353224098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.000000014944103, y: -0.00000032449017, z: 0.11968104, w: -0.9928124}
+  m_LocalPosition: {x: 0.043, y: -0.296, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2403473065782891844}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -10.509}
 --- !u!1 &1824559489415716980
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,14 +692,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 541ba0551a1978542a723e198f52dc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSound
-  pCon: {fileID: 0}
   footStepSOs:
   - {fileID: 11400000, guid: 5e29c9e0be4204c408ff1dc942171c99, type: 2}
   - {fileID: 11400000, guid: 715c35a71ed88734392abc751118d453, type: 2}
   - {fileID: 11400000, guid: cb1822fcbe3858d4f921fc05a82cc305, type: 2}
   - {fileID: 11400000, guid: c409735f5fd1722408ad881be16492d0, type: 2}
   - {fileID: 11400000, guid: 68534108356e5ef4ea1191a845cd91c5, type: 2}
-  audioSource: {fileID: 0}
   maxPitch: 1.2
   minPitch: 0.8
 --- !u!82 &4572075553160216814
@@ -1176,6 +1205,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4676562863139753736}
+  - {fileID: 3564502796623774886}
   m_Father: {fileID: 1354219702041515079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5778194878056416259
@@ -1654,7 +1684,7 @@ GameObject:
   - component: {fileID: 8549005757891471061}
   - component: {fileID: 835835347125391645}
   - component: {fileID: 4835874276094159840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PowerUpUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

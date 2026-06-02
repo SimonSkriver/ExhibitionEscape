@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisableplayerCutscene
   targetPosition: {fileID: 1545419224280773373}
-  boatCollider: {fileID: 5184819342239471774}
 --- !u!1 &50900882516979386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,11 +1146,6 @@ PrefabInstance:
 --- !u!95 &1289763836719649818 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5243415053671297068, guid: bf2ee0e6ef626fa498bed6cb07bd35aa, type: 3}
-  m_PrefabInstance: {fileID: 6422822830308762678}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &5184819342239471774 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 2222067838306270376, guid: bf2ee0e6ef626fa498bed6cb07bd35aa, type: 3}
   m_PrefabInstance: {fileID: 6422822830308762678}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5964249504251498456 stripped
