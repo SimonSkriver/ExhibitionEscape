@@ -44,6 +44,7 @@ public class PlayerCustomization : MonoBehaviour
                 break;
             case "ConfirmPlayerCustomization":
                 SFXManager.PlayEffect("ConfirmColor");
+                PlayerStats.Instance.savedColor = m_skin.color;
                 UI_Manager.Instance.HidePlayerCustomizeUI();
                 break;
         }

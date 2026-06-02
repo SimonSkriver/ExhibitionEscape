@@ -14,11 +14,11 @@ public class PlayerStats : MonoBehaviour
     public bool canTakeFallDamage = true;
 
     [Header("Take Damage Effect")]
-    private SkinnedMeshRenderer skinnedMeshRenderer;
+    [SerializeField] private SkinnedMeshRenderer skinnedMeshRenderer;
     [SerializeField] private float flickerAmount = 3;
     [SerializeField] private float flickerDelay = 0.1f;
-    [SerializeField] private Color savedColor;
-    [SerializeField] private Color redColor;
+    public Color savedColor;
+    public Color redColor;
 
     void Awake()
     {
@@ -29,9 +29,6 @@ public class PlayerStats : MonoBehaviour
         }
 
         skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
-        savedColor = skinnedMeshRenderer.material.color;
-        redColor = savedColor;
-        redColor.r = 100f;
     }
     
     public void AddHealth(int health) {
