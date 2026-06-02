@@ -4,8 +4,10 @@ using UnityEngine.Localization.Settings;
 using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
-{
+{   
     public static DialogueManager Instance;
+    public bool isWritingDialogue;
+    string dialogueLine;
 
     [Header("Ink Story")]
     private TextAsset inkJSON;
@@ -47,12 +49,17 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void ContinueOrExitStory()
-    {
-        if (story.canContinue) {
-            string dialogueLine = story.Continue();
-        UI_Manager.Instance.dialogueUI.ChangeDialogueUI(dialogueLine, story.currentChoices);
+    {   if (isWritingDialogue) {
+            isWritingDialogue = false;
+            UI_Manager.Instance.dialogueUI.SkipDialogueWriting(dialogueLine);
         } else {
-            ExitDialogue();
+            if (story.canContinue) {
+                isWritingDialogue = true;
+                dialogueLine = story.Continue();
+                UI_Manager.Instance.dialogueUI.ChangeDialogueUI(dialogueLine, story.currentChoices);
+            } else {
+                ExitDialogue();
+            }
         }
     }
 

@@ -72,9 +72,9 @@ public class PlayerCustomization : MonoBehaviour
                 float sldValPercent = (sld.value - sld.lowValue) / (sld.highValue - sld.lowValue);
 
                 // Lerp between given numbers
-                float xScreenPos = Mathf.Lerp(-0.1f, 0f, sldValPercent);
+                float xScreenPos = Mathf.Lerp(-0.05f, 0f, sldValPercent);
                 float yScreenPos = Mathf.Lerp(-0.15f, 0.08f, sldValPercent);
-                float targetOffset = Mathf.Lerp(-0.35f, 1.5f, sldValPercent);
+                float targetOffset = Mathf.Lerp(-0.35f, -1f, sldValPercent);
 
                 // Set Camera Target Offset
                 GameManager.customCam.GetComponent<CinemachineOrbitalFollow>().TargetOffset.z = targetOffset;
