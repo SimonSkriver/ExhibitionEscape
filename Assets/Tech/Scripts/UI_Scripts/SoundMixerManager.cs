@@ -13,7 +13,7 @@ public class SoundMixerManager : MonoBehaviour
     {
         audioMixer = Resources.Load<AudioMixer>("Sounds/MainMixer");
         rootVis = GetComponent<UIDocument>().rootVisualElement;
-        sliders = rootVis.Query<Slider>().ToList();
+        sliders = rootVis.Query<Slider>("SettingsSlider").ToList();
         foreach(var slider in sliders)
         {
             slider.RegisterCallback<ChangeEvent<float>>(SetVolume);
@@ -30,19 +30,15 @@ public class SoundMixerManager : MonoBehaviour
         {
             case "Master":
                 audioMixer.SetFloat("masterVolume", decibel);
-                PlaySliderSound();
                 break;
             case "Music":
                 audioMixer.SetFloat("musicVolume", decibel);
-                PlaySliderSound();
                 break;
             case "Environment":
                 audioMixer.SetFloat("soundscapeVolume", decibel);
-                PlaySliderSound();
                 break;
             case "SoundEffects":
                 audioMixer.SetFloat("sfxVolume", decibel);
-                PlaySliderSound();
                 break;
         }
     }
@@ -51,13 +47,14 @@ public class SoundMixerManager : MonoBehaviour
         
         Slider slider = (Slider) evt.target;
         AudioSliderSetting(slider);
+        PlaySliderSound();
     }
     public void PlaySliderSound()
     {
         if(nextSFXtime < Time.unscaledTime)
         {
            SFXManager.PlayEffect("SliderSound");
-           nextSFXtime = Time.unscaledTime + 0.05f; 
+           nextSFXtime = Time.unscaledTime + 0.03f; 
         }
     }
 }
