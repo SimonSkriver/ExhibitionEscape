@@ -12,6 +12,7 @@ public class BoarBehavior : MonoBehaviour
         Chasing,
         Windup,
         Charging,
+        Recharge,
         Stunned,
         Dead
     }
@@ -336,7 +337,7 @@ public class BoarBehavior : MonoBehaviour
         if (!EnableAgentAgain())
             yield break;
 
-        ChangeState(BoarState.Stunned); //Perhaps a different enum
+        ChangeState(BoarState.Recharge); //Perhaps a different enum
 
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
@@ -468,7 +469,7 @@ public class BoarBehavior : MonoBehaviour
         }
 
         if (anim != null)
-            anim.SetTrigger("BoarFlip");
+            //anim.SetTrigger("BoarFlip");
 
         StartCoroutine(DestroyBoarAfterDelay());
     }
@@ -575,6 +576,15 @@ public class BoarBehavior : MonoBehaviour
         else if (currentState == BoarState.Charging)
         {
             if (agent.enabled)
+            {
+                agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+            }
+        }
+
+        else if (currentState == BoarState.Recharge)
+        {
+            if (EnableAgentAgain())
             {
                 agent.isStopped = true;
                 agent.velocity = Vector3.zero;
@@ -730,15 +740,16 @@ public class BoarBehavior : MonoBehaviour
         if (anim == null)
             return;
 
-        int animState = BoarState.Wandering switch {
+        int animState = currentState switch {
             BoarState.Wandering => 0,
             BoarState.Grazing => 1,
             BoarState.Threatening => 2,
             BoarState.Chasing => 3,
             BoarState.Windup => 4,
             BoarState.Charging => 5,
-            BoarState.Stunned => 6,
-            BoarState.Dead => 7
+            BoarState.Recharge => 6,
+            BoarState.Stunned => 7,
+            BoarState.Dead => 8
         };
 
         anim.SetInteger("BoarAnimState", animState);
