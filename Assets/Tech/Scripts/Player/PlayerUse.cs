@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerUse : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerUse : MonoBehaviour
 
     [Header("Layers")]
     [SerializeField] private LayerMask axeHitLayers;
+
+    private bool shallEat = true;
 
     private void Awake()
     {
@@ -49,43 +52,27 @@ public class PlayerUse : MonoBehaviour
     {
         FruitData fruitData = slot.item as FruitData;
 
-        if (animator != null)
+        if (shallEat)
         {
-            animator.SetTrigger("EAT");
+            shallEat = false;
+            if (animator != null)
+            {
+                animator.SetTrigger("EAT");
+            }
+
+            StartCoroutine(EatFruitAfterDelay(0.25f, fruitData, transform));
         }
-
-        FruitUseController.Instance.UseFruit(fruitData, transform);
-
-        InventoryManager.Instance.RemoveSelectedItem();
     }
 
     private void UseMeatItem(InventorySlot slot)
     {
         MeatData meatData = slot.item as MeatData;
 
-        if (animator != null)
+        if (shallEat)
         {
-            animator.SetTrigger("EAT");
-        }
+            shallEat = false;
 
-        MeatUseController.Instance.UseMeat(meatData);
-
-        if (meatData.IsLastStage(slot.currentStage))
-        {
-            InventoryManager.Instance.RemoveSelectedItem();
-            MeatUseController.Instance.SpawnBone(meatData);
-            
-        }
-        else
-        {
-            slot.currentStage++;
-
-            EquipController.Instance.EquipSelectedSlot();
-
-            if (PlayerHUD.Instance != null)
-            {
-                PlayerHUD.Instance.UpdateInventoryUI();
-            }
+            StartCoroutine(EatMeatAfterDelay(1f, meatData, slot));
         }
     }
 
@@ -102,7 +89,8 @@ public class PlayerUse : MonoBehaviour
         if (animator != null)
         {
             Debug.Log("Swung Axe");
-            animator.SetTrigger("AXE_SWING");
+            animator.SetTrigger("ATTACK");
+            SFXManager.PlayEffect("AxeSwing");
         }
 
         Ray ray = new Ray(eyes.position, eyes.forward);
@@ -132,5 +120,47 @@ public class PlayerUse : MonoBehaviour
         {
             Debug.Log("Axe hit nothing");
         }
+    }
+
+    private IEnumerator EatFruitAfterDelay(float seconds, FruitData fruit, Transform transform) 
+    {
+        yield return new WaitForSeconds(seconds);
+        
+        FruitUseController.Instance.UseFruit(fruit, transform);
+
+        InventoryManager.Instance.RemoveSelectedItem();
+
+        shallEat = true;
+    }
+
+    private IEnumerator EatMeatAfterDelay(float seconds, MeatData meat, InventorySlot slot) 
+    { 
+        if (MeatUseController.Instance.UseMeat(meat)) 
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("EAT_MEAT");
+            }
+
+            yield return new WaitForSeconds(seconds);
+
+            if (meat.IsLastStage(slot.currentStage))
+            {
+                InventoryManager.Instance.RemoveSelectedItem();
+                MeatUseController.Instance.SpawnBone(meat);
+            }
+            else
+            {
+                slot.currentStage++;
+
+                EquipController.Instance.EquipSelectedSlot();
+
+                if (PlayerHUD.Instance != null)
+                {
+                    PlayerHUD.Instance.UpdateInventoryUI();
+                }
+            }
+        }
+        shallEat = true;
     }
 }
