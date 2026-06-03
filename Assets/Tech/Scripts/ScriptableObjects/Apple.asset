@@ -20,10 +20,10 @@ MonoBehaviour:
   itemType: 0
   healthAmount: 20
   givesMovementBoost: 1
-  movementBoostAmount: 2
+  movementBoostAmount: 5
   movementBoostDuration: 10
-  givesJumpBoost: 1
-  jumpBoostAmount: 0.5
-  jumpBoostDuration: 10
+  givesJumpBoost: 0
+  jumpBoostAmount: 0
+  jumpBoostDuration: 0
   spawnsObjectOnUse: 0
   objectToSpawn: {fileID: 0}

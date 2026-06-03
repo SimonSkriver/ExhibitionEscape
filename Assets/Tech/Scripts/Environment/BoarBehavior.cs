@@ -23,6 +23,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float wanderSpeed = 1f;
 
     [Header("Chasing")]
+    [SerializeField] private float chaseStartDistance = 15f;
     [SerializeField] private float chaseSpeed = 2.5f;
     [SerializeField] private float chaseSpeedIncrease = 0.5f;
     [SerializeField] private float giveUpTime = 2f;
@@ -39,7 +40,7 @@ public class BoarBehavior : MonoBehaviour
 
     [Header("Charge")]
     [SerializeField] private float chargeStartDistance = 10f;
-    [SerializeField] private float chargeWindupTime = 2f;
+    [SerializeField] private float chargeWindupTime = 1f;
     [SerializeField] private float chargeSpeed = 10f;
     [SerializeField] private float chargePastPlayerDistance = 5f;
     [SerializeField] private float chargeHitRadius = 0.5f;
@@ -194,14 +195,14 @@ public class BoarBehavior : MonoBehaviour
             return;
         }
 
-        if (CanSeePlayer())
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (CanSeePlayer() || distanceToPlayer <= chaseStartDistance)
         {
             lostSightCounter = 0f;
             lastSeenPlayerPosition = player.position;
 
             agent.SetDestination(player.position);
-
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
             if (distanceToPlayer <= chargeStartDistance)
             {
