@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 public class ColorFadeUI : MonoBehaviour
 {
     public static IEnumerator FadeIn(VisualElement transitionScreen) {
+        Debug.Log(transitionScreen);
         transitionScreen.style.display = DisplayStyle.Flex;
         
         float

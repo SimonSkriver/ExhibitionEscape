@@ -14,6 +14,7 @@ public class UI_Manager : MonoBehaviour
     public TemplateContainer HUD_Root { get; private set; }
     public TemplateContainer pauseRoot { get; private set; }
     public TemplateContainer settingsRoot { get; private set; }
+    public TemplateContainer warningRoot { get; private set; }
     public TemplateContainer levelRoot { get; private set; }
     public TemplateContainer customizeRoot { get; private set; }
     public TemplateContainer dialogueRoot { get; private set; }
@@ -26,6 +27,7 @@ public class UI_Manager : MonoBehaviour
         HUD_Root = root.Q<TemplateContainer>("PlayerHUD");
         pauseRoot = root.Q<TemplateContainer>("PauseMenu");
         settingsRoot = root.Q<TemplateContainer>("SettingsMenu");
+        warningRoot = root.Q<TemplateContainer>("WARNING_BOX");
         levelRoot = root.Q<TemplateContainer>("LevelSelect");
         customizeRoot = root.Q<TemplateContainer>("CustomizeMenu");
         dialogueRoot = root.Q<TemplateContainer>("DialogueMenu");
@@ -50,6 +52,8 @@ public class UI_Manager : MonoBehaviour
     public void HidePlayerHUD() => HUD_Root.style.display = DisplayStyle.None;
     public void ShowPauseMenuUI() => pauseRoot.style.display = DisplayStyle.Flex;
     public void HidePauseMenuUI() => pauseRoot.style.display = DisplayStyle.None;
+    public void ShowWARNING() => root.Q("WARNING").style.display = DisplayStyle.Flex;
+    public void HideWARNING() => root.Q("WARNING").style.display = DisplayStyle.None;
 
     public void ShowLevelMenuUI() {
         levelRoot.style.display = DisplayStyle.Flex;
