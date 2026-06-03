@@ -38,6 +38,7 @@ public class SFXManager : MonoBehaviour
                 }
                 else
                 {
+                    Instance.audioSource2.volume = sfxclip.volume;
                     Instance.audioSource2.PlayOneShot(sfxclip.audioClips[randomClip]);
                 }
                 return;
