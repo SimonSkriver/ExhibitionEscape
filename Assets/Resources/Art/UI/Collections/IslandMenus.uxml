@@ -5,12 +5,25 @@
     <ui:Template name="PauseMenu" src="project://database/Assets/Resources/Art/UI/Menus/PauseMenu.uxml?fileID=9197481963319205126&amp;guid=80174141c1158a94a9f980bbec6f8d06&amp;type=3#PauseMenu"/>
     <ui:Template name="PlayerHUD" src="project://database/Assets/Resources/Art/UI/PlayerHUD.uxml?fileID=9197481963319205126&amp;guid=6607fc3f39c62e849abec59049a05a0e&amp;type=3#PlayerHUD"/>
     <ui:Template name="SettingsMenu" src="project://database/Assets/Resources/Art/UI/Menus/SettingsMenu.uxml?fileID=9197481963319205126&amp;guid=d02e6258e6004504b987c67ffed9b4de&amp;type=3#SettingsMenu"/>
+    <ui:Template name="WarningBox" src="project://database/Assets/Resources/Art/UI/Menus/WarningBox.uxml?fileID=9197481963319205126&amp;guid=91111d2d91fbddc4ca249ef228661fe3&amp;type=3#WarningBox"/>
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
     <ui:Instance template="PlayerHUD" name="PlayerHUD" style="height: 100%; width: 100%; position: absolute; display: none;"/>
     <ui:Instance template="DialogueMenu" name="DialogueMenu" style="width: 100%; height: 100%; flex-direction: column; display: none;"/>
     <ui:Instance template="LevelSelectMenu" name="LevelSelect" style="width: 100%; height: 100%; display: none;"/>
     <ui:Instance template="CustomizeMenu" name="CustomizeMenu" style="display: none; height: 100%; width: 900px; justify-content: space-between; align-self: flex-start; scale: 0.9 0.9 0.9;"/>
-    <ui:Instance template="PauseMenu" name="PauseMenu" class="PAUSE_MENU" style="display: none; position: absolute;"/>
+    <ui:Instance template="PauseMenu" name="PauseMenu" class="PAUSE_MENU" style="display: none; position: absolute;">
+        <ui:GroupBox name="PC_Controls" style="right: 100px; position: absolute; width: 500px;">
+            <ui:Label text="KEYBOARD" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px;"/>
+            <ui:Label text="Movement = WASD&#10;Jump = Space&#10;Interact = E&#10;Attack = Left Mouse&#10;Inventory = 1 / 2 / 3 / 4 / 5" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center;"/>
+        </ui:GroupBox>
+        <ui:GroupBox name="Controller_Controls" style="position: absolute; left: 210px; width: 390px;">
+            <ui:Label text="CONTROLLER" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px;"/>
+            <ui:Label text="Movement = LS&#10;Jump = X&#10;Interact = □&#10;Attack = R2&#10;Inventory = L1 / R1&#10;" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center;"/>
+        </ui:GroupBox>
+        <ui:VisualElement name="WARNING" style="flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-self: center; background-color: rgba(0, 0, 0, 0.784); display: none;">
+            <ui:Instance template="WarningBox" name="WARNING_BOX"/>
+        </ui:VisualElement>
+    </ui:Instance>
     <ui:Instance template="SettingsMenu" name="SettingsMenu" class="PAUSE_MENU" style="display: none; background-color: rgba(0, 0, 0, 0);"/>
     <ui:VisualElement name="TransitionScreen" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); position: absolute; width: 100%; height: 100%; display: none;"/>
 </ui:UXML>

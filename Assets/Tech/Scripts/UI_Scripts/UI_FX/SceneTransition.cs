@@ -9,13 +9,17 @@ public class SceneTransition : MonoBehaviour {
     VisualElement transitionScreen;
 
     private void Awake() {
-        if(Instance != null) { 
+        Time.timeScale = 1;
+        if (Instance != null && Instance != this) { 
             Destroy(gameObject);
             Debug.LogWarning("There is multiple Instances of SceneTransition");
         }
         Instance = this;
 
+        Debug.Log("Instance: " + Instance);
+
         transitionScreen = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("TransitionScreen");
+        StartCoroutine(ColorFadeUI.FadeOut(transitionScreen));
     }
 
     public void LoadLevel(int sceneID) => StartCoroutine(StartTransition(sceneID));
@@ -25,7 +29,5 @@ public class SceneTransition : MonoBehaviour {
 
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneID);
-
-        StartCoroutine(ColorFadeUI.FadeOut(transitionScreen));
     }
 }

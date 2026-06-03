@@ -26,10 +26,12 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
+            Destroy(this);
+            return;
         }
+        Instance = this;
 
 
         player = GameObject.FindWithTag("Player");

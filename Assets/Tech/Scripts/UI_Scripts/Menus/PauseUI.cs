@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PauseUI : MonoBehaviour {
     UI_Manager UI;
     List<Button> pauseButtons = new List<Button>();
     List<Button> settingsButtons = new List<Button>();
+    List<Button> warningButtons = new List<Button>();
 
     private void Awake() {
         UI = UI_Manager.Instance;
@@ -13,11 +15,16 @@ public class PauseUI : MonoBehaviour {
         foreach (var btn in pauseButtons) {
             btn.RegisterCallback<ClickEvent>(OnPauseButton);
             btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
-
         }
+
         settingsButtons = UI.settingsRoot.Query<Button>().ToList();
         foreach (var btn in settingsButtons) {
             btn.RegisterCallback<ClickEvent>(OnSettingsButton);
+            btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
+        }
+        warningButtons = UI.warningRoot.Query<Button>().ToList();
+        foreach (var btn in warningButtons) {
+            btn.RegisterCallback<ClickEvent>(OnWarningButton);
             btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
         }
     }
@@ -39,7 +46,8 @@ public class PauseUI : MonoBehaviour {
                 Application.OpenURL("https://tally.so/r/GxQRbZ");
                 break;
             case "Leave_Island":
-                SceneTransition.Instance.LoadLevel(0);
+                SceneManager.LoadScene(0);
+                //UI.ShowWARNING();
                 break;
         }
     }
@@ -73,5 +81,13 @@ public class PauseUI : MonoBehaviour {
                 Localization.ChangeLanguage(ISO_639);
                 break;
         }
+    }
+
+    void OnWarningButton(ClickEvent evt) {
+        Button btn = (Button)evt.target;
+
+        UI.HideWARNING();
+
+        if (btn.name == "YES") SceneTransition.Instance.LoadLevel(0);
     }
 }

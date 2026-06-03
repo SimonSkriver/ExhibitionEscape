@@ -1,44 +1,72 @@
-VAR visitNum = 512
 VAR isWelcomeMessageCompleted = false
 VAR hasTreasure = false
+VAR hasMadeTheEndChoice = false
 
-===Welcome===
-{isWelcomeMessageCompleted:
-    -> SailAway
+===Captain===
+{hasTreasure:
+    {hasMadeTheEndChoice:
+        Oh, did you get second thoughts?
+        *[Yes, let me off the island please]
+            Thank you very much, fare well!
+            -> END
+        
+    - else:
+        {isWelcomeMessageCompleted:
+            -> END
+                
+        - else:
+            Ahoy!
+            It seems you have found my long lost treasure!
+            If you will let me have it, I will let you use my boat to escape from this island?
+            
+            *[Of course!]
+                Thank you very much, fare well!
+                ~ hasMadeTheEndChoice = true
+                -> END
+                
+            *[No, I want to keep it to myself]
+                Well, what am I going to do about it...?
+                If you don't give me the treasure, you'll be stranded on this island forever like the rest of us.
+                -> NO
+        }
+    }
+    
 - else:
-    AHOY camrade {visitNum}
-    
-    
-    
-    This is my island, that I totally captured by myself.
-    My crew?
-    Don't worry about them. They're useless.
-    I mean look at them. They're just skin and bones...
-    ...without skin...
-    ...
-    You are my visitor number {visitNum}
-    and I have something VERY valuable for you
-    MY TREASURE is somewhere on this island
-    If you can find it, I will let you sail away in my boat ;D
-    ARE YOU READY?
-    ~ isWelcomeMessageCompleted = true
-    *[YES]
-        LET'S GOOOO!!!
+    {isWelcomeMessageCompleted:
+        I don't have a map...
         -> END
-    *[no]
-        oh...
-        ...
-        If you get hungry, there's meat in the jungle
-        -> END
+        
+    - else:
+        -> WelcomeMessage
+        ~ isWelcomeMessageCompleted = true
+    }
 }
 
 
 
-===SailAway===
-ARRGH you found THE HAT!
-Be ready for your greatest adventure!
-BECAUSE YOU CAN NOW SAIL AWAY!!!
+===WelcomeMessage===
+Ahoy!
+I see you have stranded on the island like many before you.
+You don't want to be trapped here for all eternity like the rest of us!
+Lucky for you, I have a mighty ship, you can use to escape.
+But nothing in this world is free...
+If you can find my lost treasure on the island, I will let you sail away with my ship. But beware...
+You might find that the road to the treasure is filled with obstacles.
+Bring me my treasure, and you can escape the island!
 -> END
+
+
+
+===NO===
+*[Alright, you can have it]
+    Thank you very much, fare well!
+    ~ hasMadeTheEndChoice = true
+
+    -> END
+*[No, I want to keep it]
+    Alright, that's your loss. You will be trapped here forever!
+    ~ hasMadeTheEndChoice = true
+    -> END
 
 
 

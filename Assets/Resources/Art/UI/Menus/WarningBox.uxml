@@ -1,0 +1,31 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 800px; justify-content: space-between; align-self: center; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); -unity-text-align: middle-center; background-color: rgb(248, 188, 137); -unity-text-outline-width: 2px; border-top-color: rgb(204, 106, 106); border-bottom-color: rgb(185, 100, 100); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; border-left-color: rgb(193, 103, 103); border-right-color: rgb(193, 103, 103);">
+        <ui:Label text="WARNING!" style="color: rgb(204, 106, 106); -unity-text-outline-color: rgb(204, 106, 106); font-size: 70px;"/>
+        <ui:Label text="If you leave the island&#10;you will lose you progress!&#10;&#10;Do you want to continue?" style="font-size: 30px; color: rgb(204, 106, 106); -unity-text-outline-color: rgb(204, 106, 106);"/>
+        <ui:GroupBox style="flex-direction: row; justify-content: space-around; align-self: stretch; align-items: center;">
+            <ui:Button text="Yes" name="YES" class="menuButtonWarning" style="color: rgb(0, 0, 0); -unity-text-outline-color: rgb(0, 0, 0);">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1166099980664832)">
+                        <variables>
+                            <UnityEngine.Localization.LocalVariable name="isLeavingButton">
+                                <UnityEngine.Localization.SmartFormat.PersistentVariables.BoolVariable value="true"/>
+                            </UnityEngine.Localization.LocalVariable>
+                        </variables>
+                    </UnityEngine.Localization.LocalizedString>
+                </Bindings>
+            </ui:Button>
+            <ui:Button text="Noooooooooooo" name="NO" class="menuButtonWarning" style="-unity-text-outline-color: rgb(255, 255, 255); color: rgb(255, 255, 255);">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1166099980664832)">
+                        <variables>
+                            <UnityEngine.Localization.LocalVariable name="isLeavingButton">
+                                <UnityEngine.Localization.SmartFormat.PersistentVariables.BoolVariable value="false"/>
+                            </UnityEngine.Localization.LocalVariable>
+                        </variables>
+                    </UnityEngine.Localization.LocalizedString>
+                </Bindings>
+            </ui:Button>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

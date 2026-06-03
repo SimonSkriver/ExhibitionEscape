@@ -27,8 +27,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42f5bff1e7f66cb43be01c360b5eedbf
+    m_Address: Norwegian (no)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6158bd8f0b3370f428a42dbef362aa60
     m_Address: Swedish (sv)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70d7b9d9eddd9884ebc111b870844ac7
+    m_Address: Finnish (fi)
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale

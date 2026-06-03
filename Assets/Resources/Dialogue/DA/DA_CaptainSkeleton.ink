@@ -1,34 +1,72 @@
-VAR visitNum = 512
 VAR isWelcomeMessageCompleted = false
 VAR hasTreasure = false
+VAR hasMadeTheEndChoice = false
 
-===Welcome===
+===Captain===
 {hasTreasure:
-    -> SailAway
+    {hasMadeTheEndChoice:
+        Nåå, kom du bedre tanker?
+        *[Ja, lad mig slippe væk!]
+            Tusind tak, god sejltur!
+            -> END
+        
+    - else:
+        {isWelcomeMessageCompleted:
+            -> END
+                
+        - else:
+            Ohøj!
+            Jeg kan se, at du har fundet min forsvundne skat!
+            Hvis vil lade mig få den tilbage, vil jeg lade dig låne min båd, så du kan slippe væk fra denne ø?
+            
+            *[Ja selvfølgelig!]
+                Tusind tak, god sejltur!
+                ~ hasMadeTheEndChoice = true
+                -> END
+                
+            *[Nej, jeg gerne selv have den]
+                Nå.. Det kan jeg jo ikke gøre så meget ved...
+                Men tænk dig om, hvis du ikke giver mig skatten, vil du være fanget her til evig tid ligesom os andre.
+                -> NO
+        }
+    }
+    
 - else:
     {isWelcomeMessageCompleted:
         Jeg har ikke et kort...
         -> END
+        
     - else:
-        OHØJ kammerat {visitNum}
-        Vil du gerne ud på eventyr i denne mega seje båd?
-        Den er næsten klar til brug
-        Det der mangler er også det VIGTIGSTE for at kunne sejle jorden rundt.
-        Du kan finde den et eller andet sted her på øen.
-        Hvis du finder den, er du mere end klar til...
-        DIT LIVS EVENTYR!!!
+        -> WelcomeMessage
         ~ isWelcomeMessageCompleted = true
-        -> END
     }
 }
 
 
 
-===SailAway===
-ARRGH du fandt HATTEN!
-Gør klar til dit livs eventyr!
-FOR NU KAN DU SEJLE AFSTED!!!
+===WelcomeMessage===
+Ohøj!
+Jeg kan se, at du også er strandet på denne ø som mange andre før dig.
+Du må endelig ikke være fanget på øen i al evighed ligesom os andre!
+Heldigvis har jeg et mægtigt skib, du kan bruge til at slippe væk.
+Men alting kommer med en pris...
+Hvis du kan finde min forsvundne skat, vil jeg lade dig sejle afsted med mit skib. Men tag dig i agt...
+Du vil snart opdage, at vejen til skibet ikke er uden forhindringer.
+Find min skat, så du kan slippe væk fra øen!
 -> END
+
+
+
+===NO===
+*[Okay, du må gerne få den]
+    Tusind tak, god sejltur!
+    ~ hasMadeTheEndChoice = true
+
+    -> END
+*[Nix, jeg beholder den]
+    Okay, dit tab. Så må du være strandet her for altid
+    ~ hasMadeTheEndChoice = true
+    -> END
 
 
 

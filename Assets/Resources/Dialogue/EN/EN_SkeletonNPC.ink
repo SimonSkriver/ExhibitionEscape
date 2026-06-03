@@ -10,7 +10,8 @@ zzz
 
 
 ===Fishing===
-I was trying to catch something MASSIVE. But my fishingrod went flying out of my hands :(
+I was trying to catch something MASSIVE. But my fishingrod went flying out of my hands.
+Bummer...
 -> END
 
 
@@ -73,3 +74,12 @@ The first thing I saw on this island was this bathing ring
 Who put it there?
 And why?
 -> END
+
+
+
+===TreeThief===
+Don't tell the captain I ate all his apples...
+-> END
+
+
+

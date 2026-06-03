@@ -24,6 +24,7 @@
     margin-top: 10px;
     -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
     color: rgb(135, 103, 193);
+    transition-duration: 0.1s;
 }
 
 .menuButton:hover {
@@ -46,6 +47,7 @@
     scale: 1.05 1.05 1.05;
     color: rgb(40, 166, 96);
     -unity-text-outline-color: rgb(40, 166, 96);
+    transition-duration: 0.1s;
 }
 
 .levelSelectButton {
@@ -70,6 +72,7 @@
     margin-right: 48px;
     margin-bottom: 45px;
     margin-left: 48px;
+    transition-duration: 0.1s;
 }
 
 .levelSelectButton:hover {
@@ -88,6 +91,8 @@
     border-right-color: rgb(58, 118, 52);
     border-top-color: rgb(58, 118, 52);
     border-bottom-color: rgb(58, 118, 52);
+    transition-duration: 0.1s;
+    scale: 0.9 0.9 0.9;
 }
 
 .levelSelectButton:disabled {
@@ -167,7 +172,7 @@
 }
 
 .choiceButton {
-    width: 300px;
+    width: 650px;
     height: 70px;
     border-top-width: 10px;
     border-right-width: 10px;
@@ -188,6 +193,7 @@
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
+    text-overflow: ellipsis;
 }
 
 .choiceButton:hover {
@@ -239,8 +245,8 @@
 }
 
 .textMenu {
-    color: rgb(57, 82, 42);
-    -unity-text-outline-color: rgb(57, 82, 42);
+    color: rgba(255, 255, 255, 0.502);
+    -unity-text-outline-color: rgba(255, 255, 255, 0.502);
     -unity-text-outline-width: 4px;
     font-size: 28px;
     -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
@@ -364,4 +370,52 @@
     align-self: center;
     justify-content: center;
     position: absolute;
+}
+
+.menuButtonWarning {
+    border-left-color: rgb(193, 103, 103);
+    border-right-color: rgb(193, 103, 103);
+    border-top-color: rgb(204, 106, 106);
+    border-bottom-color: rgb(185, 100, 100);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgb(193, 103, 103);
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: normal;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    transition-duration: 0.1s;
+}
+
+.menuButtonWarning:hover {
+    background-color: rgb(250, 221, 100);
+    border-left-color: rgb(246, 194, 87);
+    border-right-color: rgb(245, 194, 87);
+    border-top-color: rgb(250, 198, 89);
+    border-bottom-color: rgb(238, 190, 89);
+    color: rgb(214, 126, 52);
+    -unity-text-outline-color: rgb(215, 126, 52);
+}
+
+.menuButtonWarning:active {
+    border-left-color: rgb(68, 161, 136);
+    border-right-color: rgb(68, 162, 137);
+    border-top-color: rgb(68, 166, 138);
+    border-bottom-color: rgb(61, 156, 130);
+    background-color: rgb(171, 236, 155);
+    color: rgb(40, 166, 96);
+    -unity-text-outline-color: rgb(40, 166, 96);
+    scale: 0.9 0.9 0.9;
+    transition-duration: 0.1s;
 }

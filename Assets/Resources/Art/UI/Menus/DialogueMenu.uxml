@@ -8,8 +8,6 @@
         <ui:GroupBox style="align-items: center; justify-content: space-evenly; flex-direction: row; width: 100%; display: flex;">
             <ui:Button text="Choice 1" name="Choice_1" class="choiceButton"/>
             <ui:Button text="Choice 2" name="Choice_2" tabindex="1" class="choiceButton"/>
-            <ui:Button text="Choice 3" name="Choice_3" tabindex="2" class="choiceButton"/>
-            <ui:Button text="Choice 4" name="Choice_4" tabindex="3" class="choiceButton"/>
         </ui:GroupBox>
     </ui:VisualElement>
 </ui:UXML>

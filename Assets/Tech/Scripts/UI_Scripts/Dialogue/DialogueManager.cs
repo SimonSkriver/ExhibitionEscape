@@ -45,6 +45,7 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+
     public void EnterDialogue(string knotName)
     {
         // Don't enter dialogue if we've already entered
@@ -92,11 +93,11 @@ public class DialogueManager : MonoBehaviour
         story.ResetState();
 
         UI_Manager.Instance.HideDialogueUI();
+
         if(npcAnim != null)
         {
             npcAnim.SetBool("hasInteracted", false);
             npcAnim.SetTrigger("talkEnd");
         }
-
     }
 }
