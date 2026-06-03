@@ -25,6 +25,9 @@ public class MainMenuUI : MonoBehaviour
     List<GameObject> islandCams = new List<GameObject>();
     int previousCamID, currentCamID, maxCamID;
 
+    [Header("SFX")]
+    bool clickButtonPlayed;
+
     private void Awake() {
         // Cameras
         camParent = GameObject.Find("Cameras/IslandCams").transform;
@@ -54,14 +57,21 @@ public class MainMenuUI : MonoBehaviour
         btnSelect.RegisterCallback<ClickEvent>(OnLevelSelect);
         lvlSelectRoot.Q<Button>("PREVIOUS").RegisterCallback<ClickEvent>(OnLevelSelect);
         lvlSelectRoot.Q<Button>("NEXT").RegisterCallback<ClickEvent>(OnLevelSelect);
+        btnSelect.RegisterCallback<PointerEnterEvent>(OnHover);
+        lvlSelectRoot.Q<Button>("PREVIOUS").RegisterCallback<PointerEnterEvent>(OnHover);
+        lvlSelectRoot.Q<Button>("NEXT").RegisterCallback<PointerEnterEvent>(OnHover);
 
         foreach (var btn in languageButtons) {
             btn.RegisterCallback<ClickEvent>(evt => {
                 var rb = (RadioButton)evt.target;
                 Localization.ChangeLanguage(rb.name);
+                SFXManager.PlayEffect((clickButtonPlayed = !clickButtonPlayed) ? "BackButton" : "ClickButton");
             });
+            btn.RegisterCallback<PointerEnterEvent>(OnHover);
         }
     }
+
+    public void OnHover(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
 
     void OnLevelSelect(ClickEvent evt) {
         var btn = (Button)evt.target;
@@ -72,13 +82,16 @@ public class MainMenuUI : MonoBehaviour
             case "PREVIOUS":
                 if (currentCamID == 0) { currentCamID = maxCamID; }
                 else { currentCamID--; }
+                SFXManager.PlayEffect("BackButton");
                 break;
             case "NEXT":
                 if (currentCamID == maxCamID) { currentCamID = 0; }
                 else { currentCamID++; }
+                SFXManager.PlayEffect("ClickButton");
                 break;
             case "SELECT":
                 StartCoroutine(LoadLevel());
+                SFXManager.PlayEffect("ConfirmColor");
                 return;
         }
 
@@ -98,7 +111,6 @@ public class MainMenuUI : MonoBehaviour
 
     IEnumerator LoadLevel() {
         SceneTransition.Instance.LoadLevel(currentCamID + 1);
-
         float fov = 60;
         while (fov > 40) {
             fov--;

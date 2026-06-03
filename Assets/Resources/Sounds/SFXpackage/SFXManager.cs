@@ -35,13 +35,10 @@ public class SFXManager : MonoBehaviour
                 if (!Instance.audioSource.isPlaying)
                 {
                     Instance.audioSource.PlayOneShot(sfxclip.audioClips[randomClip]);
-                    Debug.Log("play AudioSource 1");
                 }
                 else
                 {
                     Instance.audioSource2.PlayOneShot(sfxclip.audioClips[randomClip]);
-                    Debug.Log("play AudioSource 2");
-
                 }
                 return;
             }
