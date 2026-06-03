@@ -3,9 +3,9 @@ using UnityEngine;
 public class PirateHat : MonoBehaviour, IInteractable
 {
     [SerializeField] Animator chestAnimator;
+    [SerializeField] ParticleSystem particles;
     Transform hatAnchor;
-    [SerializeField] bool ready;
-    public bool hasHat;
+    public bool hasHat { get; private set; }
 
     void Awake()
     {
@@ -14,13 +14,17 @@ public class PirateHat : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (!ready) return;
+        hasHat = true;
+
         chestAnimator.SetTrigger("CloseLid");
+
         transform.SetParent(hatAnchor);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
-        hasHat = true;
         gameObject.layer = 2;
+
+        particles.Play();
+        SFXManager.PlayEffect("ConfirmColor");
     }
 
     public bool ShowOutline()

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1994391494354044284}
   - component: {fileID: 1342882246940722994}
   - component: {fileID: 4844963422248516010}
+  - component: {fileID: 6824293759914175073}
+  - component: {fileID: 6837713880486959365}
   m_Layer: 0
   m_Name: PirateHat
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.0052547674, y: 0.00006953506, z: 0.013333012, w: 0.9998973}
   m_LocalPosition: {x: -0.714, y: 11.449, z: -45.017}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.30000007, y: 0.3, z: 0.30000007}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -132,3 +134,40 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.34613568
   m_Center: {x: -0.0065000057, y: 0.09143234, z: -0.025113046}
+--- !u!95 &6824293759914175073
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462461736162844857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b1d7c3b955ef8b4984b13505315dd54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6837713880486959365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4462461736162844857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182e2d079c4f54e4489601dc5f36071b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  chestAnimator: {fileID: 0}
+  ready: 0
+  hasHat: 0
