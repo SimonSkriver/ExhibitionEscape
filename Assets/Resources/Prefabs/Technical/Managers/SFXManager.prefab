@@ -128,6 +128,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8e618a4b4ab0b434e87cda3b87ba9184, type: 3}
     volume: 1
     clipName: AxeSwing
+  - audioClips:
+    - {fileID: 8300000, guid: 788959d51443a224f846715e5b150f10, type: 3}
+    volume: 1
+    clipName: OpenChest
 --- !u!82 &3189948444369110283
 AudioSource:
   m_ObjectHideFlags: 0

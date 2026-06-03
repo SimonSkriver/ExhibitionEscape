@@ -9,6 +9,7 @@ public class TreasureChest : MonoBehaviour, IInteractable
     {
         animator.SetTrigger("OpenLid");
         hasInteracted = true;
+        SFXManager.PlayEffect("OpenChest");
     }
 
     public bool ShowOutline()
