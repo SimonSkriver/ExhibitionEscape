@@ -48,6 +48,7 @@ public class PauseUI : MonoBehaviour {
         switch (btn.name) {
             case "Back":
                 UI.HideSettingsMenuUI();
+                UI.ShowPauseMenuUI();
                 SFXManager.PlayEffect("BackButton");
                 break;
             
