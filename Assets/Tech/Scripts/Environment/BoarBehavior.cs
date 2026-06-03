@@ -50,7 +50,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float afterChargePause = 1f;
 
     [Header("Health")]
-    [SerializeField] private float boarHealth = 3;
+    [SerializeField] private float boarHealth = 5;
     [SerializeField] private float stunTime = 2f;
     [SerializeField] private float deathDelay = 2f;
     private bool isDead;
@@ -161,8 +161,9 @@ public class BoarBehavior : MonoBehaviour
 
    private void UpdateGrazing()
     {
-        if (CanSeePlayer())
+        if (CanSeePlayer() && !hasSpottedPlayer)
         {
+            hasSpottedPlayer = true;
             StartCoroutine(ThreatCallThenChase());
             return;
         }
@@ -211,7 +212,7 @@ public class BoarBehavior : MonoBehaviour
 
             agent.SetDestination(player.position);
 
-            if (distanceToPlayer <= chargeStartDistance)
+            if (distanceToPlayer <= chargeStartDistance && CanSeePlayer())
             {
                 StartCoroutine(WindupThenCharge());
                 return;
@@ -232,21 +233,32 @@ public class BoarBehavior : MonoBehaviour
 
     private IEnumerator ThreatCallThenChase()
     {
-        Vector3 lookDirection = player.position - transform.position;
-        lookDirection.y = 0f;
-        Quaternion targetRotation;
+        float timer = 0f;
+        float rotateTime = 1f;
+        float rotationSpeed = 180f;
+        agent.updateRotation = false;
+        agent.updatePosition = false;
 
-        if (lookDirection != Vector3.zero)
+        while (timer < rotateTime)
         {
-            targetRotation = Quaternion.LookRotation(lookDirection);
+            Vector3 lookDirection = player.position - transform.position;
+            lookDirection.y = 0f;
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 360 * Time.deltaTime);
+            if (lookDirection != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            }
+
+            timer+= Time.deltaTime;
+            yield return null;
         }
 
-        yield return new WaitForSeconds(0.5f);
-
-        boarSound.PlayBoarClip("Alert");   
         ChangeState(BoarState.Threatening);
+        boarSound.PlayBoarClip("Alert");   
+        agent.updateRotation = true;
+        agent.updatePosition = true;
 
         yield return new WaitForSeconds(threatCallTime);
 
@@ -667,7 +679,7 @@ public class BoarBehavior : MonoBehaviour
         if (distanceToPlayer > viewDistance)
             return false;
 
-        if (distanceToPlayer <= chaseStartDistance)
+        if (distanceToPlayer <= chaseStartDistance && !hasSpottedPlayer)
             return true;
 
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer.normalized);

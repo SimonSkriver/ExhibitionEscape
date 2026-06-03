@@ -1456,7 +1456,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -1465,8 +1465,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16448514, y: 0.5053058, z: 0.23364107}
-  m_Center: {x: -0.001701415, y: 0.006584093, z: 0.11075362}
+  m_Size: {x: 0.16448514, y: 0.5053058, z: 0.46883604}
+  m_Center: {x: -0.001701415, y: 0.006584093, z: -0.0068438756}
 --- !u!1 &6356834820888234595
 GameObject:
   m_ObjectHideFlags: 0
