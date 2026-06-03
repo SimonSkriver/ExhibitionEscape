@@ -98,6 +98,15 @@ MonoBehaviour:
     m_Localized: Shorts Color
     m_Metadata:
       m_Items: []
+  - m_Id: 1166099980664832
+    m_Localized: '{isLeavingButton:Yes|Noooooooooooo}'
+    m_Metadata:
+      m_Items:
+      - rid: 3975410346420863327
+  - m_Id: 1162631031209984
+    m_Localized: WARNING!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -110,3 +119,4 @@ MonoBehaviour:
         - id: 172300671234048
         - id: 176562746798080
         - id: 171942276345856
+        - id: 1166099980664832
