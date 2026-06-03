@@ -5,7 +5,7 @@ public class Seagull : MonoBehaviour
 {
     [SerializeField] Transform orbit;
 
-    [SerializeField] int range = 100;
+    [SerializeField] int range = 70;
     [SerializeField] int flySpeed = 10;
     Vector3 flyDest;
 
@@ -47,5 +47,6 @@ public class Seagull : MonoBehaviour
         Gizmos.DrawLine(transform.position, flyDest);
         Gizmos.color = Color.mediumAquamarine;
         Gizmos.DrawSphere(flyDest, 0.3f);
+        Gizmos.DrawSphere(orbit.position, range);
     }
 }

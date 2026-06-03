@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError(errorMessage);
     };
     }
-
+    InkVariables inkVariables;
 
 
 
@@ -39,6 +39,8 @@ public class DialogueManager : MonoBehaviour
         } else {
             SetInkJSON(Resources.Load<TextAsset>("Dialogue/EN/EN_main"));
         }
+
+        inkVariables = new InkVariables(story);
     }
 
     public void EnterDialogue(string knotName)
@@ -52,6 +54,9 @@ public class DialogueManager : MonoBehaviour
             // jump to the knot
             story.ChoosePathString(knotName);
         }
+
+        // Start listening for variables
+        inkVariables.SyncVariableAndStartListening(story);
 
         ContinueOrExitStory();
     }
@@ -73,7 +78,12 @@ public class DialogueManager : MonoBehaviour
 
     private void ExitDialogue() {
         isDialoguePlaying = false;
+
+        // Stop listening for variables
+        inkVariables.StopListening(story);
+        
         story.ResetState();
+
         UI_Manager.Instance.HideDialogueUI();
     }
 }

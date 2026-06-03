@@ -11,6 +11,7 @@ public class RockClear : MonoBehaviour, IInteractable
 
         if (BoulderStrengthEffect.Instance.CanDestroyBoulders)
         {
+            GetComponent<Collider>().enabled = false;
             SFXManager.PlayEffect("BoulderDestroy");
             rocks = GetComponentsInChildren<Rigidbody>();
             foreach (Rigidbody rb in rocks)
