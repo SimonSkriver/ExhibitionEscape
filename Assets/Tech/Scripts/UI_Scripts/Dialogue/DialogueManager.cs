@@ -43,6 +43,7 @@ public class DialogueManager : MonoBehaviour
         inkVariables = new InkVariables(story);
     }
 
+
     public void EnterDialogue(string knotName)
     {
         // Don't enter dialogue if we've already entered
@@ -85,5 +86,6 @@ public class DialogueManager : MonoBehaviour
         story.ResetState();
 
         UI_Manager.Instance.HideDialogueUI();
+
     }
 }

@@ -167,7 +167,7 @@
 }
 
 .choiceButton {
-    width: 300px;
+    width: 650px;
     height: 70px;
     border-top-width: 10px;
     border-right-width: 10px;
@@ -188,6 +188,7 @@
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
+    text-overflow: ellipsis;
 }
 
 .choiceButton:hover {
@@ -239,8 +240,8 @@
 }
 
 .textMenu {
-    color: rgb(57, 82, 42);
-    -unity-text-outline-color: rgb(57, 82, 42);
+    color: rgba(255, 255, 255, 0.502);
+    -unity-text-outline-color: rgba(255, 255, 255, 0.502);
     -unity-text-outline-width: 4px;
     font-size: 28px;
     -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
