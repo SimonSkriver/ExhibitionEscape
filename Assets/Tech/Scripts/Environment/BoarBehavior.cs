@@ -4,6 +4,7 @@ using System.Collections;
 
 public class BoarBehavior : MonoBehaviour
 {
+    #region Enums
     private enum BoarState
     {
         Wandering,
@@ -16,7 +17,9 @@ public class BoarBehavior : MonoBehaviour
         Stunned,
         Dead
     }
+    #endregion
 
+    #region Variables
     [Header("Wandering")]
     [SerializeField] private float wanderRadius = 30f;
     [SerializeField] private float wanderTimer = 10f;
@@ -88,6 +91,7 @@ public class BoarBehavior : MonoBehaviour
     [Header("Axe Hit Settings")]
     [SerializeField] private bool canBeHitByAxe = true;
     [SerializeField] private float dmgDelay = 1f;
+    #endregion
     
     private void Start()
     {
@@ -129,8 +133,6 @@ public class BoarBehavior : MonoBehaviour
                 UpdateCharging();
                 break;
         }
-
-       // UpdateAnimator();
     }
 
     private void UpdateWandering()
