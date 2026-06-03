@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Outline
-  outlineMode: 1
+  outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 5
   precomputeOutline: 0
@@ -133,8 +133,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.36882916
-  m_Center: {x: 0, y: 0.26406118, z: -0.010230422}
+  m_Radius: 0.49549747
+  m_Center: {x: 0, y: 0.39072946, z: -0.010230437}
 --- !u!114 &-4135655747049401766
 MonoBehaviour:
   m_ObjectHideFlags: 0
