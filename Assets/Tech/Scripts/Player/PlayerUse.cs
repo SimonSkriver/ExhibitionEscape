@@ -114,11 +114,18 @@ public class PlayerUse : MonoBehaviour
             Debug.Log("Axe hit: " + hit.collider.name);
 
             DestroyableLog log = hit.collider.GetComponentInParent<DestroyableLog>();
+            BoarBehavior boar = hit.collider.GetComponentInParent<BoarBehavior>();
 
             if (log != null)
             {
                 Debug.Log("Destroying log");
                 log.DestroyLog();
+            }
+
+            if (boar != null)
+            {
+                Debug.Log("Hit Boar");
+                boar.HitByAxe();
             }
         }
         else
