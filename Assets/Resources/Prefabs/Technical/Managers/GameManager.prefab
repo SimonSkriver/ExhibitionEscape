@@ -336,19 +336,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7757454955876931303, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.1728752
+      value: -0.17287445
       objectReference: {fileID: 0}
     - target: {fileID: 7757454955876931303, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.016376566
+      value: -0.016376475
       objectReference: {fileID: 0}
     - target: {fileID: 7757454955876931303, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9804183
+      value: 0.9804185
       objectReference: {fileID: 0}
     - target: {fileID: 7757454955876931303, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.092875585
+      value: -0.09287549
       objectReference: {fileID: 0}
     - target: {fileID: 7995535162753668384, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,6 +382,14 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 7281418748386686874}
+    - target: {fileID: 8434791825649473451, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
+      propertyPath: AvoidObstacles.Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005391041991241439, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
+      propertyPath: Orbits.Top.Radius
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9005391041991241439, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: HorizontalAxis.Value
       value: -160

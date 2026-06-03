@@ -6,6 +6,8 @@ public class PlayerFallDamage : MonoBehaviour
     [Tooltip ("The minimum velocity before fall damage is applied")]
     [SerializeField] private float threshold = 3.5f;
     [SerializeField] private float dmgMultiplier = 2.5f;
+    [SerializeField] private LayerMask water;
+    [SerializeField] private Transform feet;
     
     [Header ("Info")]
     [SerializeField] private float velocity;
@@ -21,10 +23,12 @@ public class PlayerFallDamage : MonoBehaviour
 
     void Update()
     {
-        //SetCanTakeFallDamageBool();
+        inWater = Physics.Raycast(feet.position, feet.up, 2f, water, QueryTriggerInteraction.Collide);
+
         if (!wasGrounded && player.isGrounded && !player.isSliding) //If player wasn't grounded last frame, but now is grounded
         {
-            if (velocity < threshold || !PlayerStats.Instance.canTakeFallDamage) return;
+            if (velocity < threshold || inWater) return;
+
             CalculateFallDamage(velocity);
         }
         
@@ -42,30 +46,5 @@ public class PlayerFallDamage : MonoBehaviour
         int fallDamage = Mathf.RoundToInt(fallSpeed * dmgMultiplier);
         //Apply
         PlayerStats.Instance.RemoveHealth(fallDamage);
-    }
-
-    /*void SetCanTakeFallDamageBool() // Set can take fall damage bool in PlayerStats depending on in water bool
-    {
-        if (inWater) PlayerStats.Instance.canTakeFallDamage = false;
-    }*/
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            Debug.Log("You're in water");
-            PlayerStats.Instance.canTakeFallDamage = false;
-            //inWater = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            Debug.Log("You're not in water");
-            PlayerStats.Instance.canTakeFallDamage = true;
-            //inWater = false;
-        }
     }
 }
