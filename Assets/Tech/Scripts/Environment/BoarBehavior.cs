@@ -750,7 +750,8 @@ public class BoarBehavior : MonoBehaviour
             BoarState.Charging => 5,
             BoarState.Recharge => 6,
             BoarState.Stunned => 7,
-            BoarState.Dead => 8
+            BoarState.Dead => 8,
+            _ => 0
         };
 
         anim.SetInteger("BoarAnimState", animState);
