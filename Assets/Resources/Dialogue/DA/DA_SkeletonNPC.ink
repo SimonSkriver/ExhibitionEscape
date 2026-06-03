@@ -38,6 +38,13 @@ Tror du de er interesserret i at være med i en kampklub?
     De virker meget truende.
 --> END
 
+===BoarFarm===
+Ohøj! Jeg er i gang med at træne disse vildsvin til at få et stærkt hoved.
+Nogen har angrebet dem og nu er de én mindre på deres team.
+Derfor har jeg valgt at kæmpe på deres side for at ØDELÆGGE deres fjende!
+LAD VILDSVINENE LEVE!!!
+-> END
+
 
 
 ===CaveHint===

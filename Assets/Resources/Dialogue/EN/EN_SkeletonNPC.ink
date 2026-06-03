@@ -28,7 +28,7 @@ Now we call him "Coconut Head"
 
 
 ===BoarFightingClub===
-These boars seems to be very committed in fighting.
+These boars seems to be very happy for fighting.
 Do you think they will be interested in a fighting club?
 *[Yes]
     Awesome! You're hereby invited to BBQ this evening!
@@ -39,6 +39,12 @@ Do you think they will be interested in a fighting club?
     They seem to be very threatening.
 --> END
 
+===BoarFarm===
+Ahoy! I'm training these boars to get a strong head
+Someone attacked them and now they're one less on their team
+That's why I decided to fight on their side to DESTROY their enemy!
+LET THE BOARS LIVE!!!
+-> END
 
 
 ===CaveHint===
@@ -48,12 +54,12 @@ ARRGH! Get some MEAT and fight with ME!
 
 
 ===SunBath===
-I don't know if the UV index is high enough...
+I don't know if the sun is warm enough...
 ...I don't think I'm getting a tanline
 -> END
 
 ===SunBathBurned===
-Why is the UV index so high?
+Why is the sun so hot?
 I was out in the sun for 5 seconds..
 5 SECONDS!!!!
 And then there is this guy, that lays in the sun and complains about his bones not taking color...
@@ -63,7 +69,7 @@ He can get mine if he's really burning for it
 
 
 ===BathingRing===
-The first thing I saw on this island was this bathingring
+The first thing I saw on this island was this bathing ring
 Who put it there?
 And why?
 -> END
