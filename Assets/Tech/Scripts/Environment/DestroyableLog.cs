@@ -15,6 +15,7 @@ public class DestroyableLog : MonoBehaviour, IInteractable
         {
             DestroyLog();
         }
+        else SFXManager.PlayEffect("Error");
     }
 
     public void DestroyLog()

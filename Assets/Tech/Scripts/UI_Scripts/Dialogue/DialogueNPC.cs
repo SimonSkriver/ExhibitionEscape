@@ -12,6 +12,7 @@ public class DialogueNPC : MonoBehaviour, IInteractable
         }
     public void Interact()
     {
+        DialogueManager.Instance.npcAnim = animator;
         // start dialogue if a knotName is defined
         if (dialogueKnotName != "")
         {
@@ -19,10 +20,7 @@ public class DialogueNPC : MonoBehaviour, IInteractable
         } else {
             Debug.LogWarning($"{gameObject.name} has no dialogueKnotName");
         }
-        if(animator != null)
-        {
-            animator.SetTrigger("hasInteracted");
-        }
+        
     }
     
 
