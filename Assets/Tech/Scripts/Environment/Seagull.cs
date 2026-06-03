@@ -47,6 +47,5 @@ public class Seagull : MonoBehaviour
         Gizmos.DrawLine(transform.position, flyDest);
         Gizmos.color = Color.mediumAquamarine;
         Gizmos.DrawSphere(flyDest, 0.3f);
-        Gizmos.DrawSphere(orbit.position, range);
     }
 }
