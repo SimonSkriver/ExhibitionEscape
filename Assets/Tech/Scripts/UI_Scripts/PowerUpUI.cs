@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 public class PowerUpUI : MonoBehaviour
 {
     public static PowerUpUI Instance;
-    [SerializeField] private float iconShowDuration = 2f;
     [SerializeField] private float flickerAmount = 5;
     [SerializeField] private float flickerDelay = 0.15f;
     VisualElement root;

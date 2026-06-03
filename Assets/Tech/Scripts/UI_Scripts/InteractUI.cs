@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UIElements;
 
 public class InteractUI : MonoBehaviour
@@ -9,10 +8,6 @@ public class InteractUI : MonoBehaviour
     private Label interactLabel;
     private bool labelVisible;
     private Transform labelPosition;
-
-    [Header("Position Settings")]
-    [SerializeField] private float heightOffset = 1.5f;
-    [SerializeField] private float towardsPlayerOffset = 0.5f;
 
     private void Awake() {
         if (Instance != null) { Destroy(gameObject); }
