@@ -13,6 +13,7 @@ VAR hasTreasure = false
     Du kan finde den et eller andet sted her på øen.
     Hvis du finder den, er du mere end klar til...
     DIT LIVS EVENTYR!!!
+    -> END
 }
 
 

@@ -16,6 +16,14 @@ public class DialogueManager : MonoBehaviour
     public void SetInkJSON(TextAsset inkAsset) {
         inkJSON = inkAsset;
         story = new Story(inkJSON.text);
+
+        // Print Ink ERROR message
+        story.onError += (errorMessage, errorType) => {
+        if (errorType == Ink.ErrorType.Warning)
+            Debug.LogWarning(errorMessage);
+        else
+            Debug.LogError(errorMessage);
+    };
     }
 
 
