@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviour
 
     public void Sprint()
     {
+        if (!isMoving) return;
         isSprinting = !isSprinting;
 
         if (isSprinting && isMoving)
