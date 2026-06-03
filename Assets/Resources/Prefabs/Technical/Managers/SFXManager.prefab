@@ -118,6 +118,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: eb86f5c6d28ce1443bcefbdae56e1bd6, type: 3}
     volume: 0.5
     clipName: Error
+  - audioClips:
+    - {fileID: 8300000, guid: 4dcb2d5ce76b64e489c0f2cef59d68c6, type: 3}
+    - {fileID: 8300000, guid: 1d277b8c6024efe4d8eedcd269b8dc9f, type: 3}
+    - {fileID: 8300000, guid: bedf222f161ce534ba8aed156cc0ba7f, type: 3}
+    volume: 0.25
+    clipName: SkeletonTalk
 --- !u!82 &3189948444369110283
 AudioSource:
   m_ObjectHideFlags: 0

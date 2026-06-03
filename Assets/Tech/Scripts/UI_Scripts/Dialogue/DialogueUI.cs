@@ -9,6 +9,7 @@ public class DialogueUI : MonoBehaviour
     UI_Manager UI;
     Label dialogueText;
     List<Button> choices = new List<Button>();
+     
     private void Awake() {
         UI = UI_Manager.Instance;
         
@@ -53,10 +54,16 @@ public class DialogueUI : MonoBehaviour
 
     IEnumerator WriteDialogueLine(string dialogueLine) {
         dialogueText.text = "";
-
+        int loopsuntilSFX = 0;
         foreach (char c in dialogueLine.ToCharArray()) {
             if (DialogueManager.Instance.isWritingDialogue) {
                 dialogueText.text += c.ToString();
+                loopsuntilSFX++;
+                if(loopsuntilSFX == 3)
+                {
+                    SFXManager.PlayEffect("SkeletonTalk");
+                    loopsuntilSFX = 0;
+                }
                 yield return new WaitForSeconds(0.03f);
             }
         }

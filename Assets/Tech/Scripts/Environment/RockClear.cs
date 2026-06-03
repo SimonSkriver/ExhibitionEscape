@@ -23,6 +23,7 @@ public class RockClear : MonoBehaviour, IInteractable
         else
         {
             Debug.Log("Eat some meat to destroy the boulder");
+            SFXManager.PlayEffect("Error");
         }
     }
 

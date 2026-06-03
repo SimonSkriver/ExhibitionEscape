@@ -55,6 +55,7 @@ public class InventoryManager : MonoBehaviour
         }
 
         Debug.Log("Inventory is full.");
+        SFXManager.PlayEffect("Error");
         return false;
     }
 
