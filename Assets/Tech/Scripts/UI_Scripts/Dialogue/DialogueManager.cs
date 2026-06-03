@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance;
     public bool isWritingDialogue;
     string dialogueLine;
+    public Animator npcAnim;
 
     [Header("Ink Story")]
     private TextAsset inkJSON;
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         inkVariables = new InkVariables(story);
+        
     }
 
     public void EnterDialogue(string knotName)
@@ -53,6 +55,11 @@ public class DialogueManager : MonoBehaviour
 
             // jump to the knot
             story.ChoosePathString(knotName);
+        }
+        //Npc animator
+        if(npcAnim != null)
+        {
+            npcAnim.SetBool("hasInteracted", true);
         }
 
         // Start listening for variables
@@ -85,5 +92,11 @@ public class DialogueManager : MonoBehaviour
         story.ResetState();
 
         UI_Manager.Instance.HideDialogueUI();
+        if(npcAnim != null)
+        {
+            npcAnim.SetBool("hasInteracted", false);
+            npcAnim.SetTrigger("talkEnd");
+        }
+
     }
 }
