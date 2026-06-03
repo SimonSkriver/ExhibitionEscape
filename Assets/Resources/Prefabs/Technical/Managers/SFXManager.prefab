@@ -114,6 +114,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 0a9be1ef751d6d54ea3a592b3571ac1b, type: 3}
     volume: 0.2
     clipName: SliderSound
+  - audioClips:
+    - {fileID: 8300000, guid: 0a9be1ef751d6d54ea3a592b3571ac1b, type: 3}
+    - {fileID: 8300000, guid: eb86f5c6d28ce1443bcefbdae56e1bd6, type: 3}
+    volume: 0.5
+    clipName: Error
 --- !u!82 &3189948444369110283
 AudioSource:
   m_ObjectHideFlags: 0
