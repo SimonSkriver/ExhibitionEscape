@@ -38,6 +38,9 @@ public class PauseUI : MonoBehaviour {
                 SFXManager.PlayEffect("ClickButton");
                 Application.OpenURL("https://tally.so/r/GxQRbZ");
                 break;
+            case "Leave_Island":
+                SceneTransition.Instance.LoadLevel(0);
+                break;
         }
     }
 
