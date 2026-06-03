@@ -6,14 +6,20 @@ VAR hasTreasure = false
 {hasTreasure:
     -> SailAway
 - else:
-    OHØJ kammerat {visitNum}
-    Vil du gerne ud på eventyr i denne mega seje båd?
-    Den er næsten klar til brug
-    Det der mangler er også det VIGTIGSTE for at kunne sejle jorden rundt.
-    Du kan finde den et eller andet sted her på øen.
-    Hvis du finder den, er du mere end klar til...
-    DIT LIVS EVENTYR!!!
-    -> END
+    {isWelcomeMessageCompleted:
+        Jeg har ikke et kort...
+        -> END
+    - else:
+        OHØJ kammerat {visitNum}
+        Vil du gerne ud på eventyr i denne mega seje båd?
+        Den er næsten klar til brug
+        Det der mangler er også det VIGTIGSTE for at kunne sejle jorden rundt.
+        Du kan finde den et eller andet sted her på øen.
+        Hvis du finder den, er du mere end klar til...
+        DIT LIVS EVENTYR!!!
+        ~ isWelcomeMessageCompleted = true
+        -> END
+    }
 }
 
 
