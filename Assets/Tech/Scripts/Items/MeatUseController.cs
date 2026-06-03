@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MeatUseController : MonoBehaviour
 {
@@ -6,26 +7,48 @@ public class MeatUseController : MonoBehaviour
 
     [Header("Effect Scripts")]
     [SerializeField] private BoulderStrengthEffect boulderStrengthEffect;
+    [SerializeField] private bool canEatMeat = true;
+    [SerializeField] private float meatEatDelay = 20f;
 
     private void Awake()
     {
         Instance = this;
+        canEatMeat = true;
 
         if (boulderStrengthEffect == null)
             boulderStrengthEffect = GetComponent<BoulderStrengthEffect>();
     }
 
-    public void UseMeat(MeatData meatData)
+    public bool UseMeat(MeatData meatData)
     {
         if (meatData == null)
-            return;
-
-        PlayerStats.Instance.AddHealth(meatData.healthAmount);
-
-        if (meatData.enablesBoulderBreaking && boulderStrengthEffect != null)
         {
-            boulderStrengthEffect.StartBoulderStrength(meatData.boulderBreakingDuration);
+            Debug.Log("MeatData was null");
+            return false;
         }
+
+        if (canEatMeat)
+        {
+            if (meatData.enablesBoulderBreaking && boulderStrengthEffect != null)
+            {
+                boulderStrengthEffect.StartBoulderStrength(meatData.boulderBreakingDuration);
+                PlayerStats.Instance.AddHealth(meatData.healthAmount);
+                StartCoroutine(DisableEnableMeatEating());
+                Debug.Log("Ate meat and gave strength effect");
+                return true;
+            }
+            Debug.Log("boulderstrengtheffect is null");
+            return false;
+        }
+        Debug.Log("canEatMeat = false");
+        return false;
+    }
+
+    private IEnumerator DisableEnableMeatEating()
+    {
+        canEatMeat = false;
+        yield return new WaitForSeconds(meatEatDelay);
+        canEatMeat = true;
     }
 
     public void SpawnBone(MeatData meatData)
