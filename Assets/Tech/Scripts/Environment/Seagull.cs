@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Seagull : MonoBehaviour
@@ -8,9 +9,19 @@ public class Seagull : MonoBehaviour
     [SerializeField] int range = 70;
     [SerializeField] int flySpeed = 10;
     Vector3 flyDest;
+    [SerializeField]List<AudioClip> audioClips;
+    AudioSource audioSource;
 
-
-    void Awake() => StartCoroutine(ChangeFlyDestination());
+    void Awake() 
+    {
+        StartCoroutine(ChangeFlyDestination());
+        audioSource = GetComponent<AudioSource>();
+    }
+    void PlaySFX()
+    {
+        int randomClip = Random.Range(0,audioClips.Count);
+        audioSource.PlayOneShot(audioClips[randomClip]);
+    }
 
     void Update() {
         transform.position = Vector3.MoveTowards(transform.position, flyDest, flySpeed * Time.deltaTime);

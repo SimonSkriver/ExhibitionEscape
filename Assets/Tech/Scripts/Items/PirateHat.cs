@@ -23,6 +23,7 @@ public class PirateHat : MonoBehaviour, IInteractable
         transform.localRotation = Quaternion.identity;
         gameObject.layer = 2;
 
+        gameObject.layer = LayerMask.NameToLayer("Player");
         particles.Play();
         SFXManager.PlayEffect("ConfirmColor");
     }
