@@ -2,33 +2,35 @@ VAR isWelcomeMessageCompleted = false
 VAR hasTreasure = false
 VAR hasMadeTheEndChoice = false
 
+EXTERNAL StartBoatCutscene()
+
+
 ===Captain===
 {hasTreasure:
     {hasMadeTheEndChoice:
         Oh, did you get second thoughts?
         *[Yes, let me off the island please]
             Thank you very much, fare well!
+            ~ StartBoatCutscene()
             -> END
         
     - else:
-        {isWelcomeMessageCompleted:
+        Ahoy!
+        It seems you have found my long lost treasure!
+        If you will let me have it back...
+        I will let you use my boat to escape from this island.
+        
+        *[Of course!]
+            Thank you very much, fare well!
+            ~ hasMadeTheEndChoice = true
+            ~ StartBoatCutscene()
             -> END
-                
-        - else:
-            Ahoy!
-            It seems you have found my long lost treasure!
-            If you will let me have it, I will let you use my boat to escape from this island?
             
-            *[Of course!]
-                Thank you very much, fare well!
-                ~ hasMadeTheEndChoice = true
-                -> END
-                
-            *[No, I want to keep it to myself]
-                Well, what am I going to do about it...?
-                If you don't give me the treasure, you'll be stranded on this island forever like the rest of us.
-                -> NO
-        }
+        *[No, I want to keep it to myself]
+            Well, what am I going to do about it...?
+            If you don't give me the treasure..
+            ..you'll bestranded on this island forever like the rest of us.
+            -> NO
     }
     
 - else:
@@ -61,8 +63,9 @@ Bring me my treasure, and you can escape the island!
 *[Alright, you can have it]
     Thank you very much, fare well!
     ~ hasMadeTheEndChoice = true
-
+    ~ StartBoatCutscene()
     -> END
+    
 *[No, I want to keep it]
     Alright, that's your loss. You will be trapped here forever!
     ~ hasMadeTheEndChoice = true

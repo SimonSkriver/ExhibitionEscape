@@ -2,33 +2,35 @@ VAR isWelcomeMessageCompleted = false
 VAR hasTreasure = false
 VAR hasMadeTheEndChoice = false
 
+EXTERNAL StartBoatCutscene()
+
+
 ===Captain===
 {hasTreasure:
     {hasMadeTheEndChoice:
         Nåå, kom du bedre tanker?
         *[Ja, lad mig slippe væk!]
             Tusind tak, god sejltur!
+            ~ StartBoatCutscene()
             -> END
         
     - else:
-        {isWelcomeMessageCompleted:
+        Ohøj!
+        Jeg kan se, at du har fundet min forsvundne skat!
+        Hvis jeg må få den tilbage...
+        vil jeg lade dig låne min båd, så du kan slippe vækfra denne ø.
+        
+        *[Ja selvfølgelig!]
+            Tusind tak, god sejltur!
+            ~ hasMadeTheEndChoice = true
+            ~ StartBoatCutscene()
             -> END
-                
-        - else:
-            Ohøj!
-            Jeg kan se, at du har fundet min forsvundne skat!
-            Hvis vil lade mig få den tilbage, vil jeg lade dig låne min båd, så du kan slippe væk fra denne ø?
             
-            *[Ja selvfølgelig!]
-                Tusind tak, god sejltur!
-                ~ hasMadeTheEndChoice = true
-                -> END
-                
-            *[Nej, jeg gerne selv have den]
-                Nå.. Det kan jeg jo ikke gøre så meget ved...
-                Men tænk dig om, hvis du ikke giver mig skatten, vil du være fanget her til evig tid ligesom os andre.
-                -> NO
-        }
+        *[Nej, jeg gerne selv have den]
+            Nå.. Det kan jeg jo ikke gøre så meget ved...
+            Men tænk dig om, hvis du ikke giver mig skatten,
+            vil du være fanget her til evig tid ligesom os andre.
+            -> NO
     }
     
 - else:
@@ -61,8 +63,9 @@ Find min skat, så du kan slippe væk fra øen!
 *[Okay, du må gerne få den]
     Tusind tak, god sejltur!
     ~ hasMadeTheEndChoice = true
-
+    ~ StartBoatCutscene()
     -> END
+    
 *[Nix, jeg beholder den]
     Okay, dit tab. Så må du være strandet her for altid
     ~ hasMadeTheEndChoice = true
