@@ -25,7 +25,7 @@ MonoBehaviour:
       m_Items:
       - rid: 4790090667302322814
   - m_Id: 176562746798080
-    m_Localized: 
+    m_Localized: '{Header:EINSTELLUNGEN|Einstellungen}'
     m_Metadata:
       m_Items:
       - rid: 4790090667302322814
@@ -40,10 +40,51 @@ MonoBehaviour:
       m_Items:
       - rid: 4790090667302322814
   - m_Id: 1166099980664832
-    m_Localized: 
+    m_Localized: '{isLeavingButton:Ja|Neeeeeeeiiiin}'
     m_Metadata:
       m_Items:
       - rid: 4790090667302322814
+  - m_Id: 1597073112543232
+    m_Localized: "Anders Lindberg\nJakob Hartvig Storm\nSimon M\xF8nsted Skriver\nSimon
+      Gade Pedersen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1592337416171520
+    m_Localized: 'Hergestellt von:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1588347282501632
+    m_Localized: DAS ENDE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32380283629568
+    m_Localized: "W\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172065182035968
+    m_Localized: "Zur\xFCck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1304940577402880
+    m_Localized: TASTATUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204867806015488
+    m_Localized: "Best\xE4tigen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1162631031209984
+    m_Localized: WARNUNG!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1165721486671872
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1603471552655360
+    m_Localized: Kevin MacLeod
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -52,8 +93,8 @@ MonoBehaviour:
       data:
         m_Entries: 
         m_SharedEntries:
-        - id: 63137755136
         - id: 176562746798080
         - id: 172300671234048
         - id: 171942276345856
         - id: 1166099980664832
+        - id: 63137755136

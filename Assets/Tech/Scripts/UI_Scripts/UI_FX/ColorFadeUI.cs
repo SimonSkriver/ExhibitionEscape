@@ -2,9 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class ColorFadeUI : MonoBehaviour
+public class ColorFadeUI
 {
     public static IEnumerator FadeIn(VisualElement transitionScreen) {
+        Time.timeScale = 1.0f;
         transitionScreen.style.display = DisplayStyle.Flex;
         
         float
@@ -22,6 +23,7 @@ public class ColorFadeUI : MonoBehaviour
     }
 
     public static IEnumerator FadeOut(VisualElement transitionScreen) {
+        Time.timeScale = 1.0f;
         transitionScreen.style.display = DisplayStyle.Flex;
 
         float

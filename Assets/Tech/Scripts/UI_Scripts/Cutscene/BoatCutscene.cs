@@ -38,5 +38,9 @@ public class BoatCutscene : MonoBehaviour
         yield return new WaitForSeconds(19.25f);
 
         anim.SetTrigger("NOOOOO");
+
+        yield return new WaitForSeconds(7f);
+        UI_Manager.Instance.ShowCredits();
+        Time.timeScale = 0;
     }
 }

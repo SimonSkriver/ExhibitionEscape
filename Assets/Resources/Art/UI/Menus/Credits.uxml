@@ -1,0 +1,37 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 1200px; justify-content: center; align-self: center; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); -unity-text-align: middle-center; background-color: rgb(159, 212, 204); -unity-text-outline-width: 2px; border-top-color: rgba(0, 0, 0, 0.298); border-bottom-color: rgba(0, 0, 0, 0.502); border-top-width: 15px; border-right-width: 15px; border-bottom-width: 15px; border-left-width: 15px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; border-left-color: rgba(0, 0, 0, 0.4); border-right-color: rgba(0, 0, 0, 0.4); height: 900px; position: absolute; align-content: center; align-items: center;">
+        <ui:Label text="WARNING!" style="color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); font-size: 150px; -unity-font-style: bold; padding-top: 10px;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1588347282501632)"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="If you leave the island&#10;you will lose you progress!&#10;&#10;Do you want to continue?" name="" style="font-size: 35px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-font-style: bold; padding-top: 20px;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1592337416171520)"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="If you leave the island&#10;you will lose you progress!&#10;&#10;Do you want to continue?" style="font-size: 30px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-font-style: italic; padding-bottom: 50px;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1597073112543232)"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="If you leave the island&#10;you will lose you progress!&#10;&#10;Do you want to continue?" name="" style="font-size: 35px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-font-style: bold;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1602811251765248)"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="If you leave the island&#10;you will lose you progress!&#10;&#10;Do you want to continue?" style="font-size: 30px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-font-style: italic; padding-bottom: 40px;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1603471552655360)"/>
+            </Bindings>
+        </ui:Label>
+        <ui:GroupBox style="flex-direction: row; justify-content: space-around; align-self: stretch; align-items: center; padding-bottom: 40px;">
+            <ui:Button text="Noooooooooooo" name="LEAVE_ISLAND" class="menuButtonWarning" style="-unity-text-outline-color: rgb(0, 0, 0); color: rgb(0, 0, 0);">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(203204110168064)"/>
+                </Bindings>
+            </ui:Button>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

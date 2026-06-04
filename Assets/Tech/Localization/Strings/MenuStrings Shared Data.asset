@@ -48,7 +48,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 203204110168064
-    m_Key: Pause_LeaveIsland
+    m_Key: Text_LeaveIsland
     m_Metadata:
       m_Items: []
   - m_Id: 204996713754624
@@ -93,6 +93,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1305428593061888
     m_Key: Pause_InputController
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1588347282501632
+    m_Key: Credits_End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1592337416171520
+    m_Key: Credits_Contributes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1597073112543232
+    m_Key: Credits_Names
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1602811251765248
+    m_Key: Credits_Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1603471552655360
+    m_Key: Credits_Artists
     m_Metadata:
       m_Items: []
   m_Metadata:
