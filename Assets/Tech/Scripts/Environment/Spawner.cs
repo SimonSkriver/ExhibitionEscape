@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
         float cooldown = Random.Range(10, 100);
         Debug.Log("Spawning in: " + cooldown);
         yield return new WaitForSeconds(cooldown);
-        amount = Random.Range(0, 5);
+        amount = Random.Range(0, 3);
         Debug.Log("Spawning " + amount + " seagulls");
         StartCoroutine(SpawnPrefabs());
     }
