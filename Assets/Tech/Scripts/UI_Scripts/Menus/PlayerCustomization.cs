@@ -9,7 +9,7 @@ public class PlayerCustomization : MonoBehaviour
     Material m_skin, m_shorts;
     List<Button> customButtons = new List<Button>();
     List<Slider> customSliders = new List<Slider>();
-    Transform neckBone;
+    Transform neckBone, hatAnchor;
     float nextSFXtime;
 
     private void Awake() {
@@ -28,7 +28,9 @@ public class PlayerCustomization : MonoBehaviour
 
         m_skin = Resources.Load<Material>("Art/Materials/PlayerSkin");
         m_shorts = Resources.Load<Material>("Art/Materials/PlayerShorts");
+
         neckBone = GameObject.FindGameObjectWithTag("Player").transform.Find("ShortsMan/Main/Bone.001/Bone.002/Bone.003/Chest/Neck");
+        hatAnchor = neckBone.Find("Head/Head_end/HatAnchor");
     }
     public void OnHoverSettings(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
     public void PlaySliderSound()
@@ -83,6 +85,12 @@ public class PlayerCustomization : MonoBehaviour
                 float xScreenPos = Mathf.Lerp(-0.1f, 0.04f, sldValPercent);
                 float yScreenPos = Mathf.Lerp(-0.15f, 0.07f, sldValPercent);
                 float targetOffset = Mathf.Lerp(0f, -1.71f, sldValPercent);
+                
+                // Sets the hat position better :)
+                if (sldValPercent >= 0.1f) sldValPercent += 0.5f;
+                
+                float hatPosX = Mathf.Lerp(-0.08f, 0.11f, sldValPercent);
+                float hatPosY = Mathf.Lerp(-0.8f, -0.025f, sldValPercent);
 
                 // Set Camera Target Offset
                 GameManager.customCam.GetComponent<CinemachineOrbitalFollow>().TargetOffset.z = targetOffset;
@@ -91,6 +99,11 @@ public class PlayerCustomization : MonoBehaviour
                 CinemachineRotationComposer crc = GameManager.customCam.GetComponent<CinemachineRotationComposer>();
                 crc.Composition.ScreenPosition.x = xScreenPos;
                 crc.Composition.ScreenPosition.y = yScreenPos;
+
+                // Set Hat Position
+                hatAnchor.localPosition = new Vector3(hatPosX, hatPosY, 0);
+                // MID BIG: 0.1 -0.025
+
                 break;
 
             case "Neck Length":

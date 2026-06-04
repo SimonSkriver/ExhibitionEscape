@@ -32,7 +32,6 @@ public class DialogueUI : MonoBehaviour
         foreach (Choice choice in dialogueChoices) {
             choices[choice.index].text = choice.text;
             choices[choice.index].style.display = DisplayStyle.Flex;
-            Debug.Log("CHOICE");
             DialogueManager.Instance.isShowingChoices = true;
         }
     }

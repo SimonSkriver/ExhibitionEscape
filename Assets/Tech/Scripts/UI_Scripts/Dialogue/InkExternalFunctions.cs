@@ -10,8 +10,5 @@ public class InkExternalFunctions {
         story.UnbindExternalFunction("StartBoatCutscene");
     }
 
-    void StartCutscene() {
-        Debug.Log("START CUTSCENE");
-        EventManager.Instance.StartBoatEvent();
-    }
+    void StartCutscene() => EventManager.Instance.StartBoatEvent();
 }
