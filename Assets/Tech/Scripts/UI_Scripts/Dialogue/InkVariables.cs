@@ -32,6 +32,8 @@ public class InkVariables
     public void StopListening(Story story) => story.variablesState.variableChangedEvent -= UpdateVariableState;
 
 
+
+    // Update variables
     public void UpdateVariableState(string name, Ink.Runtime.Object value) {
         // Deffensive check
         if (!variables.ContainsKey(name)) { return; }
@@ -40,6 +42,10 @@ public class InkVariables
         variables[name] = value;
         Debug.Log("Updated dialogue value: " + name + " = " + value);
     }
+
+
+
+
 
 
     // Set all the C# variables to the story (Ink file)

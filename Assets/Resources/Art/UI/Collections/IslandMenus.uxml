@@ -11,7 +11,7 @@
     <ui:Instance template="DialogueMenu" name="DialogueMenu" style="width: 100%; height: 100%; flex-direction: column; display: none;"/>
     <ui:Instance template="LevelSelectMenu" name="LevelSelect" style="width: 100%; height: 100%; display: none;"/>
     <ui:Instance template="CustomizeMenu" name="CustomizeMenu" style="display: none; height: 100%; width: 900px; justify-content: space-between; align-self: flex-start; scale: 0.9 0.9 0.9;"/>
-    <ui:Instance template="PauseMenu" name="PauseMenu" class="PAUSE_MENU" style="display: flex; position: absolute;">
+    <ui:Instance template="PauseMenu" name="PauseMenu" class="PAUSE_MENU" style="display: none; position: absolute;">
         <ui:GroupBox name="PC_Controls" style="right: 100px; position: absolute; width: 500px;">
             <ui:Label text="KEYBOARD" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px;">
                 <Bindings>

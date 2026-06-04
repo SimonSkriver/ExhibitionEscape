@@ -17,6 +17,7 @@ public class PlayerCustomization : MonoBehaviour
         customButtons = root.Query<Button>().ToList();
         foreach (var btn in customButtons) {
             btn.RegisterCallback<ClickEvent>(OnColorButton);
+            btn.RegisterCallback<NavigationSubmitEvent>(OnColorButton);
             btn.RegisterCallback<PointerEnterEvent>(OnHoverSettings);
         }
 
@@ -39,9 +40,13 @@ public class PlayerCustomization : MonoBehaviour
         }
     }
 
-    void OnColorButton(ClickEvent evt) {
-        Button btn = (Button)evt.target;
+    // Mouse Click
+    void OnColorButton(ClickEvent evt) => ColorButton((Button)evt.target);
 
+    // Controller Click
+    void OnColorButton(NavigationSubmitEvent evt) => ColorButton((Button)evt.target);
+
+    void ColorButton(Button btn) {
         switch (btn.name) {
             case "SkinColor":
                 SFXManager.PlayEffect("ClickButton");

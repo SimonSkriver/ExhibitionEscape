@@ -449,6 +449,45 @@
             ]
         },
         {
+            "name": "Menu",
+            "id": "bd3e5ea6-0e9d-4304-8d31-a7b55e7d736f",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "9a8739f2-24aa-433f-afa8-c54c7cf0e4de",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "20695487-f2bb-464c-8cc1-fe15c509ceb9",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e68dd523-8d7b-473e-91a5-99d6716bc128",
+                    "path": "<DualShockGamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "UI",
             "id": "b63c4490-52cb-4356-bb08-b6c6625a915b",
             "actions": [
@@ -970,45 +1009,6 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Menu",
-            "id": "bd3e5ea6-0e9d-4304-8d31-a7b55e7d736f",
-            "actions": [
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "9a8739f2-24aa-433f-afa8-c54c7cf0e4de",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "20695487-f2bb-464c-8cc1-fe15c509ceb9",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e68dd523-8d7b-473e-91a5-99d6716bc128",
-                    "path": "<DualShockGamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

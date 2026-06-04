@@ -23,20 +23,21 @@ public class InputManager : MonoBehaviour
     BoatCutscene cutscene;
 
     bool isGamePaused;
+    public bool canPauseGame;
 
 
     void Awake()
     {
-        if (Instance != null)
+        if (Instance != null && Instance != this)
         {
             Destroy(this);
             return;
         }
         Instance = this;
 
-
         player = GameObject.FindWithTag("Player");
         playerInput = GetComponent<PlayerInput>();
+
         playerUse = player.GetComponent<PlayerUse>();
         playerMovement = player.GetComponentInParent<PlayerController>();
         playerInteract = player.GetComponentInParent<PlayerInteract>();
@@ -107,14 +108,14 @@ public class InputManager : MonoBehaviour
     }
 
     public void Pause() {
-        if (!isGamePaused) {
+        if (!isGamePaused && canPauseGame) {
             isGamePaused = true;
             DisablePlayer();
             Time.timeScale = 0;
             UI_Manager.Instance.ShowPauseMenuUI();
             SFXManager.PlayEffect("PauseMenu");
 
-        } else {
+        } else if (canPauseGame){
             isGamePaused = false;
             SFXManager.PlayEffect("BackButton");
             if (!cutscene.inCutscene) EnablePlayer();

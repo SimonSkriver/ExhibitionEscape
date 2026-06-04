@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class UI_Manager : MonoBehaviour 
 {
     public static UI_Manager Instance;
+    InputManager IM;
     public PauseUI pauseUI { get; private set; }
     public DialogueUI dialogueUI { get; private set; }
 
@@ -40,8 +41,6 @@ public class UI_Manager : MonoBehaviour
         pauseRoot.style.display = DisplayStyle.None;
         levelRoot.style.display = DisplayStyle.None;
         dialogueRoot.style.display = DisplayStyle.None;
-
-        
     }
 
     private void Start() {
@@ -71,12 +70,14 @@ public class UI_Manager : MonoBehaviour
         customizeRoot.style.display = DisplayStyle.Flex;
         HidePlayerHUD();
         GameManager.CameraManager.GetChild(1).gameObject.SetActive(true);
+        InputManager.Instance.canPauseGame = false;
         InputManager.Instance.DisablePlayer();
     }
     public void HidePlayerCustomizeUI() {
         customizeRoot.style.display = DisplayStyle.None;
         ShowPlayerHUD();
         GameManager.CameraManager.GetChild(1).gameObject.SetActive(false);
+        InputManager.Instance.canPauseGame = true;
         InputManager.Instance.EnablePlayer();
     }
     public void ShowDialogueUI() {

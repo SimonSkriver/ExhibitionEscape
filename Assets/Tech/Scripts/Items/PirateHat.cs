@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PirateHat : MonoBehaviour, IInteractable
 {
+    Ink.Runtime.Object s;
     [SerializeField] Animator chestAnimator;
     [SerializeField] ParticleSystem particles;
     Transform hatAnchor;
@@ -15,6 +16,7 @@ public class PirateHat : MonoBehaviour, IInteractable
     public void Interact()
     {
         hasHat = true;
+        DialogueManager.Instance.ChanceInkVariable("hasTreasure", hasHat.ToString());
 
         chestAnimator.SetTrigger("CloseLid");
 

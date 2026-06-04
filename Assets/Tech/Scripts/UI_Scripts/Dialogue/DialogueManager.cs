@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError(errorMessage);
     };
     }
-    InkVariables inkVariables;
+    public InkVariables inkVariables;
 
 
 
@@ -44,6 +44,9 @@ public class DialogueManager : MonoBehaviour
         inkVariables = new InkVariables(story);
         
     }
+
+
+    public void ChanceInkVariable(string name, string value) => inkVariables.UpdateVariableState(name, new StringValue(value));
 
 
     public void EnterDialogue(string knotName)

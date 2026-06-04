@@ -23,6 +23,7 @@ public class DialogueUI : MonoBehaviour
         DialogueManager.Instance.isShowingChoices = false;
         foreach (var choice in choices) {
             choice.RegisterCallback<ClickEvent>(OnChoiceSelected);
+            choice.RegisterCallback<NavigationSubmitEvent>(OnChoiceSelected);
             choice.style.display = DisplayStyle.None;
         }
     }
@@ -36,9 +37,10 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    void OnChoiceSelected(ClickEvent evt) {
-        Button button = (Button)evt.currentTarget;
-        DialogueManager.Instance.story.ChooseChoiceIndex(button.tabIndex); // Connecting the button.tabIndex with the Ink choice index
+    void OnChoiceSelected(ClickEvent evt) => ChoiceSelected((Button)evt.target);
+    void OnChoiceSelected(NavigationSubmitEvent evt) => ChoiceSelected((Button)evt.target);
+    void ChoiceSelected(Button btn) {
+        DialogueManager.Instance.story.ChooseChoiceIndex(btn.tabIndex); // Connecting the button.tabIndex with the Ink choice index
         HideChoices();
         DialogueManager.Instance.ContinueOrExitStory();
     }
