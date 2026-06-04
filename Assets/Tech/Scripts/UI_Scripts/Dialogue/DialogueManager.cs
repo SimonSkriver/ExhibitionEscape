@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
     };
     }
     public InkVariables inkVariables;
-
+    public InkExternalFunctions inkExternalFunctions;
 
 
     private void Awake() {
@@ -42,8 +42,14 @@ public class DialogueManager : MonoBehaviour
         }
 
         inkVariables = new InkVariables(story);
-        
+        inkExternalFunctions = new InkExternalFunctions();
+        inkExternalFunctions.Bind(story);
     }
+
+    private void OnDestroy() {
+        inkExternalFunctions.Unbind(story);
+    }
+
 
 
     public void ChanceInkVariable(string name, string value) => inkVariables.UpdateVariableState(name, new StringValue(value));
@@ -80,7 +86,20 @@ public class DialogueManager : MonoBehaviour
             if (story.canContinue) {
                 isWritingDialogue = true;
                 dialogueLine = story.Continue();
-                UI_Manager.Instance.dialogueUI.ChangeDialogueUI(dialogueLine, story.currentChoices);
+
+                // Handle the case of an empty line of dialogue
+                // by continuing until there is a line with content
+                while (IsLineBlank(dialogueLine) && story.canContinue) {
+                    dialogueLine = story.Continue();
+                }
+
+                // Handle the case of the last line being blank
+                if (IsLineBlank(dialogueLine) && !story.canContinue) {
+                    ExitDialogue();
+                } else {
+                    UI_Manager.Instance.dialogueUI.ChangeDialogueUI(dialogueLine, story.currentChoices);
+                }
+
             } else if (isShowingChoices) {
                 return;
             } else {
@@ -104,5 +123,9 @@ public class DialogueManager : MonoBehaviour
             npcAnim.SetBool("hasInteracted", false);
             npcAnim.SetTrigger("talkEnd");
         }
+    }
+
+    bool IsLineBlank(string dialogueLine) {
+        return dialogueLine.Trim().Equals("") || dialogueLine.Trim().Equals("\n");
     }
 }

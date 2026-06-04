@@ -15,6 +15,12 @@ Bummer...
 -> END
 
 
+===OceanDreamer===
+Is that the world border I see?
+Or are there more on the other side?
+-> END
+
+
 
 ===CoconutHead===
 >_<
@@ -40,17 +46,12 @@ Do you think they will be interested in a fighting club?
     They seem to be very threatening.
 --> END
 
-===BoarFarm===
-Ahoy! I'm training these boars to get a strong head
-Someone attacked them and now they're one less on their team
-That's why I decided to fight on their side to DESTROY their enemy!
-LET THE BOARS LIVE!!!
--> END
-
-
-===CaveHint===
-ARRGH! Get some MEAT and fight with ME!
--> END
+//===BoarFarm===
+//Ahoy! I'm training these boars to get a strong head
+//Someone attacked them and now they're one less on their team
+//That's why I decided to fight on their side to DESTROY their enemy!
+//LET THE BOARS LIVE!!!
+//-> END
 
 
 
@@ -70,15 +71,18 @@ He can get mine if he's really burning for it
 
 
 ===BathingRing===
-The first thing I saw on this island was this bathing ring
-Who put it there?
-And why?
+BA..BA..BATHING RIIIING!!
 -> END
 
 
 
 ===TreeThief===
 Don't tell the captain I ate all his apples...
+-> END
+
+
+===RockBuilder===
+NOOOOOOOOO!!! My life's work...
 -> END
 
 

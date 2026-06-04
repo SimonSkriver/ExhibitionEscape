@@ -1,26 +1,26 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class BoatCutscene : MonoBehaviour, IInteractable
+public class BoatCutscene : MonoBehaviour
 {
     [SerializeField] PlayableDirector cutscene;
-    PirateHat hat;
+    //PirateHat hat;
     public bool inCutscene { get; private set; }
 
     void Awake()
     {
-        hat = FindAnyObjectByType<PirateHat>();
+        //hat = FindAnyObjectByType<PirateHat>();
+
+        // Bind the cutscene to the Boat event
+        // When Boat event is triggered, TryStartCutscene() will run
+        EventManager.Instance.Boat += TryStartCutscene;
     }
 
-    public void Interact()
+    public void TryStartCutscene()
     {
-        if (!hat.hasHat) return;
+        //if (!hat.hasHat) return;
         cutscene.Play();
         inCutscene = true;
-    }
-
-    public bool ShowOutline()
-    {
-        return true;
+        UI_Manager.Instance.HidePlayerHUD();
     }
 }

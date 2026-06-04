@@ -15,6 +15,13 @@ Jeg prøvede at fange noget GIGANTISK, men min fiskestang fløj ud ad hænderne 
 
 
 
+===OceanDreamer===
+Er det jordens ende jeg kan se?
+Eller er der mere på den anden side?
+-> END
+
+
+
 ===CoconutHead===
 >_<
 -> END
@@ -39,18 +46,12 @@ Tror du de er interesserret i at være med i en kampklub?
     De virker meget truende.
 --> END
 
-===BoarFarm===
-Ohøj! Jeg er i gang med at træne disse vildsvin til at få et stærkt hoved.
-Nogen har angrebet dem og nu er de én mindre på deres team.
-Derfor har jeg valgt at kæmpe på deres side for at ØDELÆGGE deres fjende!
-LAD VILDSVINENE LEVE!!!
--> END
-
-
-
-===CaveHint===
-ARRGH! Skaf en KØDKØLLE-STEG og kæmp med MIG!
--> END
+//===BoarFarm===
+//Ohøj! Jeg er i gang med at træne disse vildsvin til at få et stærkt hoved.
+//Nogen har angrebet dem og nu er de én mindre på deres team.
+//Derfor har jeg valgt at kæmpe på deres side for at ØDELÆGGE deres fjende!
+//LAD VILDSVINENE LEVE!!!
+//-> END
 
 
 
@@ -70,9 +71,7 @@ Han må gerne få mine, hvis han virkelig brænder for det!
 
 
 ===BathingRing===
-Det første jeg så, da jeg kom til denne ø, var denne badering
-Hvem har placeret den dér?
-Og hvorfor?
+BA..BA..BADERIIIING!!
 -> END
 
 
@@ -82,4 +81,6 @@ Ik' sig til kaptajnen at jeg har spist alle hans æbler...
 -> END
 
 
-
+===RockBuilder===
+NEEEEEEEEJ!!! Mit livsværk...
+-> END

@@ -16,8 +16,6 @@ public class SceneTransition : MonoBehaviour {
         }
         Instance = this;
 
-        Debug.Log("Instance: " + Instance);
-
         transitionScreen = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>("TransitionScreen");
         StartCoroutine(ColorFadeUI.FadeOut(transitionScreen));
     }
