@@ -1604,7 +1604,7 @@
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_RenderFace": 2,
+    "m_RenderFace": 0,
     "m_AlphaClip": false,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
@@ -3017,8 +3017,8 @@
     "m_ObjectId": "655253a5fbd04b17ba7ef5e0ab5db0e8",
     "m_Title": "Refraction",
     "m_Position": {
-        "x": -2709.33349609375,
-        "y": -860.0000610351563
+        "x": -2709.0,
+        "y": -860.0
     }
 }
 
@@ -5920,8 +5920,8 @@
     "m_ObjectId": "d54a759444284539b252bcb968eac52c",
     "m_Title": "Foam",
     "m_Position": {
-        "x": -1868.000244140625,
-        "y": 464.0000915527344
+        "x": -1868.0,
+        "y": 463.9999694824219
     }
 }
 
@@ -6235,8 +6235,8 @@
     "m_ObjectId": "e81e53a2ce6c47b896d9d921dbd1e876",
     "m_Title": "Water and ripple color",
     "m_Position": {
-        "x": -2149.33349609375,
-        "y": -187.33335876464845
+        "x": -2149.0,
+        "y": -187.0
     }
 }
 
