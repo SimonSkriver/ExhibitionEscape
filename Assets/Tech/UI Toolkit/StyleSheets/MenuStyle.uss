@@ -78,8 +78,12 @@
 .levelSelectButton:hover {
     -unity-font-style: bold;
     font-size: 100px;
-    background-color: rgba(226, 229, 241, 0.784);
-    color: rgb(28, 35, 60);
+    background-color: rgba(153, 233, 241, 0.784);
+    color: rgba(235, 251, 253, 0.784);
+    border-left-color: rgb(63, 133, 140);
+    border-right-color: rgb(63, 133, 140);
+    border-top-color: rgb(63, 133, 140);
+    border-bottom-color: rgb(63, 133, 140);
 }
 
 .levelSelectButton:active {

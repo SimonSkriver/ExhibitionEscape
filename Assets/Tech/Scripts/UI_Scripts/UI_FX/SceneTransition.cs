@@ -22,12 +22,8 @@ public class SceneTransition : MonoBehaviour {
         StartCoroutine(ColorFadeUI.FadeOut(transitionScreen));
     }
 
-    public void LoadLevel(int sceneID) => StartCoroutine(StartTransition(sceneID));
-
-    IEnumerator StartTransition(int sceneID) {
+    public void LoadLevel(int sceneID) {
         StartCoroutine(ColorFadeUI.FadeIn(transitionScreen));
-
-        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneID);
     }
 }

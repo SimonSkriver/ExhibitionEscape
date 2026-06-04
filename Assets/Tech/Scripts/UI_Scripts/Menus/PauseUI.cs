@@ -46,8 +46,7 @@ public class PauseUI : MonoBehaviour {
                 Application.OpenURL("https://tally.so/r/GxQRbZ");
                 break;
             case "Leave_Island":
-                SceneManager.LoadScene(0);
-                //UI.ShowWARNING();
+                UI.ShowWARNING();
                 break;
         }
     }
