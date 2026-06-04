@@ -38,13 +38,24 @@
     -unity-text-outline-color: rgb(215, 126, 52);
 }
 
+.menuButton:focus {
+    scale: 1.1 1.1 1.1;
+    background-color: rgb(250, 221, 100);
+    border-left-color: rgb(246, 194, 87);
+    border-right-color: rgb(245, 194, 87);
+    border-top-color: rgb(250, 198, 89);
+    border-bottom-color: rgb(238, 190, 89);
+    color: rgb(214, 126, 52);
+    -unity-text-outline-color: rgb(215, 126, 52);
+}
+
 .menuButton:active {
     border-left-color: rgb(68, 161, 136);
     border-right-color: rgb(68, 162, 137);
     border-top-color: rgb(68, 166, 138);
     border-bottom-color: rgb(61, 156, 130);
     background-color: rgb(171, 236, 155);
-    scale: 1.05 1.05 1.05;
+    scale: 0.9 0.9 0.9;
     color: rgb(40, 166, 96);
     -unity-text-outline-color: rgb(40, 166, 96);
     transition-duration: 0.1s;
@@ -86,6 +97,8 @@
     border-bottom-color: rgb(63, 133, 140);
 }
 
+
+
 .levelSelectButton:active {
     -unity-font-style: bold;
     font-size: 100px;
@@ -120,10 +133,10 @@
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
     scale: 5 5 5;
 }
 
@@ -136,10 +149,26 @@
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    scale: 5 5 5;
+}
+
+.levelSelectLanguageButton:focus {
+    border-left-color: rgb(171, 171, 171);
+    border-right-color: rgb(171, 171, 171);
+    border-top-color: rgb(171, 171, 171);
+    border-bottom-color: rgb(171, 171, 171);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
     scale: 5 5 5;
 }
 
@@ -152,10 +181,10 @@
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
     scale: 5 5 5;
 }
 
@@ -168,10 +197,10 @@
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
-    border-top-width: 2px;
-    border-right-width: 2px;
-    border-bottom-width: 2px;
-    border-left-width: 2px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
     scale: 5 5 5;
 }
 
@@ -198,10 +227,35 @@
     -unity-text-outline-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     text-overflow: ellipsis;
+    transition-duration: 0.1s;
 }
 
 .choiceButton:hover {
-    width: 300px;
+    width: 650px;
+    height: 70px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    -unity-font-style: normal;
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    -unity-text-outline-width: 1px;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.choiceButton:focus {
+    width: 650px;
     height: 70px;
     border-top-width: 10px;
     border-right-width: 10px;
@@ -225,7 +279,7 @@
 }
 
 .choiceButton:active {
-    width: 300px;
+    width: 650px;
     height: 70px;
     border-top-width: 10px;
     border-right-width: 10px;
@@ -246,11 +300,13 @@
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgb(78, 101, 35);
     color: rgb(78, 101, 35);
+    scale: 0.9 0.9 0.9;
+    transition-duration: 0.1s;
 }
 
 .textMenu {
-    color: rgba(255, 255, 255, 0.502);
-    -unity-text-outline-color: rgba(255, 255, 255, 0.502);
+    color: rgba(0, 0, 0, 0.502);
+    -unity-text-outline-color: rgba(0, 0, 0, 0.502);
     -unity-text-outline-width: 4px;
     font-size: 28px;
     -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
@@ -297,21 +353,10 @@
     border-right-color: rgba(0, 0, 0, 0.392);
     border-top-color: rgba(0, 0, 0, 0.392);
     border-bottom-color: rgba(0, 0, 0, 0.392);
+    transition-duration: 0.1s;
 }
 
 .customizationButton:hover {
-    border-left-color: rgb(254, 255, 103);
-    border-right-color: rgb(254, 255, 103);
-    border-top-color: rgb(254, 255, 103);
-    border-bottom-color: rgb(254, 255, 103);
-    border-top-width: 10px;
-    border-right-width: 10px;
-    border-bottom-width: 10px;
-    border-left-width: 10px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
     -unity-text-outline-width: 2px;
     font-size: 40px;
     -unity-font-style: bold;
@@ -323,21 +368,15 @@
     color: rgb(135, 103, 193);
     width: 100px;
     height: 100px;
+    scale: 1.1 1.1 1.1;
+    transition-duration: 0.1s;
+    border-left-color: rgb(255, 216, 0);
+    border-right-color: rgb(255, 216, 0);
+    border-top-color: rgb(255, 216, 0);
+    border-bottom-color: rgb(255, 216, 0);
 }
 
 .customizationButton:focus {
-    border-left-color: rgb(255, 203, 0);
-    border-right-color: rgb(255, 203, 0);
-    border-top-color: rgb(255, 203, 0);
-    border-bottom-color: rgb(255, 203, 0);
-    border-top-width: 10px;
-    border-right-width: 10px;
-    border-bottom-width: 10px;
-    border-left-width: 10px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
     -unity-text-outline-width: 2px;
     font-size: 40px;
     -unity-font-style: bold;
@@ -349,6 +388,28 @@
     color: rgb(135, 103, 193);
     width: 100px;
     height: 100px;
+    scale: 1.1 1.1 1.1;
+    transition-duration: 0.1s;
+    border-left-color: rgb(255, 216, 0);
+    border-right-color: rgb(255, 216, 0);
+    border-top-color: rgb(255, 216, 0);
+    border-bottom-color: rgb(255, 216, 0);
+}
+
+.customizationButton:active {
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(135, 103, 193);
+    -unity-text-align: upper-center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -unity-font-definition: url("project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&guid=9229ae5dbc38f488d921156ff75869e9&type=3#Cascadia");
+    color: rgb(135, 103, 193);
+    width: 100px;
+    height: 100px;
+    transition-duration: 0.1s;
+    scale: 0.9 0.9 0.9;
 }
 
 .backgroundCustomBox {
@@ -412,6 +473,16 @@
     -unity-text-outline-color: rgb(215, 126, 52);
 }
 
+.menuButtonWarning:focus {
+    background-color: rgb(250, 221, 100);
+    border-left-color: rgb(246, 194, 87);
+    border-right-color: rgb(245, 194, 87);
+    border-top-color: rgb(250, 198, 89);
+    border-bottom-color: rgb(238, 190, 89);
+    color: rgb(214, 126, 52);
+    -unity-text-outline-color: rgb(215, 126, 52);
+}
+
 .menuButtonWarning:active {
     border-left-color: rgb(68, 161, 136);
     border-right-color: rgb(68, 162, 137);
@@ -423,3 +494,7 @@
     scale: 0.9 0.9 0.9;
     transition-duration: 0.1s;
 }
+
+
+
+

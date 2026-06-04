@@ -39,8 +39,32 @@
     width: 30px;
 }
 
-#SE .unity-radio-button__checkmark-background {
+#SV .unity-radio-button__checkmark-background {
     background-image: resource("Art/UI/Sprites/Flags/Sweden_Flag");
+    -unity-background-scale-mode: scale-and-crop;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 30px;
+    height: 30px;
+    background-position-x: left -4px;
+}
+
+#NO .unity-radio-button__checkmark-background {
+    background-image: resource("Art/UI/Sprites/Flags/Norway_Flag");
+    -unity-background-scale-mode: scale-and-crop;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    width: 30px;
+    height: 30px;
+    background-position-x: left -4px;
+}
+
+#FI .unity-radio-button__checkmark-background {
+    background-image: resource("Art/UI/Sprites/Flags/Finland_Flag");
     -unity-background-scale-mode: scale-and-crop;
     border-top-width: 0;
     border-right-width: 0;

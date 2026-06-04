@@ -15,6 +15,13 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Swedish (sv)
   m_GUID: d1c290480c3442649a87510cb7ea4c54
   m_SerializeEntries:
+  - m_GUID: b6b4e96488503274281040381b548b58
+    m_Address: MenuStrings_sv
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-sv
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cda40d1cbadd25b4793e035908f694fa
     m_Address: WorldStrings_sv
     m_ReadOnly: 1

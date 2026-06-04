@@ -107,6 +107,38 @@ MonoBehaviour:
     m_Localized: WARNING!
     m_Metadata:
       m_Items: []
+  - m_Id: 1304940577402880
+    m_Localized: KEYBOARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305239006326784
+    m_Localized: 'Movement = WASD
+
+      Jump = Space
+
+      Interact = E
+
+      Attack
+      = Left Mouse Button
+
+      Inventory = 1 / 2 / 3 / 4 / 5'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305428593061888
+    m_Localized: "Movement = LS\nJump = X\nInteract = \u25A1\nAttack = R2\nInventory
+      = L1 / R1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1165721486671872
+    m_Localized: 'If you leave the island
+
+      you will lose your progress!
+
+
+      Do
+      you want to continue?'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

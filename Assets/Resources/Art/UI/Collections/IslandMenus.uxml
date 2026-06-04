@@ -13,12 +13,24 @@
     <ui:Instance template="CustomizeMenu" name="CustomizeMenu" style="display: none; height: 100%; width: 900px; justify-content: space-between; align-self: flex-start; scale: 0.9 0.9 0.9;"/>
     <ui:Instance template="PauseMenu" name="PauseMenu" class="PAUSE_MENU" style="display: none; position: absolute;">
         <ui:GroupBox name="PC_Controls" style="right: 100px; position: absolute; width: 500px;">
-            <ui:Label text="KEYBOARD" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px;"/>
-            <ui:Label text="Movement = WASD&#10;Jump = Space&#10;Interact = E&#10;Attack = Left Mouse&#10;Inventory = 1 / 2 / 3 / 4 / 5" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center;"/>
+            <ui:Label text="KEYBOARD" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px;">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1304940577402880)"/>
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Movement = WASD&#10;Jump = Space&#10;Interact = E&#10;Attack = Left Mouse&#10;Inventory = 1 / 2 / 3 / 4 / 5" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center;">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1305239006326784)"/>
+                </Bindings>
+            </ui:Label>
         </ui:GroupBox>
         <ui:GroupBox name="Controller_Controls" style="position: absolute; left: 210px; width: 390px;">
             <ui:Label text="CONTROLLER" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px;"/>
-            <ui:Label text="Movement = LS&#10;Jump = X&#10;Interact = □&#10;Attack = R2&#10;Inventory = L1 / R1&#10;" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center;"/>
+            <ui:Label text="Movement = LS&#10;Jump = X&#10;Interact = □&#10;Attack = R2&#10;Inventory = L1 / R1&#10;" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center;">
+                <Bindings>
+                    <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1305428593061888)"/>
+                </Bindings>
+            </ui:Label>
         </ui:GroupBox>
         <ui:VisualElement name="WARNING" style="flex-grow: 1; width: 100%; height: 100%; justify-content: center; align-self: center; background-color: rgba(0, 0, 0, 0.784); display: none;">
             <ui:Instance template="WarningBox" name="WARNING_BOX"/>

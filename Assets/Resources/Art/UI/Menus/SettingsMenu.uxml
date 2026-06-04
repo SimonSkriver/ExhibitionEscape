@@ -1,6 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/SliderStyles.uss?fileID=7433441132597879392&amp;guid=401769f8bac4a5c4c849a5bdccb9b5d6&amp;type=3#SliderStyles"/>
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
+    <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/RadioButtonStyle.uss?fileID=7433441132597879392&amp;guid=977ae3c879c743b4a950bbf35af89956&amp;type=3#RadioButtonStyle"/>
     <ui:VisualElement style="flex-grow: 1; justify-content: space-evenly; background-color: rgb(122, 152, 112); border-left-color: rgb(57, 82, 42); border-right-color: rgb(58, 82, 43); border-top-color: rgb(60, 87, 45); border-bottom-color: rgb(52, 75, 38); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; width: 450px; height: 750px; position: absolute; padding-right: 20px; padding-left: 20px; padding-bottom: 20px;">
         <ui:Label text="INDSTILLINGER" name="Header" style="padding-bottom: 10px; padding-top: 15px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(57, 82, 42); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); letter-spacing: 5px; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(57, 82, 42); position: absolute; top: 8px; white-space: nowrap; align-self: center; font-size: 45px;">
             <Bindings>
@@ -88,18 +89,17 @@
                         </UnityEngine.Localization.LocalizedString>
                     </Bindings>
                 </ui:Label>
-                <ui:Button text="English" name="Language" class="menuButton">
-                    <Bindings>
-                        <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(171942276345856)">
-                            <variables>
-                                <UnityEngine.Localization.LocalVariable name="Header">
-                                    <UnityEngine.Localization.SmartFormat.PersistentVariables.BoolVariable/>
-                                </UnityEngine.Localization.LocalVariable>
-                            </variables>
-                        </UnityEngine.Localization.LocalizedString>
-                    </Bindings>
-                </ui:Button>
             </ui:GroupBox>
+            <ui:VisualElement name="" style="flex-grow: 1; width: 400px; height: 27%; flex-direction: row; align-items: center; justify-content: space-around; align-self: center; padding-right: 20px; padding-left: 20px; top: 10px;">
+                <ui:RadioButton name="EN" enabled="true" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="DE" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="DA" enabled="true" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="" style="flex-grow: 1; width: 400px; height: 27%; flex-direction: row; align-items: center; justify-content: space-around; align-self: center; padding-right: 20px; padding-left: 20px; visibility: visible; top: 50px;">
+                <ui:RadioButton name="SV" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 5;"/>
+                <ui:RadioButton name="NO" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="FI" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+            </ui:VisualElement>
         </ui:GroupBox>
     </ui:VisualElement>
 </ui:UXML>

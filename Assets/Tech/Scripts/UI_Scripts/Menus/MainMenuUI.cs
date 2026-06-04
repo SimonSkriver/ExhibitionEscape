@@ -4,7 +4,6 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 public class MainMenuUI : MonoBehaviour
@@ -57,6 +56,11 @@ public class MainMenuUI : MonoBehaviour
         btnSelect.RegisterCallback<ClickEvent>(OnLevelSelect);
         lvlSelectRoot.Q<Button>("PREVIOUS").RegisterCallback<ClickEvent>(OnLevelSelect);
         lvlSelectRoot.Q<Button>("NEXT").RegisterCallback<ClickEvent>(OnLevelSelect);
+
+        btnSelect.RegisterCallback<NavigationSubmitEvent>(OnLevelSelect);
+        lvlSelectRoot.Q<Button>("PREVIOUS").RegisterCallback<NavigationSubmitEvent>(OnLevelSelect);
+        lvlSelectRoot.Q<Button>("NEXT").RegisterCallback<NavigationSubmitEvent>(OnLevelSelect);
+
         btnSelect.RegisterCallback<PointerEnterEvent>(OnHover);
         lvlSelectRoot.Q<Button>("PREVIOUS").RegisterCallback<PointerEnterEvent>(OnHover);
         lvlSelectRoot.Q<Button>("NEXT").RegisterCallback<PointerEnterEvent>(OnHover);
@@ -73,9 +77,9 @@ public class MainMenuUI : MonoBehaviour
 
     public void OnHover(PointerEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
 
-    void OnLevelSelect(ClickEvent evt) {
-        var btn = (Button)evt.target;
-
+    void OnLevelSelect(ClickEvent evt) => LevelSelect((Button)evt.target);
+    void OnLevelSelect(NavigationSubmitEvent evt) => LevelSelect((Button)evt.target);
+    void LevelSelect(Button btn) {
         // Set CamID
         previousCamID = currentCamID;
         switch (btn.name) {

@@ -38,8 +38,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 172300671234048
-    m_Localized: "{ID:cond:=0?LYD |=1?Master |=2?Musik |=3?Lydeffekter |=4?Milj\xF8
-      }"
+    m_Localized: "{ID:cond:=0?LYD \n|=1?Master \n|=2?Musik \n|=3?Lydeffekter \n|=4?Milj\xF8
+      \n}"
     m_Metadata:
       m_Items:
       - rid: 3975410346420863328
@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3975410346420863328
   - m_Id: 189366992220160
-    m_Localized: "RAPORT\xC9R BUG"
+    m_Localized: "RAPORT\xC9R FEJL"
     m_Metadata:
       m_Items: []
   - m_Id: 203204110168064
@@ -65,11 +65,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 204996713754624
-    m_Localized: "Hoved St\xF8rrelse"
+    m_Localized: "Hovedst\xF8rrelse"
     m_Metadata:
       m_Items: []
   - m_Id: 207271179956224
-    m_Localized: "Hals L\xE6ngde"
+    m_Localized: "Halsl\xE6ngde"
     m_Metadata:
       m_Items: []
   - m_Id: 207382316429312
@@ -87,6 +87,25 @@ MonoBehaviour:
       - rid: 3975410346420863328
   - m_Id: 1162631031209984
     m_Localized: ADVARSEL!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1304940577402880
+    m_Localized: TASTATUR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305239006326784
+    m_Localized: "Bev\xE6gelse = WASD\nHop = Mellemrum\nInteragere = E\nAngrib =
+      Venstre Musseknap\nInventar = 1 / 2 / 3 / 4 / 5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305428593061888
+    m_Localized: "Bev\xE6gelse = LS\nHop = X\nInteragere = \u25A1\nAngrib = R2\nInventar
+      = L1 / R1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1165721486671872
+    m_Localized: "Hvis du forlader \xF8'en,\nvil du miste din fremgang!\n\nVil du
+      gerne forts\xE6tte?"
     m_Metadata:
       m_Items: []
   references:

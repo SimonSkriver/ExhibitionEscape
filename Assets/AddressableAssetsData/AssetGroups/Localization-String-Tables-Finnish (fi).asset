@@ -15,6 +15,13 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Finnish (fi)
   m_GUID: 2f8b9870cd1ee984d873a55ee2300cd2
   m_SerializeEntries:
+  - m_GUID: d00982b9ab0cb9e4d8140f297434df24
+    m_Address: MenuStrings_fi
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fi
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: db2afa2919174cd46901311d06f46c99
     m_Address: WorldStrings_fi
     m_ReadOnly: 1
