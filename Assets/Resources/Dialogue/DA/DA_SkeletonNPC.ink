@@ -9,7 +9,8 @@ zzz
 
 
 ===Fishing===
-Jeg prøvede at fange noget GIGANTISK, men min fiskestang fløj ud ad hænderne på mig :(
+Jeg prøvede at fange noget GIGANTISK, men min fiskestang fløj ud ad hænderne på mig.
+Øv...
 -> END
 
 
@@ -73,3 +74,12 @@ Det første jeg så, da jeg kom til denne ø, var denne badering
 Hvem har placeret den dér?
 Og hvorfor?
 -> END
+
+
+
+===TreeThief===
+Ik' sig til kaptajnen at jeg har spist alle hans æbler... 
+-> END
+
+
+

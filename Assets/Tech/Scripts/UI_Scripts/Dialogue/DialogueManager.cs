@@ -6,7 +6,7 @@ using Ink.Runtime;
 public class DialogueManager : MonoBehaviour
 {   
     public static DialogueManager Instance;
-    public bool isWritingDialogue;
+    public bool isWritingDialogue, isShowingChoices;
     string dialogueLine;
     public Animator npcAnim;
 
@@ -78,6 +78,8 @@ public class DialogueManager : MonoBehaviour
                 isWritingDialogue = true;
                 dialogueLine = story.Continue();
                 UI_Manager.Instance.dialogueUI.ChangeDialogueUI(dialogueLine, story.currentChoices);
+            } else if (isShowingChoices) {
+                return;
             } else {
                 ExitDialogue();
             }

@@ -1,6 +1,7 @@
 using Ink.Parsed;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class InputManager : MonoBehaviour
 {
@@ -87,15 +88,15 @@ public class InputManager : MonoBehaviour
     }
 
     public void EnablePlayer() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
         
         playerInput.enabled = true;
         playerCam.SetActive(true);
     }
     public void DisablePlayer() {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
 
         playerInput.enabled = false;
         playerCam.SetActive(false);

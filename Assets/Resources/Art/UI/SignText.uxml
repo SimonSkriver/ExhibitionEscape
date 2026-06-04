@@ -1,5 +1,12 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Label text="KAPTAJNENS &#10;ÆBLETRÆ&#10;" style="white-space: normal; -unity-text-align: upper-center; width: 800px; height: 500px; -unity-font-style: bold; font-size: 70px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-text-outline-width: 3px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;);">
-        <ui:Label text="SPIS IKKE ÆBLERNE&#10;ELLERS SKAL DU &#10;GÅ PLANKEN UD" style="white-space: normal; -unity-text-align: middle-center; width: 800px; height: 500px; -unity-font-style: bold; font-size: 42px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-text-outline-width: 3px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); top: 40px;"/>
+        <ui:Label text="SPIS IKKE ÆBLERNE&#10;ELLERS SKAL DU &#10;GÅ PLANKEN UD" style="white-space: normal; -unity-text-align: middle-center; width: 800px; height: 500px; -unity-font-style: bold; font-size: 42px; color: rgba(0, 0, 0, 0.698); -unity-text-outline-color: rgba(0, 0, 0, 0.698); -unity-text-outline-width: 3px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); top: 40px;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:42f4e1f0cc785d841ab674f4cbcad101" entry="Id(272811274240)"/>
+            </Bindings>
+        </ui:Label>
+        <Bindings>
+            <UnityEngine.Localization.LocalizedString property="text" table="GUID:42f4e1f0cc785d841ab674f4cbcad101" entry="Id(15729799168)"/>
+        </Bindings>
     </ui:Label>
 </ui:UXML>

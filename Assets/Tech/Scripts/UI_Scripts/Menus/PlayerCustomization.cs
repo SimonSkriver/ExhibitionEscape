@@ -53,10 +53,12 @@ public class PlayerCustomization : MonoBehaviour
                 break;
             case "ConfirmPlayerCustomization":
                 SFXManager.PlayEffect("ConfirmColor");
-                PlayerStats.Instance.savedColor = m_skin.color;
                 UI_Manager.Instance.HidePlayerCustomizeUI();
                 break;
         }
+
+        // FIX for PlayerSkin is sometimes black and can't be changed
+        PlayerStats.Instance.savedColor = m_skin.color;
     }
 
     void OnCustomizationSlider(ChangeEvent<float> evt) {
@@ -73,9 +75,9 @@ public class PlayerCustomization : MonoBehaviour
                 float sldValPercent = (sld.value - sld.lowValue) / (sld.highValue - sld.lowValue);
 
                 // Lerp between given numbers
-                float xScreenPos = Mathf.Lerp(-0.05f, 0f, sldValPercent);
-                float yScreenPos = Mathf.Lerp(-0.15f, 0.08f, sldValPercent);
-                float targetOffset = Mathf.Lerp(-0.35f, -1f, sldValPercent);
+                float xScreenPos = Mathf.Lerp(-0.1f, 0.04f, sldValPercent);
+                float yScreenPos = Mathf.Lerp(-0.15f, 0.07f, sldValPercent);
+                float targetOffset = Mathf.Lerp(0f, -1.71f, sldValPercent);
 
                 // Set Camera Target Offset
                 GameManager.customCam.GetComponent<CinemachineOrbitalFollow>().TargetOffset.z = targetOffset;

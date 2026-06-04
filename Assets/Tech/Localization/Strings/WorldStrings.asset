@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: WorldStrings
+  m_EditorClassIdentifier: Unity.Localization.Editor::UnityEditor.Localization.StringTableCollection
+  m_SharedTableData: {fileID: 11400000, guid: 42f4e1f0cc785d841ab674f4cbcad101, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: c41b98d2a41a5cb4899375f2dfb82004, type: 2}
+  - {fileID: 11400000, guid: d023264a30fee0f4f8f1ebd919da4d0f, type: 2}
+  - {fileID: 11400000, guid: 40ed4e2ecfdadcb4fb4b0458567faece, type: 2}
+  - {fileID: 11400000, guid: cda40d1cbadd25b4793e035908f694fa, type: 2}
+  - {fileID: 11400000, guid: 591887306196fba40845b04ae6079cc1, type: 2}
+  - {fileID: 11400000, guid: db2afa2919174cd46901311d06f46c99, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

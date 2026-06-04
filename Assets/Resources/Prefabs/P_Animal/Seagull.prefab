@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Seagull
   orbit: {fileID: 4635035963177028145}
-  range: 100
+  range: 70
   flySpeed: 10
   audioClips:
   - {fileID: 8300000, guid: f4511afb701880041a045b58a51ac574, type: 3}

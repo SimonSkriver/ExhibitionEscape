@@ -20,6 +20,7 @@ public class DialogueUI : MonoBehaviour
 
     #region Choices
     public void HideChoices() {
+        DialogueManager.Instance.isShowingChoices = false;
         foreach (var choice in choices) {
             choice.RegisterCallback<ClickEvent>(OnChoiceSelected);
             choice.style.display = DisplayStyle.None;
@@ -30,6 +31,8 @@ public class DialogueUI : MonoBehaviour
         foreach (Choice choice in dialogueChoices) {
             choices[choice.index].text = choice.text;
             choices[choice.index].style.display = DisplayStyle.Flex;
+            Debug.Log("CHOICE");
+            DialogueManager.Instance.isShowingChoices = true;
         }
     }
 

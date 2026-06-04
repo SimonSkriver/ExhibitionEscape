@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     [Tooltip("How many seconds before spawning the next")]
     [SerializeField] int spawnInterval = 2;
 
+    [SerializeField] bool isSpawningInRuntime;
+
     void Start() => StartCoroutine(SpawnPrefabs());
 
     IEnumerator SpawnPrefabs() {
@@ -15,5 +17,16 @@ public class Spawner : MonoBehaviour
             Instantiate(prefab, transform.position, transform.rotation);
             yield return new WaitForSeconds(spawnInterval);
         }
+
+        if (isSpawningInRuntime) StartCoroutine(SpawnCooldown());
+    }
+    
+    IEnumerator SpawnCooldown() {
+        float cooldown = Random.Range(10, 100);
+        Debug.Log("Spawning in: " + cooldown);
+        yield return new WaitForSeconds(cooldown);
+        amount = Random.Range(0, 5);
+        Debug.Log("Spawning " + amount + " seagulls");
+        StartCoroutine(SpawnPrefabs());
     }
 }
