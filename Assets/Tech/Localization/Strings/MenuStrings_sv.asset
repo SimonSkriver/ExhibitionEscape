@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MenuStrings_sv
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: sv
+  m_SharedData: {fileID: 11400000, guid: 0e0ba97df2b1b9a438f0e8abd1ec2cd9, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4790090667302322815
+  m_TableData:
+  - m_Id: 63137755136
+    m_Localized: "{islandID:cond:=0?Den F\xF6rsvunna Skatten\n|=1?Den Br\xE4nda Munken\n|=2?Paddesvampar\n|???\n}"
+    m_Metadata:
+      m_Items:
+      - rid: 4790090667302322815
+  - m_Id: 176562746798080
+    m_Localized: "{Header:INST\xC4LLNINGAR|Inst\xE4llningar}"
+    m_Metadata:
+      m_Items:
+      - rid: 4790090667302322815
+  - m_Id: 172300671234048
+    m_Localized: "{ID:cond:=0?Ljud\n|=1?Huvudvolym\n|=2?Musik\n|=3?Ljudeffekter\n|=4?Milj\xF6\n}"
+    m_Metadata:
+      m_Items:
+      - rid: 4790090667302322815
+  - m_Id: 171942276345856
+    m_Localized: "{Header:SPR\xC5K|Svensk}"
+    m_Metadata:
+      m_Items:
+      - rid: 4790090667302322815
+  - m_Id: 1166099980664832
+    m_Localized: '{isLeavingButton:Ja|Neeeeeeeeeeej}'
+    m_Metadata:
+      m_Items:
+      - rid: 4790090667302322815
+  - m_Id: 203462391214080
+    m_Localized: "Forts\xE4tta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 172065182035968
+    m_Localized: Tillbaka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 189366992220160
+    m_Localized: RAPPORTERA FEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32380283629568
+    m_Localized: "V\xE4lja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 203204110168064
+    m_Localized: "L\xE4mna \xD6n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204867806015488
+    m_Localized: "Bekr\xE4fta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207409470353408
+    m_Localized: "Shorts F\xE4rg"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207382316429312
+    m_Localized: "Hudf\xE4rg"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204996713754624
+    m_Localized: Huvudstorlek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207271179956224
+    m_Localized: "Halsl\xE4ngd"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1304940577402880
+    m_Localized: TANGENTBORD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1162631031209984
+    m_Localized: VARNING!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305428593061888
+    m_Localized: "R\xF6relse = LS\nHoppa = X\nP\xE5verka Varandra = \u25A1\nAttack
+      = R2\nLager = L1 / R1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305239006326784
+    m_Localized: "R\xF6relse = WASD\nHoppa = Mellanslagstangenten\nP\xE5verka Varandra
+      = E\nAttack = V\xE4nster Musknapp\nLager = 1 / 2 / 3 / 4 / 5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1165721486671872
+    m_Localized: "Om du l\xE4mna \xF6n\nf\xF6rlorar du dina framsteg!\n\nVill du
+      forts\xE4tta?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4790090667302322815
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 63137755136
+        - id: 176562746798080
+        - id: 172300671234048
+        - id: 171942276345856
+        - id: 1166099980664832
