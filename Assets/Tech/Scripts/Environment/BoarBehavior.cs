@@ -26,28 +26,32 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float wanderSpeed = 1f;
 
     [Header("Chasing")]
-    [SerializeField] private float chaseStartDistance = 15f;
-    [SerializeField] private float chaseSpeed = 2.5f;
+    [SerializeField] private float chaseStartDistance = 20f;
+    [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float chaseSpeedIncrease = 0.5f;
-    [SerializeField] private float giveUpTime = 4f;
+    [SerializeField] private float giveUpTime = 10f;
+    [SerializeField] private float detectionCooldownTime = 2f;
+    private bool detectionCooldownActive = false;
+    private Coroutine detectionCooldownCoroutine;
+    private bool isThreatRoutineRunning = false;
 
     [Header("Vision")]
-    [SerializeField] private float viewDistance = 25f;
-    [SerializeField] private float viewAngle = 60f;
+    [SerializeField] private float viewDistance = 40f;
+    [SerializeField] private float viewAngle = 180f;
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private LayerMask chargeHitMask;
     [SerializeField] private LayerMask visionObstacleMask;
 
     [Header("Threat Call")]
-    [SerializeField] private float threatCallTime = 1f;
+    [SerializeField] private float threatCallTime = 2f;
 
     [Header("Charge")]
     [SerializeField] private float chargeStartDistance = 10f;
     [SerializeField] private float chargeWindupTime = 1f;
     [SerializeField] private float chargeSpeed = 10f;
     [SerializeField] private float chargePastPlayerDistance = 5f;
-    [SerializeField] private float chargeHitRadius = 0.5f;
-    [SerializeField] private float afterChargePause = 1f;
+    [SerializeField] private float chargeHitRadius = 0.75f;
+    [SerializeField] private float afterChargePause = 1.5f;
 
     [Header("Health")]
     [SerializeField] private float boarHealth = 5;
@@ -57,9 +61,9 @@ public class BoarBehavior : MonoBehaviour
 
     [Header("Damage")]
     [SerializeField] private int playerDamage = 25;
-    [SerializeField] private float knockbackDistance = 10f;
+    [SerializeField] private float knockbackDistance = 15f;
     [SerializeField] private float knockbackDuration = 2f;
-    [SerializeField] private float knockbackUpHeight = 2f;
+    [SerializeField] private float knockbackUpHeight = 3f;
 
     [Header("Jungle Area")]
     [SerializeField] private Collider[] jungleAreas;
@@ -81,8 +85,6 @@ public class BoarBehavior : MonoBehaviour
 
     private float wanderCounter;
     private float lostSightCounter;
-
-    private bool hasSpottedPlayer = false;
     private Vector3 lastSeenPlayerPosition;
 
     private Vector3 chargeDirection;
@@ -137,9 +139,8 @@ public class BoarBehavior : MonoBehaviour
 
     private void UpdateWandering()
     {
-        if (CanSeePlayer() && !hasSpottedPlayer)
+        if (CanDetectPlayer())
         {
-            hasSpottedPlayer = true;
             StartCoroutine(ThreatCallThenChase());
             return;
         }
@@ -159,11 +160,10 @@ public class BoarBehavior : MonoBehaviour
         }
     }
 
-   private void UpdateGrazing()
+    private void UpdateGrazing()
     {
-        if (CanSeePlayer() && !hasSpottedPlayer)
+        if (CanDetectPlayer())
         {
-            hasSpottedPlayer = true;
             StartCoroutine(ThreatCallThenChase());
             return;
         }
@@ -179,13 +179,7 @@ public class BoarBehavior : MonoBehaviour
 
     private bool HasReachedDestination()
     {
-        if (agent.pathPending)
-            return false;
-
-        if (agent.remainingDistance > agent.stoppingDistance)
-            return false;
-
-        return true;
+        return !agent.pathPending && agent.remainingDistance > agent.stoppingDistance;
     }
 
     private void SetNewWanderDestination()
@@ -212,7 +206,7 @@ public class BoarBehavior : MonoBehaviour
 
             agent.SetDestination(player.position);
 
-            if (distanceToPlayer <= chargeStartDistance && CanSeePlayer())
+            if (distanceToPlayer <= chargeStartDistance) //&& CanSeePlayer()
             {
                 StartCoroutine(WindupThenCharge());
                 return;
@@ -224,20 +218,49 @@ public class BoarBehavior : MonoBehaviour
 
             agent.SetDestination(lastSeenPlayerPosition);
 
+            if(HasReachedDestination() && !CanSeePlayer())
+                anim.SetInteger("BoarAnimState", 9);
+
             if (lostSightCounter >= giveUpTime)
             {
+                StartDetectionCooldown();
                 ChangeState(BoarState.Wandering);
             }
         }
     }
 
+    private void StartDetectionCooldown()
+    {
+        if (detectionCooldownCoroutine != null)
+        {
+            StopCoroutine(detectionCooldownCoroutine);
+        }
+
+        detectionCooldownCoroutine = StartCoroutine(DetectionCooldownRoutine());
+    }
+
+    private IEnumerator DetectionCooldownRoutine()
+    {
+        detectionCooldownActive = true;
+
+        yield return new WaitForSeconds(detectionCooldownTime);
+
+        detectionCooldownActive = false;
+        detectionCooldownCoroutine = null;
+    }
+
     private IEnumerator ThreatCallThenChase()
     {
+        if (isThreatRoutineRunning)
+            yield break;
+        
+        isThreatRoutineRunning = true;
+
         float timer = 0f;
         float rotateTime = 1f;
         float rotationSpeed = 180f;
+        
         agent.updateRotation = false;
-        agent.updatePosition = false;
 
         while (timer < rotateTime)
         {
@@ -258,9 +281,10 @@ public class BoarBehavior : MonoBehaviour
         ChangeState(BoarState.Threatening);
         boarSound.PlayBoarClip("Alert");   
         agent.updateRotation = true;
-        agent.updatePosition = true;
 
         yield return new WaitForSeconds(threatCallTime);
+
+        isThreatRoutineRunning = false;
 
         if (currentState != BoarState.Threatening || isDead)
             yield break;
@@ -277,6 +301,9 @@ public class BoarBehavior : MonoBehaviour
 
     private IEnumerator WindupThenCharge()
     {
+        if (isDead)
+            yield break;
+
         ChangeState(BoarState.Windup);
 
         boarSound.PlayBoarClip("Charge");
@@ -315,15 +342,16 @@ public class BoarBehavior : MonoBehaviour
     {
         float moveDistance = chargeSpeed * Time.deltaTime;
 
-       if (Physics.SphereCast(transform.position + Vector3.up * 0.5f, chargeHitRadius, chargeDirection, out RaycastHit hit, moveDistance, chargeHitMask, QueryTriggerInteraction.Collide))
+       if (Physics.SphereCast(transform.position + Vector3.up * 1.5f, chargeHitRadius, chargeDirection, out RaycastHit hit, moveDistance, chargeHitMask, QueryTriggerInteraction.Collide))
         {
             GameObject hitObject = hit.collider.gameObject;
 
-            if (hitObject.CompareTag("BananaPeel"))
+
+           /* if (hitObject.CompareTag("BananaPeel"))
             {
                 KillBoarByBananaPeel();
                 return;
-            }
+            }*/
 
             if (hitObject.CompareTag("Obstacle"))
             {
@@ -331,12 +359,13 @@ public class BoarBehavior : MonoBehaviour
                 return;
             }
 
-            if (hitObject.CompareTag("Player"))
+            if (HitBelongsToPlayer(hit.collider))
             {
                 HitPlayer();
                 StartCoroutine(PauseThenChaseAgain());
                 return;
             }
+            
         }
 
         Vector3 nextPosition = transform.position + chargeDirection * moveDistance;
@@ -350,11 +379,28 @@ public class BoarBehavior : MonoBehaviour
 
         transform.position = nextPosition;
 
-        if (Vector3.Distance(transform.position, chargeTarget) <= 0.5f)
+        if (Vector3.Distance(transform.position, chargeTarget) <= 0.1f)
         {
             StartCoroutine(PauseThenChaseAgain());
             return;
         }
+    }
+
+    private bool HitBelongsToPlayer(Collider collider)
+    {
+        if (player == null)
+            return false;
+
+        if (collider.transform == player)
+            return true;
+
+        if (collider.transform.IsChildOf(player))
+            return true;
+
+        if (collider.GetComponentInParent<PlayerController>() != null)
+            return true;
+
+        return false;
     }
 
     private IEnumerator PauseThenChaseAgain()
@@ -362,7 +408,7 @@ public class BoarBehavior : MonoBehaviour
         if (!EnableAgentAgain())
             yield break;
 
-        ChangeState(BoarState.Recharge); //Perhaps a different enum
+        ChangeState(BoarState.Recharge);
 
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
@@ -417,6 +463,11 @@ public class BoarBehavior : MonoBehaviour
 
         if (IsPlayerInsideJungle())
         {
+            agent.SetDestination(player.position);
+            anim.SetInteger("BoarAnimState", 3); //Chasing
+
+            yield return new WaitForSeconds(1f);
+
             ChangeState(BoarState.Chasing);
         }
         else
@@ -521,7 +572,7 @@ public class BoarBehavior : MonoBehaviour
         }
 
         if (anim != null)
-            //anim.SetTrigger("BoarFlip");
+            anim.SetTrigger("BoarFlip");
 
         StartCoroutine(DestroyBoarAfterDelay());
     }
@@ -579,8 +630,6 @@ public class BoarBehavior : MonoBehaviour
                 agent.speed = wanderSpeed;
                 agent.isStopped = false;
             }
-
-            hasSpottedPlayer = false;
             lostSightCounter = 0f;
             wanderCounter = wanderTimer;
         }
@@ -679,12 +728,17 @@ public class BoarBehavior : MonoBehaviour
         if (distanceToPlayer > viewDistance)
             return false;
 
-        if (distanceToPlayer <= chaseStartDistance && !hasSpottedPlayer)
-            return true;
-
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer.normalized);
 
         if (angleToPlayer > viewAngle / 2f)
+            return false;
+
+        return HasLineOfSightToPlayer();
+    }
+
+    private bool HasLineOfSightToPlayer()
+    {
+        if (player == null)
             return false;
 
         Vector3 rayOrigin = transform.position + Vector3.up * 0.8f;
@@ -695,13 +749,48 @@ public class BoarBehavior : MonoBehaviour
 
         if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit, viewDistance, combinedMask))
         {
-            if (hit.collider.CompareTag("Player"))
-            {
-                return true;
-            }
+            Debug.DrawLine(rayOrigin, hit.point, Color.red);
+
+            return HitBelongsToPlayer(hit.collider);
         }
 
         return false;
+    }
+    
+    private bool PlayerIsWithinChaseDistance()
+    {
+        if (player == null)
+            return false;
+
+        Vector3 directionToPlayer = player.position - transform.position;
+        directionToPlayer.y = 0f;
+
+        return directionToPlayer.magnitude <= chaseStartDistance;
+    }
+
+    private bool CanDetectPlayer()
+    {
+        if (detectionCooldownActive)
+            return false;
+
+        return CanSeePlayer() || CanSensePlayerNearby();
+    }
+
+    private bool CanSensePlayerNearby()
+    {
+        if (player == null)
+            return false;
+
+        if (!IsPlayerInsideJungle())
+            return false;
+
+        if (!PlayerIsWithinChaseDistance())
+            return false;
+
+        if (!HasLineOfSightToPlayer())
+            return false;
+
+        return true;
     }
 
     private bool IsPlayerInsideJungle()
