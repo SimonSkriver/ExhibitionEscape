@@ -81,7 +81,7 @@ public class BoarBehavior : MonoBehaviour
 
     [SerializeField] private float navMeshCheckDistance = 2f;
 
-    private BoarState currentState;
+    [SerializeField] private BoarState currentState;
 
     private float wanderCounter;
     private float lostSightCounter;
@@ -179,7 +179,7 @@ public class BoarBehavior : MonoBehaviour
 
     private bool HasReachedDestination()
     {
-        return !agent.pathPending && agent.remainingDistance > agent.stoppingDistance;
+        return !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance;
     }
 
     private void SetNewWanderDestination()
@@ -630,8 +630,8 @@ public class BoarBehavior : MonoBehaviour
                 agent.speed = wanderSpeed;
                 agent.isStopped = false;
             }
+            SetNewWanderDestination();
             lostSightCounter = 0f;
-            wanderCounter = wanderTimer;
         }
 
         else if (currentState == BoarState.Grazing)
