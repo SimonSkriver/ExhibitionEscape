@@ -11,12 +11,8 @@ public class EventManager : MonoBehaviour
             return;
         }
         Instance = this;
-
-
     }
 
     public event Action Boat;
     public void StartBoatEvent() => Boat?.Invoke();
-
-
 }

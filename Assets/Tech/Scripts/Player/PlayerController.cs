@@ -1,3 +1,4 @@
+using Ink.Parsed;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
     public bool isSprinting { get; private set; }
     public bool isMoving { get; private set; }
     public bool isSliding { get; private set; }
-
 
     void Awake()
     {
@@ -106,18 +106,11 @@ public class PlayerController : MonoBehaviour
         {
             A.SetBool("isWalking", true);
             isMoving = true;
-            if (isSprinting)
-            {
-                A.SetBool("isRunning", isSprinting);
-            }
-            else if (A.GetBool("isRunning") != isSprinting)
-            {
-                A.SetBool("isRunning", isSprinting);
-            }
-        } 
+        }
         else 
         {
             A.SetBool("isWalking", false);
+            A.SetBool("isRunning", isSprinting);
             isMoving = false;
             isSprinting = false;
         }
@@ -125,12 +118,28 @@ public class PlayerController : MonoBehaviour
 
     public void Sprint()
     {
-        if (!isMoving) return;
-        isSprinting = !isSprinting;
+        isSprinting = true;
+        A.SetBool("isRunning", isSprinting);
+        SFXManager.PlayEffect("Sprint");
+    }
 
-        if (isSprinting && isMoving)
+    public void StopSprint()
+    {
+        isSprinting = false;
+        A.SetBool("isRunning", isSprinting);
+    } 
+
+    public void ToggleSprint()
+    {
+        if (isMoving)
         {
-            SFXManager.PlayEffect("Sprint");
+            isSprinting = !isSprinting;
+            A.SetBool("isRunning", isSprinting);
+
+            if (isSprinting)
+            {
+                SFXManager.PlayEffect("Sprint");
+            }
         }
     }
 
