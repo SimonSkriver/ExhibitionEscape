@@ -21142,6 +21142,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3035011473930193883, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: CollideAgainst.m_Bits
+      value: 1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035011473930193883, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: AvoidObstacles.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035011473930193883, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
+      propertyPath: AvoidObstacles.DistanceLimit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3175133170858230806, guid: 74b750af7492e4a4fb521a91edaed558, type: 3}
       propertyPath: player
       value: 
