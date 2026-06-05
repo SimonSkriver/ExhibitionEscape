@@ -9,6 +9,7 @@ public class PlayerHUD : MonoBehaviour
 
     TemplateContainer root, HP;
     List<TemplateContainer> InvSlot;
+    Color baseColor = new Color(0.263f, 0.263f, 0.263f, 1f);
 
     private void Awake() {
         if (Instance != null) { Destroy(gameObject); }
@@ -32,16 +33,16 @@ public class PlayerHUD : MonoBehaviour
     }
 
     IEnumerator HealthAnimationUI(int health) {
-        float size = 0.5f;
+        float size = 0.75f;
 
-        while (size < 0.7f) {
+        while (size < 0.85f) {
             size += 0.01f;
             HP.style.scale = new Vector3(size, size, size);
 
             yield return new WaitForSeconds(0.001f);
         }
 
-        while (size > 0.5f) {
+        while (size > 0.75f) {
             size -= 0.01f;
             HP.style.scale = new Vector3(size, size, size);
 
@@ -115,15 +116,12 @@ public class PlayerHUD : MonoBehaviour
         InvSlot[slotID].Q<Label>("item_name").text = itemName;
     }
 
-    private void SetSelectedSlot(TemplateContainer slot, bool selected)
+    private void SetSelectedSlot(TemplateContainer tempSlot, bool selected)
     {
+
+        VisualElement slot = tempSlot.Q<VisualElement>("slot");
         if (selected)
         {
-            slot.style.borderTopWidth = 3;
-            slot.style.borderBottomWidth = 3;
-            slot.style.borderLeftWidth = 3;
-            slot.style.borderRightWidth = 3;
-
             slot.style.borderTopColor = Color.yellow;
             slot.style.borderBottomColor = Color.yellow;
             slot.style.borderLeftColor = Color.yellow;
@@ -131,15 +129,10 @@ public class PlayerHUD : MonoBehaviour
         }
         else
         {
-            slot.style.borderTopWidth = 0;
-            slot.style.borderBottomWidth = 0;
-            slot.style.borderLeftWidth = 0;
-            slot.style.borderRightWidth = 0;
-
-            slot.style.borderTopColor = Color.clear;
-            slot.style.borderBottomColor = Color.clear;
-            slot.style.borderLeftColor = Color.clear;
-            slot.style.borderRightColor = Color.clear;
+            slot.style.borderTopColor = baseColor;
+            slot.style.borderBottomColor = baseColor;
+            slot.style.borderLeftColor = baseColor;
+            slot.style.borderRightColor = baseColor;
         }
     }
 }
