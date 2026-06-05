@@ -110,9 +110,7 @@ public class PlayerController : MonoBehaviour
         else 
         {
             A.SetBool("isWalking", false);
-            A.SetBool("isRunning", isSprinting);
             isMoving = false;
-            isSprinting = false;
         }
     }
 
