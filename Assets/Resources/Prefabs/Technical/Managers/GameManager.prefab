@@ -453,7 +453,8 @@ PrefabInstance:
       propertyPath: HorizontalAxis.Value
       value: -160
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1618366209886745718, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

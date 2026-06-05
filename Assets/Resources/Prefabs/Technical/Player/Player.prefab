@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 6934698871289020828}
   - component: {fileID: 4436231094885905773}
   - component: {fileID: 4572075553160216814}
+  - component: {fileID: 4012912638030776819}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -528,8 +529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d224d5a50d45f4593cc2ab6c07182d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  WaterSpeedMult: 0.5
   MovementSpeed: 5
-  SprintSpeed: 7
+  SprintSpeedMult: 1.25
   JumpPower: 0.5
   canTakeFallDamage: 1
   skinnedMeshRenderer: {fileID: 0}
@@ -809,6 +811,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &4012912638030776819
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047162832961064572}
+  m_Enabled: 1
 --- !u!1 &2245853109052884041
 GameObject:
   m_ObjectHideFlags: 0

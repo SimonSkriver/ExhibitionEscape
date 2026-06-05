@@ -9490,14 +9490,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7649747237781186817, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
-      propertyPath: WaterSpeedMult
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7649747237781186817, guid: 44fa4c020ce5ee7488e74bd28d637620, type: 3}
-      propertyPath: SprintSpeedMult
-      value: 1.25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
