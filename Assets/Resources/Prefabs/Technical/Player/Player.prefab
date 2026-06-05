@@ -448,6 +448,7 @@ Transform:
   m_Children:
   - {fileID: 7813045640520339092}
   - {fileID: 3906704511777942031}
+  - {fileID: 169026641774825951}
   - {fileID: 3769304917319399551}
   - {fileID: 1245244180488032769}
   m_Father: {fileID: 0}
@@ -994,6 +995,87 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.04739912, y: 0.50319666, z: 0}
     m_Extent: {x: 0.45595133, y: 1.8265815, z: 0.9448335}
   m_DirtyAABB: 0
+--- !u!1 &3442343955693543333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169026641774825951}
+  - component: {fileID: 5628189752584362003}
+  - component: {fileID: 8453459393739264475}
+  - component: {fileID: 664183048732609760}
+  m_Layer: 3
+  m_Name: InteractUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169026641774825951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442343955693543333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000008940696, y: -0.000000111758695, z: -0.000000019508859, w: 1}
+  m_LocalPosition: {x: -0.871, y: 1.348, z: 0.41}
+  m_LocalScale: {x: 0.25000003, y: 0.24999997, z: 0.25}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 3659691701271155142}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5628189752584362003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442343955693543333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: ae777bbdf062a1e4aa3fe4dc62b12267, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: e0c4a24289223e542913d5d2e1cfb850, type: 3}
+  m_SortingOrder: 0
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 100
+  m_WorldSpaceHeight: 100
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &8453459393739264475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442343955693543333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcffe65c3f298aa4cb108f3a27f571d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldSpaceUIFacing
+--- !u!114 &664183048732609760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3442343955693543333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b651044148d290479161932bccd78c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractUI
 --- !u!1 &3465744230281513517
 GameObject:
   m_ObjectHideFlags: 0
