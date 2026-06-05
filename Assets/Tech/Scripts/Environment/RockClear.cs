@@ -31,4 +31,9 @@ public class RockClear : MonoBehaviour, IInteractable
     {
         return true;
     }
+
+    public bool ShowInteract()
+    {
+        return true;
+    }
 }

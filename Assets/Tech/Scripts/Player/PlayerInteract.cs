@@ -31,7 +31,8 @@ public class PlayerInteract : MonoBehaviour
                     interactableObject = currentObj;
                     currentOutline = hit.collider.transform.GetComponents<Outline>();
                     DrawOutline(currentOutline);
-                    InteractUI.Instance.ShowInteractLabel();
+                    
+                    if (currentObj.ShowInteract()) InteractUI.Instance.ShowInteractLabel();
                 }
             }
             if (!currentObj.ShowOutline())

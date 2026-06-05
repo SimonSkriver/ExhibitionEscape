@@ -17,4 +17,10 @@ public class TreasureChest : MonoBehaviour, IInteractable
         if (hasInteracted) return false;
         else return true;
     }
+
+    public bool ShowInteract()
+    {
+        if (hasInteracted) return false;
+        else return true;
+    }
 }

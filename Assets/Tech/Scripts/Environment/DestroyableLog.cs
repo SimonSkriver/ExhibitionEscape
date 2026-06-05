@@ -11,11 +11,11 @@ public class DestroyableLog : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (HasAxeEquipped())
+        /*if (HasAxeEquipped())
         {
             DestroyLog();
         }
-        else SFXManager.PlayEffect("Error");
+        else SFXManager.PlayEffect("Error");*/
     }
 
     public void DestroyLog()
@@ -69,6 +69,11 @@ public class DestroyableLog : MonoBehaviour, IInteractable
     {
         Debug.Log("Showed because axe is equipped, is this true?: " + HasAxeEquipped());
         return HasAxeEquipped();
+    }
+
+    public bool ShowInteract()
+    {
+        return false;
     }
 
     private bool HasAxeEquipped()
