@@ -49,8 +49,8 @@ public class InputManager : MonoBehaviour
 
         playerInput.actions.FindAction("Jump").performed += ctx => playerMovement.Jump();
         playerInput.actions.FindAction("Sprint").performed += ctx => playerMovement.Sprint();
-        playerInput.actions.FindAction("Sprint").canceled += ctx => playerMovement.Sprint();
-        playerInput.actions.FindAction("Sprint_Toggle").performed += ctx => playerMovement.Sprint();
+        playerInput.actions.FindAction("Sprint").canceled += ctx => playerMovement.StopSprint();
+        playerInput.actions.FindAction("Sprint_Toggle").performed += ctx => playerMovement.ToggleSprint();
         playerInput.actions.FindAction("Use").performed += ctx => playerUse.Use();
         playerInput.actions.FindAction("Interact").performed += ctx => playerInteract.Interact();
 

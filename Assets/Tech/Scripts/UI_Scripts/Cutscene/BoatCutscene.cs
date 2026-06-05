@@ -29,9 +29,9 @@ public class BoatCutscene : MonoBehaviour
         cutscene.Play();
         inCutscene = true;
         UI_Manager.Instance.HidePlayerHUD();
-        StartCoroutine(TriggerNOOOOO());
+        //StartCoroutine(TriggerNOOOOO());
     }
-
+/*
     IEnumerator TriggerNOOOOO() {
         Animator anim = GameObject.FindWithTag("Player").GetComponent<Animator>();
         
@@ -42,5 +42,5 @@ public class BoatCutscene : MonoBehaviour
         yield return new WaitForSeconds(7f);
         UI_Manager.Instance.ShowCredits();
         Time.timeScale = 0;
-    }
+    }*/
 }

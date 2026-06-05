@@ -6,6 +6,7 @@ public class PlayerFallDamage : MonoBehaviour
     [Tooltip ("The minimum velocity before fall damage is applied")]
     [SerializeField] private float threshold = 3.5f;
     [SerializeField] private float dmgMultiplier = 2.5f;
+    [SerializeField] private float waterMoveSpeedMult = 0.7f;
     [SerializeField] private LayerMask water;
     [SerializeField] private Transform feet;
     
@@ -31,7 +32,7 @@ public class PlayerFallDamage : MonoBehaviour
 
             CalculateFallDamage(velocity);
         }
-        
+
         velocity = -player.playerVelocity.y;
     }
 
