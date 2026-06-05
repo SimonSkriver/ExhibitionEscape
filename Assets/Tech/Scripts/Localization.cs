@@ -8,6 +8,7 @@ public class Localization : MonoBehaviour
         int i = ISO_639 switch {
             "EN" => 0,
             "DA" => 2,
+            "SV" => 3,
             _ => 0
         };
 
