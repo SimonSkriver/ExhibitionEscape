@@ -27,7 +27,7 @@ public class PlayerFallDamage : MonoBehaviour
 
         if (!wasGrounded && player.isGrounded && !player.isSliding) //If player wasn't grounded last frame, but now is grounded
         {
-            if (velocity < threshold || inWater) return;
+            if (velocity < threshold || inWater || !PlayerStats.Instance.canTakeFallDamage) return;
 
             CalculateFallDamage(velocity);
         }

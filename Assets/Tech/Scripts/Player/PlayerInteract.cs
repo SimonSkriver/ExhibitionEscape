@@ -31,6 +31,7 @@ public class PlayerInteract : MonoBehaviour
                     interactableObject = currentObj;
                     currentOutline = hit.collider.transform.GetComponents<Outline>();
                     DrawOutline(currentOutline);
+                    InteractUI.Instance.ShowInteractLabel();
                 }
             }
             if (!currentObj.ShowOutline())
@@ -62,6 +63,7 @@ public class PlayerInteract : MonoBehaviour
 
     public void Clear()
     {
+        InteractUI.Instance.HideInteractLabel();
         if (currentOutline != null)
         {
             foreach (Outline outline in currentOutline)

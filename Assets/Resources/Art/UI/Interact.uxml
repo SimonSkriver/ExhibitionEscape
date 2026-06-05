@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:GroupBox enabled="true" style="flex-direction: row; justify-content: center; width: 500px; height: 200px; -unity-text-align: upper-center;">
-        <ui:Label text="(E)" name="Interact" style="-unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); color: rgb(255, 255, 255); font-size: 50px;"/>
+    <ui:GroupBox enabled="true" style="flex-direction: row; justify-content: center; width: 100px; height: 100px; -unity-text-align: upper-center; font-size: 20px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); background-size: 10px 10px;">
+        <ui:Label text="(E)" name="Interact" style="-unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); color: rgb(255, 255, 255); font-size: 50px; -unity-font-style: bold;"/>
     </ui:GroupBox>
 </ui:UXML>
