@@ -15,7 +15,7 @@
             </Bindings>
         </ui:Label>
         <ui:GroupBox style="justify-content: flex-start; align-content: auto; padding-top: 100px;">
-            <ui:Button text="Back" name="Back" class="menuButton">
+            <ui:Button text="Back" name="Back" view-data-key="Back" class="menuButton">
                 <Bindings>
                     <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172065182035968)"/>
                 </Bindings>
@@ -91,14 +91,14 @@
                 </ui:Label>
             </ui:GroupBox>
             <ui:VisualElement name="" style="flex-grow: 1; width: 400px; height: 27%; flex-direction: row; align-items: center; justify-content: space-around; align-self: center; padding-right: 20px; padding-left: 20px; top: 10px;">
-                <ui:RadioButton name="EN" enabled="true" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
-                <ui:RadioButton name="DE" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
-                <ui:RadioButton name="DA" enabled="true" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="EN" enabled="true" view-data-key="Language" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="DE" enabled="false" view-data-key="Language" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="DA" enabled="true" view-data-key="Language" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
             </ui:VisualElement>
             <ui:VisualElement name="" style="flex-grow: 1; width: 400px; height: 27%; flex-direction: row; align-items: center; justify-content: space-around; align-self: center; padding-right: 20px; padding-left: 20px; visibility: visible; top: 50px;">
-                <ui:RadioButton name="SV" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 5;"/>
-                <ui:RadioButton name="NO" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
-                <ui:RadioButton name="FI" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="SV" enabled="false" view-data-key="Language" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 5;"/>
+                <ui:RadioButton name="NO" enabled="false" view-data-key="Language" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
+                <ui:RadioButton name="FI" enabled="false" view-data-key="Language" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center; scale: 2 2 2;"/>
             </ui:VisualElement>
         </ui:GroupBox>
     </ui:VisualElement>

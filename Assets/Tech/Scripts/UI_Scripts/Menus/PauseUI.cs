@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 public class PauseUI : MonoBehaviour {
     UI_Manager UI;
     List<Button> pauseButtons = new List<Button>();
-    List<Button> settingsButtons = new List<Button>();
+    List<RadioButton> settingsButtons = new List<RadioButton>();
     List<Button> warningButtons = new List<Button>();
 
     private void Awake() {
@@ -17,12 +17,17 @@ public class PauseUI : MonoBehaviour {
             btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
         }
 
-        settingsButtons = UI.settingsRoot.Query<Button>().ToList();
+        // Settings Buttons
+        UI.settingsRoot.Q<Button>("Back").RegisterCallback<ClickEvent>(OnSettingsButton);
+        UI.settingsRoot.Q<Button>("Back").RegisterCallback<NavigationSubmitEvent>(OnSettingsButton);
+        UI.settingsRoot.Q<Button>("Back").RegisterCallback<MouseEnterEvent>(OnHoverSettings);
+        settingsButtons = UI.settingsRoot.Query<RadioButton>().ToList();
         foreach (var btn in settingsButtons) {
-            btn.RegisterCallback<ClickEvent>(OnSettingsButton);
-            btn.RegisterCallback<NavigationSubmitEvent>(OnSettingsButton);
+            btn.RegisterCallback<ClickEvent>(OnLanguageButton);
+            btn.RegisterCallback<NavigationSubmitEvent>(OnLanguageButton);
             btn.RegisterCallback<MouseEnterEvent>(OnHoverSettings);
         }
+
         warningButtons = UI.warningRoot.Query<Button>().ToList();
         foreach (var btn in warningButtons) {
             btn.RegisterCallback<ClickEvent>(OnWarningButton);
@@ -34,9 +39,11 @@ public class PauseUI : MonoBehaviour {
     // Callbacks
     void OnPauseButton(ClickEvent evt) => PauseButton((Button)evt.target);
     void OnSettingsButton(ClickEvent evt) => SettingsButton((Button)evt.target);
+    void OnLanguageButton(ClickEvent evt) => LanguageButton((RadioButton)evt.target);
     void OnWarningButton(ClickEvent evt) => WarningButton((Button)evt.target);
     void OnPauseButton(NavigationSubmitEvent evt) => PauseButton((Button)evt.target);
     void OnSettingsButton(NavigationSubmitEvent evt) => SettingsButton((Button)evt.target);
+    void OnLanguageButton(NavigationSubmitEvent evt) => LanguageButton((RadioButton)evt.target);
     void OnWarningButton(NavigationSubmitEvent evt) => WarningButton((Button)evt.target);
 
 
@@ -62,31 +69,14 @@ public class PauseUI : MonoBehaviour {
 
     public void OnHoverSettings(MouseEnterEvent pointerEnterEvent) => SFXManager.PlayEffect("HoverSettings");
     void SettingsButton(Button btn) {
-        switch (btn.name) {
-            case "Back":
-                UI.HideSettingsMenuUI();
-                UI.ShowPauseMenuUI();
-                SFXManager.PlayEffect("BackButton");
-                break;
-            
-            case "Language":
-                // Change text on button
-                if (btn.text == "Dansk") {
-                    SFXManager.PlayEffect("BackButton");
-                } else {
-                    SFXManager.PlayEffect("ClickButton");
-                }
+        UI.HideSettingsMenuUI();
+        UI.ShowPauseMenuUI();
+        SFXManager.PlayEffect("BackButton");
+    }
 
-                // Get the ISO 639 Language Code
-                string ISO_639 = btn.text switch {
-                    "English" => "DA",
-                    "Dansk" => "EN",
-                    _ => "EN"
-                };
-
-                Localization.ChangeLanguage(ISO_639);
-                break;
-        }
+    void LanguageButton(RadioButton rBtn) {
+        SFXManager.PlayEffect("ClickButton");        
+        Localization.ChangeLanguage(rBtn.name);
     }
 
     void WarningButton(Button btn) {
