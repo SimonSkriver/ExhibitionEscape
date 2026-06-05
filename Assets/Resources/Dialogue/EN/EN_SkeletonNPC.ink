@@ -1,10 +1,13 @@
 === Sleeping ===
 zzz
 * [SCREAM]
-    AAAAAAAAAAAAAAHHHHHH!
-    Just 5 more minutes...
+    H..h..huh?
+    Did I sleep through the day?
+    No, it's still day..
+    ..zzz..
+    -> END
 * [Leave]
---> END
+    -> END
 
 
 
@@ -38,13 +41,6 @@ This boar has some strange behaviours.
 Sometimes it runs straight into the trees.
 --> END
 
-//===BoarFarm===
-//Ahoy! I'm training these boars to get a strong head
-//Someone attacked them and now they're one less on their team
-//That's why I decided to fight on their side to DESTROY their enemy!
-//LET THE BOARS LIVE!!!
-//-> END
-
 
 
 ===SunBath===
@@ -77,6 +73,3 @@ Don't tell the captain I ate all his apples...
 ===RockBuilder===
 NOOOOOOOOO!!! My life's work...
 -> END
-
-
-

@@ -39,7 +39,6 @@ EXTERNAL StartBoatCutscene()
         
     - else:
         -> WelcomeMessage
-        ~ isWelcomeMessageCompleted = true
     }
 }
 
@@ -54,6 +53,7 @@ Men alting kommer med en pris...
 Hvis du kan finde min forsvundne skat, vil jeg lade dig sejle afsted med mit skib. Men tag dig i agt...
 Du vil snart opdage, at vejen til skibet ikke er uden forhindringer.
 Find min skat, så du kan slippe væk fra øen!
+~ isWelcomeMessageCompleted = true
 -> END
 
 
