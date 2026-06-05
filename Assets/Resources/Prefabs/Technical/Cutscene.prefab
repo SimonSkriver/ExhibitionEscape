@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 3587054466373914003}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0004132207, y: -0.99951625, z: -0.022683714, w: -0.021275504}
-  m_LocalPosition: {x: 251.35, y: 17.69, z: 341.77002}
+  m_LocalPosition: {x: 225.26, y: 17.02, z: 392.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -786,7 +786,7 @@ Transform:
   m_GameObject: {fileID: 4744107589841319433}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.42293462, z: -0, w: 0.90616024}
-  m_LocalPosition: {x: 246.75456, y: 17.924498, z: 330.86902}
+  m_LocalPosition: {x: 229.51234, y: 17.04, z: 389.58096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -904,7 +904,7 @@ Transform:
   m_GameObject: {fileID: 5125943341697721104}
   serializedVersion: 2
   m_LocalRotation: {x: 0.027895372, y: -0.24774177, z: 0.0071363715, w: 0.96839815}
-  m_LocalPosition: {x: 255.5, y: 17.84, z: 330.69}
+  m_LocalPosition: {x: 229.40999, y: 17.17, z: 381.59998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1174,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2277404001896996863, guid: bf2ee0e6ef626fa498bed6cb07bd35aa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7d7273a1811d684a8e1ca155b5a58ca, type: 2}
     - target: {fileID: 4279305208510319650, guid: bf2ee0e6ef626fa498bed6cb07bd35aa, type: 3}
       propertyPath: m_Name
       value: SmallWoodenBoat
