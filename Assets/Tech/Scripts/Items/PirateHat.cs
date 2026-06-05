@@ -16,7 +16,7 @@ public class PirateHat : MonoBehaviour, IInteractable
     public void Interact()
     {
         hasHat = true;
-        DialogueManager.Instance.ChanceInkVariable("hasTreasure", hasHat.ToString());
+        DialogueManager.Instance.ChangeInkVariable("hasTreasure", hasHat.ToString());
 
         chestAnimator.SetTrigger("CloseLid");
 
