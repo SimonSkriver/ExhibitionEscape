@@ -18,6 +18,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private SkinnedMeshRenderer skinnedMeshRenderer;
     [SerializeField] private float flickerAmount = 3;
     [SerializeField] private float flickerDelay = 0.1f;
+    Material mat;
     public Color savedColor;
     public Color redColor;
 
@@ -28,7 +29,8 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
             Health = 100;
         }
-
+        mat = Resources.Load<Material>("Art/Materials/PlayerSkin");
+        savedColor = mat.color;
         skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
     

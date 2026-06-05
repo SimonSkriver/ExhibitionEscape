@@ -61,11 +61,9 @@ public class PlayerCustomization : MonoBehaviour
             case "ConfirmPlayerCustomization":
                 SFXManager.PlayEffect("ConfirmColor");
                 UI_Manager.Instance.HidePlayerCustomizeUI();
+                PlayerStats.Instance.savedColor = m_skin.color;
                 break;
         }
-
-        // FIX for PlayerSkin is sometimes black and can't be changed
-        PlayerStats.Instance.savedColor = m_skin.color;
     }
 
     void OnCustomizationSlider(ChangeEvent<float> evt) {
