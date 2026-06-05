@@ -33,4 +33,9 @@ public class ItemPickup : MonoBehaviour, IInteractable
     {
         return true;
     }
+
+    public bool ShowInteract()
+    {
+        return true;
+    }
 }
