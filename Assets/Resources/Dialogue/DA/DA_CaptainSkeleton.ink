@@ -15,7 +15,6 @@ EXTERNAL StartBoatCutscene()
             -> END
         
     - else:
-        Ohøj!
         Jeg kan se, at du har fundet min forsvundne skat!
         Hvis jeg må få den tilbage...
         vil jeg lade dig låne min båd, så du kan slippe vækfra denne ø.

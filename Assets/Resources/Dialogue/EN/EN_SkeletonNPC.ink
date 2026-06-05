@@ -4,7 +4,6 @@ zzz
     AAAAAAAAAAAAAAHHHHHH!
     Just 5 more minutes...
 * [Leave]
-~ isWelcomeMessageCompleted = true
 --> END
 
 
@@ -17,7 +16,7 @@ Bummer...
 
 ===OceanDreamer===
 Is that the world border I see?
-Or are there more on the other side?
+Or is there more on the other side?
 -> END
 
 
@@ -35,15 +34,8 @@ Now we call him "Coconut Head"
 
 
 ===BoarFightingClub===
-These boars seems to be very happy for fighting.
-Do you think they will be interested in a fighting club?
-*[Yes]
-    Awesome! You're hereby invited to BBQ this evening!
-    Oh wait...
-    ...it will never be evening here
-*[No]
-    Aight, you're probably right.
-    They seem to be very threatening.
+This boar has some strange behaviours.
+Sometimes it runs straight into the trees.
 --> END
 
 //===BoarFarm===
@@ -64,7 +56,8 @@ I don't know if the sun is warm enough...
 Why is the sun so hot?
 I was out in the sun for 5 seconds..
 5 SECONDS!!!!
-And then there is this guy, that lays in the sun and complains about his bones not taking color...
+But that guy over there...
+Lays in the sun and complains about his bones not taking color...
 He can get mine if he's really burning for it
 -> END
 

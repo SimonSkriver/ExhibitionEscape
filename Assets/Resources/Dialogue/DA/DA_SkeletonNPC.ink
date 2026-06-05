@@ -35,15 +35,8 @@ Nu kalder vi ham for "Kokosnøde Hoved"
 
 
 ===BoarFightingClub===
-Disse vildsvin ser ud til at være meget glade for at kæmpe.
-Tror du de er interesserret i at være med i en kampklub?
-*[Ja]
-    Fedt mand! Du er hermed inviteret til grillaften i aften!
-    Oh vent...
-    ...det bliver aldrig aften her
-*[Nej]
-    Tjaa, du har nok ret.
-    De virker meget truende.
+Dette vildsvin opfører sig meget mærkeligt.
+Nogle gange løber den direkte ind i træerne.
 --> END
 
 //===BoarFarm===

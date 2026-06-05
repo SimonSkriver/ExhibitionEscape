@@ -15,7 +15,6 @@ EXTERNAL StartBoatCutscene()
             -> END
         
     - else:
-        Ahoy!
         It seems you have found my long lost treasure!
         If you will let me have it back...
         I will let you use my boat to escape from this island.
@@ -40,7 +39,7 @@ EXTERNAL StartBoatCutscene()
         
     - else:
         -> WelcomeMessage
-        ~ isWelcomeMessageCompleted = true
+        
     }
 }
 
@@ -55,6 +54,7 @@ But nothing in this world is free...
 If you can find my lost treasure on the island, I will let you sail away with my ship. But beware...
 You might find that the road to the treasure is filled with obstacles.
 Bring me my treasure, and you can escape the island!
+~ isWelcomeMessageCompleted = true
 -> END
 
 
