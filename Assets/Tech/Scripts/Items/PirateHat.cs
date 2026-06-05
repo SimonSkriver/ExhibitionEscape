@@ -35,4 +35,10 @@ public class PirateHat : MonoBehaviour, IInteractable
         if (!hasHat) return true;
         else return false;
     }
+
+    public bool ShowInteract()
+    {
+        if (!hasHat) return true;
+        else return false;
+    }
 }
