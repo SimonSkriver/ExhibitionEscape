@@ -3,5 +3,5 @@
         <ui:Image name="item_icon" source="project://database/Resources/unity_builtin_extra?fileID=10906&amp;guid=0000000000000000f000000000000000&amp;type=0#Background" class="itemIMG" style="height: 80%; padding-top: 10px;"/>
         <ui:Label text="item" name="item_name" class="itemName" style="height: 20%; -unity-text-align: upper-center; -unity-font-style: italic; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-size: 10px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; letter-spacing: 7px; -unity-text-auto-size: none; -unity-text-generator: standard;"/>
     </ui:VisualElement>
-    <ui:Label text="-" name="item_count" class="itemCount" style="position: absolute; top: -35px; right: -15px; -unity-font-style: bold; font-size: 50px; -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"/>
+    <ui:Label text="-" name="item_count" class="itemCount" style="position: absolute; top: -24px; right: 4px; -unity-font-style: bold; font-size: 50px; -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"/>
 </ui:UXML>
