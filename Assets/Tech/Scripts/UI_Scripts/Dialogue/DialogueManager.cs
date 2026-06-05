@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
 
 
 
-    public void ChanceInkVariable(string name, string value) => inkVariables.UpdateVariableState(name, new StringValue(value));
+    public void ChangeInkVariable(string name, string value) => inkVariables.UpdateVariableState(name, new StringValue(value));
 
 
     public void EnterDialogue(string knotName)
