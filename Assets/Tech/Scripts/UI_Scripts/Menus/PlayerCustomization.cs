@@ -89,6 +89,10 @@ public class PlayerCustomization : MonoBehaviour
                 
                 float hatPosX = Mathf.Lerp(-0.08f, 0.11f, sldValPercent);
                 float hatPosY = Mathf.Lerp(-0.8f, -0.025f, sldValPercent);
+                
+                // Set Hat Position
+                hatAnchor.localPosition = new Vector3(hatPosX, hatPosY, 0);
+                Debug.Log(hatAnchor.localPosition);
 
                 // Set Camera Target Offset
                 GameManager.customCam.GetComponent<CinemachineOrbitalFollow>().TargetOffset.z = targetOffset;
@@ -97,11 +101,6 @@ public class PlayerCustomization : MonoBehaviour
                 CinemachineRotationComposer crc = GameManager.customCam.GetComponent<CinemachineRotationComposer>();
                 crc.Composition.ScreenPosition.x = xScreenPos;
                 crc.Composition.ScreenPosition.y = yScreenPos;
-
-                // Set Hat Position
-                hatAnchor.localPosition = new Vector3(hatPosX, hatPosY, 0);
-                // MID BIG: 0.1 -0.025
-
                 break;
 
             case "Neck Length":

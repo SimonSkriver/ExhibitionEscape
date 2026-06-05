@@ -1,10 +1,14 @@
 === Sleeping ===
 zzz
 * [SKRIG]
-    AAAAAAAAAAAAAAHHHHHH!
-    Bare lige 5 minutter mere...
+    H..h..huh?
+    Har jeg sovet hele dagen?
+    Nej, det er stadig dag...
+    ..zzz..
+    -> END
 * [Forlad]
---> END
+    -> END
+
 
 
 
@@ -39,25 +43,19 @@ Dette vildsvin opfører sig meget mærkeligt.
 Nogle gange løber den direkte ind i træerne.
 --> END
 
-//===BoarFarm===
-//Ohøj! Jeg er i gang med at træne disse vildsvin til at få et stærkt hoved.
-//Nogen har angrebet dem og nu er de én mindre på deres team.
-//Derfor har jeg valgt at kæmpe på deres side for at ØDELÆGGE deres fjende!
-//LAD VILDSVINENE LEVE!!!
-//-> END
-
 
 
 ===SunBath===
-Jeg ved ikke om solen er varm nok...
-...jeg synes ikke jeg tager farve
+Jeg ved ikke, om solen er varm nok...
+...jeg synes ikke, jeg tager farve
 -> END
 
 ===SunBathBurned===
 Hvorfor er solen så varm?
 Jeg var ude i solen i 5 sekunder..
 5 SEKUNDER!!!!
-Og så er der ham der, som bare ligger og brokker sig over hans knogler ikke kan tage farve...
+Og så er der ham, som ligger derovre...
+han brokker sig over hans knogler ikke kan tage farve...
 Han må gerne få mine, hvis han virkelig brænder for det!
 -> END
 
