@@ -12,7 +12,11 @@
         </ui:Label>
     </ui:GroupBox>
     <ui:GroupBox name="Controller_Controls" style="position: absolute; left: 210px; width: 400px; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); color: rgba(171, 150, 100, 0.784); font-size: 25px; -unity-font-style: bold;">
-        <ui:Label text="CONTROLLER" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px; -unity-text-align: upper-center;"/>
+        <ui:Label text="CONTROLLER" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; font-size: 40px; -unity-text-align: upper-center;">
+            <Bindings>
+                <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1926319534092288)"/>
+            </Bindings>
+        </ui:Label>
         <ui:Label text="Movement = LS&#10;Jump = X&#10;Interact = □&#10;Attack = R2&#10;Inventory = L1 / R1&#10;" name="" class="textMenu" style="-unity-paragraph-spacing: 100px; align-self: center; -unity-text-align: upper-center;">
             <Bindings>
                 <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(1305428593061888)"/>

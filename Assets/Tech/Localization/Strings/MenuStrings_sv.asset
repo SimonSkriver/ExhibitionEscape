@@ -98,8 +98,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1305239006326784
-    m_Localized: "R\xF6relse = WASD\nHoppa = Mellanslagstangenten\nP\xE5verka Varandra
-      = E\nAttack = V\xE4nster Musknapp\nLager = 1 / 2 / 3 / 4 / 5"
+    m_Localized: "R\xF6relse = WASD\nHoppa = Mellanrum\nP\xE5verka Varandra = E\nAttack
+      = V\xE4nster Musknapp\nLager = 1 / 2 / 3 / 4 / 5"
     m_Metadata:
       m_Items: []
   - m_Id: 1165721486671872
@@ -126,6 +126,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1603471552655360
     m_Localized: Kevin MacLeod
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1926319534092288
+    m_Localized: KONTROLLER
     m_Metadata:
       m_Items: []
   references:

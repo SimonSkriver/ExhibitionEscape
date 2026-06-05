@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     [Tooltip("How many seconds before spawning the next")]
     [SerializeField] int spawnInterval = 2;
 
-    [SerializeField] bool isSpawningInRuntime;
+    [SerializeField] bool isSpawningInRuntime = true;
 
     void Start() => StartCoroutine(SpawnPrefabs());
 
