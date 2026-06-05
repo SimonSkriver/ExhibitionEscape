@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded { get; private set; }
 
     [Header("Animation")]
-    public Animator A { get; private set; }
+    public static Animator A { get; private set; }
     
     [Header ("Settings")]
     [SerializeField] private float gravity = -10f; 

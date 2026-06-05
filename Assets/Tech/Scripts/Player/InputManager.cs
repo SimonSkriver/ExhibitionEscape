@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
 
     [Header ("Info")]
     [SerializeField] private GameObject player;
-    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private static PlayerInput playerInput;
     [SerializeField] private PlayerController playerMovement;
     [SerializeField] private PlayerInteract playerInteract;
     [SerializeField] private PlayerUse playerUse;
@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
     public Vector2 moveInput { get; private set; }
 
     InputActionMap playerMap;
-    GameObject playerCam;
+    static GameObject playerCam;
     BoatCutscene cutscene;
 
     bool isGamePaused;

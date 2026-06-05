@@ -81,6 +81,9 @@ public class PauseUI : MonoBehaviour {
 
     void WarningButton(Button btn) {
         UI.HideWARNING();
-        if (btn.name == "YES") SceneTransition.Instance.LoadLevel(0);
+        if (btn.name == "YES") {
+            Destroy(InputManager.Instance);
+            SceneTransition.Instance.LoadLevel(0);
+        }
     }
 }
