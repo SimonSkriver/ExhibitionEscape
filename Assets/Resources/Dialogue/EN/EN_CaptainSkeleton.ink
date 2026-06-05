@@ -9,7 +9,7 @@ EXTERNAL StartBoatCutscene()
 {hasTreasure:
     {hasMadeTheEndChoice:
         Oh, did you get second thoughts?
-        *[Yes, let me off the island please]
+        *[Yes, let me off the island, please.]
             Thank you very much, fare well!
             ~ StartBoatCutscene()
             -> END
@@ -25,10 +25,10 @@ EXTERNAL StartBoatCutscene()
             ~ StartBoatCutscene()
             -> END
             
-        *[No, I want to keep it to myself]
+        *[No, I want to keep it to myself.]
             Well, what am I going to do about it...?
-            If you don't give me the treasure..
-            ..you'll bestranded on this island forever like the rest of us.
+            But if you don't give me the treasure..
+            ..you'll be stranded on this island forever like the rest of us.
             -> NO
     }
     
@@ -48,11 +48,12 @@ EXTERNAL StartBoatCutscene()
 ===WelcomeMessage===
 Ahoy!
 I see you have stranded on the island like many before you.
-You don't want to be trapped here for all eternity like the rest of us!
+You don't want to be trapped here forever like the rest of us!
 Lucky for you, I have a mighty ship, you can use to escape.
 But nothing in this world is free...
-If you can find my lost treasure on the island, I will let you sail away with my ship. But beware...
-You might find that the road to the treasure is filled with obstacles.
+If you can find my lost treasure on the island, I will let you sail away with my ship!
+But beware...
+You will find that the road to the treasure is filled with obstacles.
 Bring me my treasure, and you can escape the island!
 ~ isWelcomeMessageCompleted = true
 -> END
@@ -60,13 +61,13 @@ Bring me my treasure, and you can escape the island!
 
 
 ===NO===
-*[Alright, you can have it]
+*[Alright, you can have it.]
     Thank you very much, fare well!
     ~ hasMadeTheEndChoice = true
     ~ StartBoatCutscene()
     -> END
     
-*[No, I want to keep it]
+*[No, I want to keep it.]
     Alright, that's your loss. You will be trapped here forever!
     ~ hasMadeTheEndChoice = true
     -> END

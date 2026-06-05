@@ -20,7 +20,7 @@ Jeg prøvede at fange noget GIGANTISK, men min fiskestang fløj ud ad hænderne 
 
 
 ===OceanDreamer===
-Er det jordens ende jeg kan se?
+Er det jordens ende, jeg kan se?
 Eller er der mere på den anden side?
 -> END
 
@@ -31,15 +31,15 @@ Eller er der mere på den anden side?
 -> END
 
 ===CoconutStory===
-Jeg så ham prøve at få en kokosnød ned fra palmetræet
+Jeg så ham forsøge at få en kokosnød ned fra palmetræet.
 Uheldigvis for ham, landede den på hans hoved.
-Nu kalder vi ham for "Kokosnøde Hoved"
+Nu kalder vi ham for "Kokosnøde Hoved".
 -> END
 
 
 
-===BoarFightingClub===
-Dette vildsvin opfører sig meget mærkeligt.
+===BoarWatcher===
+Det her vildsvin opfører sig meget mærkeligt.
 Nogle gange løber den direkte ind i træerne.
 --> END
 
@@ -47,7 +47,7 @@ Nogle gange løber den direkte ind i træerne.
 
 ===SunBath===
 Jeg ved ikke, om solen er varm nok...
-...jeg synes ikke, jeg tager farve
+...jeg synes ikke, jeg bliver brun...
 -> END
 
 ===SunBathBurned===
@@ -55,7 +55,7 @@ Hvorfor er solen så varm?
 Jeg var ude i solen i 5 sekunder..
 5 SEKUNDER!!!!
 Og så er der ham, som ligger derovre...
-han brokker sig over hans knogler ikke kan tage farve...
+Han brokker sig over, at hans knogler ikke kan tage farve...
 Han må gerne få mine, hvis han virkelig brænder for det!
 -> END
 

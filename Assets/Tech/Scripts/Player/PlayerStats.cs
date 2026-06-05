@@ -8,9 +8,9 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Stats")]
     public int Health { get; private set; }
-    public float WaterSpeed;
+    public float WaterSpeedMult;
     public float MovementSpeed;
-    public float SprintSpeed;
+    public float SprintSpeedMult;
     public float JumpPower;
     public bool canTakeFallDamage = true;
 

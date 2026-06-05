@@ -14,7 +14,7 @@ public class PlayerFallDamage : MonoBehaviour
 
     private PlayerController player;
     private bool wasGrounded;
-    private bool inWater;
+    public bool inWater { get; private set; }
 
     void Awake()
     {

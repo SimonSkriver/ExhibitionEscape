@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public Vector3 playerVelocity;
     Vector3 slopeSlideVelocity;
     Vector3 moveDirection;
+    PlayerFallDamage waterCheck;
+    float moveSpeed;
     public bool canMove { get; set; }
     public bool isSprinting { get; private set; }
     public bool isMoving { get; private set; }
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         orientation = GameObject.FindWithTag("Orientation").GetComponent<Transform>();
+        waterCheck = GetComponent<PlayerFallDamage>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGrounded = controller.isGrounded;
+        moveSpeed = GetMoveSpeed();
         
         if (canMove)
         {
@@ -49,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        if (isGrounded && !isSliding)
+        if (isGrounded && !isSliding && !waterCheck.inWater)
         {
             SFXManager.PlayEffect("Jump");
             float jumpPower = PlayerStats.Instance.JumpPower;
@@ -78,7 +82,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         //Read input and move speed
-        float moveSpeed = isSprinting ? PlayerStats.Instance.SprintSpeed : PlayerStats.Instance.MovementSpeed; 
+        //float moveSpeed = PlayerStats.Instance.MovementSpeed;
         Vector2 moveInput = InputManager.Instance.moveInput;
 
         //Save moveinput in a Vector3 to combine with vertical velocity
@@ -112,6 +116,15 @@ public class PlayerController : MonoBehaviour
             A.SetBool("isWalking", false);
             isMoving = false;
         }
+    }
+
+    float GetMoveSpeed()
+    {
+        float speed = PlayerStats.Instance.MovementSpeed;
+        if (isSprinting) speed *= PlayerStats.Instance.SprintSpeedMult;
+        if (waterCheck.inWater) speed *= PlayerStats.Instance.WaterSpeedMult;
+
+        return speed;
     }
 
     public void Sprint()

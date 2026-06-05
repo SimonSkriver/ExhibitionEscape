@@ -15,9 +15,9 @@ EXTERNAL StartBoatCutscene()
             -> END
         
     - else:
-        Jeg kan se, at du har fundet min forsvundne skat!
+        Du har fundet min forsvundne skat!
         Hvis jeg må få den tilbage...
-        vil jeg lade dig låne min båd, så du kan slippe vækfra denne ø.
+        vil jeg lade dig låne min båd, så du kan slippe væk fra denne ø.
         
         *[Ja selvfølgelig!]
             Tusind tak, god sejltur!
@@ -25,8 +25,8 @@ EXTERNAL StartBoatCutscene()
             ~ StartBoatCutscene()
             -> END
             
-        *[Nej, jeg gerne selv have den]
-            Nå.. Det kan jeg jo ikke gøre så meget ved...
+        *[Nej, den beholder jeg selv]
+            Nå... Det kan jeg jo ikke gøre så meget ved...
             Men tænk dig om, hvis du ikke giver mig skatten,
             vil du være fanget her til evig tid ligesom os andre.
             -> NO
@@ -49,8 +49,9 @@ Ohøj!
 Jeg kan se, at du også er strandet på denne ø som mange andre før dig.
 Du må endelig ikke være fanget på øen i al evighed ligesom os andre!
 Heldigvis har jeg et mægtigt skib, du kan bruge til at slippe væk.
-Men alting kommer med en pris...
-Hvis du kan finde min forsvundne skat, vil jeg lade dig sejle afsted med mit skib. Men tag dig i agt...
+Men intet er gratis...
+Hvis du kan finde min forsvundne skat, vil jeg lade dig sejle afsted med mit skib. 
+Men tag dig i agt...
 Du vil snart opdage, at vejen til skibet ikke er uden forhindringer.
 Find min skat, så du kan slippe væk fra øen!
 ~ isWelcomeMessageCompleted = true
@@ -66,7 +67,7 @@ Find min skat, så du kan slippe væk fra øen!
     -> END
     
 *[Nix, jeg beholder den]
-    Okay, dit tab. Så må du være strandet her for altid
+    Okay, dit tab. Så må du være strandet her for altid.
     ~ hasMadeTheEndChoice = true
     -> END
 

@@ -2,7 +2,7 @@
 zzz
 * [SCREAM]
     H..h..huh?
-    Did I sleep through the day?
+    Did I sleep all day?
     No, it's still day..
     ..zzz..
     -> END
@@ -12,7 +12,7 @@ zzz
 
 
 ===Fishing===
-I was trying to catch something MASSIVE. But my fishingrod went flying out of my hands.
+I was trying to catch something MASSIVE. But my fishing rod went flying out of my hands.
 Bummer...
 -> END
 
@@ -29,15 +29,15 @@ Or is there more on the other side?
 -> END
 
 ===CoconutStory===
-I watched him trying to get a coconut down from the palm tree
+I watched him try to get a coconut down from the palm tree.
 Unlucky for him, it landed on his head.
-Now we call him "Coconut Head"
+Now we call him "Coconut Head".
 -> END
 
 
 
-===BoarFightingClub===
-This boar has some strange behaviours.
+===BoarWatcher===
+This boar is acting strange.
 Sometimes it runs straight into the trees.
 --> END
 
@@ -45,7 +45,7 @@ Sometimes it runs straight into the trees.
 
 ===SunBath===
 I don't know if the sun is warm enough...
-...I don't think I'm getting a tanline
+...I don't think I'm getting a tanline.
 -> END
 
 ===SunBathBurned===
@@ -53,8 +53,8 @@ Why is the sun so hot?
 I was out in the sun for 5 seconds..
 5 SECONDS!!!!
 But that guy over there...
-Lays in the sun and complains about his bones not taking color...
-He can get mine if he's really burning for it
+Lays in the sun and complains about not getting tan...
+He can get mine if he's really burning for it.
 -> END
 
 
