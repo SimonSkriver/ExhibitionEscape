@@ -83,21 +83,9 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable() {
         playerInput.actions.FindAction("Pause").Enable();
-        playerInput.actions.FindAction("Jump").Enable();
-        playerInput.actions.FindAction("Slot1").Enable();
-        playerInput.actions.FindAction("Slot2").Enable();
-        playerInput.actions.FindAction("Slot3").Enable();
-        playerInput.actions.FindAction("Slot4").Enable();
-        playerInput.actions.FindAction("Slot5").Enable();
     }
     private void OnDisable() {
         playerInput.actions.FindAction("Pause").Disable();
-        playerInput.actions.FindAction("Jump").Disable();
-        playerInput.actions.FindAction("Slot1").Disable();
-        playerInput.actions.FindAction("Slot2").Disable();
-        playerInput.actions.FindAction("Slot3").Disable();
-        playerInput.actions.FindAction("Slot4").Disable();
-        playerInput.actions.FindAction("Slot5").Disable();
     }
 
     public void EnablePlayer() {
