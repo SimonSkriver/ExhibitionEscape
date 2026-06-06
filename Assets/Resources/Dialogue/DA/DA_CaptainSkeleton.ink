@@ -40,7 +40,7 @@ EXTERNAL GiveCapHat()
         Jeg har ikke et kort...
         *[Okay]
             -> END
-        *[Vil du gentage opgave?]
+        *[Vil du gentage opgaven?]
             Ja, selvfølgelig!
             -> TreasureQuest
         
@@ -61,9 +61,10 @@ Men intet er gratis...
 -> TreasureQuest
 
 ===TreasureQuest===
-Hvis du kan finde min forsvundne skat, vil jeg lade dig sejle afsted med mit skib. 
+Hvis du kan finde min forsvundne skat..
+vil jeg lade dig sejle afsted med mit skib!
 Men tag dig i agt...
-Du vil snart opdage, at vejen til skibet ikke er uden forhindringer.
+Du vil snart opdage, at vejen til skatten ikke er uden forhindringer.
 Find min skat, så du kan slippe væk fra øen!
 -> END
 

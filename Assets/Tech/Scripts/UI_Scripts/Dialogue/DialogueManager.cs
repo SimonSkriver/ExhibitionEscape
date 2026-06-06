@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using Ink.Runtime;
@@ -35,20 +36,20 @@ public class DialogueManager : MonoBehaviour
         Instance = this;
 
         // Default dialogue language
-        if (LocalizationSettings.SelectedLocale.name.Contains("Danish")) {
-            SetInkJSON(Resources.Load<TextAsset>("Dialogue/DA/DA_main"));
-        } else {
-            SetInkJSON(Resources.Load<TextAsset>("Dialogue/EN/EN_main"));
-        }
+        string ISO_639 = LocalizationSettings.SelectedLocale.SortOrder switch {
+            0 => "EN",
+            2 => "DA",
+            3 => "SV",
+            _ => "EN"
+        };
+        SetInkJSON(Resources.Load<TextAsset>($"Dialogue/{ISO_639}/{ISO_639}_main"));
 
         inkVariables = new InkVariables(story);
         inkExternalFunctions = new InkExternalFunctions();
         inkExternalFunctions.Bind(story);
     }
 
-    private void OnDestroy() {
-        inkExternalFunctions.Unbind(story);
-    }
+    private void OnDestroy() => inkExternalFunctions.Unbind(story);
 
 
 
@@ -113,7 +114,7 @@ public class DialogueManager : MonoBehaviour
 
         // Stop listening for variables
         inkVariables.StopListening(story);
-        
+
         story.ResetState();
 
         UI_Manager.Instance.HideDialogueUI();

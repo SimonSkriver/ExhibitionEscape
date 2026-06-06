@@ -39,12 +39,32 @@ MonoBehaviour:
     m_Key: Settings_Language
     m_Metadata:
       m_Items: []
+  - m_Id: 2172394090115072
+    m_Key: Pause_Title
+    m_Metadata:
+      m_Items: []
   - m_Id: 203462391214080
     m_Key: Pause_Continue
     m_Metadata:
       m_Items: []
   - m_Id: 189366992220160
     m_Key: Pause_BugReport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1304940577402880
+    m_Key: Pause_InputTitlePC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305239006326784
+    m_Key: Pause_InputPC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1926319534092288
+    m_Key: Pause_InputTitleController
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1305428593061888
+    m_Key: Pause_InputController
     m_Metadata:
       m_Items: []
   - m_Id: 203204110168064
@@ -81,22 +101,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1166099980664832
     m_Key: WARNING_Button
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1304940577402880
-    m_Key: Pause_InputTitlePC
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1305239006326784
-    m_Key: Pause_InputPC
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1926319534092288
-    m_Key: Pause_InputTitleController
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1305428593061888
-    m_Key: Pause_InputController
     m_Metadata:
       m_Items: []
   - m_Id: 1588347282501632

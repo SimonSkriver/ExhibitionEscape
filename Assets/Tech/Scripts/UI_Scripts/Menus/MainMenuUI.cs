@@ -71,6 +71,11 @@ public class MainMenuUI : MonoBehaviour
                 Localization.ChangeLanguage(rb.name);
                 SFXManager.PlayEffect((clickButtonPlayed = !clickButtonPlayed) ? "BackButton" : "ClickButton");
             });
+            btn.RegisterCallback<NavigationSubmitEvent>(evt => {
+                var rb = (RadioButton)evt.target;
+                Localization.ChangeLanguage(rb.name);
+                SFXManager.PlayEffect((clickButtonPlayed = !clickButtonPlayed) ? "BackButton" : "ClickButton");
+            });
             btn.RegisterCallback<PointerEnterEvent>(OnHover);
         }
     }
