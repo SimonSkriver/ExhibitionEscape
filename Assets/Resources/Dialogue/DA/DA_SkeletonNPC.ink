@@ -62,7 +62,7 @@ Han må gerne få mine, hvis han virkelig brænder for det!
 
 
 
-===Ring===
+===SwimmingRing===
 BA..BA..BADERIIIING!!
 -> END
 

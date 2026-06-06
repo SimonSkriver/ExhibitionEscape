@@ -80,14 +80,15 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void ContinueOrExitStory()
-    {   if (isWritingDialogue) {
+    {   
+        if (isWritingDialogue) {
             isWritingDialogue = false;
             UI_Manager.Instance.dialogueUI.SkipDialogueWriting(dialogueLine);
         } else {
             if (story.canContinue) {
                 isWritingDialogue = true;
                 dialogueLine = story.Continue();
-
+                
                 // Handle the case of an empty line of dialogue
                 // by continuing until there is a line with content
                 while (IsLineBlank(dialogueLine) && story.canContinue) {
@@ -103,6 +104,7 @@ public class DialogueManager : MonoBehaviour
 
             } else if (isShowingChoices) {
                 return;
+
             } else {
                 ExitDialogue();
             }
@@ -111,6 +113,7 @@ public class DialogueManager : MonoBehaviour
 
     private void ExitDialogue() {
         isDialoguePlaying = false;
+        isWritingDialogue = false;
 
         // Stop listening for variables
         inkVariables.StopListening(story);
