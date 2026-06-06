@@ -15314,6 +15314,80 @@ Transform:
   - {fileID: 1780623203}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1325304202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1325304203}
+  - component: {fileID: 1325304205}
+  - component: {fileID: 1325304204}
+  m_Layer: 14
+  m_Name: KeyboardGuide (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1325304203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325304202}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.73280275, y: 0.22557846, z: -0.24671327, w: -0.5926611}
+  m_LocalPosition: {x: -25.220001, y: -2.4300003, z: 60.679993}
+  m_LocalScale: {x: 1.4872012, y: 1.4872012, z: 1.4872013}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 823576644}
+  m_LocalEulerAnglesHint: {x: 78.497, y: 151.812, z: -168.964}
+--- !u!114 &1325304204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325304202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3292b70d43b7d45ba7e7c93b89a3c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationDecal
+  decalName: KeyboardGuide
+--- !u!114 &1325304205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325304202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 4ba80d59c6e757a4387f405e772ddb3c, type: 2}
+  m_DrawDistance: 50
+  m_FadeScale: 0
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 2.5}
+  m_Size: {x: 7, y: 3, z: 5}
+  m_FadeFactor: 0.4
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!4 &1326623417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6000116795433927201, guid: 448a46d687305504bba3ce994db08b28, type: 3}
@@ -19609,6 +19683,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3264456845796857180, guid: 9eb09d2713ca6a844a9f57eea1a552f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1453750223}
+    - targetCorrespondingSourceObject: {fileID: 3264456845796857180, guid: 9eb09d2713ca6a844a9f57eea1a552f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1325304203}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb09d2713ca6a844a9f57eea1a552f2, type: 3}
 --- !u!1 &1581078203
@@ -26114,12 +26191,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8242212356162461722, guid: 8187128d7278ab548983a7e0bdcab467, type: 3}
-      propertyPath: dialogueKnotName
-      value: Captain
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2463543698159746061, guid: 8187128d7278ab548983a7e0bdcab467, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

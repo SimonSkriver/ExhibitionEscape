@@ -15,7 +15,7 @@ public class BoatCutscene : MonoBehaviour
         flagMat = Resources.Load<Material>("Art/Materials/Colors/Flag");
         shortsMat = Resources.Load<Material>("Art/Materials/PlayerShorts");
 
-        flagMat.color = new Color(0.9063354f, 0.2156203f, 0.1827435f, 1);
+        flagMat.color = new Color(0.9063354f, 0.2156203f, 0.1827435f, 1f);
 
         // Bind the cutscene to the Boat event
         // When Boat event is triggered, TryStartCutscene() will run
