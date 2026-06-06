@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 108408870}
   m_Layer: 0
   m_Name: JungleAreaBounds (3)
-  m_TagString: Untagged
+  m_TagString: JungleBounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4944,7 +4944,7 @@ GameObject:
   - component: {fileID: 422750765}
   m_Layer: 0
   m_Name: JungleAreaBounds (1)
-  m_TagString: Untagged
+  m_TagString: JungleBounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6098,7 +6098,7 @@ GameObject:
   - component: {fileID: 517336178}
   m_Layer: 0
   m_Name: JungleAreaBounds (2)
-  m_TagString: Untagged
+  m_TagString: JungleBounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15117,7 +15117,7 @@ GameObject:
   - component: {fileID: 1271498022}
   m_Layer: 0
   m_Name: JungleAreaBounds (4)
-  m_TagString: Untagged
+  m_TagString: JungleBounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18835,6 +18835,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 448a46d687305504bba3ce994db08b28, type: 3}
+--- !u!1 &1532455752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532455754}
+  - component: {fileID: 1532455753}
+  m_Layer: 0
+  m_Name: BoarSpawner
+  m_TagString: BoarSpawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1532455753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532455752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bc22409f4fc344f99e6e9bc913d97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoarSpawner
+  boarPrefab: {fileID: 5769699706869562953, guid: 7a68f007ee8360b4ea5c49b03f2f6cec, type: 3}
+  spawnPoint: {fileID: 1532455754}
+  respawnDelay: 150
+--- !u!4 &1532455754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532455752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 365.43, y: 19.032803, z: 260.6}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533470771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6888027485802149689, guid: 0bd35137798752343b1c36cc85462bd2, type: 3}
@@ -19978,7 +20025,7 @@ GameObject:
   - component: {fileID: 1581078205}
   m_Layer: 0
   m_Name: JungleAreaBounds (5)
-  m_TagString: Untagged
+  m_TagString: JungleBounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22087,7 +22134,7 @@ GameObject:
   - component: {fileID: 1789962059}
   m_Layer: 0
   m_Name: JungleAreaBounds
-  m_TagString: Untagged
+  m_TagString: JungleBounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26963,3 +27010,4 @@ SceneRoots:
   - {fileID: 716892390472311200}
   - {fileID: 40581823}
   - {fileID: 719313038}
+  - {fileID: 1532455754}
