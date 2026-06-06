@@ -25,7 +25,7 @@ EXTERNAL StartBoatCutscene()
             ~ StartBoatCutscene()
             -> END
             
-        *[No, I want to keep it to myself.]
+        *[No, I want to keep it for myself.]
             Well, what am I going to do about it...?
             But if you don't give me the treasure..
             ..you'll be stranded on this island forever like the rest of us.
@@ -35,27 +35,33 @@ EXTERNAL StartBoatCutscene()
 - else:
     {isWelcomeMessageCompleted:
         I don't have a map...
-        -> END
+        *[Okay]
+            -> END
+        *[Can you repeat the quest?]
+            Of course!
+            -> TreasureQuest
         
     - else:
+        Ahoy!
         -> WelcomeMessage
-        
     }
 }
 
 
 
 ===WelcomeMessage===
-Ahoy!
 I see you have stranded on the island like many before you.
 You don't want to be trapped here forever like the rest of us!
 Lucky for you, I have a mighty ship, you can use to escape.
 But nothing in this world is free...
+~ isWelcomeMessageCompleted = true
+-> TreasureQuest
+
+===TreasureQuest===
 If you can find my lost treasure on the island, I will let you sail away with my ship!
 But beware...
 You will find that the road to the treasure is filled with obstacles.
 Bring me my treasure, and you can escape the island!
-~ isWelcomeMessageCompleted = true
 -> END
 
 

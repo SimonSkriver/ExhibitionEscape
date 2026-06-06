@@ -35,9 +35,14 @@ EXTERNAL StartBoatCutscene()
 - else:
     {isWelcomeMessageCompleted:
         Jeg har ikke et kort...
-        -> END
+        *[Okay]
+            -> END
+        *[Vil du gentage opgave?]
+            Ja, selvfølgelig!
+            -> TreasureQuest
         
     - else:
+        Ohøj!
         -> WelcomeMessage
     }
 }
@@ -45,16 +50,18 @@ EXTERNAL StartBoatCutscene()
 
 
 ===WelcomeMessage===
-Ohøj!
 Jeg kan se, at du også er strandet på denne ø som mange andre før dig.
 Du må endelig ikke være fanget på øen i al evighed ligesom os andre!
 Heldigvis har jeg et mægtigt skib, du kan bruge til at slippe væk.
 Men intet er gratis...
+~ isWelcomeMessageCompleted = true
+-> TreasureQuest
+
+===TreasureQuest===
 Hvis du kan finde min forsvundne skat, vil jeg lade dig sejle afsted med mit skib. 
 Men tag dig i agt...
 Du vil snart opdage, at vejen til skibet ikke er uden forhindringer.
 Find min skat, så du kan slippe væk fra øen!
-~ isWelcomeMessageCompleted = true
 -> END
 
 

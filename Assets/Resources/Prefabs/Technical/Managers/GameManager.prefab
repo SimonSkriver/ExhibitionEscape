@@ -441,10 +441,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 7281418748386686874}
-    - target: {fileID: 8434791825649473451, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
-      propertyPath: AvoidObstacles.Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9005391041991241439, guid: 9f324f6558954e44e995f5a696cbaa64, type: 3}
       propertyPath: Orbits.Top.Radius
       value: 1.5
