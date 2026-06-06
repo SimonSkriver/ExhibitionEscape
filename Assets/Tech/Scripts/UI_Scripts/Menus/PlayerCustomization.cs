@@ -80,9 +80,9 @@ public class PlayerCustomization : MonoBehaviour
                 float sldValPercent = (sld.value - sld.lowValue) / (sld.highValue - sld.lowValue);
 
                 // Lerp between given numbers
-                float xScreenPos = Mathf.Lerp(-262.170013f, -262.5f, sldValPercent);
-                float yScreenPos = Mathf.Lerp(-22.9f, -22.5499992f, sldValPercent);
-                float zScreenPos = Mathf.Lerp(-56.6f, -57.7999992f, sldValPercent);
+                float xScreenPos = Mathf.Lerp(-262.08f, -262.3f, sldValPercent);
+                float yScreenPos = Mathf.Lerp(-23f, -22.6f, sldValPercent);
+                float zScreenPos = Mathf.Lerp(-55.1f, -55.8f, sldValPercent);
                 float targetOffset = Mathf.Lerp(0f, -1.71f, sldValPercent);
                 
                 // Sets the hat position better :)
