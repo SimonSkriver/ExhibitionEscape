@@ -75,3 +75,10 @@ Ik' sig til kaptajnen at jeg har spist alle hans æbler...
 ===RockBuilder===
 NEEEEEEEEJ!!! Mit livsværk...
 -> END
+
+
+===Banana===
+Vil du have en stægt banan?
+Hov.. ilden gik ud..
+Du må spise dem rå
+-> END

@@ -1,20 +1,18 @@
 using UnityEngine;
 
-public class PirateHat : MonoBehaviour, IInteractable
-{
-    Ink.Runtime.Object s;
+public class PirateHat : MonoBehaviour, IInteractable {
     [SerializeField] Animator chestAnimator;
     [SerializeField] ParticleSystem particles;
-    Transform hatAnchor;
+    Transform hatAnchor, capHatAnchor;
     public bool hasHat { get; private set; }
 
-    void Awake()
-    {
+    void Awake() {
         hatAnchor = GameObject.FindWithTag("HatAnchor").transform;
+        capHatAnchor = GameObject.Find("Skeleton (Captain)/Skeleton/lowertorso/torsobone/skull/HatAnchor").transform;
+        EventManager.Instance.CapHat += SetHatOnCaptain;
     }
 
-    public void Interact()
-    {
+    public void Interact() {
         hasHat = true;
         DialogueManager.Instance.ChangeInkVariable("hasTreasure", hasHat.ToString());
 
@@ -30,15 +28,24 @@ public class PirateHat : MonoBehaviour, IInteractable
         SFXManager.PlayEffect("ConfirmColor");
     }
 
-    public bool ShowOutline()
-    {
-        if (!hasHat) return true;
-        else return false;
+    public bool ShowOutline() {
+        if (!hasHat)
+            return true;
+        else
+            return false;
     }
 
-    public bool ShowInteract()
-    {
-        if (!hasHat) return true;
-        else return false;
+    public bool ShowInteract() {
+        if (!hasHat)
+            return true;
+        else
+            return false;
+    }
+
+    void SetHatOnCaptain() {
+        transform.SetParent(capHatAnchor);
+        transform.localPosition = Vector3.zero;
+        transform.localRotation = Quaternion.identity;
+        transform.localScale = Vector3.one;
     }
 }

@@ -3,6 +3,7 @@ VAR hasTreasure = false
 VAR hasMadeTheEndChoice = false
 
 EXTERNAL StartBoatCutscene()
+EXTERNAL GiveCapHat()
 
 
 ===Captain===
@@ -10,6 +11,7 @@ EXTERNAL StartBoatCutscene()
     {hasMadeTheEndChoice:
         Oh, did you get second thoughts?
         *[Yes, let me off the island, please.]
+            ~ GiveCapHat()
             Thank you very much, fare well!
             ~ StartBoatCutscene()
             -> END
@@ -20,6 +22,7 @@ EXTERNAL StartBoatCutscene()
         I will let you use my boat to escape from this island.
         
         *[Of course!]
+            ~ GiveCapHat()
             Thank you very much, fare well!
             ~ hasMadeTheEndChoice = true
             ~ StartBoatCutscene()
@@ -68,6 +71,7 @@ Bring me my treasure, and you can escape the island!
 
 ===NO===
 *[Alright, you can have it.]
+    ~ GiveCapHat()
     Thank you very much, fare well!
     ~ hasMadeTheEndChoice = true
     ~ StartBoatCutscene()

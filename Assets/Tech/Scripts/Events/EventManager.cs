@@ -15,4 +15,7 @@ public class EventManager : MonoBehaviour
 
     public event Action Boat;
     public void StartBoatEvent() => Boat?.Invoke();
+
+    public event Action CapHat;
+    public void GiveCapHat() => CapHat?.Invoke();
 }

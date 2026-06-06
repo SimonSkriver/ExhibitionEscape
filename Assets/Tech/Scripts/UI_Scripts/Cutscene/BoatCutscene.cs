@@ -6,12 +6,11 @@ public class BoatCutscene : MonoBehaviour
 {
     [SerializeField] PlayableDirector cutscene;
     Material flagMat, shortsMat;
-    //PirateHat hat;
+
     public bool inCutscene { get; private set; }
 
     void Awake()
     {
-        //hat = FindAnyObjectByType<PirateHat>();
         flagMat = Resources.Load<Material>("Art/Materials/Colors/Flag");
         shortsMat = Resources.Load<Material>("Art/Materials/PlayerShorts");
 

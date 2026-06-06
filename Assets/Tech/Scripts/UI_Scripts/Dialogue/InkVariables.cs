@@ -14,7 +14,6 @@ public class InkVariables
         foreach(string name in story.variablesState) {
             Ink.Runtime.Object value = story.variablesState.GetVariableWithName(name);
             variables.Add(name, value);
-            Debug.Log("Name: " + name + "\nValue: " + value);
         }
     }
 

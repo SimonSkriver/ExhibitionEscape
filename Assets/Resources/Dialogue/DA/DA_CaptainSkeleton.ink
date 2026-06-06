@@ -3,6 +3,7 @@ VAR hasTreasure = false
 VAR hasMadeTheEndChoice = false
 
 EXTERNAL StartBoatCutscene()
+EXTERNAL GiveCapHat()
 
 
 ===Captain===
@@ -10,6 +11,7 @@ EXTERNAL StartBoatCutscene()
     {hasMadeTheEndChoice:
         Nåå, kom du bedre tanker?
         *[Ja, lad mig slippe væk!]
+            ~ GiveCapHat()
             Tusind tak, god sejltur!
             ~ StartBoatCutscene()
             -> END
@@ -20,6 +22,7 @@ EXTERNAL StartBoatCutscene()
         vil jeg lade dig låne min båd, så du kan slippe væk fra denne ø.
         
         *[Ja selvfølgelig!]
+            ~ GiveCapHat()
             Tusind tak, god sejltur!
             ~ hasMadeTheEndChoice = true
             ~ StartBoatCutscene()
@@ -68,6 +71,7 @@ Find min skat, så du kan slippe væk fra øen!
 
 ===NO===
 *[Okay, du må gerne få den]
+    ~ GiveCapHat()
     Tusind tak, god sejltur!
     ~ hasMadeTheEndChoice = true
     ~ StartBoatCutscene()
