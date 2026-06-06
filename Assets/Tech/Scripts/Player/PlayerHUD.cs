@@ -22,7 +22,6 @@ public class PlayerHUD : MonoBehaviour
         foreach (var slot in InvSlot) {
             slot.Q<Label>("item_count").text = " ";
             slot.Q<Image>("item_icon").image = null;
-            slot.Q<Label>("item_name").text = " ";
         }
     }
 
@@ -63,7 +62,7 @@ public class PlayerHUD : MonoBehaviour
 
             if (!slotExistsInInventory || InventoryManager.Instance.slots[i].IsEmpty)
             {
-                UpdateInvSlotUI(i, 0, null, " ");
+                UpdateInvSlotUI(i, 0, null);
             }
             else
             {
@@ -72,7 +71,7 @@ public class PlayerHUD : MonoBehaviour
 
                 Texture iconTexture = GetSlotIconTexture(slot);
 
-                UpdateInvSlotUI(i, 1, iconTexture, item.itemName);
+                UpdateInvSlotUI(i, 1, iconTexture);
             }
 
             bool isSelected = i == InventoryManager.Instance.SelectedSlotIndex;
@@ -103,7 +102,7 @@ public class PlayerHUD : MonoBehaviour
         return iconSprite.texture;
     }
 
-    public void UpdateInvSlotUI(int slotID, int itemCount, Texture itemIcon, string itemName) {
+    public void UpdateInvSlotUI(int slotID, int itemCount, Texture itemIcon) {
 
         // Only show itemCount if there's multiple
         if (itemCount > 1) {
@@ -113,7 +112,6 @@ public class PlayerHUD : MonoBehaviour
         }
 
         InvSlot[slotID].Q<Image>("item_icon").image = itemIcon;
-        InvSlot[slotID].Q<Label>("item_name").text = itemName;
     }
 
     private void SetSelectedSlot(TemplateContainer tempSlot, bool selected)

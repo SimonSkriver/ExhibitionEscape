@@ -1114,7 +1114,7 @@ MonoBehaviour:
   playerDamage: 25
   knockbackDistance: 15
   knockbackDuration: 2
-  knockbackUpHeight: 2
+  knockbackUpHeight: 3
   jungleAreas:
   - {fileID: 0}
   - {fileID: 0}
@@ -1130,6 +1130,7 @@ MonoBehaviour:
   boarSound: {fileID: 0}
   meatPickupPrefab: {fileID: 7326735245159988429, guid: 9080759850a279b47b92782c0c3a37d9, type: 3}
   navMeshCheckDistance: 2
+  currentState: 0
   canBeHitByAxe: 1
   dmgDelay: 1
 --- !u!195 &3886198325507341329

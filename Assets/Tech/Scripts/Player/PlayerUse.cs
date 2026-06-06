@@ -97,7 +97,7 @@ public class PlayerUse : MonoBehaviour
 
         Debug.DrawRay(eyes.position, eyes.forward * axeData.reach, Color.red, 2f);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, axeData.reach, axeHitLayers)) //, QueryTriggerInteraction.Collide
+        if (Physics.SphereCast(ray, 0.25f, out RaycastHit hit, axeData.reach, axeHitLayers)) //, QueryTriggerInteraction.Collide
         {
             Debug.Log("Axe hit: " + hit.collider.name);
 
