@@ -27,7 +27,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -103,6 +103,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaClip_threshold: 0
     - _AlphaToMask: 0
+    - _Apply_Wind: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -137,6 +138,8 @@ Material:
     - _Surface: 0
     - _UVSec: 0
     - _Use_Specular: 0
+    - _Wind_Scale: 1
+    - _Wind_Speed: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
