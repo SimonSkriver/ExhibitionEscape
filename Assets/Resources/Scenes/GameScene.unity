@@ -3189,6 +3189,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9217986124630090692, guid: 17fb1a5833293a14dbb4e29f0a40769a, type: 3}
   m_PrefabInstance: {fileID: 1344214527}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &289035202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 289035203}
+  - component: {fileID: 289035204}
+  m_Layer: 14
+  m_Name: CaveDecal4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &289035203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289035202}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.066938736, y: 0.8282567, z: -0.100098185, w: -0.54725707}
+  m_LocalPosition: {x: 19.278961, y: 31.939861, z: -38.07054}
+  m_LocalScale: {x: 1.4871998, y: 1.4872, z: 1.4872}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1387348520}
+  m_LocalEulerAnglesHint: {x: 13.832, y: 246.899, z: -0.078}
+--- !u!114 &289035204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289035202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: d7fe61901c2696541be5558c7546a3ea, type: 2}
+  m_DrawDistance: 50
+  m_FadeScale: 0
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1.25}
+  m_Size: {x: 2, y: 2, z: 2.5}
+  m_FadeFactor: 0.733
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!1001 &289441287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3262,6 +3322,66 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2484c8eab351724fa9b6575c47a91c0, type: 3}
+--- !u!1 &299284380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299284381}
+  - component: {fileID: 299284382}
+  m_Layer: 14
+  m_Name: CaveDecal1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &299284381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299284380}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.12512325, y: 0.6787254, z: -0.07252814, w: -0.7200109}
+  m_LocalPosition: {x: 21.418945, y: 34.989864, z: -50.71054}
+  m_LocalScale: {x: 1.4872005, y: 1.4872, z: 1.4872}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1387348520}
+  m_LocalEulerAnglesHint: {x: 16.179, y: 272.826, z: -3.905}
+--- !u!114 &299284382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299284380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 3378d85f305c30d45ad65879da2ce730, type: 2}
+  m_DrawDistance: 50
+  m_FadeScale: 0
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1.5}
+  m_Size: {x: 2, y: 2, z: 3}
+  m_FadeFactor: 0.733
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!1001 &299462011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13256,6 +13376,66 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fb1a5833293a14dbb4e29f0a40769a, type: 3}
+--- !u!1 &1192275979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192275980}
+  - component: {fileID: 1192275981}
+  m_Layer: 14
+  m_Name: CaveDecal5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1192275980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192275979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0939295, y: 0.9570585, z: -0.17736804, w: -0.20918156}
+  m_LocalPosition: {x: 15.748962, y: 33.059864, z: -34.680542}
+  m_LocalScale: {x: 1.4872003, y: 1.4871998, z: 1.4871999}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1387348520}
+  m_LocalEulerAnglesHint: {x: 17.47, y: 207.045, z: 15.443}
+--- !u!114 &1192275981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192275979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 282574813b1eb3e43b64818a698dbe3c, type: 2}
+  m_DrawDistance: 50
+  m_FadeScale: 0
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1.25}
+  m_Size: {x: 2.5, y: 2.5, z: 2.5}
+  m_FadeFactor: 0.733
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!4 &1194734721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 792292175539967613, guid: abb1c11867b4e874bbace79b9fc7a1e4, type: 3}
@@ -13590,6 +13770,7 @@ Transform:
   - {fileID: 564049386}
   - {fileID: 1441840873}
   - {fileID: 1876942655}
+  - {fileID: 1387348520}
   m_Father: {fileID: 588990931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1230109383
@@ -16010,6 +16191,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9111853552746283367, guid: a15ed646aaa0317458f20bebcf773214, type: 3}
   m_PrefabInstance: {fileID: 1377057581}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1387348519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387348520}
+  m_Layer: 0
+  m_Name: CaveDecals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1387348520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387348519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 299284381}
+  - {fileID: 1401210128}
+  - {fileID: 1396351610}
+  - {fileID: 289035203}
+  - {fileID: 1192275980}
+  m_Father: {fileID: 1226776211}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1387535522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16209,6 +16426,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 792292175539967613, guid: abb1c11867b4e874bbace79b9fc7a1e4, type: 3}
   m_PrefabInstance: {fileID: 1569251492}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1396351609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396351610}
+  - component: {fileID: 1396351611}
+  m_Layer: 14
+  m_Name: CaveDecal3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1396351610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396351609}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.14578384, y: 0.7294909, z: -0.047578488, w: -0.6665782}
+  m_LocalPosition: {x: 19.978943, y: 33.279858, z: -42.53055}
+  m_LocalScale: {x: 1.4872003, y: 1.4872001, z: 1.4872001}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1387348520}
+  m_LocalEulerAnglesHint: {x: 15.294, y: 263.642, z: -8.902}
+--- !u!114 &1396351611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396351609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 7fef4ec5b4f67ac419f5d20678dac1ba, type: 2}
+  m_DrawDistance: 50
+  m_FadeScale: 0
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1.75}
+  m_Size: {x: 2.5, y: 2.5, z: 3.5}
+  m_FadeFactor: 0.733
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!1001 &1399760734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16266,6 +16543,66 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71fa940860d263546a713b63eda44257, type: 3}
+--- !u!1 &1401210127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1401210128}
+  - component: {fileID: 1401210129}
+  m_Layer: 14
+  m_Name: CaveDecal2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1401210128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401210127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.053311303, y: 0.69347733, z: -0.041345295, w: -0.7173128}
+  m_LocalPosition: {x: 20.518951, y: 34.89986, z: -46.800537}
+  m_LocalScale: {x: 1.4872003, y: 1.4871998, z: 1.4872}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1387348520}
+  m_LocalEulerAnglesHint: {x: 7.691, y: 271.879, z: -0.846}
+--- !u!114 &1401210129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401210127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: a533600932b1a594dbf39a86eefb691f, type: 2}
+  m_DrawDistance: 50
+  m_FadeScale: 0
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 1.75}
+  m_Size: {x: 2, y: 2, z: 3.5}
+  m_FadeFactor: 0.733
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!4 &1401707517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7654608037389008282, guid: 8e61babe2916cfa409fc442da3708470, type: 3}
