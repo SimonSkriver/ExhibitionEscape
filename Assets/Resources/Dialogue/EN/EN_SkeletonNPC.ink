@@ -1,3 +1,5 @@
+VAR isPalmTreeDestroyed = false
+
 === Sleeping ===
 zzz
 * [SCREAM]
@@ -50,13 +52,19 @@ I don't know if the sun is warm enough...
 -> END
 
 ===SunBathBurned===
-Why is the sun so hot?
-I was out in the sun for 5 seconds..
-5 SECONDS!!!!
-But that guy over there...
-Lays in the sun and complains about not getting tan...
-He can get mine if he's really burning for it.
--> END
+{isPalmTreeDestroyed:
+    AAAAAAAHHHH!
+    WHY DID YOU REMOVE THE PALM TREE?
+    -> END
+- else:
+    Why is the sun so hot?
+    I was out in the sun for 5 seconds..
+    5 SECONDS!!!!
+    But that guy over there...
+    Lays in the sun and complains about not getting tan...
+    He can get mine if he's really burning for it.
+    -> END
+}
 
 
 
