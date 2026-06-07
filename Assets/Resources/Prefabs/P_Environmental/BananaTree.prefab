@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 7363069401778144784}
   - component: {fileID: 5939998271565561785}
   - component: {fileID: 5666177893987367236}
-  - component: {fileID: 3993442336659721030}
   - component: {fileID: 9156791718773813426}
   m_Layer: 6
   m_Name: PalmTrunk_2
@@ -320,28 +319,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3993442336659721030
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7756765007360758274}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8674429964204669066, guid: 39176624a844e13489bde7aea1d97544, type: 3}
 --- !u!114 &9156791718773813426
 MonoBehaviour:
   m_ObjectHideFlags: 0
