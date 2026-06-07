@@ -74,11 +74,13 @@ public class UI_Manager : MonoBehaviour
         dialogueRoot.style.display = DisplayStyle.Flex;
         ShowPlayerHUD();
         InputManager.Instance.DisablePlayer();
+        InputManager.Instance.canPauseGame = false;
     }
 
     public void HideDialogueUI() {
         dialogueRoot.style.display = DisplayStyle.None;
         InputManager.Instance.EnablePlayer();
+        InputManager.Instance.canPauseGame = true;
     }
 
     // Credits

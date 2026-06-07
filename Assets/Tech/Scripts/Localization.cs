@@ -16,7 +16,11 @@ public class Localization : MonoBehaviour
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[i];
 
         // Change Dialogue language
+        Debug.Log(ISO_639);
         TextAsset asset = Resources.Load<TextAsset>($"Dialogue/{ISO_639}/{ISO_639}_main");
-        DialogueManager.Instance.SetInkJSON(asset);
+        if (DialogueManager.Instance != null) {
+            DialogueManager.Instance.SetInkJSON(asset);
+            Debug.Log("LOADED: " + asset);
+        }
     }
 }

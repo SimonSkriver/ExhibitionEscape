@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System;
+using System.Collections.Generic;
 
 public class BoarBehavior : MonoBehaviour
 {
@@ -107,6 +109,37 @@ public class BoarBehavior : MonoBehaviour
         {
             boarSound = GetComponentInChildren<BoarSound>();
         }
+
+        if (boarSpawner == null)
+        {
+            boarSpawner = GameObject.FindWithTag("BoarSpawner").GetComponent<BoarSpawner>();
+        }
+
+        if (player == null)
+        {
+            player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        }
+
+        if (playerController == null)
+        {
+            playerController = GameObject.FindWithTag("Player").GetComponent<CharacterController>();
+        }
+
+        GameObject[] jungleBounds = GameObject.FindGameObjectsWithTag("JungleBounds");
+
+        List<Collider> foundColliders = new List<Collider>();
+
+        for (int i = 0; i < jungleBounds.Length; i++)
+            {
+                Collider col = jungleBounds[i].GetComponent<Collider>();
+
+                if (col != null)
+                {
+                    foundColliders.Add(col);
+                }
+            }
+
+        jungleAreas = foundColliders.ToArray();
 
         agent.autoBraking = false;
 
@@ -773,15 +806,15 @@ public class BoarBehavior : MonoBehaviour
         if (detectionCooldownActive)
             return false;
 
+        if (!IsPlayerInsideJungle())
+            return false;
+
         return CanSeePlayer() || CanSensePlayerNearby();
     }
 
     private bool CanSensePlayerNearby()
     {
         if (player == null)
-            return false;
-
-        if (!IsPlayerInsideJungle())
             return false;
 
         if (!PlayerIsWithinChaseDistance())
@@ -796,26 +829,20 @@ public class BoarBehavior : MonoBehaviour
     private bool IsPlayerInsideJungle()
     {
         if (player == null)
-        {
             return false;
-        }
 
         if (jungleAreas == null || jungleAreas.Length == 0)
-        {
             return true;
-        }
 
         foreach (Collider area in jungleAreas)
         {
             if (area == null)
-            {
                 continue;
-            }
-            
-            if (area.bounds.Contains(player.position))
-            {
+
+            Vector3 closestPoint = area.ClosestPoint(player.position);
+
+            if (Vector3.Distance(closestPoint, player.position) < 0.01f)
                 return true;
-            }
         }
 
         return false;
@@ -825,7 +852,7 @@ public class BoarBehavior : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            Vector3 randomDirection = Random.insideUnitSphere * dist;
+            Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * dist;
             randomDirection += origin;
 
             if (NavMesh.SamplePosition(randomDirection, out NavMeshHit navHit, dist, NavMesh.AllAreas))
@@ -846,18 +873,19 @@ public class BoarBehavior : MonoBehaviour
         {
             return true;
         }
-            
 
         foreach (Collider area in jungleAreas)
         {
-            if (area == null) 
+            if (area == null)
             {
                 continue;
             }
 
-            if (area.bounds.Contains(point))
+            Vector3 closestPoint = area.ClosestPoint(point);
+
+            if (Vector3.Distance(closestPoint, point) < 0.01f)
             {
-            return true;
+                return true;
             }
         }
 

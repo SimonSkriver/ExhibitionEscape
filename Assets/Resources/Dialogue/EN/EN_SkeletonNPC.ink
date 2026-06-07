@@ -12,7 +12,8 @@ zzz
 
 
 ===Fishing===
-I was trying to catch something MASSIVE. But my fishing rod went flying out of my hands.
+I was trying to catch something MASSIVE..
+But my fishing rod went flying out of my hands.
 Bummer...
 -> END
 
@@ -39,13 +40,13 @@ Now we call him "Coconut Head".
 ===BoarWatcher===
 This boar is acting strange.
 Sometimes it runs straight into the trees.
---> END
+-> END
 
 
 
 ===SunBath===
 I don't know if the sun is warm enough...
-...I don't think I'm getting a tanline.
+...I don't think I'm getting a tan line...
 -> END
 
 ===SunBathBurned===
@@ -59,8 +60,8 @@ He can get mine if he's really burning for it.
 
 
 
-===BathingRing===
-BA..BA..BATHING RIIIING!!
+===SwimmingRing===
+SWI..SWI..SWIMMING RIIIING!!
 -> END
 
 

@@ -13,7 +13,8 @@ zzz
 
 
 ===Fishing===
-Jeg prøvede at fange noget GIGANTISK, men min fiskestang fløj ud ad hænderne på mig.
+Jeg prøvede at fange noget GIGANTISK..
+men min fiskestang fløj ud ad hænderne på mig.
 Øv...
 -> END
 
@@ -41,7 +42,7 @@ Nu kalder vi ham for "Kokosnøde Hoved".
 ===BoarWatcher===
 Det her vildsvin opfører sig meget mærkeligt.
 Nogle gange løber den direkte ind i træerne.
---> END
+-> END
 
 
 
@@ -61,7 +62,7 @@ Han må gerne få mine, hvis han virkelig brænder for det!
 
 
 
-===BathingRing===
+===SwimmingRing===
 BA..BA..BADERIIIING!!
 -> END
 
@@ -77,8 +78,8 @@ NEEEEEEEEJ!!! Mit livsværk...
 -> END
 
 
-===Banana===
-Vil du have en stægt banan?
-Hov.. ilden gik ud..
-Du må spise dem rå
--> END
+//===Banana===
+//Vil du have en stægt banan?
+//Hov.. ilden gik ud..
+//Du må spise dem rå
+//-> END

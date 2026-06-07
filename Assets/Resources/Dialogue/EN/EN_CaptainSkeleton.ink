@@ -41,7 +41,7 @@ EXTERNAL GiveCapHat()
         *[Okay]
             -> END
         *[Can you repeat the quest?]
-            Of course!
+            Yes, of course!
             -> TreasureQuest
         
     - else:
@@ -61,7 +61,8 @@ But nothing in this world is free...
 -> TreasureQuest
 
 ===TreasureQuest===
-If you can find my lost treasure on the island, I will let you sail away with my ship!
+If you can find my lost treasure on this island..
+I will let you sail away with my ship!
 But beware...
 You will find that the road to the treasure is filled with obstacles.
 Bring me my treasure, and you can escape the island!
@@ -77,7 +78,7 @@ Bring me my treasure, and you can escape the island!
     ~ StartBoatCutscene()
     -> END
     
-*[No, I want to keep it.]
+*[Nope, I want to keep it.]
     Alright, that's your loss. You will be trapped here forever!
     ~ hasMadeTheEndChoice = true
     -> END
