@@ -1105,7 +1105,7 @@ MonoBehaviour:
   chargeStartDistance: 10
   chargeWindupTime: 1
   chargeSpeed: 10
-  chargePastPlayerDistance: 4
+  chargePastPlayerDistance: 5
   chargeHitRadius: 0.9
   afterChargePause: 1.5
   boarHealth: 5

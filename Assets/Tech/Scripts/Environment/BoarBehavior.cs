@@ -51,7 +51,7 @@ public class BoarBehavior : MonoBehaviour
     [SerializeField] private float chargeStartDistance = 10f;
     [SerializeField] private float chargeWindupTime = 1f;
     [SerializeField] private float chargeSpeed = 10f;
-    [SerializeField] private float chargePastPlayerDistance = 4f;
+    [SerializeField] private float chargePastPlayerDistance = 5f;
     [SerializeField] private float chargeHitRadius = 0.75f;
     [SerializeField] private float afterChargePause = 1.5f;
 
