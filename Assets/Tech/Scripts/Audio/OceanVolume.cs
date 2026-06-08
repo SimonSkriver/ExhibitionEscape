@@ -26,7 +26,7 @@ public class OceanVolume : MonoBehaviour
         float t = Mathf.InverseLerp(0, islandRadius, dist);
 
         
-        float volume = Mathf.Lerp(0.1f, 0.45f, t);
+        float volume = Mathf.Lerp(0.1f, 0.35f, t);
 
         audioSource.volume = volume;
     }

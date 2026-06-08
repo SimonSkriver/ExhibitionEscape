@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFallDamage
   threshold: 5
-  dmgMultiplier: 4
+  dmgMultiplier: 4.5
   water:
     serializedVersion: 2
     m_Bits: 16
@@ -602,6 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   slotCount: 5
   slots: []
+  canScroll: 1
 --- !u!114 &2806153252156207621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +842,7 @@ Transform:
   m_Children:
   - {fileID: 4222736063260187710}
   m_Father: {fileID: 4187043007428483050}
-  m_LocalEulerAnglesHint: {x: 69.60958, y: -32.223057, z: -10.004517}
+  m_LocalEulerAnglesHint: {x: 56.1, y: 9.5, z: -42.6}
 --- !u!1 &2795208803168493090
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +874,7 @@ Transform:
   m_Children:
   - {fileID: 1071017591028790117}
   m_Father: {fileID: 1811189809590257679}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -76.063156, y: -179.99994, z: 179.99995}
 --- !u!1 &2865303414777722853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1140,7 @@ Transform:
   m_Children:
   - {fileID: 1491055040524942150}
   m_Father: {fileID: 702968101442814502}
-  m_LocalEulerAnglesHint: {x: 3.7888297e-20, y: -0.000016063432, z: 2.131813}
+  m_LocalEulerAnglesHint: {x: -7.526458e-20, y: -0.000013660378, z: -2.2555944e-13}
 --- !u!1 &3836804532601010997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1590,7 @@ Transform:
   m_Children:
   - {fileID: 3107661299151887777}
   m_Father: {fileID: 1811189809590257679}
-  m_LocalEulerAnglesHint: {x: -76.00843, y: -28.960726, z: 179.4808}
+  m_LocalEulerAnglesHint: {x: -76.03957, y: 14.88, z: -198.78}
 --- !u!1 &7993909116371657818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +1800,7 @@ Transform:
   m_Children:
   - {fileID: 7836308872051601674}
   m_Father: {fileID: 8919400339678373244}
-  m_LocalEulerAnglesHint: {x: 50.373356, y: -0.1456809, z: -38.464695}
+  m_LocalEulerAnglesHint: {x: 70.66, y: -58, z: -0.6}
 --- !u!1 &8583883187834547836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1832,7 @@ Transform:
   m_Children:
   - {fileID: 1354219702041515079}
   m_Father: {fileID: 1811189809590257679}
-  m_LocalEulerAnglesHint: {x: 3.4343505e-19, y: 2.5405658e-27, z: 2.4093847}
+  m_LocalEulerAnglesHint: {x: -5.7631235e-19, y: -4.2632794e-27, z: -40.2}
 --- !u!1 &8597240013179510334
 GameObject:
   m_ObjectHideFlags: 0
