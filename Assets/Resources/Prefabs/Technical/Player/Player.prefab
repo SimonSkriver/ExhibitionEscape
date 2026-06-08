@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   orientation: {fileID: 0}
-  gravity: -8
+  gravity: -40
   turnSpeed: 10
   playerVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &7649747237781186817
@@ -531,7 +531,7 @@ MonoBehaviour:
   WaterSpeedMult: 0.5
   MovementSpeed: 5
   SprintSpeedMult: 1.25
-  JumpPower: 0.5
+  JumpPower: 4.5
   canTakeFallDamage: 1
   skinnedMeshRenderer: {fileID: 0}
   flickerAmount: 3
@@ -581,8 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4aa2242f9d2e1246b47758b6f12a0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFallDamage
-  threshold: 5
-  dmgMultiplier: 4.5
+  threshold: 20
+  dmgMultiplier: 1.5
   water:
     serializedVersion: 2
     m_Bits: 16

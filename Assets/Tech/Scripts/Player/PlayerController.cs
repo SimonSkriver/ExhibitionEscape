@@ -42,12 +42,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGrounded = controller.isGrounded;
-        moveSpeed = GetMoveSpeed();
+        float savedMoveSpeed = GetMoveSpeed();
         
         if (canMove)
         {
-            Move();
+            //Gravity
             HandleGravity();  
+            if (!isGrounded) 
+                moveSpeed = savedMoveSpeed / 1.5f; 
+            else
+                moveSpeed = savedMoveSpeed;
+
+            Move();
         }
     }
 
@@ -89,8 +95,10 @@ public class PlayerController : MonoBehaviour
         Vector3 horizontalInput = orientation.right * moveInput.x + orientation.forward * moveInput.y;
 
         //Combine horizontal and vertical movement and apply movement
-            moveDirection = horizontalInput + (playerVelocity.y * Vector3.up);
-            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+            Vector3 horizontalMove = horizontalInput * moveSpeed;
+            Vector3 verticalMove = playerVelocity.y * Vector3.up;
+            moveDirection = horizontalInput;
+            controller.Move((horizontalMove + verticalMove) * Time.deltaTime);
 
         if (isSliding) {
             Vector3 velocity = slopeSlideVelocity;
@@ -101,11 +109,19 @@ public class PlayerController : MonoBehaviour
         //If there's horizontal input, lerp from current rotation to the input value rotation
         if (horizontalInput.sqrMagnitude > 0.01f)
         {
+            A.SetBool("isWalking", true);
+            isMoving = true;
+
             Quaternion targetRotation = Quaternion.LookRotation(horizontalInput);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
         }
+        else
+        {
+            A.SetBool("isWalking", false);
+            isMoving = false;
+        }
 
-        // Walking or Idle animation
+       /* // Walking or Idle animation
         if (moveDirection != new Vector3(0, playerVelocity.y, 0)) 
         {
             A.SetBool("isWalking", true);
@@ -115,7 +131,7 @@ public class PlayerController : MonoBehaviour
         {
             A.SetBool("isWalking", false);
             isMoving = false;
-        }
+        }*/
     }
 
     float GetMoveSpeed()

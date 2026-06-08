@@ -18,9 +18,9 @@ MonoBehaviour:
   positionOffSet: {x: 0.118, y: -0.16, z: -0.007}
   rotationOffset: {x: -76.729, y: 51.189, z: 58.449}
   itemType: 0
-  healthAmount: 20
+  healthAmount: 25
   givesMovementBoost: 1
-  movementBoostAmount: 5
+  movementBoostAmount: 2.5
   movementBoostDuration: 10
   givesJumpBoost: 0
   jumpBoostAmount: 0
