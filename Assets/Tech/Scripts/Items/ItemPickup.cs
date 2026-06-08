@@ -14,7 +14,6 @@ public class ItemPickup : MonoBehaviour, IInteractable
         }
 
         bool added = InventoryManager.Instance.AddItem(itemData);
-        SFXManager.PlayEffect("ItemPickup");
 
         if (!added) return;
 
@@ -23,8 +22,9 @@ public class ItemPickup : MonoBehaviour, IInteractable
         if (anim != null) 
         {
         anim.SetTrigger("PICK_UP");
+        EquipController.Instance.EquipSelectedSlot();
+        SFXManager.PlayEffect("ItemPickup");
         }
-
 
         Destroy(gameObject);
     }
