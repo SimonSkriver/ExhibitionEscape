@@ -23,23 +23,9 @@ public class BoatCutscene : MonoBehaviour
 
     public void TryStartCutscene()
     {
-        //if (!hat.hasHat) return;
         flagMat.color = shortsMat.color;
         cutscene.Play();
         inCutscene = true;
         UI_Manager.Instance.HidePlayerHUD();
-        StartCoroutine(TriggerNOOOOO());
-    }
-
-    IEnumerator TriggerNOOOOO() {
-        Animator anim = GameObject.FindWithTag("Player").GetComponent<Animator>();
-        
-        yield return new WaitForSeconds(19.75f);
-
-        anim.SetTrigger("NOOOOO");
-
-        //yield return new WaitForSeconds(7f);
-        //UI_Manager.Instance.ShowCredits();
-        //Time.timeScale = 0;
     }
 }
