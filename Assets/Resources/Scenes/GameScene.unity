@@ -38711,6 +38711,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1075060271}
     - target: {fileID: 7632451415788353634, guid: 7a68f007ee8360b4ea5c49b03f2f6cec, type: 3}
+      propertyPath: chargePastPlayerDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632451415788353634, guid: 7a68f007ee8360b4ea5c49b03f2f6cec, type: 3}
       propertyPath: 'jungleAreas.Array.data[0]'
       value: 
       objectReference: {fileID: 1789962059}
