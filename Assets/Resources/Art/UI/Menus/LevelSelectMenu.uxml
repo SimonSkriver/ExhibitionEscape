@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/RadioButtonStyle.uss?fileID=7433441132597879392&amp;guid=977ae3c879c743b4a950bbf35af89956&amp;type=3#RadioButtonStyle"/>
-    <ui:Label name="Island_Title" text="" style="position: absolute; align-self: center; -unity-text-align: middle-center; font-size: 100px; -unity-font-style: bold; -unity-text-outline-width: 5px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); top: 30px;">
+    <ui:Label name="Island_Title" text="" style="position: absolute; align-self: center; -unity-text-align: middle-center; font-size: 100px; -unity-font-style: bold; -unity-text-outline-width: 5px; -unity-text-outline-color: rgb(0, 0, 0); color: rgb(255, 255, 255); -unity-font-definition: resource(&quot;Art/UI/Fonts/Super Starfish&quot;); top: 30px;">
         <Bindings>
             <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(63137755136)" fallback="DontUseFallback">
                 <variables>
@@ -23,12 +23,12 @@
             <ui:RadioButton name="NO" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center;"/>
             <ui:RadioButton name="FI" enabled="false" class="levelSelectLanguageButton" style="justify-content: center; align-items: center; align-self: center;"/>
         </ui:VisualElement>
-        <ui:Button text="&lt;" name="PREVIOUS" class="levelSelectButton" style="white-space: nowrap; height: 200px; width: 200px; -unity-text-align: upper-center; align-self: center;"/>
-        <ui:Button text="Select" name="SELECT" enabled="true" class="levelSelectButton" style="width: 500px; height: 200px; align-self: flex-end; -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); -unity-text-align: upper-center;">
+        <ui:Button text="&lt;" name="PREVIOUS" class="levelSelectButton" style="white-space: nowrap; height: 200px; width: 200px; -unity-text-align: middle-center; align-self: center; -unity-font-style: normal; font-size: 200px; -unity-font-definition: resource(&quot;Art/UI/Fonts/Super Starfish&quot;);"/>
+        <ui:Button text="Select" name="SELECT" enabled="true" class="levelSelectButton" style="width: 500px; height: 200px; align-self: flex-end; -unity-font-definition: resource(&quot;Art/UI/Fonts/Super Starfish&quot;); -unity-text-align: middle-center;">
             <Bindings>
                 <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(32380283629568)"/>
             </Bindings>
         </ui:Button>
-        <ui:Button text="&gt;" name="NEXT" class="levelSelectButton" style="white-space: nowrap; width: 200px; height: 200px; align-self: center; -unity-text-align: upper-center;"/>
+        <ui:Button text="&gt;" name="NEXT" class="levelSelectButton" style="white-space: nowrap; width: 200px; height: 200px; align-self: center; -unity-text-align: middle-center; -unity-font-definition: resource(&quot;Art/UI/Fonts/Super Starfish&quot;); font-size: 200px; -unity-font-style: normal;"/>
     </ui:VisualElement>
 </ui:UXML>

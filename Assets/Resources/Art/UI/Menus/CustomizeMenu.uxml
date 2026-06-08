@@ -74,7 +74,7 @@
                 <ui:Button name="ShortsColor" class="customizeButton customizationButton" style="background-color: rgb(212, 1, 226);"/>
             </ui:GroupBox>
         </ui:VisualElement>
-        <ui:Button text="Confirm" name="ConfirmPlayerCustomization" class="menuButton" style="font-size: 50px; width: 300px; border-left-color: rgba(0, 0, 0, 0.784); border-right-color: rgba(0, 0, 0, 0.784); border-top-color: rgba(0, 0, 0, 0.784); border-bottom-color: rgba(0, 0, 0, 0.784); background-color: rgba(0, 0, 0, 0.784); -unity-text-outline-color: rgb(255, 122, 0); color: rgb(255, 122, 0);">
+        <ui:Button text="Confirm" name="ConfirmPlayerCustomization" class="menuButton" style="font-size: 50px; width: 300px; border-left-color: rgba(0, 0, 0, 0.784); border-right-color: rgba(0, 0, 0, 0.784); border-top-color: rgba(0, 0, 0, 0.784); border-bottom-color: rgba(0, 0, 0, 0.784); background-color: rgba(0, 0, 0, 0.784); -unity-text-outline-color: rgb(255, 122, 0); color: rgb(255, 122, 0); letter-spacing: 4px;">
             <Bindings>
                 <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(204867806015488)"/>
             </Bindings>
