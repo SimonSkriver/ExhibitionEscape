@@ -124,11 +124,13 @@ public class PlayerUse : MonoBehaviour
 
     private IEnumerator EatFruitAfterDelay(float seconds, FruitData fruit, Transform transform) 
     {
+        InventoryManager.Instance.canScroll = false;
         yield return new WaitForSeconds(seconds);
         
         FruitUseController.Instance.UseFruit(fruit, transform);
 
         InventoryManager.Instance.RemoveSelectedItem();
+        InventoryManager.Instance.canScroll = true;
 
         shallEat = true;
     }
@@ -137,6 +139,7 @@ public class PlayerUse : MonoBehaviour
     { 
         if (MeatUseController.Instance.UseMeat(meat)) 
         {
+            InventoryManager.Instance.canScroll = false;
             if (animator != null)
             {
                 animator.SetTrigger("EAT_MEAT");
@@ -162,5 +165,6 @@ public class PlayerUse : MonoBehaviour
             }
         }
         shallEat = true;
+        InventoryManager.Instance.canScroll = true;
     }
 }

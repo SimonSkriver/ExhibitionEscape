@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     public List<InventorySlot> slots = new List<InventorySlot>();
 
     public int SelectedSlotIndex { get; private set; } = -1;
+    public bool canScroll = true;
 
     private void Awake()
     {
@@ -61,6 +62,8 @@ public class InventoryManager : MonoBehaviour
 
     public void SelectSlot(int index)
     {
+        if (!canScroll) return;
+
         if (index < 0 || index >= slots.Count)
             return;
 
@@ -72,6 +75,8 @@ public class InventoryManager : MonoBehaviour
 
     public void ScrollSelect(float scrollValue)
     {
+        if (!canScroll) return;
+        
         if (slots.Count == 0)
             return;
 
