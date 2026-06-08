@@ -3,7 +3,15 @@ using UnityEngine;
 public class RockClear : MonoBehaviour, IInteractable
 {
     private Rigidbody[] rocks;
+    private Animator animator;
 
+    public void Awake()
+    {
+        if (animator == null)
+        {
+            animator = GameObject.FindWithTag("Player").GetComponent<Animator>();
+        }
+    }
     public void Interact()
     {
         if (BoulderStrengthEffect.Instance == null)
@@ -13,6 +21,7 @@ public class RockClear : MonoBehaviour, IInteractable
         {
             GetComponent<Collider>().enabled = false;
             SFXManager.PlayEffect("BoulderDestroy");
+            animator.SetTrigger("ATTACK");
             rocks = GetComponentsInChildren<Rigidbody>();
             foreach (Rigidbody rb in rocks)
             {
