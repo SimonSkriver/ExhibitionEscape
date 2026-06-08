@@ -10,7 +10,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animation")]
     public static Animator A { get; private set; }
-    
+
+    [Header("Effects")]
+    GameObject speedLines;
+    public static bool canShowSpeedLines;
+
     [Header ("Settings")]
     [SerializeField] private float gravity = -10f; 
     [SerializeField] private float turnSpeed = 5f; 
@@ -37,6 +41,9 @@ public class PlayerController : MonoBehaviour
         A = GetComponent<Animator>();
         
         canMove = true;
+
+        speedLines = GameManager.thirdPersonCam.GetChild(0).gameObject;
+        speedLines.SetActive(false);
     }
 
     void Update()
@@ -111,6 +118,8 @@ public class PlayerController : MonoBehaviour
         {
             A.SetBool("isWalking", true);
             isMoving = true;
+            if (isSprinting && canShowSpeedLines) speedLines.SetActive(true);
+            else speedLines.SetActive(false);
 
             Quaternion targetRotation = Quaternion.LookRotation(horizontalInput);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
@@ -119,19 +128,20 @@ public class PlayerController : MonoBehaviour
         {
             A.SetBool("isWalking", false);
             isMoving = false;
+            speedLines.SetActive(false);
         }
 
-       /* // Walking or Idle animation
-        if (moveDirection != new Vector3(0, playerVelocity.y, 0)) 
-        {
-            A.SetBool("isWalking", true);
-            isMoving = true;
-        }
-        else 
-        {
-            A.SetBool("isWalking", false);
-            isMoving = false;
-        }*/
+        /* // Walking or Idle animation
+         if (moveDirection != new Vector3(0, playerVelocity.y, 0)) 
+         {
+             A.SetBool("isWalking", true);
+             isMoving = true;
+         }
+         else 
+         {
+             A.SetBool("isWalking", false);
+             isMoving = false;
+         }*/
     }
 
     float GetMoveSpeed()
@@ -147,7 +157,7 @@ public class PlayerController : MonoBehaviour
     {
         isSprinting = true;
         A.SetBool("isRunning", isSprinting);
-        SFXManager.PlayEffect("Sprint");
+        if (isMoving) SFXManager.PlayEffect("Sprint");
     }
 
     public void StopSprint()

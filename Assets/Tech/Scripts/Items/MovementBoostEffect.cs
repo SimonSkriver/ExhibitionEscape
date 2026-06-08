@@ -33,9 +33,12 @@ public class MovementBoostEffect : MonoBehaviour
 
     private IEnumerator BoostRoutine(float duration)
     {
+        PlayerController.canShowSpeedLines = true;
+
         yield return new WaitForSeconds(duration);
 
         PlayerStats.Instance.MovementSpeed -= currentBoostAmount;
+        PlayerController.canShowSpeedLines = false;
 
         currentBoostAmount = 0;
         boostCoroutine = null;
