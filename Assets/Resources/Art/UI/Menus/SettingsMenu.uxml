@@ -3,7 +3,7 @@
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/MenuStyle.uss?fileID=7433441132597879392&amp;guid=42a1f58cb3150cd4ab49c63b8acaf772&amp;type=3#MenuStyle"/>
     <Style src="project://database/Assets/Tech/UI%20Toolkit/StyleSheets/RadioButtonStyle.uss?fileID=7433441132597879392&amp;guid=977ae3c879c743b4a950bbf35af89956&amp;type=3#RadioButtonStyle"/>
     <ui:VisualElement style="flex-grow: 1; justify-content: space-evenly; background-color: rgb(122, 152, 112); border-left-color: rgb(57, 82, 42); border-right-color: rgb(58, 82, 43); border-top-color: rgb(60, 87, 45); border-bottom-color: rgb(52, 75, 38); border-top-width: 10px; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; width: 450px; height: 750px; position: absolute; padding-right: 20px; padding-left: 20px; padding-bottom: 20px;">
-        <ui:Label text="INDSTILLINGER" name="Header" style="padding-bottom: 10px; padding-top: 15px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(57, 82, 42); -unity-font-definition: url(&quot;project://database/Packages/com.unity.collab-proxy/Editor/Assets/Fonts/Cascadia.ttf?fileID=12800000&amp;guid=9229ae5dbc38f488d921156ff75869e9&amp;type=3#Cascadia&quot;); letter-spacing: 5px; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(57, 82, 42); position: absolute; top: 8px; white-space: nowrap; align-self: center; font-size: 45px;">
+        <ui:Label text="INDSTILLINGER" name="Header" style="padding-bottom: 10px; padding-top: 15px; -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(57, 82, 42); -unity-font-definition: resource(&quot;Art/UI/Fonts/Super Starfish&quot;); letter-spacing: 5px; -unity-text-align: middle-center; -unity-font-style: bold; color: rgb(57, 82, 42); position: absolute; top: 8px; white-space: nowrap; align-self: center; font-size: 55px;">
             <Bindings>
                 <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(176562746798080)">
                     <variables>
@@ -21,7 +21,7 @@
                 </Bindings>
             </ui:Button>
             <ui:GroupBox>
-                <ui:Label text="VOLUME" name="SoundVolume" class="textMenu">
+                <ui:Label text="VOLUME" name="SoundVolume" class="textMenu" style="letter-spacing: 12px; color: rgba(106, 156, 0, 0.588); -unity-font-style: bold;">
                     <Bindings>
                         <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(172300671234048)">
                             <variables>
@@ -78,7 +78,7 @@
                 </ui:Slider>
             </ui:GroupBox>
             <ui:GroupBox enabled="false">
-                <ui:Label text="LANGUAGE" class="textMenu" style="padding-bottom: 15px;">
+                <ui:Label text="LANGUAGE" class="textMenu" style="padding-bottom: 15px; letter-spacing: 12px; color: rgba(106, 156, 0, 0.588); -unity-font-style: bold;">
                     <Bindings>
                         <UnityEngine.Localization.LocalizedString property="text" table="GUID:0e0ba97df2b1b9a438f0e8abd1ec2cd9" entry="Id(171942276345856)">
                             <variables>

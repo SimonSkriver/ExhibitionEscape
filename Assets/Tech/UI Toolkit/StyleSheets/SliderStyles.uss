@@ -75,8 +75,6 @@
     scale: 1 3;
 }
 
-
-
 #SettingsSlider .unity-base-slider__dragger {
     background-color: rgb(255, 168, 0);
     border-top-left-radius: 30px;
@@ -107,14 +105,13 @@
     margin-top: 2px;
 }
 
+
+
 #SettingsSlider .unity-base-slider__label {
-    font-size: 20px;
-    color: rgba(72, 62, 82, 0.588);
-    -unity-text-outline-width: 2px;
+    font-size: 25px;
+    color: rgba(206, 229, 161, 0.545);
+    -unity-text-outline-width: 1px;
     -unity-font-style: normal;
-    -unity-text-outline-color: rgba(72, 62, 82, 0.588);
+    -unity-text-outline-color: rgba(0, 0, 0, 0.588);
+    -unity-font-definition: resource("Art/UI/Fonts/Super Starfish");
 }
-
-
-
-
